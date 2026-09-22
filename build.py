@@ -5,7 +5,7 @@
     python3 build.py --refresh  also fetch the latest releases from GitHub first
 
 Pictures: drop files into images/<slug>/. They are shown in name order, the
-first one is the page's hero picture. Files with "logo", "banner" or "splash"
+first one is the page's hero picture. Files with "logo", "banner", "splash" or "product"
 in the name are shown whole instead of cropped.
 """
 import html
@@ -77,7 +77,7 @@ def images_for(slug):
 
 
 def is_whole(path):
-    return any(k in path.name.lower() for k in ("logo", "banner", "splash"))
+    return any(k in path.name.lower() for k in ("logo", "banner", "splash", "product"))
 
 
 # ---------------------------------------------------------------- releases
