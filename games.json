@@ -59,7 +59,7 @@
         "Some VR tables ship with `Const VRRoom = 0`, which hides their cabinet. Put a copy of the table script next to the table as `<table name>.vbs` with `VRRoom` set to a room (\"Ultra Minimal\" is the lightest).",
         "Updating from an earlier beta: install over it, settings and tables are kept."
       ],
-      "credits": "Based on [Visual Pinball](https://github.com/vpinball/vpinball) by the Visual Pinball development team. Photo: pinball machines by [Rob DiCaterino](https://commons.wikimedia.org/wiki/File:Pinball_machines,_Red_Bank,_NJ.1%282_-_7279175820%29.jpg), CC BY 2.0."
+      "credits": "Based on [Visual Pinball](https://github.com/vpinball/vpinball) by the Visual Pinball development team."
     },
     {
       "slug": "unreal-tournament",
