@@ -753,7 +753,9 @@
         "Water quality must stay above Low, or the ocean is drawn across the sky.",
         "Menus follow your head (WinlatorXR's flat screen)."
       ],
-      "credits": "Based on [crysis_vrmod](https://github.com/fholger/crysis_vrmod) by fholger. Crysis is © Crytek / Electronic Arts."
+      "video": "rVGW-ZcZUpk",
+      "video_label": "PC VR version · trailer by fholger",
+      "credits": "Based on [crysis_vrmod](https://github.com/fholger/crysis_vrmod) by fholger. Crysis is © Crytek / Electronic Arts. Screenshots and video (PC VR version of the mod): fholger, [crysis.vrmods.eu](https://crysis.vrmods.eu)."
     },
     {
       "slug": "farcry",

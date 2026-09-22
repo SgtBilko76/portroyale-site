@@ -346,7 +346,8 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     extra = imgs[1:]
     if game.get("video"):
         vid = game["video"]
-        gallery_items = [f'<a class="shot video" href="https://www.youtube.com/watch?v={esc(vid)}" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/{esc(vid)}/hqdefault.jpg" alt="Video: {esc(game["name"])}" loading="lazy"><span class="play" aria-hidden="true">▶</span></a>']
+        video_label = f'<span class="shot-label">{esc(game["video_label"])}</span>' if game.get("video_label") else ""
+        gallery_items = [f'<a class="shot video" href="https://www.youtube.com/watch?v={esc(vid)}" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/{esc(vid)}/hqdefault.jpg" alt="Video: {esc(game["name"])}" loading="lazy">{video_label}<span class="play" aria-hidden="true">▶</span></a>']
     else:
         gallery_items = []
     gallery_items += [f'<a class="shot" href="{esc(p.relative_to(ROOT).as_posix())}" target="_blank">{picture(game, p)}</a>' for p in extra]

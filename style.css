@@ -248,3 +248,4 @@ code {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
+.shot-label { position: absolute; left: 10px; bottom: 10px; z-index: 1; background: rgba(17, 26, 40, .88); color: #fff; font-size: .78rem; font-weight: 700; padding: .25em .7em; border-radius: 999px; border: 1px solid var(--line); }
