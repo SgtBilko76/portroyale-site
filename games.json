@@ -279,7 +279,7 @@
         ]
       },
       "notes": ["The APK is signed with a debug key."],
-      "credits": "Based on [Xonotic](https://xonotic.org/) by Team Xonotic."
+      "credits": "Based on [Xonotic](https://xonotic.org/) by Team Xonotic. Pictures (desktop version) via Wikimedia Commons, GPL: [Xonotic developers](https://commons.wikimedia.org/wiki/File:Xonotic_0.8.2_rocket.jpg), [greewrfdsfsf](https://commons.wikimedia.org/wiki/File:Xonotic_Game_Play_-_Silent_Siege.jpg)."
     },
     {
       "slug": "supertuxkart",
