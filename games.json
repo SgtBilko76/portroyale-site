@@ -481,7 +481,7 @@
           ["Right stick click", "", "Rollover recover"]
         ]
       },
-      "credits": "Based on [VDrift](https://vdrift.net/). VR framework from Team Beef's [QuakeQuest](https://github.com/Team-Beef-Studios/QuakeQuest). Pictures (desktop version): [VDrift community](https://commons.wikimedia.org/wiki/File:VDrift-screebshot_(2015).jpg), GPLv3."
+      "credits": "Based on [VDrift](https://vdrift.net/). VR framework from Team Beef's [QuakeQuest](https://github.com/Team-Beef-Studios/QuakeQuest). Pictures (desktop version): [VDrift community](https://commons.wikimedia.org/wiki/File:VDrift-screebshot_%282015%29.jpg), GPLv3."
     },
     {
       "slug": "speeddreams",
