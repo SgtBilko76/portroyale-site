@@ -5,7 +5,7 @@
     "intro": "Classic games and emulators, rebuilt to run standalone on Meta Quest: no PC, no streaming. Every port is free and open source on GitHub.",
     "github_user": "SgtBilko76",
     "sponsor_url": "https://github.com/sponsors/SgtBilko76",
-    "thanks": "Luboš, The WinlatorXR Team, Team Beef and the whole VR community"
+    "thanks": "Luboš, the WinlatorXR Team, Team Beef and the whole VR community..."
   },
   "categories": [
     {"id": "native", "name": "Native Quest ports", "blurb": "Game engines ported to run directly on the headset through OpenXR."},
