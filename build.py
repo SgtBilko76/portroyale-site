@@ -344,12 +344,14 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 
     gallery = ""
     extra = imgs[1:]
-    if game.get("video"):
-        vid = game["video"]
-        video_label = f'<span class="shot-label">{esc(game["video_label"])}</span>' if game.get("video_label") else ""
-        gallery_items = [f'<a class="shot video" href="https://www.youtube.com/watch?v={esc(vid)}" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/{esc(vid)}/hqdefault.jpg" alt="Video: {esc(game["name"])}" loading="lazy">{video_label}<span class="play" aria-hidden="true">▶</span></a>']
-    else:
-        gallery_items = []
+    videos = game.get("videos") or ([{"id": game["video"], "label": game.get("video_label", "")}] if game.get("video") else [])
+    gallery_items = []
+    for v in videos:
+        label = f'<span class="shot-label">{esc(v["label"])}</span>' if v.get("label") else ""
+        gallery_items.append(
+            f'<a class="shot video" href="https://www.youtube.com/watch?v={esc(v["id"])}" target="_blank" rel="noopener">'
+            f'<img src="https://img.youtube.com/vi/{esc(v["id"])}/hqdefault.jpg" alt="Video: {esc(v.get("label") or game["name"])}" loading="lazy">'
+            f'{label}<span class="play" aria-hidden="true">▶</span></a>')
     gallery_items += [f'<a class="shot" href="{esc(p.relative_to(ROOT).as_posix())}" target="_blank">{picture(game, p)}</a>' for p in extra]
     if gallery_items:
         gallery = f"""

@@ -14,6 +14,7 @@ Open `public/index.html` in a browser. To host it, upload the contents of `publi
 - **Texts, features, install steps, controls:** `games.json`. It supports `**bold**`, `*italic*`, `` `code` `` and `[links](https://...)`. Use `"install": "default"` for the standard sideload steps.
 - **Pictures:** put them in `images/<slug>/`. They're shown in file-name order, and the first one is the header picture. Files with `logo`, `banner` or `splash` in the name are shown whole instead of cropped. A port with no pictures gets a red title card.
 - **Downloads:** these come from each repo's GitHub releases. Run `--refresh` after publishing a release.
+- **Videos:** `"videos": [{"id": "<YouTube id>", "label": "caption"}]` in `games.json` (a single `"video"` + `"video_label"` also works).
 - **Look:** `style.css`.
 
 ## Online

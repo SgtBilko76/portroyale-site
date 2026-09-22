@@ -800,7 +800,11 @@
         "Maximum screen width is about 1792 (32-bit memory limit).",
         "Play with more than 50% battery."
       ],
-      "credits": "Based on [farcry_vrmod](https://github.com/fholger/farcry_vrmod) by fholger. No game files included."
+      "videos": [
+        {"id": "6jDmnkO0UX0", "label": "Standalone on Quest 3 · by Luboš VR"},
+        {"id": "I1oiDHGzDTk", "label": "PC VR version · trailer by fholger"}
+      ],
+      "credits": "Based on [farcry_vrmod](https://github.com/fholger/farcry_vrmod) by fholger. No game files included. Videos: [Luboš VR](https://www.youtube.com/watch?v=6jDmnkO0UX0) and [fholger](https://www.youtube.com/watch?v=I1oiDHGzDTk)."
     }
   ]
 }
