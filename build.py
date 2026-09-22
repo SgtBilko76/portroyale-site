@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Portroyale site into public/.
+"""Build the PortRoyale site into public/.
 
     python3 build.py            build from games.json and the cached release data
     python3 build.py --refresh  also fetch the latest releases from GitHub first
@@ -187,7 +187,7 @@ def build_index(site, cats, games, rels):
     parts = [f"""
 <section class="hero">
   <div class="wrap hero-inner">
-    <img class="hero-logo" src="images/site/logo.png" alt="Portroyale logo" width="220" height="220">
+    <img class="hero-logo" src="images/site/logo.png" alt="PortRoyale logo" width="220" height="220">
     <div>
       <p class="eyebrow">Welcome to {esc(site['title'])}</p>
       <h1>{esc(site['tagline'])}</h1>
