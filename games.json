@@ -525,22 +525,6 @@
       "credits": "Based on [Speed Dreams](https://www.speed-dreams.net/)."
     },
     {
-      "slug": "csvr",
-      "name": "CSVR: Counter-Strike 1.6 VR",
-      "repo": "CSVR",
-      "category": "native",
-      "tagline": "Unofficial Counter-Strike 1.6 in VR on Meta Quest.",
-      "about": [
-        "An unofficial VR port of Counter-Strike 1.6 for Meta Quest, based on [Team Beef's CSVR](https://github.com/Team-Beef-Studios/CSVR) and Velaron's reverse-engineered [cs16-client](https://github.com/Velaron/cs16-client) running on the Xash3D FWGS engine."
-      ],
-      "features": [
-        "Server browser fixed for the current protocol (1.0.6)"
-      ],
-      "needs": ["Meta Quest", "Your own copy of [Counter-Strike on Steam](https://store.steampowered.com/app/10/CounterStrike/) for the `valve` and `cstrike` game folders"],
-      "install": "default",
-      "credits": "[Velaron](https://github.com/Velaron) (cs16-client), [Team Beef](https://github.com/Team-Beef-Studios) (original CSVR), [FWGS](https://github.com/FWGS/xash3d-fwgs) (Xash3D FWGS)."
-    },
-    {
       "slug": "snes9x",
       "name": "Snes9x VR",
       "repo": "snes9x-QuestVR",

@@ -240,22 +240,6 @@
    ]
   }
  ],
- "CSVR": [
-  {
-   "tag": "v1.0.6",
-   "name": "CSVR-1.0.6",
-   "date": "2026-09-08T13:42:46Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/CSVR/releases/tag/v1.0.6",
-   "assets": [
-    {
-     "name": "CSVR-Beta0.6.apk",
-     "size": 73839883,
-     "url": "https://github.com/SgtBilko76/CSVR/releases/download/v1.0.6/CSVR-Beta0.6.apk"
-    }
-   ]
-  }
- ],
  "snes9x-QuestVR": [
   {
    "tag": "v0.1",
