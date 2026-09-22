@@ -307,7 +307,7 @@
           ["Face buttons", "Nitro, fire, drift, rescue, look back, pause"]
         ]
       },
-      "credits": "Based on [SuperTuxKart](https://supertuxkart.net/) by the SuperTuxKart team."
+      "credits": "Based on [SuperTuxKart](https://supertuxkart.net/) by the SuperTuxKart team. Pictures (desktop version): [SuperTuxKart contributors](https://commons.wikimedia.org/wiki/File:STK_track_8.png), CC BY 1.0; [TrainAndBus64](https://commons.wikimedia.org/wiki/File:SuperTuxKart_Mobile_in_Gnu.jpg), CC BY-SA 4.0."
     },
     {
       "slug": "supertux",
@@ -481,7 +481,7 @@
           ["Right stick click", "", "Rollover recover"]
         ]
       },
-      "credits": "Based on [VDrift](https://vdrift.net/). VR framework from Team Beef's [QuakeQuest](https://github.com/Team-Beef-Studios/QuakeQuest)."
+      "credits": "Based on [VDrift](https://vdrift.net/). VR framework from Team Beef's [QuakeQuest](https://github.com/Team-Beef-Studios/QuakeQuest). Pictures (desktop version): [VDrift community](https://commons.wikimedia.org/wiki/File:VDrift-screebshot_(2015).jpg), GPLv3."
     },
     {
       "slug": "speeddreams",
