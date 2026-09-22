@@ -1,0 +1,355 @@
+{
+ "VPinball-QuestVR": [
+  {
+   "tag": "v0.16-beta",
+   "name": "Quest Beta 0.16",
+   "date": "2026-09-22T14:51:07Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/VPinball-QuestVR/releases/tag/v0.16-beta",
+   "assets": [
+    {
+     "name": "VPinball-QuestVR-Beta-0.16.apk",
+     "size": 284925968,
+     "url": "https://github.com/SgtBilko76/VPinball-QuestVR/releases/download/v0.16-beta/VPinball-QuestVR-Beta-0.16.apk"
+    }
+   ]
+  }
+ ],
+ "Unreal-Tournament-QuestVR": [
+  {
+   "tag": "v1.0.0-beta8-ut99",
+   "name": "Unreal Tournament VR 1.0.0-beta8",
+   "date": "2026-09-20T18:13:28Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/Unreal-Tournament-QuestVR/releases/tag/v1.0.0-beta8-ut99",
+   "assets": [
+    {
+     "name": "UnrealTournamentVR-1.0.0-beta8-nodata.apk",
+     "size": 12277535,
+     "url": "https://github.com/SgtBilko76/Unreal-Tournament-QuestVR/releases/download/v1.0.0-beta8-ut99/UnrealTournamentVR-1.0.0-beta8-nodata.apk"
+    }
+   ]
+  }
+ ],
+ "Unreal-Gold-QuestVR": [
+  {
+   "tag": "v1.0.0-beta8",
+   "name": "Unreal Gold VR 1.0.0-beta8",
+   "date": "2026-09-20T18:13:23Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/Unreal-Gold-QuestVR/releases/tag/v1.0.0-beta8",
+   "assets": [
+    {
+     "name": "UnrealGoldVR-1.0.0-beta8-nodata.apk",
+     "size": 12277519,
+     "url": "https://github.com/SgtBilko76/Unreal-Gold-QuestVR/releases/download/v1.0.0-beta8/UnrealGoldVR-1.0.0-beta8-nodata.apk"
+    }
+   ]
+  }
+ ],
+ "Descent3-QuestVR": [
+  {
+   "tag": "quest-v0.2-beta",
+   "name": "Descent 3 for Meta Quest \u2014 Beta 0.2",
+   "date": "2026-09-16T12:15:09Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/tag/quest-v0.2-beta",
+   "assets": [
+    {
+     "name": "Descent3-Quest-0.2-beta.apk",
+     "size": 8643278,
+     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.2-beta/Descent3-Quest-0.2-beta.apk"
+    },
+    {
+     "name": "Descent3-Quest-0.2-beta.zip",
+     "size": 17672757,
+     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.2-beta/Descent3-Quest-0.2-beta.zip"
+    }
+   ]
+  }
+ ],
+ "Sauerbraten-QuestVR": [
+  {
+   "tag": "Sauerbraten-QuestVRBeta6",
+   "name": "Sauerbraten-QuestVR",
+   "date": "2026-09-08T13:26:33Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/tag/Sauerbraten-QuestVRBeta6",
+   "assets": [
+    {
+     "name": "sauerbratenquest.apk",
+     "size": 1016981693,
+     "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/download/Sauerbraten-QuestVRBeta6/sauerbratenquest.apk"
+    }
+   ]
+  }
+ ],
+ "Xonotic-QuestVR": [
+  {
+   "tag": "Beta-0.1",
+   "name": "Beta 0.1",
+   "date": "2026-09-13T16:32:43Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Xonotic-QuestVR/releases/tag/Beta-0.1",
+   "assets": [
+    {
+     "name": "XonoticQuest-full-release.apk",
+     "size": 1196767250,
+     "url": "https://github.com/SgtBilko76/Xonotic-QuestVR/releases/download/Beta-0.1/XonoticQuest-full-release.apk"
+    }
+   ]
+  }
+ ],
+ "SuperTuxKart-QuestVR": [
+  {
+   "tag": "v0.9",
+   "name": "SuperTuxKart-QuestVR",
+   "date": "2026-09-08T13:18:17Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/SuperTuxKart-QuestVR/releases/tag/v0.9",
+   "assets": [
+    {
+     "name": "supertuxkartquest.apk",
+     "size": 735777769,
+     "url": "https://github.com/SgtBilko76/SuperTuxKart-QuestVR/releases/download/v0.9/supertuxkartquest.apk"
+    }
+   ]
+  }
+ ],
+ "SuperTux-QuestVR": [
+  {
+   "tag": "Beta0.1",
+   "name": "SuperTux Quest VR Beta 0.1",
+   "date": "2026-09-13T16:02:56Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/SuperTux-QuestVR/releases/tag/Beta0.1",
+   "assets": [
+    {
+     "name": "SuperTux-Beta0.1-quest-arm64-v8a.apk",
+     "size": 345561097,
+     "url": "https://github.com/SgtBilko76/SuperTux-QuestVR/releases/download/Beta0.1/SuperTux-Beta0.1-quest-arm64-v8a.apk"
+    }
+   ]
+  }
+ ],
+ "ExtremeTuxRacer-QuestVR": [
+  {
+   "tag": "Tuxracer0.0.1",
+   "name": "ExtremeTuxRacer-QuestVR",
+   "date": "2026-09-08T13:12:52Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-QuestVR/releases/tag/Tuxracer0.0.1",
+   "assets": [
+    {
+     "name": "extremetuxracer.apk",
+     "size": 53074322,
+     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-QuestVR/releases/download/Tuxracer0.0.1/extremetuxracer.apk"
+    }
+   ]
+  }
+ ],
+ "Hurrican-QuestVR": [
+  {
+   "tag": "v1.0.0-quest",
+   "name": "Hurrican Quest VR 1.0.0",
+   "date": "2026-09-17T08:21:37Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/tag/v1.0.0-quest",
+   "assets": [
+    {
+     "name": "Hurrican-QuestVR-v1.0.0.apk",
+     "size": 43284182,
+     "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/download/v1.0.0-quest/Hurrican-QuestVR-v1.0.0.apk"
+    }
+   ]
+  },
+  {
+   "tag": "v1.0.9.3",
+   "name": "Hurrican-QuestVR",
+   "date": "2026-09-08T13:13:59Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/tag/v1.0.9.3",
+   "assets": [
+    {
+     "name": "Hurrican.apk",
+     "size": 46295549,
+     "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/download/v1.0.9.3/Hurrican.apk"
+    }
+   ]
+  }
+ ],
+ "Neverball-and-Neverputt-QuestVR": [
+  {
+   "tag": "neverball-0814",
+   "name": "NeverBall-QuestVR",
+   "date": "2026-09-08T13:07:53Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/tag/neverball-0814",
+   "assets": [
+    {
+     "name": "neverballquest.apk",
+     "size": 61765029,
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/neverball-0814/neverballquest.apk"
+    }
+   ]
+  },
+  {
+   "tag": "puttnik-0507",
+   "name": "NeverPutt-QuestVR",
+   "date": "2026-09-08T13:09:28Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/tag/puttnik-0507",
+   "assets": [
+    {
+     "name": "neverputtquest.apk",
+     "size": 36833396,
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/puttnik-0507/neverputtquest.apk"
+    }
+   ]
+  }
+ ],
+ "VDrift-QuestVR": [
+  {
+   "tag": "Beta-0.0.1",
+   "name": "VDrift-QuestVR Full Game Package",
+   "date": "2026-09-11T17:03:23Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/VDrift-QuestVR/releases/tag/Beta-0.0.1",
+   "assets": [
+    {
+     "name": "VDriftVR-0.1.0.apk",
+     "size": 1800861337,
+     "url": "https://github.com/SgtBilko76/VDrift-QuestVR/releases/download/Beta-0.0.1/VDriftVR-0.1.0.apk"
+    }
+   ]
+  }
+ ],
+ "SpeedDreams-QuestVR": [
+  {
+   "tag": "speeddreams0.0.4",
+   "name": "SpeedDreams-QuestVR",
+   "date": "2026-09-08T13:11:25Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/SpeedDreams-QuestVR/releases/tag/speeddreams0.0.4",
+   "assets": [
+    {
+     "name": "Speeddreams.0.9.2-beta.apk",
+     "size": 233108076,
+     "url": "https://github.com/SgtBilko76/SpeedDreams-QuestVR/releases/download/speeddreams0.0.4/Speeddreams.0.9.2-beta.apk"
+    }
+   ]
+  }
+ ],
+ "CSVR": [
+  {
+   "tag": "v1.0.6",
+   "name": "CSVR-1.0.6",
+   "date": "2026-09-08T13:42:46Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/CSVR/releases/tag/v1.0.6",
+   "assets": [
+    {
+     "name": "CSVR-Beta0.6.apk",
+     "size": 73839883,
+     "url": "https://github.com/SgtBilko76/CSVR/releases/download/v1.0.6/CSVR-Beta0.6.apk"
+    }
+   ]
+  }
+ ],
+ "snes9x-QuestVR": [
+  {
+   "tag": "v0.1",
+   "name": "Snes9x VR 0.1 \u2014 first beta",
+   "date": "2026-09-20T13:57:17Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/snes9x-QuestVR/releases/tag/v0.1",
+   "assets": [
+    {
+     "name": "Snes9xVR-0.1.apk",
+     "size": 1425955,
+     "url": "https://github.com/SgtBilko76/snes9x-QuestVR/releases/download/v0.1/Snes9xVR-0.1.apk"
+    }
+   ]
+  }
+ ],
+ "ARMSX2-Quest": [
+  {
+   "tag": "v0.1-beta",
+   "name": "Beta 0.1",
+   "date": "2026-09-20T08:26:49Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/tag/v0.1-beta",
+   "assets": [
+    {
+     "name": "ARMSX2-Quest-0.1-beta.apk",
+     "size": 44688882,
+     "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/download/v0.1-beta/ARMSX2-Quest-0.1-beta.apk"
+    }
+   ]
+  }
+ ],
+ "CallOfDuty4_VR_WinlatorXR": [
+  {
+   "tag": "v0.1.0-beta.1",
+   "name": "KisakCOD VR WinlatorXR beta 0.1.0-beta.1",
+   "date": "2026-09-20T08:37:08Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/CallOfDuty4_VR_WinlatorXR/releases/tag/v0.1.0-beta.1",
+   "assets": [
+    {
+     "name": "KisakCOD-VR-WinlatorXR-v0.1.0-beta.1.zip",
+     "size": 3265746,
+     "url": "https://github.com/SgtBilko76/CallOfDuty4_VR_WinlatorXR/releases/download/v0.1.0-beta.1/KisakCOD-VR-WinlatorXR-v0.1.0-beta.1.zip"
+    }
+   ]
+  }
+ ],
+ "Battlefield-1942-WinlatorXR": [
+  {
+   "tag": "quest-beta2",
+   "name": "BFVR Quest Beta 2",
+   "date": "2026-09-18T11:00:24Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Battlefield-1942-WinlatorXR/releases/tag/quest-beta2",
+   "assets": [
+    {
+     "name": "BFVR-Quest-Beta2.zip",
+     "size": 2450211,
+     "url": "https://github.com/SgtBilko76/Battlefield-1942-WinlatorXR/releases/download/quest-beta2/BFVR-Quest-Beta2.zip"
+    }
+   ]
+  }
+ ],
+ "Crysis-VR-WinlatorXR": [
+  {
+   "tag": "Beta-0.3",
+   "name": "Crysis VR Quest Beta 0.3",
+   "date": "2026-09-16T14:10:00Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Crysis-VR-WinlatorXR/releases/tag/Beta-0.3",
+   "assets": [
+    {
+     "name": "CrysisVR-Installer-Beta-0.3.zip",
+     "size": 5383897,
+     "url": "https://github.com/SgtBilko76/Crysis-VR-WinlatorXR/releases/download/Beta-0.3/CrysisVR-Installer-Beta-0.3.zip"
+    }
+   ]
+  }
+ ],
+ "Farcry_vrmod-WinlatorXR": [
+  {
+   "tag": "quest-beta-0.2",
+   "name": "Far Cry VR (Quest) \u2014 Beta 0.2",
+   "date": "2026-09-16T10:57:50Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Farcry_vrmod-WinlatorXR/releases/tag/quest-beta-0.2",
+   "assets": [
+    {
+     "name": "FarCryVR-Installer-Beta-0.2.zip",
+     "size": 1141320,
+     "url": "https://github.com/SgtBilko76/Farcry_vrmod-WinlatorXR/releases/download/quest-beta-0.2/FarCryVR-Installer-Beta-0.2.zip"
+    }
+   ]
+  }
+ ]
+}

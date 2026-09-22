@@ -1,0 +1,818 @@
+{
+  "site": {
+    "title": "Portroyale",
+    "tagline": "Free High Quality Open Source VR Ports",
+    "intro": "Classic games and emulators, rebuilt to run standalone on Meta Quest: no PC, no streaming. Every port is free and open source on GitHub.",
+    "github_user": "SgtBilko76",
+    "sponsor_url": "https://github.com/sponsors/SgtBilko76",
+    "thanks": "Team Beef, Lubosz and the whole VR Community"
+  },
+  "categories": [
+    {"id": "native", "name": "Native Quest ports", "blurb": "Game engines ported to run directly on the headset through OpenXR."},
+    {"id": "emulator", "name": "Emulators", "blurb": "Console emulators with a stereoscopic virtual screen."},
+    {"id": "winlator", "name": "WinlatorXR VR mods", "blurb": "PC VR mods running standalone on Quest 3 through WinlatorXR (Wine + Box64 + DXVK)."}
+  ],
+  "games": [
+    {
+      "slug": "vpinball",
+      "name": "Visual Pinball X VR",
+      "repo": "VPinball-QuestVR",
+      "category": "native",
+      "tagline": "Real pinball tables in VR and mixed reality on Meta Quest 3.",
+      "about": [
+        "Visual Pinball X standalone for **Meta Quest 3** (OpenXR, Vulkan), based on vpinball 10.8.1. Stand in front of real and original tables, with the cabinet and backglass around you, or play them in your own room with passthrough."
+      ],
+      "features": [
+        "**Mixed Reality (passthrough):** see your real room around the table, switchable instantly while playing",
+        "**Backglass for tables not built for VR:** rebuilt from the desktop backdrop, including working EM score reels",
+        "**VR room switch:** cycle a table's VR rooms by holding the menu button",
+        "Adjustable table position, angle, size and distance",
+        "Accidental Start presses are ignored while a ball is in play",
+        "The menu pauses the game"
+      ],
+      "needs": ["Meta Quest 3", "Your own `.vpx` tables and ROMs"],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r VPinball-QuestVR-Beta-0.16.apk`.",
+        "Put each table in its own folder, with its ROMs next to it: `VPinball/tables/<Table name>/<table>.vpx` and `VPinball/tables/<Table name>/pinmame/roms/<rom>.zip`.",
+        "Start VPinball (*Library → Unknown Sources*) and select the `VPinball/tables` folder in the settings."
+      ],
+      "controls": {
+        "columns": ["Button", "During play", "In the menu"],
+        "rows": [
+          ["Triggers", "Flippers", ""],
+          ["Grips", "Magna save", ""],
+          ["☰ (left menu)", "Open menu (**hold: next VR room**)", "Back / close"],
+          ["A", "Start game (hold 1 s while a ball is moving)", "Select"],
+          ["B", "Insert coin", "Back"],
+          ["X (hold)", "Move away from the table", ""],
+          ["Y", "View mode: left stick = left/right & up/down, right stick = angle (press again to save). **Hold: reset view**", ""],
+          ["Left stick click", "Size & distance mode: left stick = distance, right stick = size", ""],
+          ["Right stick click", "Launch ball", "Reset page to defaults"],
+          ["Right stick up/down", "Plunger", ""],
+          ["Left stick", "Nudge", "Navigate"]
+        ]
+      },
+      "notes": [
+        "Williams / Bally / Data East tables show \"Factory settings restored\" on their very first start: quit once through the menu and start again.",
+        "Some VR tables ship with `Const VRRoom = 0`, which hides their cabinet. Put a copy of the table script next to the table as `<table name>.vbs` with `VRRoom` set to a room (\"Ultra Minimal\" is the lightest).",
+        "Updating from an earlier beta: install over it, settings and tables are kept."
+      ],
+      "credits": "Based on [Visual Pinball](https://github.com/vpinball/vpinball) by the Visual Pinball development team."
+    },
+    {
+      "slug": "unreal-tournament",
+      "name": "Unreal Tournament VR",
+      "repo": "Unreal-Tournament-QuestVR",
+      "category": "native",
+      "tagline": "UT99 in VR on Meta Quest, running standalone on Surreal Engine.",
+      "about": [
+        "A standalone Meta Quest (Quest 2 / Pro / 3 / 3S, tested on Quest 3) VR port of **Unreal Tournament (UT99)**, built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine), a from-scratch reimplementation of Unreal Engine 1, with an OpenXR/Vulkan stereo renderer.",
+        "No game content is included, but UT99 is available **free and legally** from OldUnreal."
+      ],
+      "features": [
+        "Native OpenXR rendering at 72 Hz, snap turning, stick locomotion",
+        "Weapons held and aimed with the right controller, including UT's dual Enforcers",
+        "Sniper rifle zoom shown as a scope screen above the gun",
+        "Redeemer guided shell steered with the right controller",
+        "Curved menu panel operated by pointing and clicking",
+        "Installs side by side with Unreal Gold VR"
+      ],
+      "needs": ["Meta Quest 2 / Pro / 3 / 3S", "UT99 game files (free from [OldUnreal](https://www.oldunreal.com/downloads/unrealtournament/full-game-installers/); 469e and 436 work)"],
+      "install": [
+        "Install UT99 on a PC with the OldUnreal installer.",
+        "Sideload the APK with SideQuest or `adb install -r`.",
+        "Copy the `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngineUT/` on the headset. Leave out your PC's `UnrealTournament.ini` / `User.ini`.",
+        "Launch **Unreal Tournament VR** from *Unknown Sources* and grant \"All files access\"."
+      ],
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Left stick", "Move (direction follows snap-turns)"],
+          ["Right stick left/right", "Snap-turn 45°"],
+          ["Right stick up/down", "Next / previous weapon"],
+          ["Right trigger", "Fire"],
+          ["Right grip", "Alt-fire"],
+          ["A", "Activate selected inventory item"],
+          ["B", "F2 key"],
+          ["Left trigger", "Jump"],
+          ["X", "Next inventory item"],
+          ["Left grip (hold)", "Crouch"],
+          ["Y", "Scoreboard"],
+          ["Left menu button", "Open / close the game menu"],
+          ["Meta button (long press)", "Recenter"]
+        ]
+      },
+      "notes": [
+        "Bot AI is only partially implemented in Surreal Engine.",
+        "No dynamic lighting; some movers behave oddly.",
+        "No networking / multiplayer."
+      ],
+      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal Tournament is a trademark of Epic Games; this project is not affiliated with Epic Games."
+    },
+    {
+      "slug": "unreal-gold",
+      "name": "Unreal Gold VR",
+      "repo": "Unreal-Gold-QuestVR",
+      "category": "native",
+      "tagline": "The 1998 classic Unreal in VR on Meta Quest, running standalone on Surreal Engine.",
+      "about": [
+        "A standalone Meta Quest (Quest 2 / Pro / 3 / 3S, tested on Quest 3) VR port of **Unreal Gold**, built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine), a from-scratch reimplementation of Unreal Engine 1, with an OpenXR/Vulkan stereo renderer.",
+        "No game content is included, but Unreal Gold is available **free and legally** from OldUnreal."
+      ],
+      "features": [
+        "Native OpenXR rendering at 72 Hz, snap turning, stick locomotion",
+        "Weapons held and aimed with the right controller, with a controller-ray crosshair",
+        "Curved menu panel operated by pointing and clicking",
+        "VR-tuned controls for translator, inventory and crouch",
+        "Save games persist on the headset",
+        "Installs side by side with Unreal Tournament VR"
+      ],
+      "needs": ["Meta Quest 2 / Pro / 3 / 3S", "Unreal Gold **226b** game files (free from [OldUnreal](https://www.oldunreal.com/downloads/unreal/full-game-installers/))"],
+      "install": [
+        "Get the game files. The port needs the original **226b** `System` files (from GOG/Steam, or the disc contents the OldUnreal installer extracts before it applies the 227 patch). `Maps`, `Textures`, `Sounds`, `Music` and `Help` are the same either way.",
+        "Sideload the APK with SideQuest or `adb install -r`.",
+        "Copy the `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngine/` on the headset. Leave out your PC's `Unreal.ini` / `User.ini`.",
+        "Launch **Unreal Gold VR** from *Unknown Sources* and grant \"All files access\"."
+      ],
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Left stick", "Move (direction follows snap-turns)"],
+          ["Right stick left/right", "Snap-turn 45°"],
+          ["Right stick up/down", "Next / previous weapon"],
+          ["Right trigger", "Fire"],
+          ["Right grip", "Alt-fire"],
+          ["A", "Activate selected inventory item"],
+          ["B", "Universal translator"],
+          ["Left trigger", "Jump"],
+          ["X", "Next inventory item"],
+          ["Left grip (hold)", "Crouch"],
+          ["Y", "Scoreboard"],
+          ["Left menu button", "Open / close the game menu"],
+          ["Meta button (long press)", "Recenter"]
+        ]
+      },
+      "notes": [
+        "Enemy AI is only partially implemented in Surreal Engine: monsters often just stand around.",
+        "Inventory does not carry over between maps.",
+        "No dynamic lighting; some movers behave oddly."
+      ],
+      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal is a trademark of Epic Games; this project is not affiliated with Epic Games."
+    },
+    {
+      "slug": "descent3",
+      "name": "Descent 3 VR",
+      "repo": "Descent3-QuestVR",
+      "category": "native",
+      "tagline": "Six degrees of freedom, from a real cockpit, on Meta Quest.",
+      "about": [
+        "A VR port of the [Descent 3 open source engine](https://github.com/DescentDevelopers/Descent3) for Meta Quest, running standalone. You sit in a virtual cockpit: the ship flies on the Touch controllers while you look around freely. The world and the cockpit are rendered in stereo; menus, cutscenes and the flat HUD float in front of you."
+      ],
+      "features": [
+        "Stereo world and cockpit with head tracking",
+        "Full ship control on the Touch controllers",
+        "Menus and dialogs fully usable with the controllers",
+        "Quest system keyboard for text fields like the pilot name",
+        "Runs at 90 Hz where available"
+      ],
+      "needs": ["Meta Quest (Quest 3 tested)", "Your own copy of Descent 3 (original CDs, GOG or Steam; v1.4 recommended)"],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r Descent3-Quest-0.2-beta.apk`.",
+        "Copy all `.hog` files plus the `missions` and `movies` folders to `/sdcard/Android/data/com.descentdevelopers.descent3/files/`.",
+        "From GOG/Steam: after copying with adb, make the folders readable for the app with `adb shell \"cd /sdcard/Android/data/com.descentdevelopers.descent3/files && find . -mindepth 1 -type d -exec chmod 2777 {} +\"`.",
+        "From the original CDs: the zip download contains `tools/stage_gamedata.sh`, which extracts the data from CD images and pushes it to the headset."
+      ],
+      "controls": {
+        "columns": ["Input", "Flying", "Menus"],
+        "rows": [
+          ["Left stick", "Thrust forward/back, slide left/right", "Previous / next item"],
+          ["Right stick", "Turn, pitch (stick up = nose down)", "Move within lists"],
+          ["Right trigger", "Fire primary", "Select"],
+          ["Left trigger", "Fire secondary", "Select"],
+          ["Grips", "Bank left / right", ""],
+          ["A", "Afterburner", "Select"],
+          ["B", "Flare (hold: next primary)", "Back"],
+          ["X / Y", "Slide down / up", "X = Enter"],
+          ["Right stick click", "Drop countermeasure (hold: next countermeasure)", ""],
+          ["Left stick click", "Next secondary (hold: headlight)", ""],
+          ["Menu button", "Pause menu (hold: automap)", "Back"],
+          ["Meta button (hold)", "Recenter the view", ""]
+        ]
+      },
+      "notes": [
+        "**Uninstalling the app deletes the game data folder**: keep a copy of your game files.",
+        "Rear view and inventory have no controller buttons yet.",
+        "Some disc copies lack the music; pre-v1.4 data lacks a few images and sounds.",
+        "Multiplayer is untested."
+      ],
+      "credits": "Based on the [Descent 3 open source engine](https://github.com/DescentDevelopers/Descent3) by the Descent community."
+    },
+    {
+      "slug": "sauerbraten",
+      "name": "SauerQuest: Cube 2 Sauerbraten VR",
+      "repo": "Sauerbraten-QuestVR",
+      "category": "native",
+      "tagline": "Old school deathmatch in real 6DOF on Meta Quest.",
+      "about": [
+        "A standalone native port of the classic open-source shooter *Cube 2: Sauerbraten* to Meta Quest 2 and 3. Built directly on OpenXR, it runs the original engine on the headset with full stereoscopic rendering, room-scale head tracking and motion controls. No PC or streaming required.",
+        "Aiming is decoupled from your head: point the right controller and shoot where you're actually pointing. Frag bots across the game's original arenas."
+      ],
+      "features": [
+        "Full stereoscopic rendering with room-scale head tracking",
+        "Motion-controller aiming, smooth stick locomotion and snap turn",
+        "Laser-pointer menus",
+        "Complete game in one APK (about 970 MB)"
+      ],
+      "needs": ["Meta Quest 2 or 3"],
+      "install": "default",
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Right trigger", "Fire / select"],
+          ["Right stick ←→", "Snap turn"],
+          ["Right stick ↑↓", "Switch weapon"],
+          ["B", "Back"],
+          ["Left stick", "Move & strafe"],
+          ["Left trigger", "Jump"],
+          ["Left menu button", "Main menu"],
+          ["Y", "Scoreboard"]
+        ]
+      },
+      "video": "fX7o-1OH-WM",
+      "credits": "Based on [Cube 2: Sauerbraten](http://sauerbraten.org/)."
+    },
+    {
+      "slug": "xonotic",
+      "name": "Xonotic VR",
+      "repo": "Xonotic-QuestVR",
+      "category": "native",
+      "tagline": "The fast-paced open-source arena shooter, standalone on Meta Quest.",
+      "about": [
+        "A native OpenXR port of Xonotic 0.8.6 for Meta Quest. The APK is self-contained: the full game data is bundled, no extra download needed."
+      ],
+      "features": [
+        "Single-pass stereo rendering (multiview) and GPU skeletal skinning",
+        "Controller-attached weapons with the game's own crosshair along the aim",
+        "Sniper zoom and haptics",
+        "VR text input in menus and chat",
+        "Comfort turning; the head-tracked camera is kept out of walls"
+      ],
+      "needs": ["Meta Quest"],
+      "install": "default",
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Right trigger", "Fire"],
+          ["Right grip", "Secondary fire"],
+          ["Right stick up", "Zoom"],
+          ["Right stick down", "Crouch"],
+          ["Left trigger", "Jump"],
+          ["Left grip", "Grappling hook"],
+          ["Left stick", "Move"],
+          ["A / B", "Next / previous weapon"],
+          ["X", "Use"],
+          ["Y", "Scoreboard"],
+          ["Right stick click", "Recenter view"],
+          ["Left menu button", "Menu"]
+        ]
+      },
+      "notes": ["The APK is signed with a debug key."],
+      "credits": "Based on [Xonotic](https://xonotic.org/) by Team Xonotic."
+    },
+    {
+      "slug": "supertuxkart",
+      "name": "SuperTuxKart VR",
+      "repo": "SuperTuxKart-QuestVR",
+      "category": "native",
+      "tagline": "The free open-source kart racer, from the driver's seat.",
+      "about": [
+        "A standalone VR port of [SuperTuxKart](https://supertuxkart.net/) for Meta Quest. Races are rendered in real per-eye stereo with head tracking, layered on the normal kart-following camera, and the Touch controllers drive SuperTuxKart's standard gamepad controls."
+      ],
+      "features": [
+        "Native OpenXR app on Quest",
+        "Per-eye stereo rendering with head tracking",
+        "Menus on a floating screen in VR",
+        "Touch controllers mapped to the standard gamepad controls"
+      ],
+      "needs": ["Meta Quest"],
+      "install": "default",
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Left stick", "Steer"],
+          ["Right trigger", "Accelerate"],
+          ["Left trigger", "Brake"],
+          ["Face buttons", "Nitro, fire, drift, rescue, look back, pause"]
+        ]
+      },
+      "credits": "Based on [SuperTuxKart](https://supertuxkart.net/) by the SuperTuxKart team."
+    },
+    {
+      "slug": "supertux",
+      "name": "SuperTux VR",
+      "repo": "SuperTux-QuestVR",
+      "category": "native",
+      "tagline": "The classic jump'n'run as a layered 3D diorama on Meta Quest.",
+      "about": [
+        "[SuperTux](https://www.supertux.org/), the open-source jump'n'run, running standalone on Meta Quest (Quest 2 / 3 / 3S / Pro) through OpenXR.",
+        "The game is shown on a virtual screen in front of you, with each drawing layer at its own depth: backgrounds sit farther back, and the HUD and menus float closer. Moving your head gives real parallax."
+      ],
+      "features": [
+        "Every drawing layer at its own depth, with real head-motion parallax",
+        "Peek around the level with the right stick or grips",
+        "Falls back to normal 2D mode without an OpenXR runtime"
+      ],
+      "needs": ["Meta Quest 2 / 3 / 3S / Pro"],
+      "install": "default",
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Left stick", "Move"],
+          ["Right stick", "Peek (look around)"],
+          ["A / left trigger", "Jump (select in menus)"],
+          ["B", "Back (in menus)"],
+          ["X / right trigger", "Action (run, grab, shoot)"],
+          ["Y", "Item"],
+          ["Left / right grip", "Peek left / right"],
+          ["Menu button", "Pause"],
+          ["Left stick click", "Recenter screen"]
+        ]
+      },
+      "notes": [
+        "Single player only. Screen-space effects (displacement, blur) are disabled in VR."
+      ],
+      "credits": "Based on [SuperTux](https://www.supertux.org/) by the SuperTux team."
+    },
+    {
+      "slug": "extremetuxracer",
+      "name": "Extreme Tux Racer VR",
+      "repo": "ExtremeTuxRacer-QuestVR",
+      "category": "native",
+      "tagline": "Race Tux the penguin down icy slopes, in true stereo.",
+      "about": [
+        "[Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer/) running standalone on Meta Quest in true stereo at 72 Hz. Race down the slopes, grab herrings along the way, and pull off tricks in the air."
+      ],
+      "features": [
+        "Native OpenXR app: each race is simulated once per frame and rendered once per eye",
+        "Menus on a floating screen, driven with the thumbstick",
+        "Game data unpacked on first launch"
+      ],
+      "needs": ["Meta Quest"],
+      "install": "default",
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Left stick", "Steer (menus: navigate)"],
+          ["Right trigger", "Paddle"],
+          ["Left trigger", "Brake"],
+          ["A / X", "Jump"],
+          ["Grips", "Trick"],
+          ["B", "Pause"],
+          ["Left menu button", "Menu"]
+        ]
+      },
+      "credits": "Based on [Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer/)."
+    },
+    {
+      "slug": "hurrican",
+      "name": "Hurrican VR",
+      "repo": "Hurrican-QuestVR",
+      "category": "native",
+      "tagline": "The Turrican-inspired run-and-gun as a stereoscopic diorama.",
+      "about": [
+        "A standalone Meta Quest port (Quest 2 / 3 / 3S / Pro) of [Hurrican](https://www.winterworks.de/project/hurrican/), the freeware run-and-gun inspired by Turrican.",
+        "The game is played on a large world-locked virtual screen. Its draw layers (sky, parallax planes, tiles, playfield, overlays, HUD) are composited per eye at different depths for a stereoscopic \"diorama\" look."
+      ],
+      "features": [
+        "Seven depth layers composited per eye",
+        "Touch controllers fully mapped, with rumble, and remappable in *Options → Define Buttons*",
+        "Screen size, distance, depth strength and refresh rate adjustable in `vr.cfg`",
+        "All game data inside the APK"
+      ],
+      "needs": ["Meta Quest 2 / 3 / 3S / Pro"],
+      "install": "default",
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Left stick", "Move / look up / duck"],
+          ["Right stick", "Look up / down"],
+          ["A", "Jump"],
+          ["Right trigger", "Shoot"],
+          ["B", "Lightning"],
+          ["X", "Powerline"],
+          ["Y", "Grenade"],
+          ["Left trigger", "Smart bomb"],
+          ["Right grip", "Cycle weapon"],
+          ["Menu (left controller)", "Pause / back"],
+          ["Click both sticks", "Recenter the screen"]
+        ]
+      },
+      "notes": [
+        "Tuning: `files/vr.cfg` in the app's private storage (delete it to restore defaults). The default depth strength is 0.10.",
+        "Signed with a debug key: uninstall any previous differently-signed build first."
+      ],
+      "credits": "Based on [Hurrican](https://github.com/HurricanGame/Hurrican) by Eiswuxe (Poke53280) and contributors."
+    },
+    {
+      "slug": "neverball",
+      "name": "Neverball & Neverputt VR",
+      "repo": "Neverball-and-Neverputt-QuestVR",
+      "category": "native",
+      "tagline": "Tilt the world to roll the ball, plus mini golf, on Meta Quest.",
+      "about": [
+        "[Neverball](https://neverball.org/) and its mini-golf sibling Neverputt, ported to Meta Quest as standalone VR apps.",
+        "**Neverball:** tilt the floor to roll a ball through an obstacle course before time runs out. Collect coins to unlock the exit. **Neverputt:** mini golf on Neverball's courses."
+      ],
+      "features": [
+        "Two separate apps: install either or both",
+        "Laser-pointer menus",
+        "Optional wrist control: tilt the floor by turning the right controller (`vr_control 1`)"
+      ],
+      "needs": ["Meta Quest"],
+      "install": "default",
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Left stick", "Tilt the floor (Neverputt: aim); move the menu highlight"],
+          ["Right stick", "Turn the camera left or right, one step per push"],
+          ["Trigger", "Click what the ray is on"],
+          ["A", "Take the highlight"],
+          ["B", "Back"],
+          ["X", "Pause"],
+          ["Y", "Options"],
+          ["Grip", "Turn the camera left or right"]
+        ]
+      },
+      "credits": "Based on [Neverball](https://neverball.org/) by Robert Kooima and contributors."
+    },
+    {
+      "slug": "vdrift",
+      "name": "VDrift VR",
+      "repo": "VDrift-QuestVR",
+      "category": "native",
+      "tagline": "The open-source drift racing simulator, from the driver's seat.",
+      "about": [
+        "A native port of [VDrift](https://vdrift.net/) for Meta Quest. The race is rendered in stereo with head tracking on whichever camera you pick (in-car, hood, chase...), the HUD is a head-locked panel, and the menus float in front of you over the 3D garage scene."
+      ],
+      "features": [
+        "Stereo races with head tracking on every camera",
+        "Floating (curved) menu screen over the garage scene",
+        "Sound and rumble",
+        "Full game package with all tracks and cars (1.7 GB)"
+      ],
+      "needs": ["Meta Quest (Quest 3 tested)"],
+      "install": "default",
+      "install_extra": "The first start can take a minute or two while the game data is extracted.",
+      "controls": {
+        "columns": ["Input", "Menus", "Race"],
+        "rows": [
+          ["Right hand pointer", "Move the cursor", ""],
+          ["Right trigger", "Click", "Throttle"],
+          ["Left trigger", "Back", "Brake"],
+          ["Left stick", "Navigate lists", "Steering"],
+          ["A", "Select / Enter", "Start engine"],
+          ["B / left menu button", "Back", "Pause menu"],
+          ["X", "", "Handbrake"],
+          ["Y", "Recenter (hold 1 s)", "Next camera; hold 1 s to recenter"],
+          ["Right / left grip", "", "Shift up / down"],
+          ["Left stick click", "", "Reverse gear"],
+          ["Right stick click", "", "Rollover recover"]
+        ]
+      },
+      "credits": "Based on [VDrift](https://vdrift.net/). VR framework from Team Beef's [QuakeQuest](https://github.com/Team-Beef-Studios/QuakeQuest)."
+    },
+    {
+      "slug": "speeddreams",
+      "name": "Speed Dreams VR",
+      "repo": "SpeedDreams-QuestVR",
+      "category": "native",
+      "tagline": "A full motorsport simulator, standalone on Meta Quest.",
+      "about": [
+        "Speed Dreams 2.4 as a standalone Meta Quest application: stereo rendering through OpenXR, a curved menu panel, and the full game in one APK. Another 74 tracks and 90 cars can be downloaded from inside the headset."
+      ],
+      "features": [
+        "Stereo rendering through OpenXR",
+        "Curved menu panel anchored in the room",
+        "Online play with ranking lists and a dedicated server",
+        "Force feedback and rumble",
+        "Extra tracks and cars in *Options → Downloads* over wifi (about 5.4 GB for the full set)"
+      ],
+      "needs": ["Meta Quest 2 / 3 / Pro", "About 500 MB free space"],
+      "install": "default",
+      "install_extra": "The first launch takes an extra half minute while the game data is unpacked to `/sdcard/SpeedDreamsVR`. Updates reuse it: just install the new APK.",
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Right trigger", "Throttle"],
+          ["Left trigger", "Brake"],
+          ["Left stick", "Steer"],
+          ["Left stick click", "Reverse gear"],
+          ["Right grip", "Shift up"],
+          ["Left grip", "Shift down"],
+          ["A", "ABS / confirm"],
+          ["X", "ASR"],
+          ["Right stick click", "Rear-view mirror"],
+          ["Y", "Next camera; hold 1 s to recenter the menu panel"]
+        ]
+      },
+      "notes": [
+        "`/sdcard/SpeedDreamsVR/vr.cfg` holds eye buffer scale, refresh rate, antialiasing, mirror position and steering curve.",
+        "If a track won't hold frame rate, turn the sky dome off first.",
+        "Practice and qualifying run one car at a time: use Quick Race or a championship to race opponents."
+      ],
+      "credits": "Based on [Speed Dreams](https://www.speed-dreams.net/)."
+    },
+    {
+      "slug": "csvr",
+      "name": "CSVR: Counter-Strike 1.6 VR",
+      "repo": "CSVR",
+      "category": "native",
+      "tagline": "Unofficial Counter-Strike 1.6 in VR on Meta Quest.",
+      "about": [
+        "An unofficial VR port of Counter-Strike 1.6 for Meta Quest, based on [Team Beef's CSVR](https://github.com/Team-Beef-Studios/CSVR) and Velaron's reverse-engineered [cs16-client](https://github.com/Velaron/cs16-client) running on the Xash3D FWGS engine."
+      ],
+      "features": [
+        "Server browser fixed for the current protocol (1.0.6)"
+      ],
+      "needs": ["Meta Quest", "Your own copy of [Counter-Strike on Steam](https://store.steampowered.com/app/10/CounterStrike/) for the `valve` and `cstrike` game folders"],
+      "install": "default",
+      "credits": "[Velaron](https://github.com/Velaron) (cs16-client), [Team Beef](https://github.com/Team-Beef-Studios) (original CSVR), [FWGS](https://github.com/FWGS/xash3d-fwgs) (Xash3D FWGS)."
+    },
+    {
+      "slug": "snes9x",
+      "name": "Snes9x VR",
+      "repo": "snes9x-QuestVR",
+      "category": "emulator",
+      "tagline": "SNES on a curved screen, with real depth and true Mode 7 perspective.",
+      "about": [
+        "A port of Snes9x to Meta Quest that puts the SNES on a curved screen and reconstructs depth from what the console was already telling the renderer.",
+        "Backgrounds and sprites are split into their own layers, ordered by the console's own priorities, and a Mode 7 ground plane recedes properly into the distance instead of hanging flat."
+      ],
+      "features": [
+        "Curved OpenXR screen, rendered at 2048×1536 per eye",
+        "**Depth:** layer order, split layers and true Mode 7 perspective",
+        "120 Hz for 60 fps NTSC games (90 Hz for PAL)",
+        "In-headset ROM browser; `.sfc`, `.smc`, `.fig`, `.swc` and `.zip`",
+        "Ten save-state slots per ROM, plus battery saves",
+        "Remappable controls; Bluetooth gamepads work too"
+      ],
+      "needs": ["Meta Quest", "Your own SNES ROMs"],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install Snes9xVR-0.1.apk`.",
+        "Put ROMs in `/sdcard/Android/data/com.snes9x.vr/files/roms`, or choose any folder in *Settings → ROM folder* and grant storage access there.",
+        "Launch from *Library → Unknown Sources*: the app opens on the ROM list."
+      ],
+      "controls": {
+        "columns": ["SNES", "Touch"],
+        "rows": [
+          ["D-pad", "Left stick"],
+          ["Y / X", "X / Y"],
+          ["B / A", "A / B"],
+          ["L / R", "Left / right trigger"],
+          ["Select", "Left grip"],
+          ["Start", "Right grip"],
+          ["Options", "Left menu button"]
+        ]
+      },
+      "controls_note": "Remap everything under *Controls...* in the menu.",
+      "notes": [
+        "PAL games still judder slightly: no refresh rate the headset offers divides 50.",
+        "Super FX games (Star Fox) get layer-order depth only, and take about 15 seconds to show a picture."
+      ],
+      "credits": "Based on [Snes9x](https://github.com/snes9xgit/snes9x)."
+    },
+    {
+      "slug": "armsx2",
+      "name": "ARMSX2 Quest",
+      "repo": "ARMSX2-Quest",
+      "category": "emulator",
+      "tagline": "PlayStation 2 in stereoscopic 3D on a curved virtual screen.",
+      "about": [
+        "ARMSX2 (the ARM64 fork of PCSX2) for Meta Quest, built on ARMSX2 2.7. The emulator runs as a normal 2D panel; starting a game moves it into an immersive OpenXR session with the game on a curved virtual screen, in real stereoscopic 3D."
+      ],
+      "features": [
+        "**Stereoscopic 3D:** each frame is reprojected per eye from the game's depth buffer",
+        "Curved virtual screen, 2.4 m wide at 1.5 m, 1920×1080 per eye",
+        "Touch controllers mapped to a DualShock 2, with rumble",
+        "Library and settings stay a 2D panel; the pause menu takes you back",
+        "Quest-tuned defaults (3× internal resolution and more)"
+      ],
+      "needs": ["Meta Quest 3", "A BIOS dump from your own PS2 console", "Your own PS2 games"],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r ARMSX2-Quest-0.1-beta.apk`.",
+        "Grant storage access and point the app at your games.",
+        "Uninstall any other ARMSX2 build first if the install fails with a signature mismatch."
+      ],
+      "controls": {
+        "columns": ["Quest", "PS2"],
+        "rows": [
+          ["A / B / X / Y", "Cross / Circle / Square / Triangle"],
+          ["Grips / triggers", "L1 R1 / L2 R2 (triggers analog)"],
+          ["Stick clicks", "L3 / R3"],
+          ["Left stick", "Left analog; a hard push is the D-pad"],
+          ["Right stick", "Right analog"],
+          ["Menu tap / long press", "Start / Select"],
+          ["Menu + right stick", "D-pad"],
+          ["Menu + B", "Left stick: analog only, or analog + D-pad"],
+          ["Menu + right trigger", "Recenter the screen"],
+          ["Menu + right grip", "Leave VR to the ARMSX2 menu"]
+        ]
+      },
+      "notes": [
+        "Games that never offer a usable depth buffer are shown flat.",
+        "Depth reprojection shows small artifacts at object edges.",
+        "3D strength, screen size and distance can be tuned over adb, e.g. `adb shell setprop debug.armsx2.sep 0.011`."
+      ],
+      "video": "a1_zydGhVaE",
+      "credits": "Based on [ARMSX2](https://github.com/ARMSX2/ARMSX2) and the [PCSX2](https://pcsx2.net) project."
+    },
+    {
+      "slug": "cod4",
+      "name": "Call of Duty 4 VR",
+      "repo": "CallOfDuty4_VR_WinlatorXR",
+      "category": "winlator",
+      "tagline": "Call of Duty 4 (2007) in VR, standalone on Meta Quest via WinlatorXR.",
+      "about": [
+        "KisakCOD VR with a WinlatorXR XrAPI backend: Call of Duty 4: Modern Warfare (2007) in VR, standalone on a Meta Quest, with no PC and no OpenXR or SteamVR runtime.",
+        "Tested on Quest 3 with WinlatorXR cats-27 at about 45 to 72 frames per second."
+      ],
+      "features": [
+        "Stereo rendering with head and controller tracking, paced to the headset's frame rate",
+        "Physical weapon handling: aiming, two-hand grip, magazine reloads and belt grenades",
+        "Menus and cinematics on a screen fixed in the room",
+        "Campaign playable from the intro through the F.N.G. training"
+      ],
+      "needs": ["Meta Quest 3", "WinlatorXR cats-27", "Your own Call of Duty 4 (2007) game folder"],
+      "install": [
+        "Copy the archive's files into a copy of your own COD4 game folder.",
+        "Put that folder on the headset.",
+        "Follow `README-FIRST.txt` and `WINLATORXR.txt` from the download."
+      ],
+      "controls": {
+        "columns": ["Action", "Button"],
+        "rows": [
+          ["Fire", "Right trigger"],
+          ["Use / pick up", "X"],
+          ["Reload / eject magazine", "A"],
+          ["Crouch / stance", "B"],
+          ["Next weapon", "Y"],
+          ["Pause", "Menu"],
+          ["Support grip, magazines, grenades", "Left grip"],
+          ["Grenade launcher", "Right grip"],
+          ["Sprint", "Left stick click"],
+          ["Melee", "Left trigger + left stick up"],
+          ["Night vision, airstrike, C4", "Left trigger + left stick down / left / right"]
+        ]
+      },
+      "controls_note": "Reloading is physical: eject with A, take a fresh magazine from the off-hand hip with the left grip and release it at the magazine well. The right stick click is left free for WinlatorXR's menu.",
+      "notes": [
+        "No dedicated physical-scope panel yet.",
+        "No manual recenter for the virtual screen.",
+        "WinlatorXR's right-stick-click menu can switch back to a flat window."
+      ],
+      "credits": "Based on [KisakCOD VR](https://github.com/jplakon/CallOfDuty4_VR) and [KisakCOD](https://github.com/SwagSoftware/KisakCOD). Contains no Call of Duty game data."
+    },
+    {
+      "slug": "bf1942",
+      "name": "BFVR: Battlefield 1942 VR",
+      "repo": "Battlefield-1942-WinlatorXR",
+      "category": "winlator",
+      "tagline": "Classic Battlefield in virtual reality, standalone on Meta Quest 3.",
+      "about": [
+        "BFVR, the Battlefield 1942 VR mod by JayBiggsGaming, running **standalone on Meta Quest 3** through WinlatorXR. Includes launchers for the expansions *The Road to Rome* and *Secret Weapons of WWII*."
+      ],
+      "features": [
+        "Stereoscopic VR rendering with head tracking",
+        "Tracked-controller aiming and two-handed weapon grip",
+        "VR Quick Menu and VR settings (turning, HUD, comfort vignette and more)",
+        "Shortcuts for the base game and both expansions"
+      ],
+      "needs": ["Meta Quest 3", "WinlatorXR cats-27", "Battlefield 1942 from the MoonGamers \"BF1942 & Expansions\" installer (dgVoodoo version)", "About 2 GB free space"],
+      "install": [
+        "Install the MoonGamers package on a PC and copy the complete `Battlefield 1942` folder to the headset as `Download/BF1942`.",
+        "Copy the zip's `BF1942` folder contents into `Download/BF1942`, and its `Winlator` folder to `Download/Winlator`.",
+        "In WinlatorXR, create a container: screen **3120x1430**, drive `D:` = `/sdcard/Download`, Wine `proton-9.0-x86_64`, Box64, **DXVK 1.10.x** with Async. The full tested settings (including the controller key mapping) are in `README-QUEST.md`.",
+        "Start the container and run `D:\\BF1942\\Setup-BFVR-Quest.bat` once, then optionally `Install-BFVR-Shortcut.bat`.",
+        "Play with `D:\\BF1942\\BFVR-VR.bat` or the **BFVR-VR** shortcut. The first start takes a few minutes."
+      ],
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Right trigger", "Fire"],
+          ["Right grip", "Secondary fire"],
+          ["Left trigger", "Use"],
+          ["A", "Reload"],
+          ["B (short press)", "Next weapon"],
+          ["B (hold 2 s)", "Recenter"],
+          ["Left stick", "Move"],
+          ["Right stick", "Turn; up jump, down crouch"],
+          ["X", "Prone"],
+          ["Y (hold)", "Scoreboard"],
+          ["Left grip (near the weapon)", "Hold the weapon with both hands"],
+          ["Left stick click (hold)", "Quick Menu: point with the right hand, release to choose"],
+          ["Left menu button", "Game menu"]
+        ]
+      },
+      "notes": [
+        "Secret Weapons of WWII runs slower than the base game; lower View Distance.",
+        "Occasionally the screen stays black with music after starting: restart the game.",
+        "Play with more than 50% battery; the Quest throttles below that."
+      ],
+      "video": "htv_u67kUKw",
+      "credits": "BFVR by JayBiggsGaming. No game files included."
+    },
+    {
+      "slug": "crysis",
+      "name": "Crysis VR",
+      "repo": "Crysis-VR-WinlatorXR",
+      "category": "winlator",
+      "tagline": "Crysis (2007) in VR, standalone on Meta Quest 3 via WinlatorXR.",
+      "about": [
+        "fholger's Crysis VR mod running standalone on **Meta Quest 3** through WinlatorXR (Wine + Box64 + DXVK). No PC needed while playing.",
+        "Early beta: Crysis is very CPU-heavy and Box64 has to emulate it, so expect roughly 20-40 fps. WinlatorXR's reprojection keeps head tracking smooth."
+      ],
+      "features": [
+        "Full 6DOF with motion controllers and two-handed aiming",
+        "Holster weapons at hip, shoulder and chest",
+        "Binoculars on a panel at your left hand; scope zoom when raised to the eye",
+        "Nanosuit menu by hand gesture",
+        "Tuned Quest performance settings"
+      ],
+      "needs": ["Meta Quest 3", "WinlatorXR cats-27 (avoid the dawn builds)", "Your own Crysis (2007, Steam or GOG, **not** Remastered)"],
+      "install": [
+        "Install WinlatorXR **cats-27** and create a container: screen `1592x1440` (or `1792x1624` for a sharper image), DXVK, wrapper/Turnip, drive `D:` mapped to `/sdcard/Download`.",
+        "Copy Crysis to `/sdcard/Download/Crysis` and the unzipped package to `/sdcard/Download/CrysisVR-Setup`.",
+        "Run `install.cmd` inside the container.",
+        "Launch `D:\\Crysis\\Bin32\\CrysisVR.exe` (use the **32-bit** launcher)."
+      ],
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Right trigger", "Fire"],
+          ["Left trigger", "Use / pick up"],
+          ["Right grip", "Holster / switch weapon (at hip, shoulder, chest)"],
+          ["Left grip", "Grab weapon with off hand"],
+          ["A", "Reload (hold: fire mode)"],
+          ["B", "Grenade (tap: cycle, hold: throw)"],
+          ["X", "Binoculars"],
+          ["Y", "Suit menu (tap: armor mode, hold: open suit menu)"],
+          ["Left menu button", "Game menu / objectives"],
+          ["Right stick", "Turn (45° snap); up = jump, down = crouch/prone"],
+          ["Left stick", "Move; click = sprint"],
+          ["Swing with grip held", "Melee"],
+          ["Right stick click", "Reserved for the WinlatorXR menu"]
+        ]
+      },
+      "notes": [
+        "Water quality must stay above Low, or the ocean is drawn across the sky.",
+        "Menus follow your head (WinlatorXR's flat screen)."
+      ],
+      "credits": "Based on [crysis_vrmod](https://github.com/fholger/crysis_vrmod) by fholger. Crysis is © Crytek / Electronic Arts."
+    },
+    {
+      "slug": "farcry",
+      "name": "Far Cry VR",
+      "repo": "Farcry_vrmod-WinlatorXR",
+      "category": "winlator",
+      "tagline": "Far Cry (2004) in VR, standalone on Meta Quest 3 via WinlatorXR.",
+      "about": [
+        "fholger's Far Cry VR mod running standalone on **Meta Quest 3** under WinlatorXR (Wine + Box64 + DXVK). No PC needed at runtime."
+      ],
+      "features": [
+        "Full roomscale 6DOF with motion controllers",
+        "Two-handed gun handling, binoculars and scopes, ladder climbing",
+        "Recommended preset for a steady ~60-72 fps",
+        "Pause menu anchored in the world",
+        "Seated mode and 45° snap turn"
+      ],
+      "needs": ["Meta Quest 3", "WinlatorXR cats-27 or public v27 (avoid the dawn/Turnip builds)", "Your own Far Cry (2004), e.g. the Steam version"],
+      "install": [
+        "Download and unzip `FarCryVR-Installer-Beta-0.2.zip`.",
+        "Follow `README_INSTALL.txt`: copy the game and mod to the headset, create the WinlatorXR container and point the shortcut at it.",
+        "Use the recommended **1591×1440** screen preset."
+      ],
+      "controls": {
+        "columns": ["Input", "Action"],
+        "rows": [
+          ["Right trigger", "Fire"],
+          ["Left trigger", "Use / interact"],
+          ["A", "Reload (hold: fire mode)"],
+          ["B", "Switch weapon (hold: drop)"],
+          ["X", "Binoculars"],
+          ["Y", "Grenade (tap: cycle, hold: throw)"],
+          ["Left menu button", "Game menu"],
+          ["Right stick", "Turn / 45° snap; up = jump, down = crouch"],
+          ["Left stick", "Move; click = sprint"],
+          ["Grips", "Grab (two-handed weapon / ladders)"],
+          ["Right stick click", "Reserved for the WinlatorXR menu"]
+        ]
+      },
+      "notes": [
+        "The main menu is unstable on this engine, so the package loads straight into Training: use the in-game pause menu to save and load.",
+        "Maximum screen width is about 1792 (32-bit memory limit).",
+        "Play with more than 50% battery."
+      ],
+      "credits": "Based on [farcry_vrmod](https://github.com/fholger/farcry_vrmod) by fholger. No game files included."
+    }
+  ]
+}
