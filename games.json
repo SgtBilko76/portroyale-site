@@ -610,7 +610,7 @@
         "3D strength, screen size and distance can be tuned over adb, e.g. `adb shell setprop debug.armsx2.sep 0.011`."
       ],
       "video": "a1_zydGhVaE",
-      "credits": "Based on [ARMSX2](https://github.com/ARMSX2/ARMSX2) and the [PCSX2](https://pcsx2.net) project."
+      "credits": "Based on [ARMSX2](https://github.com/ARMSX2/ARMSX2) and the [PCSX2](https://pcsx2.net) project. Photos: DualShock 2 and PlayStation 2 by [Evan-Amos](https://commons.wikimedia.org/wiki/File:DualShock_2.jpg) (public domain)."
     },
     {
       "slug": "cod4",
