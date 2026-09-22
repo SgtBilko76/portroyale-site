@@ -14,7 +14,7 @@ import re
 import shutil
 import sys
 import urllib.request
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -109,14 +109,34 @@ def fetch_releases(user, games):
 
 # ---------------------------------------------------------------- layout
 
-def page(site, title, body, desc="", depth=""):
+def seo_head(site, title, desc, path, image, ld):
+    url = f"{site['url']}/{path}"
+    img = f"{site['url']}/{image}" if image else f"{site['url']}/images/site/logo.png"
+    tags = [
+        f'<link rel="canonical" href="{esc(url)}">',
+        '<meta property="og:type" content="website">',
+        f'<meta property="og:site_name" content="{esc(site["title"])}">',
+        f'<meta property="og:title" content="{esc(title)}">',
+        f'<meta property="og:description" content="{esc(desc)}">',
+        f'<meta property="og:url" content="{esc(url)}">',
+        f'<meta property="og:image" content="{esc(img)}">',
+        '<meta name="twitter:card" content="summary_large_image">',
+    ]
+    if ld:
+        tags.append('<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>")
+    return "\n".join(tags)
+
+
+def page(site, title, body, desc="", path="", image=None, ld=None):
+    desc = desc or site["tagline"]
     return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
-<meta name="description" content="{esc(desc or site['tagline'])}">
+<meta name="description" content="{esc(desc)}">
+{seo_head(site, title, desc, path, image, ld)}
 <link rel="icon" href="images/site/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;600;700&display=swap">
@@ -241,7 +261,9 @@ def build_index(site, cats, games, rels):
     <a class="btn btn-sponsor btn-lg" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor SgtBilko76</a>
   </div>
 </section>""")
-    return page(site, f"{site['title']} | {site['tagline']}", "".join(parts))
+    ld = {"@context": "https://schema.org", "@type": "WebSite", "name": site["title"],
+          "url": site["url"] + "/", "description": site["intro"]}
+    return page(site, f"{site['title']} | {site['tagline']}", "".join(parts), site["intro"], "", None, ld)
 
 
 # ---------------------------------------------------------------- game page
@@ -412,7 +434,23 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 {pager}
 """
     desc = re.sub(r"[*`\[\]]", "", game["tagline"])
-    return page(site, f"{game['name']} | {site['title']}", body, desc)
+    image = next((p.relative_to(ROOT).as_posix() for p in imgs if p.suffix.lower() != ".svg"), None)
+    ld = {
+        "@context": "https://schema.org", "@type": "SoftwareApplication",
+        "name": game["name"], "description": desc,
+        "url": f"{site['url']}/{game['slug']}.html",
+        "applicationCategory": "GameApplication", "operatingSystem": "Android (Meta Quest)",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "author": {"@type": "Person", "name": site["github_user"], "url": f"https://github.com/{user}"},
+        "sameAs": repo_url,
+    }
+    if image:
+        ld["image"] = f"{site['url']}/{image}"
+    if rel:
+        ld["softwareVersion"] = rel["tag"]
+        if primary:
+            ld["downloadUrl"] = primary["url"]
+    return page(site, f"{game['name']} | {site['title']}", body, desc, f"{game['slug']}.html", image, ld)
 
 
 # ---------------------------------------------------------------- main
@@ -439,7 +477,25 @@ def main():
         prev_g = ordered[i - 1] if i > 0 else None
         next_g = ordered[i + 1] if i + 1 < len(ordered) else None
         (OUT / f"{g['slug']}.html").write_text(build_game(site, cats, g, rels, prev_g, next_g), encoding="utf-8")
+    write_seo_files(site, ordered, rels)
     print(f"Built {len(ordered) + 1} pages into {OUT}")
+
+
+def write_seo_files(site, ordered, rels):
+    """sitemap.xml, robots.txt and the IndexNow key file."""
+    today = date.today().isoformat()
+    urls = [(f"{site['url']}/", today, "1.0")]
+    for g in ordered:
+        r = latest(rels.get(g["repo"], []))
+        urls.append((f"{site['url']}/{g['slug']}.html", (r["date"] or today)[:10] if r else today, "0.8"))
+    items = "".join(f"  <url><loc>{esc(u)}</loc><lastmod>{d}</lastmod><priority>{p}</priority></url>\n"
+                    for u, d, p in urls)
+    (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
+                                     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                                     f"{items}</urlset>\n", encoding="utf-8")
+    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {site['url']}/sitemap.xml\n")
+    if site.get("indexnow_key"):
+        (OUT / f"{site['indexnow_key']}.txt").write_text(site["indexnow_key"])
 
 
 if __name__ == "__main__":

@@ -1,6 +1,8 @@
 {
   "site": {
     "title": "PortRoyale",
+    "url": "https://portroyale.online",
+    "indexnow_key": "c148f43a15bced37271009b38fba3796",
     "tagline": "Free High Quality Open Source VR Ports",
     "intro": "Classic games and emulators, rebuilt to run standalone on Meta Quest: no PC, no streaming. Every port is free and open source on GitHub.",
     "github_user": "SgtBilko76",
