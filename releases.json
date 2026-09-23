@@ -21,28 +21,28 @@
    "name": "Unreal Gold VR 1.0.0-beta9",
    "date": "2026-09-23T12:24:24Z",
    "prerelease": false,
-   "url": "https://github.com/SgtBilko76/Unreal-Gold-QuestVR/releases/tag/v1.0.0-beta9",
+   "url": "https://github.com/SgtBilko76/Unreal-Gold-VR/releases/tag/v1.0.0-beta9",
    "assets": [
     {
      "name": "UnrealGoldVR-1.0.0-beta9-nodata.apk",
      "size": 12278251,
-     "url": "https://github.com/SgtBilko76/Unreal-Gold-QuestVR/releases/download/v1.0.0-beta9/UnrealGoldVR-1.0.0-beta9-nodata.apk"
+     "url": "https://github.com/SgtBilko76/Unreal-Gold-VR/releases/download/v1.0.0-beta9/UnrealGoldVR-1.0.0-beta9-nodata.apk"
     }
    ]
   }
  ],
  "Sauerbraten-QuestVR": [
   {
-   "tag": "Sauerbraten-QuestVRBeta6",
-   "name": "Sauerbraten-QuestVR",
-   "date": "2026-09-08T13:26:33Z",
+   "tag": "Beta-0.2",
+   "name": "Sauerbraten-VR Beta 0.2",
+   "date": "2026-09-23T13:41:17Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/tag/Sauerbraten-QuestVRBeta6",
+   "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/tag/Beta-0.2",
    "assets": [
     {
      "name": "sauerbratenquest.apk",
-     "size": 1016981693,
-     "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/download/Sauerbraten-QuestVRBeta6/sauerbratenquest.apk"
+     "size": 1017061305,
+     "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/download/Beta-0.2/sauerbratenquest.apk"
     }
    ]
   }
@@ -286,20 +286,6 @@
      "name": "XonoticQuest-full-release.apk",
      "size": 1196771346,
      "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.4/XonoticQuest-full-release.apk"
-    }
-   ]
-  },
-  {
-   "tag": "Beta-0.1",
-   "name": "Beta 0.1",
-   "date": "2026-09-13T16:32:43Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/tag/Beta-0.1",
-   "assets": [
-    {
-     "name": "XonoticQuest-full-release.apk",
-     "size": 1196767250,
-     "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.1/XonoticQuest-full-release.apk"
     }
    ]
   }
