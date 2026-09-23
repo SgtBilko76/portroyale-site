@@ -91,6 +91,11 @@
      "name": "neverballquest.apk",
      "size": 61765029,
      "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/neverball-0814/neverballquest.apk"
+    },
+    {
+     "name": "pico-neverball.apk",
+     "size": 61764973,
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/neverball-0814/pico-neverball.apk"
     }
    ]
   },
@@ -105,6 +110,11 @@
      "name": "neverputtquest.apk",
      "size": 36833396,
      "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/puttnik-0507/neverputtquest.apk"
+    },
+    {
+     "name": "pico-neverputt.apk",
+     "size": 36833340,
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/puttnik-0507/pico-neverputt.apk"
     }
    ]
   }
@@ -128,7 +138,7 @@
  "snes9x-QuestVR": [
   {
    "tag": "v0.1",
-   "name": "Snes9x VR 0.1 — first beta",
+   "name": "Snes9x VR 0.1 \u2014 first beta",
    "date": "2026-09-20T13:57:17Z",
    "prerelease": true,
    "url": "https://github.com/SgtBilko76/snes9x-QuestVR/releases/tag/v0.1",
@@ -208,7 +218,7 @@
  "Farcry_vrmod-WinlatorXR": [
   {
    "tag": "quest-beta-0.2",
-   "name": "Far Cry VR (Quest) — Beta 0.2",
+   "name": "Far Cry VR (Quest) \u2014 Beta 0.2",
    "date": "2026-09-16T10:57:50Z",
    "prerelease": true,
    "url": "https://github.com/SgtBilko76/Farcry_vrmod-WinlatorXR/releases/tag/quest-beta-0.2",
@@ -245,7 +255,7 @@
  "Descent3-VR": [
   {
    "tag": "quest-v0.3-beta",
-   "name": "Descent 3 for Meta Quest and PICO — Beta 0.3",
+   "name": "Descent 3 for Meta Quest and PICO \u2014 Beta 0.3",
    "date": "2026-09-23T12:33:49Z",
    "prerelease": true,
    "url": "https://github.com/SgtBilko76/Descent3-VR/releases/tag/quest-v0.3-beta",
@@ -267,9 +277,9 @@
    "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/tag/Beta-0.4",
    "assets": [
     {
-     "name": "XonoticQuest-full-release.apk",
+     "name": "Xonotic-VR-full-release.apk",
      "size": 1196771346,
-     "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.4/XonoticQuest-full-release.apk"
+     "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.4/Xonotic-VR-full-release.apk"
     }
    ]
   }
@@ -277,7 +287,7 @@
  "Hurrican-3D": [
   {
    "tag": "v1.1.0",
-   "name": "Hurrican VR 1.1.0 — Quest + PICO",
+   "name": "Hurrican VR 1.1.0 \u2014 Quest + PICO",
    "date": "2026-09-23T11:56:05Z",
    "prerelease": false,
    "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/tag/v1.1.0",
