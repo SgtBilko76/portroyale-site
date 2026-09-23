@@ -1092,7 +1092,7 @@
     {
       "slug": "snes9x",
       "name": "Snes9x VR",
-      "repo": "snes9x-QuestVR",
+      "repo": "snes9x-3D",
       "category": "emulator",
       "tagline": "SNES on a curved screen, with real depth and true Mode 7 perspective.",
       "about": [
@@ -1108,13 +1108,15 @@
         "Remappable controls; Bluetooth gamepads work too"
       ],
       "needs": [
-        "Meta Quest",
+        "Meta Quest, or PICO 4 / 4 Ultra / Neo 3 (untested)",
         "Your own SNES ROMs"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install Snes9xVR-0.1.apk`.",
+        "Enable developer mode on your headset.",
+        "Download the APK below.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Snes9xVR-0.1.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Put ROMs in `/sdcard/Android/data/com.snes9x.vr/files/roms`, or choose any folder in *Settings → ROM folder* and grant storage access there.",
-        "Launch from *Library → Unknown Sources*: the app opens on the ROM list."
+        "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO: the app opens on the ROM list."
       ],
       "controls": {
         "columns": [
@@ -1155,7 +1157,9 @@
       "controls_note": "Remap everything under *Controls...* in the menu.",
       "notes": [
         "PAL games still judder slightly: no refresh rate the headset offers divides 50.",
-        "Super FX games (Star Fox) get layer-order depth only, and take about 15 seconds to show a picture."
+        "Super FX games (Star Fox) get layer-order depth only, and take about 15 seconds to show a picture.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub."
       ],
       "credits": "Based on [Snes9x](https://github.com/snes9xgit/snes9x). Photo: Super Famicom by [Evan-Amos](https://commons.wikimedia.org/wiki/File:Nintendo-Super-Famicom-Set-FL.jpg) (public domain)."
     },
