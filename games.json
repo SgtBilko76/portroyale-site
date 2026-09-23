@@ -1142,7 +1142,7 @@
     {
       "slug": "armsx2",
       "name": "ARMSX2-3D",
-      "repo": "ARMSX2-Quest",
+      "repo": "ARMSX2-3D",
       "category": "emulator",
       "tagline": "PlayStation 2 in stereoscopic 3D on a curved virtual screen.",
       "about": [
@@ -1164,7 +1164,7 @@
         "Your own PS2 games"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r ARMSX2-Quest-0.3-beta.apk`. Installing over an earlier beta keeps your settings (same signing key).",
+        "Sideload the APK with SideQuest or `adb install -r ARMSX2-3D-0.3-beta.apk`. Installing over an earlier beta keeps your settings (same signing key).",
         "Grant storage access and point the app at your games.",
         "Uninstall any other ARMSX2 build first if the install fails with a signature mismatch."
       ],

@@ -151,22 +151,6 @@
    ]
   }
  ],
- "ARMSX2-Quest": [
-  {
-   "tag": "v0.3-beta",
-   "name": "Beta 0.3",
-   "date": "2026-09-23T11:45:33Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/tag/v0.3-beta",
-   "assets": [
-    {
-     "name": "ARMSX2-Quest-0.3-beta.apk",
-     "size": 44692254,
-     "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/download/v0.3-beta/ARMSX2-Quest-0.3-beta.apk"
-    }
-   ]
-  }
- ],
  "CallOfDuty4_VR_WinlatorXR": [
   {
    "tag": "v0.1.0-beta.1",
@@ -330,9 +314,25 @@
    "url": "https://github.com/SgtBilko76/Sauerbraten-VR/releases/tag/Beta-0.2",
    "assets": [
     {
-     "name": "sauerbratenquest.apk",
+     "name": "sauerbraten-vr.apk",
      "size": 1017061305,
-     "url": "https://github.com/SgtBilko76/Sauerbraten-VR/releases/download/Beta-0.2/sauerbratenquest.apk"
+     "url": "https://github.com/SgtBilko76/Sauerbraten-VR/releases/download/Beta-0.2/sauerbraten-vr.apk"
+    }
+   ]
+  }
+ ],
+ "ARMSX2-3D": [
+  {
+   "tag": "v0.3-beta",
+   "name": "Beta 0.3",
+   "date": "2026-09-23T11:45:33Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/ARMSX2-3D/releases/tag/v0.3-beta",
+   "assets": [
+    {
+     "name": "ARMSX2-3D-0.3-beta.apk",
+     "size": 44692254,
+     "url": "https://github.com/SgtBilko76/ARMSX2-3D/releases/download/v0.3-beta/ARMSX2-3D-0.3-beta.apk"
     }
    ]
   }
