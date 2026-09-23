@@ -10,6 +10,7 @@ in the name are shown whole instead of cropped.
 """
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -83,8 +84,14 @@ def is_whole(path):
 # ---------------------------------------------------------------- releases
 
 def _gh_json(url):
-    req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json",
-                                               "User-Agent": "portroyale-site-builder"})
+    headers = {"Accept": "application/vnd.github+json", "User-Agent": "portroyale-site-builder"}
+    # Unauthenticated requests are limited to 60 per hour, which one refresh of
+    # all the repos can exhaust. GITHUB_TOKEN / GH_TOKEN (e.g. `gh auth token`,
+    # or the token the GitHub Actions workflow already has) raises that a lot.
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=20) as r:
         return json.load(r)
 
