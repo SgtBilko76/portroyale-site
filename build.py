@@ -82,15 +82,32 @@ def is_whole(path):
 
 # ---------------------------------------------------------------- releases
 
+def _gh_json(url):
+    req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json",
+                                               "User-Agent": "portroyale-site-builder"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return json.load(r)
+
+
+def _assets_of(user, repo, rel):
+    """Assets of a release. The releases list sometimes comes back without them
+    right after an upload, so ask for the single release in that case."""
+    assets = rel.get("assets") or []
+    if not assets and rel.get("id"):
+        try:
+            assets = _gh_json(f"https://api.github.com/repos/{user}/{repo}/releases/{rel['id']}").get("assets") or []
+        except Exception as e:
+            print(f"  ! {repo} {rel.get('tag_name')}: {e}")
+    return [{"name": a["name"], "size": a["size"], "url": a["browser_download_url"]}
+            for a in assets if not a["name"].endswith(".sha256")]
+
+
 def fetch_releases(user, games):
     data = {}
     for g in games:
         url = f"https://api.github.com/repos/{user}/{g['repo']}/releases?per_page=5"
-        req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json",
-                                                   "User-Agent": "portroyale-site-builder"})
         try:
-            with urllib.request.urlopen(req, timeout=20) as r:
-                rels = json.load(r)
+            rels = _gh_json(url)
         except Exception as e:  # keep whatever the cache had
             print(f"  ! {g['repo']}: {e}")
             continue
@@ -100,8 +117,7 @@ def fetch_releases(user, games):
             "date": x.get("published_at") or x.get("created_at"),
             "prerelease": x.get("prerelease", False),
             "url": x["html_url"],
-            "assets": [{"name": a["name"], "size": a["size"], "url": a["browser_download_url"]}
-                       for a in x.get("assets", []) if not a["name"].endswith(".sha256")],
+            "assets": _assets_of(user, g["repo"], x),
         } for x in rels if not x.get("draft")]
         print(f"  {g['repo']}: {len(data[g['repo']])} release(s)")
     return data
