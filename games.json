@@ -18,7 +18,7 @@
     {
       "slug": "vpinball",
       "name": "Visual Pinball X VR",
-      "repo": "VPinball-QuestVR",
+      "repo": "VPinball-VR",
       "category": "emulator",
       "tagline": "Real pinball tables in VR and mixed reality on Meta Quest 3 and PICO.",
       "about": [
@@ -26,7 +26,8 @@
         "A **PICO build** is available as well, with controller support for PICO Neo 3, PICO 4 and PICO G3. It is brand new and **not tested on PICO hardware yet**: reports are very welcome."
       ],
       "features": [
-        "**Mixed Reality (passthrough):** see your real room around the table, switchable instantly while playing",
+        "**Mixed Reality (passthrough):** see your real room around the table, switchable instantly while playing. Tables with a VR room are switched to their most minimal room while it is on",
+        "**Standard cabinet** for tables not built for VR: body, legs and backbox around the playfield, so the table stands in your room instead of floating",
         "**Backglass for tables not built for VR:** rebuilt from the desktop backdrop, including working EM score reels",
         "**VR room switch:** cycle a table's VR rooms by holding the menu button",
         "Adjustable table position, angle, size and distance",
@@ -35,7 +36,7 @@
       ],
       "needs": ["Meta Quest 3 or a PICO headset", "Your own `.vpx` tables and ROMs"],
       "install": [
-        "Sideload the APK for your headset with SideQuest or `adb install -r <apk>`: `VPinball-QuestVR-Beta-0.17.apk` for Meta Quest, `VPinball-PicoVR-Beta-0.1.apk` for PICO.",
+        "Sideload the APK for your headset with SideQuest or `adb install -r <apk>`: `VPinball-QuestVR-Beta-0.24.apk` for Meta Quest, `VPinball-PicoVR-Beta-0.2.apk` for PICO.",
         "Put each table in its own folder, with its ROMs next to it: `VPinball/tables/<Table name>/<table>.vpx` and `VPinball/tables/<Table name>/pinmame/roms/<rom>.zip`.",
         "Start VPinball (*Library → Unknown Sources*) and select the `VPinball/tables` folder in the settings."
       ],
