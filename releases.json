@@ -357,5 +357,21 @@
     }
    ]
   }
+ ],
+ "SpaghettiKart-VR": [
+  {
+   "tag": "v0.2.0-beta1",
+   "name": "SpaghettiKart-VR 0.2.0 beta 1",
+   "date": "2026-09-23T18:04:16Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/SpaghettiKart-VR/releases/tag/v0.2.0-beta1",
+   "assets": [
+    {
+     "name": "SpaghettiKart-VR-0.2.0-beta1.apk",
+     "size": 6165679,
+     "url": "https://github.com/SgtBilko76/SpaghettiKart-VR/releases/download/v0.2.0-beta1/SpaghettiKart-VR-0.2.0-beta1.apk"
+    }
+   ]
+  }
  ]
 }
