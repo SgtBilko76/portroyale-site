@@ -11,7 +11,7 @@
   },
   "categories": [
     {"id": "native", "name": "Native Quest ports", "blurb": "Game engines ported to run directly on the headset through OpenXR."},
-    {"id": "emulator", "name": "Emulators", "blurb": "Console emulators with a stereoscopic virtual screen."},
+    {"id": "emulator", "name": "Emulators", "blurb": "Console and pinball emulators with a stereoscopic virtual screen."},
     {"id": "winlator", "name": "WinlatorXR VR mods", "blurb": "PC VR mods running standalone on Quest 3 through WinlatorXR (Wine + Box64 + DXVK)."}
   ],
   "games": [
@@ -19,7 +19,7 @@
       "slug": "vpinball",
       "name": "Visual Pinball X VR",
       "repo": "VPinball-QuestVR",
-      "category": "native",
+      "category": "emulator",
       "tagline": "Real pinball tables in VR and mixed reality on Meta Quest 3.",
       "about": [
         "Visual Pinball X standalone for **Meta Quest 3** (OpenXR, Vulkan), based on vpinball 10.8.1. Stand in front of real and original tables, with the cabinet and backglass around you, or play them in your own room with passthrough."
