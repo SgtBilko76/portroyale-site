@@ -327,7 +327,7 @@
     {
       "slug": "descent3",
       "name": "Descent 3 VR",
-      "repo": "Descent3-QuestVR",
+      "repo": "Descent3-VR",
       "category": "native",
       "tagline": "Six degrees of freedom, from a real cockpit, on Meta Quest and PICO.",
       "about": [
@@ -495,7 +495,7 @@
     {
       "slug": "xonotic",
       "name": "Xonotic VR",
-      "repo": "Xonotic-QuestVR",
+      "repo": "Xonotic-VR",
       "category": "native",
       "tagline": "The fast-paced open-source arena shooter, standalone on Meta Quest.",
       "about": [
@@ -745,7 +745,7 @@
     {
       "slug": "hurrican",
       "name": "Hurrican VR",
-      "repo": "Hurrican-QuestVR",
+      "repo": "Hurrican-3D",
       "category": "native",
       "tagline": "The Turrican-inspired run-and-gun as a stereoscopic diorama, on Meta Quest and PICO.",
       "about": [
@@ -978,7 +978,7 @@
     {
       "slug": "speeddreams",
       "name": "Speed Dreams VR",
-      "repo": "SpeedDreams-QuestVR",
+      "repo": "SpeedDreams-VR",
       "category": "native",
       "tagline": "A full motorsport simulator, standalone on Meta Quest and PICO.",
       "about": [

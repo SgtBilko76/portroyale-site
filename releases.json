@@ -31,27 +31,6 @@
    ]
   }
  ],
- "Descent3-QuestVR": [
-  {
-   "tag": "quest-v0.3-beta",
-   "name": "Descent 3 for Meta Quest and PICO \u2014 Beta 0.3",
-   "date": "2026-09-23T12:33:49Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/tag/quest-v0.3-beta",
-   "assets": [
-    {
-     "name": "Descent3-VR-0.3-beta.apk",
-     "size": 8647374,
-     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.3-beta/Descent3-VR-0.3-beta.apk"
-    },
-    {
-     "name": "Descent3-VR-0.3-beta.zip",
-     "size": 17676843,
-     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.3-beta/Descent3-VR-0.3-beta.zip"
-    }
-   ]
-  }
- ],
  "Sauerbraten-QuestVR": [
   {
    "tag": "Sauerbraten-QuestVRBeta6",
@@ -64,22 +43,6 @@
      "name": "sauerbratenquest.apk",
      "size": 1016981693,
      "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/download/Sauerbraten-QuestVRBeta6/sauerbratenquest.apk"
-    }
-   ]
-  }
- ],
- "Xonotic-QuestVR": [
-  {
-   "tag": "Beta-0.1",
-   "name": "Beta 0.1",
-   "date": "2026-09-13T16:32:43Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Xonotic-QuestVR/releases/tag/Beta-0.1",
-   "assets": [
-    {
-     "name": "XonoticQuest-full-release.apk",
-     "size": 1196767250,
-     "url": "https://github.com/SgtBilko76/Xonotic-QuestVR/releases/download/Beta-0.1/XonoticQuest-full-release.apk"
     }
    ]
   }
@@ -132,27 +95,6 @@
    ]
   }
  ],
- "Hurrican-QuestVR": [
-  {
-   "tag": "v1.1.0",
-   "name": "Hurrican VR 1.1.0 \u2014 Quest + PICO",
-   "date": "2026-09-23T11:56:05Z",
-   "prerelease": false,
-   "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/tag/v1.1.0",
-   "assets": [
-    {
-     "name": "Hurrican-PicoVR-v1.1.0.apk",
-     "size": 43285038,
-     "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-PicoVR-v1.1.0.apk"
-    },
-    {
-     "name": "Hurrican-QuestVR-v1.1.0.apk",
-     "size": 43285122,
-     "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-QuestVR-v1.1.0.apk"
-    }
-   ]
-  }
- ],
  "Neverball-and-Neverputt-QuestVR": [
   {
    "tag": "neverball-0814",
@@ -195,22 +137,6 @@
      "name": "VDriftVR-0.1.0.apk",
      "size": 1800861337,
      "url": "https://github.com/SgtBilko76/VDrift-QuestVR/releases/download/Beta-0.0.1/VDriftVR-0.1.0.apk"
-    }
-   ]
-  }
- ],
- "SpeedDreams-QuestVR": [
-  {
-   "tag": "speeddreams0.0.5",
-   "name": "SpeedDreams-QuestVR 0.9.3-beta",
-   "date": "2026-09-23T10:27:53Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/tag/speeddreams0.0.5",
-   "assets": [
-    {
-     "name": "Speeddreams.0.9.3-beta.apk",
-     "size": 233029432,
-     "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/speeddreams0.0.5/Speeddreams.0.9.3-beta.apk"
     }
    ]
   }
@@ -328,6 +254,94 @@
      "name": "VPinball-QuestVR-Beta-0.24.apk",
      "size": 284942348,
      "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.24-beta/VPinball-QuestVR-Beta-0.24.apk"
+    }
+   ]
+  }
+ ],
+ "Descent3-VR": [
+  {
+   "tag": "quest-v0.3-beta",
+   "name": "Descent 3 for Meta Quest and PICO \u2014 Beta 0.3",
+   "date": "2026-09-23T12:33:49Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Descent3-VR/releases/tag/quest-v0.3-beta",
+   "assets": [
+    {
+     "name": "Descent3-VR-0.3-beta.apk",
+     "size": 8647374,
+     "url": "https://github.com/SgtBilko76/Descent3-VR/releases/download/quest-v0.3-beta/Descent3-VR-0.3-beta.apk"
+    },
+    {
+     "name": "Descent3-VR-0.3-beta.zip",
+     "size": 17676843,
+     "url": "https://github.com/SgtBilko76/Descent3-VR/releases/download/quest-v0.3-beta/Descent3-VR-0.3-beta.zip"
+    }
+   ]
+  }
+ ],
+ "Xonotic-VR": [
+  {
+   "tag": "Beta-0.4",
+   "name": "Beta 0.4",
+   "date": "2026-09-23T12:58:09Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/tag/Beta-0.4",
+   "assets": [
+    {
+     "name": "XonoticQuest-full-release.apk",
+     "size": 1196771346,
+     "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.4/XonoticQuest-full-release.apk"
+    }
+   ]
+  },
+  {
+   "tag": "Beta-0.1",
+   "name": "Beta 0.1",
+   "date": "2026-09-13T16:32:43Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/tag/Beta-0.1",
+   "assets": [
+    {
+     "name": "XonoticQuest-full-release.apk",
+     "size": 1196767250,
+     "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.1/XonoticQuest-full-release.apk"
+    }
+   ]
+  }
+ ],
+ "Hurrican-3D": [
+  {
+   "tag": "v1.1.0",
+   "name": "Hurrican VR 1.1.0 \u2014 Quest + PICO",
+   "date": "2026-09-23T11:56:05Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/tag/v1.1.0",
+   "assets": [
+    {
+     "name": "Hurrican-PicoVR-v1.1.0.apk",
+     "size": 43285038,
+     "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-PicoVR-v1.1.0.apk"
+    },
+    {
+     "name": "Hurrican-QuestVR-v1.1.0.apk",
+     "size": 43285122,
+     "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-QuestVR-v1.1.0.apk"
+    }
+   ]
+  }
+ ],
+ "SpeedDreams-VR": [
+  {
+   "tag": "speeddreams0.0.5",
+   "name": "SpeedDreams-QuestVR 0.9.3-beta",
+   "date": "2026-09-23T10:27:53Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/tag/speeddreams0.0.5",
+   "assets": [
+    {
+     "name": "Speeddreams.0.9.3-beta.apk",
+     "size": 233029432,
+     "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/speeddreams0.0.5/Speeddreams.0.9.3-beta.apk"
     }
    ]
   }
