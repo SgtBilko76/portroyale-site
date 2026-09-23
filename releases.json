@@ -341,5 +341,21 @@
     }
    ]
   }
+ ],
+ "Starship-VR": [
+  {
+   "tag": "v1.0-beta1",
+   "name": "Starship-VR 1.0 beta 1",
+   "date": "2026-09-23T17:38:54Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Starship-VR/releases/tag/v1.0-beta1",
+   "assets": [
+    {
+     "name": "Starship-VR-1.0-beta1.apk",
+     "size": 6394674,
+     "url": "https://github.com/SgtBilko76/Starship-VR/releases/download/v1.0-beta1/Starship-VR-1.0-beta1.apk"
+    }
+   ]
+  }
  ]
 }
