@@ -434,19 +434,20 @@
       "name": "SauerQuest: Cube 2 Sauerbraten VR",
       "repo": "Sauerbraten-QuestVR",
       "category": "native",
-      "tagline": "Old school deathmatch in real 6DOF on Meta Quest.",
+      "tagline": "Old school deathmatch in real 6DOF on Meta Quest and PICO.",
       "about": [
-        "A standalone native port of the classic open-source shooter *Cube 2: Sauerbraten* to Meta Quest 2 and 3. Built directly on OpenXR, it runs the original engine on the headset with full stereoscopic rendering, room-scale head tracking and motion controls. No PC or streaming required.",
+        "A standalone native port of the classic open-source shooter *Cube 2: Sauerbraten* to Meta Quest and PICO. The same APK works on both headsets, the controller bindings and OpenXR extensions are picked automatically at startup. Built directly on OpenXR, it runs the original engine on the headset with full stereoscopic rendering, room-scale head tracking and motion controls. No PC or streaming required.",
         "Aiming is decoupled from your head: point the right controller and shoot where you're actually pointing. Frag bots across the game's original arenas."
       ],
       "features": [
         "Full stereoscopic rendering with room-scale head tracking",
         "Motion-controller aiming, smooth stick locomotion and snap turn",
+        "The weapon is drawn on your tracked hand, aimed where you point it",
         "Laser-pointer menus",
         "Complete game in one APK (about 970 MB)"
       ],
       "needs": [
-        "Meta Quest 2 or 3"
+        "Meta Quest 2 or 3, or a PICO headset (untested on real PICO hardware)"
       ],
       "install": "default",
       "controls": {
@@ -489,6 +490,10 @@
           ]
         ]
       },
+      "notes": [
+        "The PICO build is untested: if it does not start, or the buttons are mapped differently, please open an issue on GitHub."
+      ],
+      "controls_note": "Button names are those of the Meta Quest controllers, PICO controllers use the same layout.",
       "video": "fX7o-1OH-WM",
       "credits": "Based on [Cube 2: Sauerbraten](http://sauerbraten.org/)."
     },
