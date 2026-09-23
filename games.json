@@ -706,9 +706,10 @@
       "name": "Extreme Tux Racer VR",
       "repo": "ExtremeTuxRacer-QuestVR",
       "category": "native",
-      "tagline": "Race Tux the penguin down icy slopes, in true stereo.",
+      "tagline": "Race Tux the penguin down icy slopes, in true stereo, on Meta Quest and PICO.",
       "about": [
-        "[Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer/) running standalone on Meta Quest in true stereo at 72 Hz. Race down the slopes, grab herrings along the way, and pull off tricks in the air."
+        "[Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer/) running standalone on Meta Quest and PICO (4, 4 Ultra, Neo 3) in true stereo at 72 Hz. Race down the slopes, grab herrings along the way, and pull off tricks in the air.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. Each release has one APK per make: `extremetuxracer-quest.apk` for Meta Quest, `extremetuxracer-pico.apk` for PICO."
       ],
       "features": [
         "Native OpenXR app: each race is simulated once per frame and rendered once per eye",
@@ -716,9 +717,14 @@
         "Game data unpacked on first launch"
       ],
       "needs": [
-        "Meta Quest"
+        "Meta Quest, or PICO 4 / 4 Ultra / Neo 3 (untested)"
       ],
-      "install": "default",
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK for your headset below: `extremetuxracer-quest.apk` for Meta Quest, `extremetuxracer-pico.apk` for PICO.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r <file>.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO."
+      ],
       "controls": {
         "columns": [
           "Input",
@@ -755,6 +761,11 @@
           ]
         ]
       },
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
+      "notes": [
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub."
+      ],
       "credits": "Based on [Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer/)."
     },
     {
