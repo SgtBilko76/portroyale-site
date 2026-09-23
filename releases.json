@@ -134,16 +134,21 @@
  ],
  "Hurrican-QuestVR": [
   {
-   "tag": "v1.0.0-quest",
-   "name": "Hurrican Quest VR 1.0.0",
-   "date": "2026-09-17T08:21:37Z",
+   "tag": "v1.1.0",
+   "name": "Hurrican VR 1.1.0 \u2014 Quest + PICO",
+   "date": "2026-09-23T11:56:05Z",
    "prerelease": false,
-   "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/tag/v1.0.0-quest",
+   "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/tag/v1.1.0",
    "assets": [
     {
-     "name": "Hurrican-QuestVR-v1.0.0.apk",
-     "size": 43284182,
-     "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/download/v1.0.0-quest/Hurrican-QuestVR-v1.0.0.apk"
+     "name": "Hurrican-PicoVR-v1.1.0.apk",
+     "size": 43285038,
+     "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-PicoVR-v1.1.0.apk"
+    },
+    {
+     "name": "Hurrican-QuestVR-v1.1.0.apk",
+     "size": 43285122,
+     "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-QuestVR-v1.1.0.apk"
     }
    ]
   }
@@ -200,12 +205,12 @@
    "name": "SpeedDreams-QuestVR 0.9.3-beta",
    "date": "2026-09-23T10:27:53Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/SpeedDreams-QuestVR/releases/tag/speeddreams0.0.5",
+   "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/tag/speeddreams0.0.5",
    "assets": [
     {
      "name": "Speeddreams.0.9.3-beta.apk",
      "size": 233029432,
-     "url": "https://github.com/SgtBilko76/SpeedDreams-QuestVR/releases/download/speeddreams0.0.5/Speeddreams.0.9.3-beta.apk"
+     "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/speeddreams0.0.5/Speeddreams.0.9.3-beta.apk"
     }
    ]
   }
@@ -230,7 +235,7 @@
   {
    "tag": "v0.3-beta",
    "name": "Beta 0.3",
-   "date": "2026-09-23T09:20:00Z",
+   "date": "2026-09-23T11:45:33Z",
    "prerelease": true,
    "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/tag/v0.3-beta",
    "assets": [
@@ -238,20 +243,6 @@
      "name": "ARMSX2-Quest-0.3-beta.apk",
      "size": 44692254,
      "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/download/v0.3-beta/ARMSX2-Quest-0.3-beta.apk"
-    }
-   ]
-  },
-  {
-   "tag": "v0.2-beta",
-   "name": "Beta 0.2",
-   "date": "2026-09-23T08:42:43Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/tag/v0.2-beta",
-   "assets": [
-    {
-     "name": "ARMSX2-Quest-0.2-beta.apk",
-     "size": 44692478,
-     "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/download/v0.2-beta/ARMSX2-Quest-0.2-beta.apk"
     }
    ]
   }

@@ -384,40 +384,86 @@
       "name": "Hurrican VR",
       "repo": "Hurrican-QuestVR",
       "category": "native",
-      "tagline": "The Turrican-inspired run-and-gun as a stereoscopic diorama.",
+      "tagline": "The Turrican-inspired run-and-gun as a stereoscopic diorama, on Meta Quest and PICO.",
       "about": [
-        "A standalone Meta Quest port (Quest 2 / 3 / 3S / Pro) of [Hurrican](https://www.winterworks.de/project/hurrican/), the freeware run-and-gun inspired by Turrican.",
-        "The game is played on a large world-locked virtual screen. Its draw layers (sky, parallax planes, tiles, playfield, overlays, HUD) are composited per eye at different depths for a stereoscopic \"diorama\" look."
+        "A standalone headset port of [Hurrican](https://www.winterworks.de/project/hurrican/), the freeware run-and-gun inspired by Turrican, for Meta Quest 2 / 3 / 3S / Pro and PICO 4 / Neo 3.",
+        "The game is played on a large world-locked virtual screen. Its draw layers (sky, parallax planes, tiles, playfield, overlays, HUD) are composited per eye at different depths for a stereoscopic \"diorama\" look.",
+        "There is one APK per make: **QuestVR** for Meta Quest, **PicoVR** for PICO. The PICO build is brand new and **not tested on PICO hardware yet**: reports are very welcome."
       ],
       "features": [
         "Seven depth layers composited per eye",
-        "Touch controllers fully mapped, with rumble, and remappable in *Options → Define Buttons*",
+        "Touch controllers fully mapped, with rumble, and remappable in *Options \u2192 Define Buttons*",
         "Screen size, distance, depth strength and refresh rate adjustable in `vr.cfg`",
         "All game data inside the APK"
       ],
-      "needs": ["Meta Quest 2 / 3 / 3S / Pro"],
-      "install": "default",
+      "needs": [
+        "Meta Quest 2 / 3 / 3S / Pro, or PICO 4 / Neo 3"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK for your make below: *QuestVR* for Meta Quest, *PicoVR* for PICO.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r <file>.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Launch it from *Library \u2192 Unknown Sources*."
+      ],
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Left stick", "Move / look up / duck"],
-          ["Right stick", "Look up / down"],
-          ["A", "Jump"],
-          ["Right trigger", "Shoot"],
-          ["B", "Lightning"],
-          ["X", "Powerline"],
-          ["Y", "Grenade"],
-          ["Left trigger", "Smart bomb"],
-          ["Right grip", "Cycle weapon"],
-          ["Menu (left controller)", "Pause / back"],
-          ["Click both sticks", "Recenter the screen"]
+          [
+            "Left stick",
+            "Move / look up / duck"
+          ],
+          [
+            "Right stick",
+            "Look up / down"
+          ],
+          [
+            "A",
+            "Jump"
+          ],
+          [
+            "Right trigger",
+            "Shoot"
+          ],
+          [
+            "B",
+            "Lightning"
+          ],
+          [
+            "X",
+            "Powerline"
+          ],
+          [
+            "Y",
+            "Grenade"
+          ],
+          [
+            "Left trigger",
+            "Smart bomb"
+          ],
+          [
+            "Right grip",
+            "Cycle weapon"
+          ],
+          [
+            "Menu (left controller)",
+            "Pause / back"
+          ],
+          [
+            "Click both sticks",
+            "Recenter the screen"
+          ]
         ]
       },
       "notes": [
         "Tuning: `files/vr.cfg` in the app's private storage (delete it to restore defaults). The default depth strength is 0.10.",
-        "Signed with a debug key: uninstall any previous differently-signed build first."
+        "Signed with a debug key: uninstall any previous differently-signed build first.",
+        "The PICO build is untested: if it does not start, or buttons are mapped oddly, please open an issue on GitHub. `adb logcat -s Hurrican:* HurricanVR:*` shows how far it gets and which controller profile was bound, which is the useful thing to paste in."
       ],
-      "credits": "Based on [Hurrican](https://github.com/HurricanGame/Hurrican) by Eiswuxe (Poke53280) and contributors."
+      "credits": "Based on [Hurrican](https://github.com/HurricanGame/Hurrican) by Eiswuxe (Poke53280) and contributors.",
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout (the grip buttons stand in for Quest's analog grips). Everything can be rebound in *Options \u2192 Define Buttons*."
     },
     {
       "slug": "neverball",
