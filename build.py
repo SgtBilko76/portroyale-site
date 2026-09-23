@@ -301,7 +301,10 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 
     primary = None
     if rel and rel["assets"]:
-        primary = rel["assets"][0]
+        # A release with separate Quest and PICO APKs lists them
+        # alphabetically, PICO first; the main button is for Quest.
+        primary = next((a for a in rel["assets"] if "pico" not in a["name"].lower()),
+                       rel["assets"][0])
     dl_btn = (f'<a class="btn btn-primary" href="{esc(primary["url"])}">{DL} Download {esc(rel["tag"])}</a>'
               if primary else
               f'<a class="btn btn-primary" href="{repo_url}/releases" target="_blank" rel="noopener">{DL} Releases</a>')
