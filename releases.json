@@ -82,20 +82,6 @@
      "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-QuestVR/releases/download/Tuxracer0.0.2/extremetuxracer-quest.apk"
     }
    ]
-  },
-  {
-   "tag": "Tuxracer0.0.1",
-   "name": "ExtremeTuxRacer-QuestVR",
-   "date": "2026-09-08T13:12:52Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-QuestVR/releases/tag/Tuxracer0.0.1",
-   "assets": [
-    {
-     "name": "extremetuxracer.apk",
-     "size": 53074322,
-     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-QuestVR/releases/download/Tuxracer0.0.1/extremetuxracer.apk"
-    }
-   ]
   }
  ],
  "Neverball-and-Neverputt-QuestVR": [
