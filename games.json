@@ -1165,7 +1165,7 @@
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "World scale, HUD placement and refresh rate are in the *VR* menu (left stick click)."
       ],
-      "credits": "Based on [Starship](https://github.com/HarbourMasters/Starship) by the HarbourMasters team, which is itself a decompilation-based PC port of Star Fox 64. Photos: Nintendo 64 by [Evan-Amos](https://commons.wikimedia.org/wiki/File:Nintendo-64-wController-L.jpg) (public domain); Keyhole Nebula by [NASA and the Hubble Heritage Team](https://commons.wikimedia.org/wiki/File:Keyhole_Nebula_-_Hubble_1999.jpg) (public domain)."
+      "credits": "Based on [Starship](https://github.com/HarbourMasters/Starship) by the HarbourMasters team, which is itself a decompilation-based PC port of Star Fox 64. Photo: Nintendo 64 by [Evan-Amos](https://commons.wikimedia.org/wiki/File:Nintendo-64-wController-L.jpg) (public domain)."
     },
     {
       "slug": "snes9x",
