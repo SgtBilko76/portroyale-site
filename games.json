@@ -586,7 +586,8 @@
       "category": "emulator",
       "tagline": "PlayStation 2 in stereoscopic 3D on a curved virtual screen.",
       "about": [
-        "ARMSX2 (the ARM64 fork of PCSX2) for Meta Quest, built on ARMSX2 release 2.7. The emulator runs as a normal 2D panel; starting a game moves it into an immersive OpenXR session with the game on a curved virtual screen, in real stereoscopic 3D."
+        "ARMSX2 (the ARM64 fork of PCSX2) for Meta Quest, built on ARMSX2 release 2.7. The emulator runs as a normal 2D panel; starting a game moves it into an immersive OpenXR session with the game on a curved virtual screen, in real stereoscopic 3D.",
+        "A **PICO build** is included in the same APK, with the PICO 4 and PICO Neo 3 controller profiles. It is **not tested on PICO hardware yet**: reports are very welcome."
       ],
       "features": [
         "**VR settings page:** 3D on/off, depth, screen plane, size, distance and curvature, each with a reset. Changes reach the running session immediately",
@@ -594,11 +595,12 @@
         "Curved virtual screen, 2.4 m wide at 1.5 m, 1920×1080 per eye",
         "Touch controllers mapped to a DualShock 2, with rumble",
         "Library and settings stay a 2D panel; the pause menu takes you back",
-        "Quest-tuned defaults (3× internal resolution and more)"
+        "Quest-tuned defaults (3× internal resolution and more)",
+        "Runs on **PICO** headsets from the same APK (experimental)"
       ],
-      "needs": ["Meta Quest 3", "A BIOS dump from your own PS2 console", "Your own PS2 games"],
+      "needs": ["Meta Quest 3 (PICO untested)", "A BIOS dump from your own PS2 console", "Your own PS2 games"],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r ARMSX2-Quest-0.2-beta.apk`. Installing over Beta 0.1 keeps your settings (same signing key).",
+        "Sideload the APK with SideQuest or `adb install -r ARMSX2-Quest-0.3-beta.apk`. Installing over an earlier beta keeps your settings (same signing key).",
         "Grant storage access and point the app at your games.",
         "Uninstall any other ARMSX2 build first if the install fails with a signature mismatch."
       ],
@@ -620,7 +622,8 @@
       "notes": [
         "Games that never offer a usable depth buffer are shown flat.",
         "Depth reprojection shows small artifacts at object edges.",
-        "3D strength, screen size and distance can be tuned over adb, e.g. `adb shell setprop debug.armsx2.sep 0.011`."
+        "3D strength, screen size and distance can be tuned over adb, e.g. `adb shell setprop debug.armsx2.sep 0.011`.",
+        "The PICO build is written from the OpenXR specification and has never run on PICO hardware. If it reports *VR mode unavailable* there, `adb logcat -s ARMSX2-XR` names the missing piece."
       ],
       "video": "a1_zydGhVaE",
       "credits": "Based on [ARMSX2](https://github.com/ARMSX2/ARMSX2) and the [PCSX2](https://pcsx2.net) project. Photos: DualShock 2 and PlayStation 2 by [Evan-Amos](https://commons.wikimedia.org/wiki/File:DualShock_2.jpg) (public domain)."
