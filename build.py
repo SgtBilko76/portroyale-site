@@ -5,7 +5,7 @@
     python3 build.py --refresh  also fetch the latest releases from GitHub first
 
 Pictures: drop files into images/<slug>/. They are shown in name order, the
-first one is the page's hero picture. Files with "logo", "banner", "splash" or "product"
+first one is the page's hero picture, unless the game sets "hero" to a file name. Files with "logo", "banner", "splash" or "product"
 in the name are shown whole instead of cropped.
 """
 import html
@@ -75,6 +75,16 @@ def images_for(slug):
     if not folder.is_dir():
         return []
     return sorted(p for p in folder.iterdir() if p.suffix.lower() in IMG_EXT)
+
+
+def hero_image(game, imgs):
+    """Page header picture: the "hero" name from games.json, else the first picture."""
+    name = game.get("hero")
+    if name:
+        for img in imgs:
+            if img.name == name:
+                return img
+    return imgs[0] if imgs else None
 
 
 def is_whole(path):
@@ -396,7 +406,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 
     body = f"""
 <section class="game-hero">
-  <div class="game-hero-media">{picture(game, imgs[0] if imgs else None, "game-hero-img", eager=True)}</div>
+  <div class="game-hero-media">{picture(game, hero_image(game, imgs), "game-hero-img", eager=True)}</div>
   <div class="wrap game-hero-inner">
     <p class="crumbs"><a href="index.html">Home</a> / <a href="index.html#{esc(cat['id'])}">{esc(cat['name'])}</a></p>
     <h1>{esc(game['name'])}</h1>

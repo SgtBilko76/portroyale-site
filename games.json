@@ -32,6 +32,7 @@
       "name": "Visual Pinball X VR",
       "repo": "VPinball-VR",
       "category": "emulator",
+      "hero": "6-street-fighter.jpg",
       "tagline": "Real pinball tables in VR and mixed reality on Meta Quest 3 and PICO.",
       "about": [
         "Visual Pinball X standalone for **Meta Quest 3** (OpenXR, Vulkan), based on vpinball 10.8.1. Stand in front of real and original tables, with the cabinet and backglass around you, or play them in your own room with passthrough.",
@@ -51,7 +52,7 @@
         "Your own `.vpx` tables and ROMs"
       ],
       "install": [
-        "Sideload the APK for your headset with SideQuest or `adb install -r <apk>`: `VPinball-QuestVR-Beta-0.29.apk` for Meta Quest, `VPinball-PicoVR-Beta-0.3.apk` for PICO.",
+        "Sideload the APK for your headset with SideQuest or `adb install -r <apk>`: `VPinball-QuestVR-Beta-0.30.apk` for Meta Quest, `VPinball-PicoVR-Beta-0.4.apk` for PICO.",
         "Put each table in its own folder, with its ROMs next to it: `VPinball/tables/<Table name>/<table>.vpx` and `VPinball/tables/<Table name>/pinmame/roms/<rom>.zip`.",
         "Start VPinball (*Library → Unknown Sources*) and select the `VPinball/tables` folder in the settings."
       ],
