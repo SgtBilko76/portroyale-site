@@ -329,9 +329,9 @@
       "name": "Descent 3 VR",
       "repo": "Descent3-QuestVR",
       "category": "native",
-      "tagline": "Six degrees of freedom, from a real cockpit, on Meta Quest.",
+      "tagline": "Six degrees of freedom, from a real cockpit, on Meta Quest and PICO.",
       "about": [
-        "A VR port of the [Descent 3 open source engine](https://github.com/DescentDevelopers/Descent3) for Meta Quest, running standalone. You sit in a virtual cockpit: the ship flies on the Touch controllers while you look around freely. The world and the cockpit are rendered in stereo; menus, cutscenes and the flat HUD float in front of you."
+        "A VR port of the [Descent 3 open source engine](https://github.com/DescentDevelopers/Descent3) for Meta Quest and PICO, running standalone. You sit in a virtual cockpit: the ship flies on the Touch controllers while you look around freely. The world and the cockpit are rendered in stereo; menus, cutscenes and the flat HUD float in front of you."
       ],
       "features": [
         "Stereo world and cockpit with head tracking",
@@ -341,11 +341,11 @@
         "Runs at 90 Hz where available"
       ],
       "needs": [
-        "Meta Quest (Quest 3 tested)",
+        "Meta Quest (Quest 3 tested), or PICO 4 / Neo 3 (untested)",
         "Your own copy of Descent 3 (original CDs, GOG or Steam; v1.4 recommended)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r Descent3-Quest-0.2-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r Descent3-Quest-0.3-beta.apk`.",
         "Copy all `.hog` files plus the `missions` and `movies` folders to `/sdcard/Android/data/com.descentdevelopers.descent3/files/`.",
         "From GOG/Steam: after copying with adb, make the folders readable for the app with `adb shell \"cd /sdcard/Android/data/com.descentdevelopers.descent3/files && find . -mindepth 1 -type d -exec chmod 2777 {} +\"`.",
         "From the original CDs: the zip download contains `tools/stage_gamedata.sh`, which extracts the data from CD images and pushes it to the headset."
@@ -421,6 +421,8 @@
       },
       "notes": [
         "**Uninstalling the app deletes the game data folder**: keep a copy of your game files.",
+        "After your ship is destroyed, pull a trigger or press A to continue.",
+        "The PICO build is untested: if it does not start, or the buttons are mapped differently, please open an issue on GitHub. `adb logcat -s Descent3:V` prints the runtime it found and the controller profile it bound, which is the useful thing to paste in.",
         "Rear view and inventory have no controller buttons yet.",
         "Some disc copies lack the music; pre-v1.4 data lacks a few images and sounds.",
         "Multiplayer is untested."
