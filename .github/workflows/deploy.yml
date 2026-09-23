@@ -25,6 +25,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 build.py --refresh
+        env:
+          # Raises the GitHub API rate limit; without it the refresh can
+          # be throttled and fall back to stale release data.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
