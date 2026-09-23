@@ -223,25 +223,6 @@
      "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.30-beta/VPinball-QuestVR-Beta-0.30.apk"
     }
    ]
-  },
-  {
-   "tag": "v0.29-beta",
-   "name": "Quest Beta 0.29 + PICO Beta 0.3",
-   "date": "2026-09-23T17:54:59Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/VPinball-VR/releases/tag/v0.29-beta",
-   "assets": [
-    {
-     "name": "VPinball-PicoVR-Beta-0.3.apk",
-     "size": 284942400,
-     "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.29-beta/VPinball-PicoVR-Beta-0.3.apk"
-    },
-    {
-     "name": "VPinball-QuestVR-Beta-0.29.apk",
-     "size": 284942352,
-     "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.29-beta/VPinball-QuestVR-Beta-0.29.apk"
-    }
-   ]
   }
  ],
  "Descent3-VR": [
