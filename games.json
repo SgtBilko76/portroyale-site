@@ -574,9 +574,10 @@
       "category": "emulator",
       "tagline": "PlayStation 2 in stereoscopic 3D on a curved virtual screen.",
       "about": [
-        "ARMSX2 (the ARM64 fork of PCSX2) for Meta Quest, built on ARMSX2 2.7. The emulator runs as a normal 2D panel; starting a game moves it into an immersive OpenXR session with the game on a curved virtual screen, in real stereoscopic 3D."
+        "ARMSX2 (the ARM64 fork of PCSX2) for Meta Quest, built on ARMSX2 release 2.7. The emulator runs as a normal 2D panel; starting a game moves it into an immersive OpenXR session with the game on a curved virtual screen, in real stereoscopic 3D."
       ],
       "features": [
+        "**VR settings page:** 3D on/off, depth, screen plane, size, distance and curvature, each with a reset. Changes reach the running session immediately",
         "**Stereoscopic 3D:** each frame is reprojected per eye from the game's depth buffer",
         "Curved virtual screen, 2.4 m wide at 1.5 m, 1920×1080 per eye",
         "Touch controllers mapped to a DualShock 2, with rumble",
@@ -585,7 +586,7 @@
       ],
       "needs": ["Meta Quest 3", "A BIOS dump from your own PS2 console", "Your own PS2 games"],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r ARMSX2-Quest-0.1-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r ARMSX2-Quest-0.2-beta.apk`. Installing over Beta 0.1 keeps your settings (same signing key).",
         "Grant storage access and point the app at your games.",
         "Uninstall any other ARMSX2 build first if the install fails with a signature mismatch."
       ],
@@ -593,15 +594,15 @@
         "columns": ["Quest", "PS2"],
         "rows": [
           ["A / B / X / Y", "Cross / Circle / Square / Triangle"],
-          ["Grips / triggers", "L1 R1 / L2 R2 (triggers analog)"],
-          ["Stick clicks", "L3 / R3"],
+          ["Grips / triggers", "L1 R1 / L2 R2"],
+          ["Left stick click", "Start"],
+          ["Right stick click", "Select"],
+          ["Menu tap", "Opens the ARMSX2 menu (leaves VR)"],
+          ["Menu + left / right stick click", "L3 / R3"],
           ["Left stick", "Left analog; a hard push is the D-pad"],
           ["Right stick", "Right analog"],
-          ["Menu tap / long press", "Start / Select"],
-          ["Menu + right stick", "D-pad"],
           ["Menu + B", "Left stick: analog only, or analog + D-pad"],
-          ["Menu + right trigger", "Recenter the screen"],
-          ["Menu + right grip", "Leave VR to the ARMSX2 menu"]
+          ["Menu + right trigger", "Recenter the screen"]
         ]
       },
       "notes": [

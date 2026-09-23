@@ -51,21 +51,10 @@
   {
    "tag": "quest-v0.2-beta",
    "name": "Descent 3 for Meta Quest \u2014 Beta 0.2",
-   "date": "2026-09-16T12:15:09Z",
+   "date": "2026-09-23T08:17:33Z",
    "prerelease": true,
    "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/tag/quest-v0.2-beta",
-   "assets": [
-    {
-     "name": "Descent3-Quest-0.2-beta.apk",
-     "size": 8643278,
-     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.2-beta/Descent3-Quest-0.2-beta.apk"
-    },
-    {
-     "name": "Descent3-Quest-0.2-beta.zip",
-     "size": 17672757,
-     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.2-beta/Descent3-Quest-0.2-beta.zip"
-    }
-   ]
+   "assets": []
   }
  ],
  "Sauerbraten-QuestVR": [
@@ -162,20 +151,6 @@
      "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/download/v1.0.0-quest/Hurrican-QuestVR-v1.0.0.apk"
     }
    ]
-  },
-  {
-   "tag": "v1.0.9.3",
-   "name": "Hurrican-QuestVR",
-   "date": "2026-09-08T13:13:59Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/tag/v1.0.9.3",
-   "assets": [
-    {
-     "name": "Hurrican.apk",
-     "size": 46295549,
-     "url": "https://github.com/SgtBilko76/Hurrican-QuestVR/releases/download/v1.0.9.3/Hurrican.apk"
-    }
-   ]
   }
  ],
  "Neverball-and-Neverputt-QuestVR": [
@@ -258,18 +233,12 @@
  ],
  "ARMSX2-Quest": [
   {
-   "tag": "v0.1-beta",
-   "name": "Beta 0.1",
-   "date": "2026-09-20T08:26:49Z",
+   "tag": "v0.2-beta",
+   "name": "Beta 0.2",
+   "date": "2026-09-23T08:42:43Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/tag/v0.1-beta",
-   "assets": [
-    {
-     "name": "ARMSX2-Quest-0.1-beta.apk",
-     "size": 44688882,
-     "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/download/v0.1-beta/ARMSX2-Quest-0.1-beta.apk"
-    }
-   ]
+   "url": "https://github.com/SgtBilko76/ARMSX2-Quest/releases/tag/v0.2-beta",
+   "assets": []
   }
  ],
  "CallOfDuty4_VR_WinlatorXR": [
