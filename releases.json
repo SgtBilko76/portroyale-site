@@ -40,33 +40,14 @@
    "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/tag/quest-v0.3-beta",
    "assets": [
     {
-     "name": "Descent3-Quest-0.3-beta.apk",
+     "name": "Descent3-VR-0.3-beta.apk",
      "size": 8647374,
-     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.3-beta/Descent3-Quest-0.3-beta.apk"
+     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.3-beta/Descent3-VR-0.3-beta.apk"
     },
     {
-     "name": "Descent3-Quest-0.3-beta.zip",
-     "size": 17677520,
-     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.3-beta/Descent3-Quest-0.3-beta.zip"
-    }
-   ]
-  },
-  {
-   "tag": "quest-v0.2-beta",
-   "name": "Descent 3 for Meta Quest \u2014 Beta 0.2",
-   "date": "2026-09-23T08:17:33Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/tag/quest-v0.2-beta",
-   "assets": [
-    {
-     "name": "Descent3-Quest-0.2-beta.apk",
-     "size": 8643278,
-     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.2-beta/Descent3-Quest-0.2-beta.apk"
-    },
-    {
-     "name": "Descent3-Quest-0.2-beta.zip",
-     "size": 17672005,
-     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.2-beta/Descent3-Quest-0.2-beta.zip"
+     "name": "Descent3-VR-0.3-beta.zip",
+     "size": 17676843,
+     "url": "https://github.com/SgtBilko76/Descent3-QuestVR/releases/download/quest-v0.3-beta/Descent3-VR-0.3-beta.zip"
     }
    ]
   }
