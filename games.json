@@ -4,7 +4,7 @@
     "url": "https://portroyale.online",
     "indexnow_key": "c148f43a15bced37271009b38fba3796",
     "tagline": "Free High Quality Open Source VR Ports",
-    "intro": "Classic games and emulators, rebuilt to run standalone on Meta Quest: no PC, no streaming. Every port is free and open source on GitHub.",
+    "intro": "Classic games and emulators, rebuilt to run standalone on Meta Quest, some also on PICO: no PC, no streaming. Every port is free and open source on GitHub.",
     "github_user": "SgtBilko76",
     "sponsor_url": "https://github.com/sponsors/SgtBilko76",
     "thanks": "Luboš, the WinlatorXR Team, Team Beef and the whole VR community..."
@@ -20,9 +20,10 @@
       "name": "Visual Pinball X VR",
       "repo": "VPinball-QuestVR",
       "category": "emulator",
-      "tagline": "Real pinball tables in VR and mixed reality on Meta Quest 3.",
+      "tagline": "Real pinball tables in VR and mixed reality on Meta Quest 3 and PICO.",
       "about": [
-        "Visual Pinball X standalone for **Meta Quest 3** (OpenXR, Vulkan), based on vpinball 10.8.1. Stand in front of real and original tables, with the cabinet and backglass around you, or play them in your own room with passthrough."
+        "Visual Pinball X standalone for **Meta Quest 3** (OpenXR, Vulkan), based on vpinball 10.8.1. Stand in front of real and original tables, with the cabinet and backglass around you, or play them in your own room with passthrough.",
+        "A **PICO build** is available as well, with controller support for PICO Neo 3, PICO 4 and PICO G3. It is brand new and **not tested on PICO hardware yet**: reports are very welcome."
       ],
       "features": [
         "**Mixed Reality (passthrough):** see your real room around the table, switchable instantly while playing",
@@ -32,9 +33,9 @@
         "Accidental Start presses are ignored while a ball is in play",
         "The menu pauses the game"
       ],
-      "needs": ["Meta Quest 3", "Your own `.vpx` tables and ROMs"],
+      "needs": ["Meta Quest 3 or a PICO headset", "Your own `.vpx` tables and ROMs"],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r VPinball-QuestVR-Beta-0.16.apk`.",
+        "Sideload the APK for your headset with SideQuest or `adb install -r <apk>`: `VPinball-QuestVR-Beta-0.17.apk` for Meta Quest, `VPinball-PicoVR-Beta-0.1.apk` for PICO.",
         "Put each table in its own folder, with its ROMs next to it: `VPinball/tables/<Table name>/<table>.vpx` and `VPinball/tables/<Table name>/pinmame/roms/<rom>.zip`.",
         "Start VPinball (*Library → Unknown Sources*) and select the `VPinball/tables` folder in the settings."
       ],
@@ -57,8 +58,10 @@
       "notes": [
         "Williams / Bally / Data East tables show \"Factory settings restored\" on their very first start: quit once through the menu and start again.",
         "Some VR tables ship with `Const VRRoom = 0`, which hides their cabinet. Put a copy of the table script next to the table as `<table name>.vbs` with `VRRoom` set to a room (\"Ultra Minimal\" is the lightest).",
-        "Updating from an earlier beta: install over it, settings and tables are kept."
+        "Updating from an earlier beta: install over it, settings and tables are kept.",
+        "The PICO build is untested: if it does not start, or the buttons are mapped differently, please open an issue on GitHub."
       ],
+      "controls_note": "Button names are those of the Meta Quest controllers, PICO controllers use the same layout.",
       "credits": "Based on [Visual Pinball](https://github.com/vpinball/vpinball) by the Visual Pinball development team."
     },
     {
