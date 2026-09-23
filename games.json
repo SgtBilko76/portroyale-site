@@ -834,9 +834,9 @@
       "name": "Neverball & Neverputt VR",
       "repo": "Neverball-and-Neverputt-QuestVR",
       "category": "native",
-      "tagline": "Tilt the world to roll the ball, plus mini golf, on Meta Quest.",
+      "tagline": "Tilt the world to roll the ball, plus mini golf, on Meta Quest and PICO.",
       "about": [
-        "[Neverball](https://neverball.org/) and its mini-golf sibling Neverputt, ported to Meta Quest as standalone VR apps.",
+        "[Neverball](https://neverball.org/) and its mini-golf sibling Neverputt, ported to Meta Quest and PICO as standalone VR apps. Each release has a Quest APK and a PICO APK: pick the one for your headset.",
         "**Neverball:** tilt the floor to roll a ball through an obstacle course before time runs out. Collect coins to unlock the exit. **Neverputt:** mini golf on Neverball's courses."
       ],
       "features": [
@@ -845,7 +845,7 @@
         "Optional wrist control: tilt the floor by turning the right controller (`vr_control 1`)"
       ],
       "needs": [
-        "Meta Quest"
+        "Meta Quest, or a PICO headset (untested on real PICO hardware)"
       ],
       "install": "default",
       "controls": {
@@ -888,6 +888,9 @@
           ]
         ]
       },
+      "notes": [
+        "The PICO builds are untested: if they do not start, or the buttons are mapped differently, please open an issue on GitHub."
+      ],
       "credits": "Based on [Neverball](https://neverball.org/) by Robert Kooima and contributors."
     },
     {
