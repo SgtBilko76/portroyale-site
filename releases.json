@@ -1,32 +1,32 @@
 {
  "Unreal-Tournament-QuestVR": [
   {
-   "tag": "v1.0.0-beta8-ut99",
-   "name": "Unreal Tournament VR 1.0.0-beta8",
-   "date": "2026-09-20T18:13:28Z",
+   "tag": "v1.0.0-beta9-ut99",
+   "name": "Unreal Tournament VR 1.0.0-beta9",
+   "date": "2026-09-23T12:24:29Z",
    "prerelease": false,
-   "url": "https://github.com/SgtBilko76/Unreal-Tournament-QuestVR/releases/tag/v1.0.0-beta8-ut99",
+   "url": "https://github.com/SgtBilko76/Unreal-Tournament-QuestVR/releases/tag/v1.0.0-beta9-ut99",
    "assets": [
     {
-     "name": "UnrealTournamentVR-1.0.0-beta8-nodata.apk",
-     "size": 12277535,
-     "url": "https://github.com/SgtBilko76/Unreal-Tournament-QuestVR/releases/download/v1.0.0-beta8-ut99/UnrealTournamentVR-1.0.0-beta8-nodata.apk"
+     "name": "UnrealTournamentVR-1.0.0-beta9-nodata.apk",
+     "size": 12278263,
+     "url": "https://github.com/SgtBilko76/Unreal-Tournament-QuestVR/releases/download/v1.0.0-beta9-ut99/UnrealTournamentVR-1.0.0-beta9-nodata.apk"
     }
    ]
   }
  ],
  "Unreal-Gold-QuestVR": [
   {
-   "tag": "v1.0.0-beta8",
-   "name": "Unreal Gold VR 1.0.0-beta8",
-   "date": "2026-09-20T18:13:23Z",
+   "tag": "v1.0.0-beta9",
+   "name": "Unreal Gold VR 1.0.0-beta9",
+   "date": "2026-09-23T12:24:24Z",
    "prerelease": false,
-   "url": "https://github.com/SgtBilko76/Unreal-Gold-QuestVR/releases/tag/v1.0.0-beta8",
+   "url": "https://github.com/SgtBilko76/Unreal-Gold-QuestVR/releases/tag/v1.0.0-beta9",
    "assets": [
     {
-     "name": "UnrealGoldVR-1.0.0-beta8-nodata.apk",
-     "size": 12277519,
-     "url": "https://github.com/SgtBilko76/Unreal-Gold-QuestVR/releases/download/v1.0.0-beta8/UnrealGoldVR-1.0.0-beta8-nodata.apk"
+     "name": "UnrealGoldVR-1.0.0-beta9-nodata.apk",
+     "size": 12278251,
+     "url": "https://github.com/SgtBilko76/Unreal-Gold-QuestVR/releases/download/v1.0.0-beta9/UnrealGoldVR-1.0.0-beta9-nodata.apk"
     }
    ]
   }
