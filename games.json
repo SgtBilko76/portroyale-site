@@ -10,9 +10,21 @@
     "thanks": "Luboš, the WinlatorXR Team, Team Beef and the whole VR community..."
   },
   "categories": [
-    {"id": "native", "name": "Native Quest ports", "blurb": "Game engines ported to run directly on the headset through OpenXR."},
-    {"id": "emulator", "name": "Emulators", "blurb": "Console and pinball emulators with a stereoscopic virtual screen."},
-    {"id": "winlator", "name": "WinlatorXR VR mods", "blurb": "PC VR mods running standalone on Quest 3 through WinlatorXR (Wine + Box64 + DXVK)."}
+    {
+      "id": "native",
+      "name": "Native Quest ports",
+      "blurb": "Game engines ported to run directly on the headset through OpenXR."
+    },
+    {
+      "id": "emulator",
+      "name": "Emulators",
+      "blurb": "Console and pinball emulators with a stereoscopic virtual screen."
+    },
+    {
+      "id": "winlator",
+      "name": "WinlatorXR VR mods",
+      "blurb": "PC VR mods running standalone on Quest 3 through WinlatorXR (Wine + Box64 + DXVK)."
+    }
   ],
   "games": [
     {
@@ -34,26 +46,77 @@
         "Accidental Start presses are ignored while a ball is in play",
         "The menu pauses the game"
       ],
-      "needs": ["Meta Quest 3 or a PICO headset", "Your own `.vpx` tables and ROMs"],
+      "needs": [
+        "Meta Quest 3 or a PICO headset",
+        "Your own `.vpx` tables and ROMs"
+      ],
       "install": [
         "Sideload the APK for your headset with SideQuest or `adb install -r <apk>`: `VPinball-QuestVR-Beta-0.24.apk` for Meta Quest, `VPinball-PicoVR-Beta-0.2.apk` for PICO.",
         "Put each table in its own folder, with its ROMs next to it: `VPinball/tables/<Table name>/<table>.vpx` and `VPinball/tables/<Table name>/pinmame/roms/<rom>.zip`.",
         "Start VPinball (*Library → Unknown Sources*) and select the `VPinball/tables` folder in the settings."
       ],
       "controls": {
-        "columns": ["Button", "During play", "In the menu"],
+        "columns": [
+          "Button",
+          "During play",
+          "In the menu"
+        ],
         "rows": [
-          ["Triggers", "Flippers", ""],
-          ["Grips", "Magna save", ""],
-          ["☰ (left menu)", "Open menu (**hold: next VR room**)", "Back / close"],
-          ["A", "Start game (hold 1 s while a ball is moving)", "Select"],
-          ["B", "Insert coin", "Back"],
-          ["X (hold)", "Move away from the table", ""],
-          ["Y", "View mode: left stick = left/right & up/down, right stick = angle (press again to save). **Hold: reset view**", ""],
-          ["Left stick click", "Size & distance mode: left stick = distance, right stick = size", ""],
-          ["Right stick click", "Launch ball", "Reset page to defaults"],
-          ["Right stick up/down", "Plunger", ""],
-          ["Left stick", "Nudge", "Navigate"]
+          [
+            "Triggers",
+            "Flippers",
+            ""
+          ],
+          [
+            "Grips",
+            "Magna save",
+            ""
+          ],
+          [
+            "☰ (left menu)",
+            "Open menu (**hold: next VR room**)",
+            "Back / close"
+          ],
+          [
+            "A",
+            "Start game (hold 1 s while a ball is moving)",
+            "Select"
+          ],
+          [
+            "B",
+            "Insert coin",
+            "Back"
+          ],
+          [
+            "X (hold)",
+            "Move away from the table",
+            ""
+          ],
+          [
+            "Y",
+            "View mode: left stick = left/right & up/down, right stick = angle (press again to save). **Hold: reset view**",
+            ""
+          ],
+          [
+            "Left stick click",
+            "Size & distance mode: left stick = distance, right stick = size",
+            ""
+          ],
+          [
+            "Right stick click",
+            "Launch ball",
+            "Reset page to defaults"
+          ],
+          [
+            "Right stick up/down",
+            "Plunger",
+            ""
+          ],
+          [
+            "Left stick",
+            "Nudge",
+            "Navigate"
+          ]
         ]
       },
       "notes": [
@@ -70,10 +133,11 @@
       "name": "Unreal Tournament VR",
       "repo": "Unreal-Tournament-QuestVR",
       "category": "native",
-      "tagline": "UT99 in VR on Meta Quest, running standalone on Surreal Engine.",
+      "tagline": "UT99 in VR, standalone on Meta Quest and PICO.",
       "about": [
-        "A standalone Meta Quest (Quest 2 / Pro / 3 / 3S, tested on Quest 3) VR port of **Unreal Tournament (UT99)**, built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine), a from-scratch reimplementation of Unreal Engine 1, with an OpenXR/Vulkan stereo renderer.",
-        "No game content is included, but UT99 is available **free and legally** from OldUnreal."
+        "A standalone VR port for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3) and PICO 4 / Neo 3 of **Unreal Tournament (UT99)**, built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine), a from-scratch reimplementation of Unreal Engine 1, with an OpenXR/Vulkan stereo renderer.",
+        "No game content is included, but UT99 is available **free and legally** from OldUnreal.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "Native OpenXR rendering at 72 Hz, snap turning, stick locomotion",
@@ -83,47 +147,95 @@
         "Curved menu panel operated by pointing and clicking",
         "Installs side by side with Unreal Gold VR"
       ],
-      "needs": ["Meta Quest 2 / Pro / 3 / 3S", "UT99 game files (free from [OldUnreal](https://www.oldunreal.com/downloads/unrealtournament/full-game-installers/); 469e and 436 work)"],
+      "needs": [
+        "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
+        "UT99 game files (free from [OldUnreal](https://www.oldunreal.com/downloads/unrealtournament/full-game-installers/); 469e and 436 work)"
+      ],
       "install": [
         "Install UT99 on a PC with the OldUnreal installer.",
-        "Sideload the APK with SideQuest or `adb install -r`.",
+        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Copy the `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngineUT/` on the headset. Leave out your PC's `UnrealTournament.ini` / `User.ini`.",
         "Launch **Unreal Tournament VR** from *Unknown Sources* and grant \"All files access\"."
       ],
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Left stick", "Move (direction follows snap-turns)"],
-          ["Right stick left/right", "Snap-turn 45°"],
-          ["Right stick up/down", "Next / previous weapon"],
-          ["Right trigger", "Fire"],
-          ["Right grip", "Alt-fire"],
-          ["A", "Activate selected inventory item"],
-          ["B", "F2 key"],
-          ["Left trigger", "Jump"],
-          ["X", "Next inventory item"],
-          ["Left grip (hold)", "Crouch"],
-          ["Y", "Scoreboard"],
-          ["Left menu button", "Open / close the game menu"],
-          ["Meta button (long press)", "Recenter"]
+          [
+            "Left stick",
+            "Move (direction follows snap-turns)"
+          ],
+          [
+            "Right stick left/right",
+            "Snap-turn 45°"
+          ],
+          [
+            "Right stick up/down",
+            "Next / previous weapon"
+          ],
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Right grip",
+            "Alt-fire"
+          ],
+          [
+            "A",
+            "Activate selected inventory item"
+          ],
+          [
+            "B",
+            "F2 key"
+          ],
+          [
+            "Left trigger",
+            "Jump"
+          ],
+          [
+            "X",
+            "Next inventory item"
+          ],
+          [
+            "Left grip (hold)",
+            "Crouch"
+          ],
+          [
+            "Y",
+            "Scoreboard"
+          ],
+          [
+            "Left menu button",
+            "Open / close the game menu"
+          ],
+          [
+            "Meta / Home button (long press)",
+            "Recenter"
+          ]
         ]
       },
       "notes": [
         "Bot AI is only partially implemented in Surreal Engine.",
         "No dynamic lighting; some movers behave oddly.",
-        "No networking / multiplayer."
+        "No networking / multiplayer.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SurrealEngine-Log:*` shows how far it gets, which is the useful thing to paste in."
       ],
-      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal Tournament is a trademark of Epic Games; this project is not affiliated with Epic Games."
+      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal Tournament is a trademark of Epic Games; this project is not affiliated with Epic Games.",
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout."
     },
     {
       "slug": "unreal-gold",
       "name": "Unreal Gold VR",
       "repo": "Unreal-Gold-QuestVR",
       "category": "native",
-      "tagline": "The 1998 classic Unreal in VR on Meta Quest, running standalone on Surreal Engine.",
+      "tagline": "The 1998 classic Unreal in VR, standalone on Meta Quest and PICO.",
       "about": [
-        "A standalone Meta Quest (Quest 2 / Pro / 3 / 3S, tested on Quest 3) VR port of **Unreal Gold**, built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine), a from-scratch reimplementation of Unreal Engine 1, with an OpenXR/Vulkan stereo renderer.",
-        "No game content is included, but Unreal Gold is available **free and legally** from OldUnreal."
+        "A standalone VR port for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3) and PICO 4 / Neo 3 of **Unreal Gold**, built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine), a from-scratch reimplementation of Unreal Engine 1, with an OpenXR/Vulkan stereo renderer.",
+        "No game content is included, but Unreal Gold is available **free and legally** from OldUnreal.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "Native OpenXR rendering at 72 Hz, snap turning, stick locomotion",
@@ -133,37 +245,84 @@
         "Save games persist on the headset",
         "Installs side by side with Unreal Tournament VR"
       ],
-      "needs": ["Meta Quest 2 / Pro / 3 / 3S", "Unreal Gold **226b** game files (free from [OldUnreal](https://www.oldunreal.com/downloads/unreal/full-game-installers/))"],
+      "needs": [
+        "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
+        "Unreal Gold **226b** game files (free from [OldUnreal](https://www.oldunreal.com/downloads/unreal/full-game-installers/))"
+      ],
       "install": [
         "Get the game files. The port needs the original **226b** `System` files (from GOG/Steam, or the disc contents the OldUnreal installer extracts before it applies the 227 patch). `Maps`, `Textures`, `Sounds`, `Music` and `Help` are the same either way.",
-        "Sideload the APK with SideQuest or `adb install -r`.",
+        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Copy the `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngine/` on the headset. Leave out your PC's `Unreal.ini` / `User.ini`.",
         "Launch **Unreal Gold VR** from *Unknown Sources* and grant \"All files access\"."
       ],
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Left stick", "Move (direction follows snap-turns)"],
-          ["Right stick left/right", "Snap-turn 45°"],
-          ["Right stick up/down", "Next / previous weapon"],
-          ["Right trigger", "Fire"],
-          ["Right grip", "Alt-fire"],
-          ["A", "Activate selected inventory item"],
-          ["B", "Universal translator"],
-          ["Left trigger", "Jump"],
-          ["X", "Next inventory item"],
-          ["Left grip (hold)", "Crouch"],
-          ["Y", "Scoreboard"],
-          ["Left menu button", "Open / close the game menu"],
-          ["Meta button (long press)", "Recenter"]
+          [
+            "Left stick",
+            "Move (direction follows snap-turns)"
+          ],
+          [
+            "Right stick left/right",
+            "Snap-turn 45°"
+          ],
+          [
+            "Right stick up/down",
+            "Next / previous weapon"
+          ],
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Right grip",
+            "Alt-fire"
+          ],
+          [
+            "A",
+            "Activate selected inventory item"
+          ],
+          [
+            "B",
+            "Universal translator"
+          ],
+          [
+            "Left trigger",
+            "Jump"
+          ],
+          [
+            "X",
+            "Next inventory item"
+          ],
+          [
+            "Left grip (hold)",
+            "Crouch"
+          ],
+          [
+            "Y",
+            "Scoreboard"
+          ],
+          [
+            "Left menu button",
+            "Open / close the game menu"
+          ],
+          [
+            "Meta / Home button (long press)",
+            "Recenter"
+          ]
         ]
       },
       "notes": [
         "Enemy AI is only partially implemented in Surreal Engine: monsters often just stand around.",
         "Inventory does not carry over between maps.",
-        "No dynamic lighting; some movers behave oddly."
+        "No dynamic lighting; some movers behave oddly.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SurrealEngine-Log:*` shows how far it gets, which is the useful thing to paste in."
       ],
-      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal is a trademark of Epic Games; this project is not affiliated with Epic Games."
+      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal is a trademark of Epic Games; this project is not affiliated with Epic Games.",
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout."
     },
     {
       "slug": "descent3",
@@ -181,7 +340,10 @@
         "Quest system keyboard for text fields like the pilot name",
         "Runs at 90 Hz where available"
       ],
-      "needs": ["Meta Quest (Quest 3 tested)", "Your own copy of Descent 3 (original CDs, GOG or Steam; v1.4 recommended)"],
+      "needs": [
+        "Meta Quest (Quest 3 tested)",
+        "Your own copy of Descent 3 (original CDs, GOG or Steam; v1.4 recommended)"
+      ],
       "install": [
         "Sideload the APK with SideQuest or `adb install -r Descent3-Quest-0.2-beta.apk`.",
         "Copy all `.hog` files plus the `missions` and `movies` folders to `/sdcard/Android/data/com.descentdevelopers.descent3/files/`.",
@@ -189,20 +351,72 @@
         "From the original CDs: the zip download contains `tools/stage_gamedata.sh`, which extracts the data from CD images and pushes it to the headset."
       ],
       "controls": {
-        "columns": ["Input", "Flying", "Menus"],
+        "columns": [
+          "Input",
+          "Flying",
+          "Menus"
+        ],
         "rows": [
-          ["Left stick", "Thrust forward/back, slide left/right", "Previous / next item"],
-          ["Right stick", "Turn, pitch (stick up = nose down)", "Move within lists"],
-          ["Right trigger", "Fire primary", "Select"],
-          ["Left trigger", "Fire secondary", "Select"],
-          ["Grips", "Bank left / right", ""],
-          ["A", "Afterburner", "Select"],
-          ["B", "Flare (hold: next primary)", "Back"],
-          ["X / Y", "Slide down / up", "X = Enter"],
-          ["Right stick click", "Drop countermeasure (hold: next countermeasure)", ""],
-          ["Left stick click", "Next secondary (hold: headlight)", ""],
-          ["Menu button", "Pause menu (hold: automap)", "Back"],
-          ["Meta button (hold)", "Recenter the view", ""]
+          [
+            "Left stick",
+            "Thrust forward/back, slide left/right",
+            "Previous / next item"
+          ],
+          [
+            "Right stick",
+            "Turn, pitch (stick up = nose down)",
+            "Move within lists"
+          ],
+          [
+            "Right trigger",
+            "Fire primary",
+            "Select"
+          ],
+          [
+            "Left trigger",
+            "Fire secondary",
+            "Select"
+          ],
+          [
+            "Grips",
+            "Bank left / right",
+            ""
+          ],
+          [
+            "A",
+            "Afterburner",
+            "Select"
+          ],
+          [
+            "B",
+            "Flare (hold: next primary)",
+            "Back"
+          ],
+          [
+            "X / Y",
+            "Slide down / up",
+            "X = Enter"
+          ],
+          [
+            "Right stick click",
+            "Drop countermeasure (hold: next countermeasure)",
+            ""
+          ],
+          [
+            "Left stick click",
+            "Next secondary (hold: headlight)",
+            ""
+          ],
+          [
+            "Menu button",
+            "Pause menu (hold: automap)",
+            "Back"
+          ],
+          [
+            "Meta button (hold)",
+            "Recenter the view",
+            ""
+          ]
         ]
       },
       "notes": [
@@ -229,19 +443,48 @@
         "Laser-pointer menus",
         "Complete game in one APK (about 970 MB)"
       ],
-      "needs": ["Meta Quest 2 or 3"],
+      "needs": [
+        "Meta Quest 2 or 3"
+      ],
       "install": "default",
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Right trigger", "Fire / select"],
-          ["Right stick ←→", "Snap turn"],
-          ["Right stick ↑↓", "Switch weapon"],
-          ["B", "Back"],
-          ["Left stick", "Move & strafe"],
-          ["Left trigger", "Jump"],
-          ["Left menu button", "Main menu"],
-          ["Y", "Scoreboard"]
+          [
+            "Right trigger",
+            "Fire / select"
+          ],
+          [
+            "Right stick ←→",
+            "Snap turn"
+          ],
+          [
+            "Right stick ↑↓",
+            "Switch weapon"
+          ],
+          [
+            "B",
+            "Back"
+          ],
+          [
+            "Left stick",
+            "Move & strafe"
+          ],
+          [
+            "Left trigger",
+            "Jump"
+          ],
+          [
+            "Left menu button",
+            "Main menu"
+          ],
+          [
+            "Y",
+            "Scoreboard"
+          ]
         ]
       },
       "video": "fX7o-1OH-WM",
@@ -263,26 +506,69 @@
         "VR text input in menus and chat",
         "Comfort turning; the head-tracked camera is kept out of walls"
       ],
-      "needs": ["Meta Quest"],
+      "needs": [
+        "Meta Quest"
+      ],
       "install": "default",
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Right trigger", "Fire"],
-          ["Right grip", "Secondary fire"],
-          ["Right stick up", "Zoom"],
-          ["Right stick down", "Crouch"],
-          ["Left trigger", "Jump"],
-          ["Left grip", "Grappling hook"],
-          ["Left stick", "Move"],
-          ["A / B", "Next / previous weapon"],
-          ["X", "Use"],
-          ["Y", "Scoreboard"],
-          ["Right stick click", "Recenter view"],
-          ["Left menu button", "Menu"]
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Right grip",
+            "Secondary fire"
+          ],
+          [
+            "Right stick up",
+            "Zoom"
+          ],
+          [
+            "Right stick down",
+            "Crouch"
+          ],
+          [
+            "Left trigger",
+            "Jump"
+          ],
+          [
+            "Left grip",
+            "Grappling hook"
+          ],
+          [
+            "Left stick",
+            "Move"
+          ],
+          [
+            "A / B",
+            "Next / previous weapon"
+          ],
+          [
+            "X",
+            "Use"
+          ],
+          [
+            "Y",
+            "Scoreboard"
+          ],
+          [
+            "Right stick click",
+            "Recenter view"
+          ],
+          [
+            "Left menu button",
+            "Menu"
+          ]
         ]
       },
-      "notes": ["The APK is signed with a debug key."],
+      "notes": [
+        "The APK is signed with a debug key."
+      ],
       "credits": "Based on [Xonotic](https://xonotic.org/) by Team Xonotic. Pictures (desktop version) via Wikimedia Commons, GPL: [Xonotic developers](https://commons.wikimedia.org/wiki/File:Xonotic_0.8.2_rocket.jpg), [greewrfdsfsf](https://commons.wikimedia.org/wiki/File:Xonotic_Game_Play_-_Silent_Siege.jpg)."
     },
     {
@@ -300,15 +586,32 @@
         "Menus on a floating screen in VR",
         "Touch controllers mapped to the standard gamepad controls"
       ],
-      "needs": ["Meta Quest"],
+      "needs": [
+        "Meta Quest"
+      ],
       "install": "default",
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Left stick", "Steer"],
-          ["Right trigger", "Accelerate"],
-          ["Left trigger", "Brake"],
-          ["Face buttons", "Nitro, fire, drift, rescue, look back, pause"]
+          [
+            "Left stick",
+            "Steer"
+          ],
+          [
+            "Right trigger",
+            "Accelerate"
+          ],
+          [
+            "Left trigger",
+            "Brake"
+          ],
+          [
+            "Face buttons",
+            "Nitro, fire, drift, rescue, look back, pause"
+          ]
         ]
       },
       "credits": "Based on [SuperTuxKart](https://supertuxkart.net/) by the SuperTuxKart team. Pictures (desktop version): [SuperTuxKart contributors](https://commons.wikimedia.org/wiki/File:STK_track_8.png), CC BY 1.0; [TrainAndBus64](https://commons.wikimedia.org/wiki/File:SuperTuxKart_Mobile_in_Gnu.jpg), CC BY-SA 4.0."
@@ -328,20 +631,52 @@
         "Peek around the level with the right stick or grips",
         "Falls back to normal 2D mode without an OpenXR runtime"
       ],
-      "needs": ["Meta Quest 2 / 3 / 3S / Pro"],
+      "needs": [
+        "Meta Quest 2 / 3 / 3S / Pro"
+      ],
       "install": "default",
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Left stick", "Move"],
-          ["Right stick", "Peek (look around)"],
-          ["A / left trigger", "Jump (select in menus)"],
-          ["B", "Back (in menus)"],
-          ["X / right trigger", "Action (run, grab, shoot)"],
-          ["Y", "Item"],
-          ["Left / right grip", "Peek left / right"],
-          ["Menu button", "Pause"],
-          ["Left stick click", "Recenter screen"]
+          [
+            "Left stick",
+            "Move"
+          ],
+          [
+            "Right stick",
+            "Peek (look around)"
+          ],
+          [
+            "A / left trigger",
+            "Jump (select in menus)"
+          ],
+          [
+            "B",
+            "Back (in menus)"
+          ],
+          [
+            "X / right trigger",
+            "Action (run, grab, shoot)"
+          ],
+          [
+            "Y",
+            "Item"
+          ],
+          [
+            "Left / right grip",
+            "Peek left / right"
+          ],
+          [
+            "Menu button",
+            "Pause"
+          ],
+          [
+            "Left stick click",
+            "Recenter screen"
+          ]
         ]
       },
       "notes": [
@@ -363,18 +698,44 @@
         "Menus on a floating screen, driven with the thumbstick",
         "Game data unpacked on first launch"
       ],
-      "needs": ["Meta Quest"],
+      "needs": [
+        "Meta Quest"
+      ],
       "install": "default",
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Left stick", "Steer (menus: navigate)"],
-          ["Right trigger", "Paddle"],
-          ["Left trigger", "Brake"],
-          ["A / X", "Jump"],
-          ["Grips", "Trick"],
-          ["B", "Pause"],
-          ["Left menu button", "Menu"]
+          [
+            "Left stick",
+            "Steer (menus: navigate)"
+          ],
+          [
+            "Right trigger",
+            "Paddle"
+          ],
+          [
+            "Left trigger",
+            "Brake"
+          ],
+          [
+            "A / X",
+            "Jump"
+          ],
+          [
+            "Grips",
+            "Trick"
+          ],
+          [
+            "B",
+            "Pause"
+          ],
+          [
+            "Left menu button",
+            "Menu"
+          ]
         ]
       },
       "credits": "Based on [Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer/)."
@@ -392,7 +753,7 @@
       ],
       "features": [
         "Seven depth layers composited per eye",
-        "Touch controllers fully mapped, with rumble, and remappable in *Options \u2192 Define Buttons*",
+        "Touch controllers fully mapped, with rumble, and remappable in *Options → Define Buttons*",
         "Screen size, distance, depth strength and refresh rate adjustable in `vr.cfg`",
         "All game data inside the APK"
       ],
@@ -403,7 +764,7 @@
         "Enable developer mode on your headset.",
         "Download the APK for your make below: *QuestVR* for Meta Quest, *PicoVR* for PICO.",
         "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r <file>.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
-        "Launch it from *Library \u2192 Unknown Sources*."
+        "Launch it from *Library → Unknown Sources*."
       ],
       "controls": {
         "columns": [
@@ -463,7 +824,7 @@
         "The PICO build is untested: if it does not start, or buttons are mapped oddly, please open an issue on GitHub. `adb logcat -s Hurrican:* HurricanVR:*` shows how far it gets and which controller profile was bound, which is the useful thing to paste in."
       ],
       "credits": "Based on [Hurrican](https://github.com/HurricanGame/Hurrican) by Eiswuxe (Poke53280) and contributors.",
-      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout (the grip buttons stand in for Quest's analog grips). Everything can be rebound in *Options \u2192 Define Buttons*."
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout (the grip buttons stand in for Quest's analog grips). Everything can be rebound in *Options → Define Buttons*."
     },
     {
       "slug": "neverball",
@@ -480,19 +841,48 @@
         "Laser-pointer menus",
         "Optional wrist control: tilt the floor by turning the right controller (`vr_control 1`)"
       ],
-      "needs": ["Meta Quest"],
+      "needs": [
+        "Meta Quest"
+      ],
       "install": "default",
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Left stick", "Tilt the floor (Neverputt: aim); move the menu highlight"],
-          ["Right stick", "Turn the camera left or right, one step per push"],
-          ["Trigger", "Click what the ray is on"],
-          ["A", "Take the highlight"],
-          ["B", "Back"],
-          ["X", "Pause"],
-          ["Y", "Options"],
-          ["Grip", "Turn the camera left or right"]
+          [
+            "Left stick",
+            "Tilt the floor (Neverputt: aim); move the menu highlight"
+          ],
+          [
+            "Right stick",
+            "Turn the camera left or right, one step per push"
+          ],
+          [
+            "Trigger",
+            "Click what the ray is on"
+          ],
+          [
+            "A",
+            "Take the highlight"
+          ],
+          [
+            "B",
+            "Back"
+          ],
+          [
+            "X",
+            "Pause"
+          ],
+          [
+            "Y",
+            "Options"
+          ],
+          [
+            "Grip",
+            "Turn the camera left or right"
+          ]
         ]
       },
       "credits": "Based on [Neverball](https://neverball.org/) by Robert Kooima and contributors."
@@ -512,23 +902,73 @@
         "Sound and rumble",
         "Full game package with all tracks and cars (1.7 GB)"
       ],
-      "needs": ["Meta Quest (Quest 3 tested)"],
+      "needs": [
+        "Meta Quest (Quest 3 tested)"
+      ],
       "install": "default",
       "install_extra": "The first start can take a minute or two while the game data is extracted.",
       "controls": {
-        "columns": ["Input", "Menus", "Race"],
+        "columns": [
+          "Input",
+          "Menus",
+          "Race"
+        ],
         "rows": [
-          ["Right hand pointer", "Move the cursor", ""],
-          ["Right trigger", "Click", "Throttle"],
-          ["Left trigger", "Back", "Brake"],
-          ["Left stick", "Navigate lists", "Steering"],
-          ["A", "Select / Enter", "Start engine"],
-          ["B / left menu button", "Back", "Pause menu"],
-          ["X", "", "Handbrake"],
-          ["Y", "Recenter (hold 1 s)", "Next camera; hold 1 s to recenter"],
-          ["Right / left grip", "", "Shift up / down"],
-          ["Left stick click", "", "Reverse gear"],
-          ["Right stick click", "", "Rollover recover"]
+          [
+            "Right hand pointer",
+            "Move the cursor",
+            ""
+          ],
+          [
+            "Right trigger",
+            "Click",
+            "Throttle"
+          ],
+          [
+            "Left trigger",
+            "Back",
+            "Brake"
+          ],
+          [
+            "Left stick",
+            "Navigate lists",
+            "Steering"
+          ],
+          [
+            "A",
+            "Select / Enter",
+            "Start engine"
+          ],
+          [
+            "B / left menu button",
+            "Back",
+            "Pause menu"
+          ],
+          [
+            "X",
+            "",
+            "Handbrake"
+          ],
+          [
+            "Y",
+            "Recenter (hold 1 s)",
+            "Next camera; hold 1 s to recenter"
+          ],
+          [
+            "Right / left grip",
+            "",
+            "Shift up / down"
+          ],
+          [
+            "Left stick click",
+            "",
+            "Reverse gear"
+          ],
+          [
+            "Right stick click",
+            "",
+            "Rollover recover"
+          ]
         ]
       },
       "credits": "Based on [VDrift](https://vdrift.net/). VR framework from Team Beef's [QuakeQuest](https://github.com/Team-Beef-Studios/QuakeQuest). Pictures (desktop version): [VDrift community](https://commons.wikimedia.org/wiki/File:VDrift-screebshot_%282015%29.jpg), GPLv3."
@@ -550,7 +990,10 @@
         "Force feedback and rumble",
         "Extra tracks and cars in *Options → Downloads* over wifi (about 5.4 GB for the full set)"
       ],
-      "needs": ["Meta Quest 2 / 3 / Pro, or PICO 4 / Neo 3", "About 500 MB free space"],
+      "needs": [
+        "Meta Quest 2 / 3 / Pro, or PICO 4 / Neo 3",
+        "About 500 MB free space"
+      ],
       "install": [
         "Enable developer mode on your headset.",
         "Download the APK below: the same one runs on Meta Quest and on PICO.",
@@ -559,18 +1002,51 @@
       ],
       "install_extra": "The first launch takes an extra half minute while the game data is unpacked to `/sdcard/SpeedDreamsVR`. Updates reuse it: just install the new APK.",
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Right trigger", "Throttle"],
-          ["Left trigger", "Brake"],
-          ["Left stick", "Steer"],
-          ["Left stick click", "Reverse gear"],
-          ["Right grip", "Shift up"],
-          ["Left grip", "Shift down"],
-          ["A", "ABS / confirm"],
-          ["X", "ASR"],
-          ["Right stick click", "Rear-view mirror"],
-          ["Y", "Next camera; hold 1 s to recenter the menu panel"]
+          [
+            "Right trigger",
+            "Throttle"
+          ],
+          [
+            "Left trigger",
+            "Brake"
+          ],
+          [
+            "Left stick",
+            "Steer"
+          ],
+          [
+            "Left stick click",
+            "Reverse gear"
+          ],
+          [
+            "Right grip",
+            "Shift up"
+          ],
+          [
+            "Left grip",
+            "Shift down"
+          ],
+          [
+            "A",
+            "ABS / confirm"
+          ],
+          [
+            "X",
+            "ASR"
+          ],
+          [
+            "Right stick click",
+            "Rear-view mirror"
+          ],
+          [
+            "Y",
+            "Next camera; hold 1 s to recenter the menu panel"
+          ]
         ]
       },
       "controls_note": "Button names are those of the Meta Quest controllers, PICO controllers use the same layout. The driving controls are a virtual joystick either way, so they can be rebound in *Options → Players*.",
@@ -600,22 +1076,49 @@
         "Ten save-state slots per ROM, plus battery saves",
         "Remappable controls; Bluetooth gamepads work too"
       ],
-      "needs": ["Meta Quest", "Your own SNES ROMs"],
+      "needs": [
+        "Meta Quest",
+        "Your own SNES ROMs"
+      ],
       "install": [
         "Sideload the APK with SideQuest or `adb install Snes9xVR-0.1.apk`.",
         "Put ROMs in `/sdcard/Android/data/com.snes9x.vr/files/roms`, or choose any folder in *Settings → ROM folder* and grant storage access there.",
         "Launch from *Library → Unknown Sources*: the app opens on the ROM list."
       ],
       "controls": {
-        "columns": ["SNES", "Touch"],
+        "columns": [
+          "SNES",
+          "Touch"
+        ],
         "rows": [
-          ["D-pad", "Left stick"],
-          ["Y / X", "X / Y"],
-          ["B / A", "A / B"],
-          ["L / R", "Left / right trigger"],
-          ["Select", "Left grip"],
-          ["Start", "Right grip"],
-          ["Options", "Left menu button"]
+          [
+            "D-pad",
+            "Left stick"
+          ],
+          [
+            "Y / X",
+            "X / Y"
+          ],
+          [
+            "B / A",
+            "A / B"
+          ],
+          [
+            "L / R",
+            "Left / right trigger"
+          ],
+          [
+            "Select",
+            "Left grip"
+          ],
+          [
+            "Start",
+            "Right grip"
+          ],
+          [
+            "Options",
+            "Left menu button"
+          ]
         ]
       },
       "controls_note": "Remap everything under *Controls...* in the menu.",
@@ -644,25 +1147,62 @@
         "Quest-tuned defaults (3× internal resolution and more)",
         "Runs on **PICO** headsets from the same APK (experimental)"
       ],
-      "needs": ["Meta Quest 3 (PICO untested)", "A BIOS dump from your own PS2 console", "Your own PS2 games"],
+      "needs": [
+        "Meta Quest 3 (PICO untested)",
+        "A BIOS dump from your own PS2 console",
+        "Your own PS2 games"
+      ],
       "install": [
         "Sideload the APK with SideQuest or `adb install -r ARMSX2-Quest-0.3-beta.apk`. Installing over an earlier beta keeps your settings (same signing key).",
         "Grant storage access and point the app at your games.",
         "Uninstall any other ARMSX2 build first if the install fails with a signature mismatch."
       ],
       "controls": {
-        "columns": ["Quest", "PS2"],
+        "columns": [
+          "Quest",
+          "PS2"
+        ],
         "rows": [
-          ["A / B / X / Y", "Cross / Circle / Square / Triangle"],
-          ["Grips / triggers", "L1 R1 / L2 R2"],
-          ["Left stick click", "Start"],
-          ["Right stick click", "Select"],
-          ["Menu tap", "Opens the ARMSX2 menu (leaves VR)"],
-          ["Menu + left / right stick click", "L3 / R3"],
-          ["Left stick", "Left analog; a hard push is the D-pad"],
-          ["Right stick", "Right analog"],
-          ["Menu + B", "Left stick: analog only, or analog + D-pad"],
-          ["Menu + right trigger", "Recenter the screen"]
+          [
+            "A / B / X / Y",
+            "Cross / Circle / Square / Triangle"
+          ],
+          [
+            "Grips / triggers",
+            "L1 R1 / L2 R2"
+          ],
+          [
+            "Left stick click",
+            "Start"
+          ],
+          [
+            "Right stick click",
+            "Select"
+          ],
+          [
+            "Menu tap",
+            "Opens the ARMSX2 menu (leaves VR)"
+          ],
+          [
+            "Menu + left / right stick click",
+            "L3 / R3"
+          ],
+          [
+            "Left stick",
+            "Left analog; a hard push is the D-pad"
+          ],
+          [
+            "Right stick",
+            "Right analog"
+          ],
+          [
+            "Menu + B",
+            "Left stick: analog only, or analog + D-pad"
+          ],
+          [
+            "Menu + right trigger",
+            "Recenter the screen"
+          ]
         ]
       },
       "notes": [
@@ -690,26 +1230,66 @@
         "Menus and cinematics on a screen fixed in the room",
         "Campaign playable from the intro through the F.N.G. training"
       ],
-      "needs": ["Meta Quest 3", "WinlatorXR cats-27", "Your own Call of Duty 4 (2007) game folder"],
+      "needs": [
+        "Meta Quest 3",
+        "WinlatorXR cats-27",
+        "Your own Call of Duty 4 (2007) game folder"
+      ],
       "install": [
         "Copy the archive's files into a copy of your own COD4 game folder.",
         "Put that folder on the headset.",
         "Follow `README-FIRST.txt` and `WINLATORXR.txt` from the download."
       ],
       "controls": {
-        "columns": ["Action", "Button"],
+        "columns": [
+          "Action",
+          "Button"
+        ],
         "rows": [
-          ["Fire", "Right trigger"],
-          ["Use / pick up", "X"],
-          ["Reload / eject magazine", "A"],
-          ["Crouch / stance", "B"],
-          ["Next weapon", "Y"],
-          ["Pause", "Menu"],
-          ["Support grip, magazines, grenades", "Left grip"],
-          ["Grenade launcher", "Right grip"],
-          ["Sprint", "Left stick click"],
-          ["Melee", "Left trigger + left stick up"],
-          ["Night vision, airstrike, C4", "Left trigger + left stick down / left / right"]
+          [
+            "Fire",
+            "Right trigger"
+          ],
+          [
+            "Use / pick up",
+            "X"
+          ],
+          [
+            "Reload / eject magazine",
+            "A"
+          ],
+          [
+            "Crouch / stance",
+            "B"
+          ],
+          [
+            "Next weapon",
+            "Y"
+          ],
+          [
+            "Pause",
+            "Menu"
+          ],
+          [
+            "Support grip, magazines, grenades",
+            "Left grip"
+          ],
+          [
+            "Grenade launcher",
+            "Right grip"
+          ],
+          [
+            "Sprint",
+            "Left stick click"
+          ],
+          [
+            "Melee",
+            "Left trigger + left stick up"
+          ],
+          [
+            "Night vision, airstrike, C4",
+            "Left trigger + left stick down / left / right"
+          ]
         ]
       },
       "controls_note": "Reloading is physical: eject with A, take a fresh magazine from the off-hand hip with the left grip and release it at the magazine well. The right stick click is left free for WinlatorXR's menu.",
@@ -735,7 +1315,12 @@
         "VR Quick Menu and VR settings (turning, HUD, comfort vignette and more)",
         "Shortcuts for the base game and both expansions"
       ],
-      "needs": ["Meta Quest 3", "WinlatorXR cats-27", "Battlefield 1942 from the MoonGamers \"BF1942 & Expansions\" installer (dgVoodoo version)", "About 2 GB free space"],
+      "needs": [
+        "Meta Quest 3",
+        "WinlatorXR cats-27",
+        "Battlefield 1942 from the MoonGamers \"BF1942 & Expansions\" installer (dgVoodoo version)",
+        "About 2 GB free space"
+      ],
       "install": [
         "Install the MoonGamers package on a PC and copy the complete `Battlefield 1942` folder to the headset as `Download/BF1942`.",
         "Copy the zip's `BF1942` folder contents into `Download/BF1942`, and its `Winlator` folder to `Download/Winlator`.",
@@ -744,21 +1329,63 @@
         "Play with `D:\\BF1942\\BFVR-VR.bat` or the **BFVR-VR** shortcut. The first start takes a few minutes."
       ],
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Right trigger", "Fire"],
-          ["Right grip", "Secondary fire"],
-          ["Left trigger", "Use"],
-          ["A", "Reload"],
-          ["B (short press)", "Next weapon"],
-          ["B (hold 2 s)", "Recenter"],
-          ["Left stick", "Move"],
-          ["Right stick", "Turn; up jump, down crouch"],
-          ["X", "Prone"],
-          ["Y (hold)", "Scoreboard"],
-          ["Left grip (near the weapon)", "Hold the weapon with both hands"],
-          ["Left stick click (hold)", "Quick Menu: point with the right hand, release to choose"],
-          ["Left menu button", "Game menu"]
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Right grip",
+            "Secondary fire"
+          ],
+          [
+            "Left trigger",
+            "Use"
+          ],
+          [
+            "A",
+            "Reload"
+          ],
+          [
+            "B (short press)",
+            "Next weapon"
+          ],
+          [
+            "B (hold 2 s)",
+            "Recenter"
+          ],
+          [
+            "Left stick",
+            "Move"
+          ],
+          [
+            "Right stick",
+            "Turn; up jump, down crouch"
+          ],
+          [
+            "X",
+            "Prone"
+          ],
+          [
+            "Y (hold)",
+            "Scoreboard"
+          ],
+          [
+            "Left grip (near the weapon)",
+            "Hold the weapon with both hands"
+          ],
+          [
+            "Left stick click (hold)",
+            "Quick Menu: point with the right hand, release to choose"
+          ],
+          [
+            "Left menu button",
+            "Game menu"
+          ]
         ]
       },
       "notes": [
@@ -786,7 +1413,11 @@
         "Nanosuit menu by hand gesture",
         "Tuned Quest performance settings"
       ],
-      "needs": ["Meta Quest 3", "WinlatorXR cats-27 (avoid the dawn builds)", "Your own Crysis (2007, Steam or GOG, **not** Remastered)"],
+      "needs": [
+        "Meta Quest 3",
+        "WinlatorXR cats-27 (avoid the dawn builds)",
+        "Your own Crysis (2007, Steam or GOG, **not** Remastered)"
+      ],
       "install": [
         "Install WinlatorXR **cats-27** and create a container: screen `1592x1440` (or `1792x1624` for a sharper image), DXVK, wrapper/Turnip, drive `D:` mapped to `/sdcard/Download`.",
         "Copy Crysis to `/sdcard/Download/Crysis` and the unzipped package to `/sdcard/Download/CrysisVR-Setup`.",
@@ -794,21 +1425,63 @@
         "Launch `D:\\Crysis\\Bin32\\CrysisVR.exe` (use the **32-bit** launcher)."
       ],
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Right trigger", "Fire"],
-          ["Left trigger", "Use / pick up"],
-          ["Right grip", "Holster / switch weapon (at hip, shoulder, chest)"],
-          ["Left grip", "Grab weapon with off hand"],
-          ["A", "Reload (hold: fire mode)"],
-          ["B", "Grenade (tap: cycle, hold: throw)"],
-          ["X", "Binoculars"],
-          ["Y", "Suit menu (tap: armor mode, hold: open suit menu)"],
-          ["Left menu button", "Game menu / objectives"],
-          ["Right stick", "Turn (45° snap); up = jump, down = crouch/prone"],
-          ["Left stick", "Move; click = sprint"],
-          ["Swing with grip held", "Melee"],
-          ["Right stick click", "Reserved for the WinlatorXR menu"]
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Left trigger",
+            "Use / pick up"
+          ],
+          [
+            "Right grip",
+            "Holster / switch weapon (at hip, shoulder, chest)"
+          ],
+          [
+            "Left grip",
+            "Grab weapon with off hand"
+          ],
+          [
+            "A",
+            "Reload (hold: fire mode)"
+          ],
+          [
+            "B",
+            "Grenade (tap: cycle, hold: throw)"
+          ],
+          [
+            "X",
+            "Binoculars"
+          ],
+          [
+            "Y",
+            "Suit menu (tap: armor mode, hold: open suit menu)"
+          ],
+          [
+            "Left menu button",
+            "Game menu / objectives"
+          ],
+          [
+            "Right stick",
+            "Turn (45° snap); up = jump, down = crouch/prone"
+          ],
+          [
+            "Left stick",
+            "Move; click = sprint"
+          ],
+          [
+            "Swing with grip held",
+            "Melee"
+          ],
+          [
+            "Right stick click",
+            "Reserved for the WinlatorXR menu"
+          ]
         ]
       },
       "notes": [
@@ -835,26 +1508,66 @@
         "Pause menu anchored in the world",
         "Seated mode and 45° snap turn"
       ],
-      "needs": ["Meta Quest 3", "WinlatorXR cats-27 or public v27 (avoid the dawn/Turnip builds)", "Your own Far Cry (2004), e.g. the Steam version"],
+      "needs": [
+        "Meta Quest 3",
+        "WinlatorXR cats-27 or public v27 (avoid the dawn/Turnip builds)",
+        "Your own Far Cry (2004), e.g. the Steam version"
+      ],
       "install": [
         "Download and unzip `FarCryVR-Installer-Beta-0.2.zip`.",
         "Follow `README_INSTALL.txt`: copy the game and mod to the headset, create the WinlatorXR container and point the shortcut at it.",
         "Use the recommended **1591×1440** screen preset."
       ],
       "controls": {
-        "columns": ["Input", "Action"],
+        "columns": [
+          "Input",
+          "Action"
+        ],
         "rows": [
-          ["Right trigger", "Fire"],
-          ["Left trigger", "Use / interact"],
-          ["A", "Reload (hold: fire mode)"],
-          ["B", "Switch weapon (hold: drop)"],
-          ["X", "Binoculars"],
-          ["Y", "Grenade (tap: cycle, hold: throw)"],
-          ["Left menu button", "Game menu"],
-          ["Right stick", "Turn / 45° snap; up = jump, down = crouch"],
-          ["Left stick", "Move; click = sprint"],
-          ["Grips", "Grab (two-handed weapon / ladders)"],
-          ["Right stick click", "Reserved for the WinlatorXR menu"]
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Left trigger",
+            "Use / interact"
+          ],
+          [
+            "A",
+            "Reload (hold: fire mode)"
+          ],
+          [
+            "B",
+            "Switch weapon (hold: drop)"
+          ],
+          [
+            "X",
+            "Binoculars"
+          ],
+          [
+            "Y",
+            "Grenade (tap: cycle, hold: throw)"
+          ],
+          [
+            "Left menu button",
+            "Game menu"
+          ],
+          [
+            "Right stick",
+            "Turn / 45° snap; up = jump, down = crouch"
+          ],
+          [
+            "Left stick",
+            "Move; click = sprint"
+          ],
+          [
+            "Grips",
+            "Grab (two-handed weapon / ladders)"
+          ],
+          [
+            "Right stick click",
+            "Reserved for the WinlatorXR menu"
+          ]
         ]
       },
       "notes": [
@@ -863,8 +1576,14 @@
         "Play with more than 50% battery."
       ],
       "videos": [
-        {"id": "6jDmnkO0UX0", "label": "Standalone on Quest 3 · by Luboš VR"},
-        {"id": "I1oiDHGzDTk", "label": "PC VR version · trailer by fholger"}
+        {
+          "id": "6jDmnkO0UX0",
+          "label": "Standalone on Quest 3 · by Luboš VR"
+        },
+        {
+          "id": "I1oiDHGzDTk",
+          "label": "PC VR version · trailer by fholger"
+        }
       ],
       "credits": "Based on [farcry_vrmod](https://github.com/fholger/farcry_vrmod) by fholger. No game files included. Videos: [Luboš VR](https://www.youtube.com/watch?v=6jDmnkO0UX0) and [fholger](https://www.youtube.com/watch?v=I1oiDHGzDTk)."
     }
