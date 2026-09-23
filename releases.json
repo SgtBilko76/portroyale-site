@@ -5,12 +5,12 @@
    "name": "Unreal Tournament VR 1.0.0-beta9",
    "date": "2026-09-23T12:24:29Z",
    "prerelease": false,
-   "url": "https://github.com/SgtBilko76/Unreal-Tournament-QuestVR/releases/tag/v1.0.0-beta9-ut99",
+   "url": "https://github.com/SgtBilko76/Unreal-Tournament-VR/releases/tag/v1.0.0-beta9-ut99",
    "assets": [
     {
      "name": "UnrealTournamentVR-1.0.0-beta9-nodata.apk",
      "size": 12278263,
-     "url": "https://github.com/SgtBilko76/Unreal-Tournament-QuestVR/releases/download/v1.0.0-beta9-ut99/UnrealTournamentVR-1.0.0-beta9-nodata.apk"
+     "url": "https://github.com/SgtBilko76/Unreal-Tournament-VR/releases/download/v1.0.0-beta9-ut99/UnrealTournamentVR-1.0.0-beta9-nodata.apk"
     }
    ]
   }
@@ -53,12 +53,12 @@
    "name": "SuperTux VR Beta 0.2 (Quest + PICO)",
    "date": "2026-09-23T14:51:47Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/SuperTux-QuestVR/releases/tag/Beta0.2",
+   "url": "https://github.com/SgtBilko76/SuperTux-3D/releases/tag/Beta0.2",
    "assets": [
     {
      "name": "SuperTux-Beta0.2-quest-pico-arm64-v8a.apk",
      "size": 294152462,
-     "url": "https://github.com/SgtBilko76/SuperTux-QuestVR/releases/download/Beta0.2/SuperTux-Beta0.2-quest-pico-arm64-v8a.apk"
+     "url": "https://github.com/SgtBilko76/SuperTux-3D/releases/download/Beta0.2/SuperTux-Beta0.2-quest-pico-arm64-v8a.apk"
     }
    ]
   }
@@ -69,17 +69,17 @@
    "name": "ExtremeTuxRacer VR 0.0.2 \u2013 Quest & Pico (beta)",
    "date": "2026-09-23T15:06:44Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-QuestVR/releases/tag/Tuxracer0.0.2",
+   "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/tag/Tuxracer0.0.2",
    "assets": [
     {
      "name": "extremetuxracer-pico.apk",
      "size": 53073914,
-     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-QuestVR/releases/download/Tuxracer0.0.2/extremetuxracer-pico.apk"
+     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-pico.apk"
     },
     {
      "name": "extremetuxracer-quest.apk",
      "size": 53073782,
-     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-QuestVR/releases/download/Tuxracer0.0.2/extremetuxracer-quest.apk"
+     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-quest.apk"
     }
    ]
   }
@@ -90,17 +90,17 @@
    "name": "NeverBall-QuestVR",
    "date": "2026-09-08T13:07:53Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/tag/neverball-0814",
+   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/tag/neverball-0814",
    "assets": [
     {
      "name": "neverballquest.apk",
      "size": 61765029,
-     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/neverball-0814/neverballquest.apk"
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/neverball-0814/neverballquest.apk"
     },
     {
      "name": "pico-neverball.apk",
      "size": 61764973,
-     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/neverball-0814/pico-neverball.apk"
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/neverball-0814/pico-neverball.apk"
     }
    ]
   },
@@ -109,17 +109,17 @@
    "name": "NeverPutt-QuestVR",
    "date": "2026-09-08T13:09:28Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/tag/puttnik-0507",
+   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/tag/puttnik-0507",
    "assets": [
     {
      "name": "neverputtquest.apk",
      "size": 36833396,
-     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/puttnik-0507/neverputtquest.apk"
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/puttnik-0507/neverputtquest.apk"
     },
     {
      "name": "pico-neverputt.apk",
      "size": 36833340,
-     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-QuestVR/releases/download/puttnik-0507/pico-neverputt.apk"
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/puttnik-0507/pico-neverputt.apk"
     }
    ]
   }
@@ -136,22 +136,6 @@
      "name": "VDriftVR-0.1.0.apk",
      "size": 1800861337,
      "url": "https://github.com/SgtBilko76/VDrift-QuestVR/releases/download/Beta-0.0.1/VDriftVR-0.1.0.apk"
-    }
-   ]
-  }
- ],
- "snes9x-QuestVR": [
-  {
-   "tag": "v0.1",
-   "name": "Snes9x VR 0.1 \u2014 first beta",
-   "date": "2026-09-20T13:57:17Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/snes9x-QuestVR/releases/tag/v0.1",
-   "assets": [
-    {
-     "name": "Snes9xVR-0.1.apk",
-     "size": 1425955,
-     "url": "https://github.com/SgtBilko76/snes9x-QuestVR/releases/download/v0.1/Snes9xVR-0.1.apk"
     }
    ]
   }
@@ -338,6 +322,22 @@
      "name": "ARMSX2-3D-0.3-beta.apk",
      "size": 44692254,
      "url": "https://github.com/SgtBilko76/ARMSX2-3D/releases/download/v0.3-beta/ARMSX2-3D-0.3-beta.apk"
+    }
+   ]
+  }
+ ],
+ "snes9x-3D": [
+  {
+   "tag": "v0.1",
+   "name": "Snes9x VR 0.1 \u2014 first beta",
+   "date": "2026-09-20T13:57:17Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/snes9x-3D/releases/tag/v0.1",
+   "assets": [
+    {
+     "name": "Snes9xVR-0.1.apk",
+     "size": 1380899,
+     "url": "https://github.com/SgtBilko76/snes9x-3D/releases/download/v0.1/Snes9xVR-0.1.apk"
     }
    ]
   }
