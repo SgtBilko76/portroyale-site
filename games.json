@@ -492,9 +492,10 @@
       "name": "Speed Dreams VR",
       "repo": "SpeedDreams-QuestVR",
       "category": "native",
-      "tagline": "A full motorsport simulator, standalone on Meta Quest.",
+      "tagline": "A full motorsport simulator, standalone on Meta Quest and PICO.",
       "about": [
-        "Speed Dreams 2.4 as a standalone Meta Quest application: stereo rendering through OpenXR, a curved menu panel, and the full game in one APK. Another 74 tracks and 90 cars can be downloaded from inside the headset."
+        "Speed Dreams 2.4 as a standalone headset application: stereo rendering through OpenXR, a curved menu panel, and the full game in one APK. Another 74 tracks and 90 cars can be downloaded from inside the headset.",
+        "**One APK covers both makes.** The game asks the headset's OpenXR runtime what it supports and configures itself from the answer, so there is no separate PICO download and nothing to choose at install time. The PICO side is brand new and **not tested on PICO hardware yet**: reports are very welcome."
       ],
       "features": [
         "Stereo rendering through OpenXR",
@@ -503,8 +504,13 @@
         "Force feedback and rumble",
         "Extra tracks and cars in *Options → Downloads* over wifi (about 5.4 GB for the full set)"
       ],
-      "needs": ["Meta Quest 2 / 3 / Pro", "About 500 MB free space"],
-      "install": "default",
+      "needs": ["Meta Quest 2 / 3 / Pro, or PICO 4 / Neo 3", "About 500 MB free space"],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK below: the same one runs on Meta Quest and on PICO.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r <file>.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Launch it from *Library → Unknown Sources*."
+      ],
       "install_extra": "The first launch takes an extra half minute while the game data is unpacked to `/sdcard/SpeedDreamsVR`. Updates reuse it: just install the new APK.",
       "controls": {
         "columns": ["Input", "Action"],
@@ -521,10 +527,12 @@
           ["Y", "Next camera; hold 1 s to recenter the menu panel"]
         ]
       },
+      "controls_note": "Button names are those of the Meta Quest controllers, PICO controllers use the same layout. The driving controls are a virtual joystick either way, so they can be rebound in *Options → Players*.",
       "notes": [
         "`/sdcard/SpeedDreamsVR/vr.cfg` holds eye buffer scale, refresh rate, antialiasing, mirror position and steering curve.",
         "If a track won't hold frame rate, turn the sky dome off first.",
-        "Practice and qualifying run one car at a time: use Quick Race or a championship to race opponents."
+        "Practice and qualifying run one car at a time: use Quick Race or a championship to race opponents.",
+        "The PICO build is untested: if it does not start, or the buttons are mapped differently, please open an issue on GitHub. `adb logcat -s SpeedDreamsVR:V TBXR:V` prints the runtime it found and the controller profile it bound, which is the useful thing to paste in."
       ],
       "credits": "Based on [Speed Dreams](https://www.speed-dreams.net/). Picture (desktop version): [Ocirne94](https://commons.wikimedia.org/wiki/File:Speed_Dreams_car_with_headlamps_on_and_glowing_brake_disk.jpg), CC BY-SA 3.0."
     },
