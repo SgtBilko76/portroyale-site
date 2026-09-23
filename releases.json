@@ -49,6 +49,20 @@
  ],
  "SuperTux-QuestVR": [
   {
+   "tag": "Beta0.2",
+   "name": "SuperTux VR Beta 0.2 (Quest + PICO)",
+   "date": "2026-09-23T14:51:47Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/SuperTux-QuestVR/releases/tag/Beta0.2",
+   "assets": [
+    {
+     "name": "SuperTux-Beta0.2-quest-pico-arm64-v8a.apk",
+     "size": 294152462,
+     "url": "https://github.com/SgtBilko76/SuperTux-QuestVR/releases/download/Beta0.2/SuperTux-Beta0.2-quest-pico-arm64-v8a.apk"
+    }
+   ]
+  },
+  {
    "tag": "Beta0.1",
    "name": "SuperTux Quest VR Beta 0.1",
    "date": "2026-09-13T16:02:56Z",

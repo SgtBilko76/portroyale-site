@@ -629,10 +629,11 @@
       "name": "SuperTux VR",
       "repo": "SuperTux-QuestVR",
       "category": "native",
-      "tagline": "The classic jump'n'run as a layered 3D diorama on Meta Quest.",
+      "tagline": "The classic jump'n'run as a layered 3D diorama on Meta Quest and PICO.",
       "about": [
-        "[SuperTux](https://www.supertux.org/), the open-source jump'n'run, running standalone on Meta Quest (Quest 2 / 3 / 3S / Pro) through OpenXR.",
-        "The game is shown on a virtual screen in front of you, with each drawing layer at its own depth: backgrounds sit farther back, and the HUD and menus float closer. Moving your head gives real parallax."
+        "[SuperTux](https://www.supertux.org/), the open-source jump'n'run, running standalone on Meta Quest (Quest 2 / 3 / 3S / Pro) and PICO (4, 4 Ultra, Neo 3) through OpenXR.",
+        "The game is shown on a virtual screen in front of you, with each drawing layer at its own depth: backgrounds sit farther back, and the HUD and menus float closer. Moving your head gives real parallax.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "Every drawing layer at its own depth, with real head-motion parallax",
@@ -640,9 +641,14 @@
         "Falls back to normal 2D mode without an OpenXR runtime"
       ],
       "needs": [
-        "Meta Quest 2 / 3 / 3S / Pro"
+        "Meta Quest 2 / 3 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested)"
       ],
-      "install": "default",
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK below.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r <file>.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO."
+      ],
       "controls": {
         "columns": [
           "Input",
@@ -687,8 +693,11 @@
           ]
         ]
       },
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
       "notes": [
-        "Single player only. Screen-space effects (displacement, blur) are disabled in VR."
+        "Single player only. Screen-space effects (displacement, blur) are disabled in VR.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub."
       ],
       "credits": "Based on [SuperTux](https://www.supertux.org/) by the SuperTux team."
     },
