@@ -79,8 +79,8 @@ code {
 /* ---------- home hero */
 .hero {
   background:
-    linear-gradient(to right, rgba(17, 26, 40, .92) 25%, rgba(17, 26, 40, .6) 60%, rgba(17, 26, 40, .3)),
-    url("images/site/hero.png") center 60% / cover no-repeat,
+    radial-gradient(ellipse at 20% 0%, rgba(207, 23, 23, .35), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(245, 130, 32, .18), transparent 50%),
     var(--surface);
   border-bottom: 1px solid var(--line);
 }
@@ -235,10 +235,6 @@ code {
   .footer-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  .hero { background:
-    linear-gradient(rgba(17, 26, 40, .8), rgba(17, 26, 40, .8)),
-    url("images/site/hero.png") center / cover no-repeat,
-    var(--surface); }
   .hero-inner { grid-template-columns: 1fr; gap: 24px; padding: 48px 0; }
   .hero-logo { width: 140px; }
   .section { padding: 48px 0; }
