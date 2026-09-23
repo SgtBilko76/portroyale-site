@@ -31,22 +31,6 @@
    ]
   }
  ],
- "Sauerbraten-QuestVR": [
-  {
-   "tag": "Beta-0.2",
-   "name": "Sauerbraten-VR Beta 0.2",
-   "date": "2026-09-23T13:41:17Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/tag/Beta-0.2",
-   "assets": [
-    {
-     "name": "sauerbratenquest.apk",
-     "size": 1017061305,
-     "url": "https://github.com/SgtBilko76/Sauerbraten-QuestVR/releases/download/Beta-0.2/sauerbratenquest.apk"
-    }
-   ]
-  }
- ],
  "SuperTuxKart-QuestVR": [
   {
    "tag": "v0.9",
@@ -144,7 +128,7 @@
  "snes9x-QuestVR": [
   {
    "tag": "v0.1",
-   "name": "Snes9x VR 0.1 \u2014 first beta",
+   "name": "Snes9x VR 0.1 — first beta",
    "date": "2026-09-20T13:57:17Z",
    "prerelease": true,
    "url": "https://github.com/SgtBilko76/snes9x-QuestVR/releases/tag/v0.1",
@@ -224,7 +208,7 @@
  "Farcry_vrmod-WinlatorXR": [
   {
    "tag": "quest-beta-0.2",
-   "name": "Far Cry VR (Quest) \u2014 Beta 0.2",
+   "name": "Far Cry VR (Quest) — Beta 0.2",
    "date": "2026-09-16T10:57:50Z",
    "prerelease": true,
    "url": "https://github.com/SgtBilko76/Farcry_vrmod-WinlatorXR/releases/tag/quest-beta-0.2",
@@ -261,7 +245,7 @@
  "Descent3-VR": [
   {
    "tag": "quest-v0.3-beta",
-   "name": "Descent 3 for Meta Quest and PICO \u2014 Beta 0.3",
+   "name": "Descent 3 for Meta Quest and PICO — Beta 0.3",
    "date": "2026-09-23T12:33:49Z",
    "prerelease": true,
    "url": "https://github.com/SgtBilko76/Descent3-VR/releases/tag/quest-v0.3-beta",
@@ -293,7 +277,7 @@
  "Hurrican-3D": [
   {
    "tag": "v1.1.0",
-   "name": "Hurrican VR 1.1.0 \u2014 Quest + PICO",
+   "name": "Hurrican VR 1.1.0 — Quest + PICO",
    "date": "2026-09-23T11:56:05Z",
    "prerelease": false,
    "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/tag/v1.1.0",
@@ -323,6 +307,22 @@
      "name": "Speeddreams.0.9.3-beta.apk",
      "size": 233029432,
      "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/speeddreams0.0.5/Speeddreams.0.9.3-beta.apk"
+    }
+   ]
+  }
+ ],
+ "Sauerbraten-VR": [
+  {
+   "tag": "Beta-0.2",
+   "name": "Sauerbraten-VR",
+   "date": "2026-09-23T13:41:17Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Sauerbraten-VR/releases/tag/Beta-0.2",
+   "assets": [
+    {
+     "name": "sauerbratenquest.apk",
+     "size": 1017061305,
+     "url": "https://github.com/SgtBilko76/Sauerbraten-VR/releases/download/Beta-0.2/sauerbratenquest.apk"
     }
    ]
   }
