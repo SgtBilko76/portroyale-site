@@ -497,9 +497,9 @@
       "name": "Xonotic VR",
       "repo": "Xonotic-VR",
       "category": "native",
-      "tagline": "The fast-paced open-source arena shooter, standalone on Meta Quest.",
+      "tagline": "The fast-paced open-source arena shooter, standalone on Meta Quest and PICO.",
       "about": [
-        "A native OpenXR port of Xonotic 0.8.6 for Meta Quest. The APK is self-contained: the full game data is bundled, no extra download needed."
+        "A native OpenXR port of Xonotic 0.8.6 for Meta Quest and PICO. The same APK works on both headsets, the right controller bindings and OpenXR extensions are picked automatically at startup. The APK is self-contained: the full game data is bundled, no extra download needed."
       ],
       "features": [
         "Single-pass stereo rendering (multiview) and GPU skeletal skinning",
@@ -509,7 +509,7 @@
         "Comfort turning; the head-tracked camera is kept out of walls"
       ],
       "needs": [
-        "Meta Quest"
+        "Meta Quest, or a PICO headset (untested on real PICO hardware)"
       ],
       "install": "default",
       "controls": {
@@ -569,7 +569,8 @@
         ]
       },
       "notes": [
-        "The APK is signed with a debug key."
+        "The APK is signed with a debug key.",
+        "The PICO build is untested: if it does not start, or the buttons are mapped differently, please open an issue on GitHub."
       ],
       "credits": "Based on [Xonotic](https://xonotic.org/) by Team Xonotic. Pictures (desktop version) via Wikimedia Commons, GPL: [Xonotic developers](https://commons.wikimedia.org/wiki/File:Xonotic_0.8.2_rocket.jpg), [greewrfdsfsf](https://commons.wikimedia.org/wiki/File:Xonotic_Game_Play_-_Silent_Siege.jpg)."
     },
