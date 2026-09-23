@@ -348,7 +348,7 @@
         "Sideload the APK with SideQuest or `adb install -r Descent3-VR-0.3-beta.apk`.",
         "Copy all `.hog` files plus the `missions` and `movies` folders to `/sdcard/Android/data/com.descentdevelopers.descent3/files/`.",
         "From GOG/Steam: after copying with adb, make the folders readable for the app with `adb shell \"cd /sdcard/Android/data/com.descentdevelopers.descent3/files && find . -mindepth 1 -type d -exec chmod 2777 {} +\"`.",
-        "From the original CDs: the zip download contains `tools/stage_gamedata.sh`, which extracts the data from CD images and pushes it to the headset."
+        "From the original CDs: [quest/tools/stage_gamedata.sh](https://github.com/SgtBilko76/Descent3-VR/tree/quest-vr-port/quest/tools) in the source repository extracts the data from CD images and pushes it to the headset."
       ],
       "controls": {
         "columns": [
