@@ -408,5 +408,21 @@
     }
    ]
   }
+ ],
+ "Luanti-VR": [
+  {
+   "tag": "v0.1.1-beta",
+   "name": "Luanti VR 0.1.1-beta \u2013 Quest + PICO",
+   "date": "2026-09-24T22:47:48Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Luanti-VR/releases/tag/v0.1.1-beta",
+   "assets": [
+    {
+     "name": "LuantiVR-0.1.1-beta.apk",
+     "size": 30218114,
+     "url": "https://github.com/SgtBilko76/Luanti-VR/releases/download/v0.1.1-beta/LuantiVR-0.1.1-beta.apk"
+    }
+   ]
+  }
  ]
 }
