@@ -388,20 +388,6 @@
      "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/download/v0.10.0-beta1/supertuxkart-beta1.apk"
     }
    ]
-  },
-  {
-   "tag": "v0.9",
-   "name": "SuperTuxKart-QuestVR",
-   "date": "2026-09-08T13:18:17Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/tag/v0.9",
-   "assets": [
-    {
-     "name": "supertuxkartquest.apk",
-     "size": 735777769,
-     "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/download/v0.9/supertuxkartquest.apk"
-    }
-   ]
   }
  ]
 }
