@@ -932,19 +932,29 @@
       "category": "native",
       "tagline": "The open-source drift racing simulator, from the driver's seat.",
       "about": [
-        "A native port of [VDrift](https://vdrift.net/) for Meta Quest. The race is rendered in stereo with head tracking on whichever camera you pick (in-car, hood, chase...), the HUD is a head-locked panel, and the menus float in front of you over the 3D garage scene."
+        "A native port of [VDrift](https://vdrift.net/) for Meta Quest and PICO. The same APK works on both headsets. The race is rendered in stereo with head tracking on whichever camera you pick (in-car, hood, chase...), the HUD is a head-locked panel, and the menus float in front of you over the 3D garage scene.",
+        "Online multiplayer runs on a dedicated server that simulates every car, including collisions between players. Pick **Multiplayer** on the main menu, choose a server and join with the car from your garage. Hosting a server is described in the [server README](https://github.com/SgtBilko76/VDrift-QuestVR/tree/master/tools/server).",
+        "**PICO support is brand new and not tested on PICO hardware yet**: reports are very welcome."
       ],
       "features": [
         "Stereo races with head tracking on every camera",
         "Floating (curved) menu screen over the garage scene",
+        "Online multiplayer on a dedicated server, with bots",
         "Sound and rumble",
+        "Runs on **PICO** headsets from the same APK (experimental)",
         "Full game package with all tracks and cars (1.7 GB)"
       ],
       "needs": [
-        "Meta Quest (Quest 3 tested)"
+        "Meta Quest (Quest 3 tested), or PICO 4 / Neo 3 (untested)"
+      ],
+      "notes": [
+        "**Coming from 0.1.0 on Quest: uninstall it first.** Version 0.2.0 is signed with a different key, so it can't install over it. Your game data and settings in `/sdcard/VDriftVR` are kept.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "Your multiplayer name is `player_name` in `/sdcard/VDriftVR/vr.cfg`, and the server list is `/sdcard/VDriftVR/.vdrift/servers.config` (one `name = host:port` per line)."
       ],
       "install": "default",
-      "install_extra": "The first start can take a minute or two while the game data is extracted.",
+      "install_extra": "The first start can take a minute or two while the game data is extracted. Grant \"All files access\" when asked. SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader) and launch it from your library.",
       "controls": {
         "columns": [
           "Input",

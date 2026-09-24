@@ -126,16 +126,16 @@
  ],
  "VDrift-QuestVR": [
   {
-   "tag": "Beta-0.0.1",
-   "name": "VDrift-QuestVR Full Game Package",
-   "date": "2026-09-11T17:03:23Z",
+   "tag": "v0.2.0",
+   "name": "VDrift VR 0.2.0 \u2013 Quest + PICO, Full Game Package",
+   "date": "2026-09-24T21:11:07Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/VDrift-QuestVR/releases/tag/Beta-0.0.1",
+   "url": "https://github.com/SgtBilko76/VDrift-QuestVR/releases/tag/v0.2.0",
    "assets": [
     {
-     "name": "VDriftVR-0.1.0.apk",
-     "size": 1800861337,
-     "url": "https://github.com/SgtBilko76/VDrift-QuestVR/releases/download/Beta-0.0.1/VDriftVR-0.1.0.apk"
+     "name": "VDriftVR-0.2.0.apk",
+     "size": 1800905973,
+     "url": "https://github.com/SgtBilko76/VDrift-QuestVR/releases/download/v0.2.0/VDriftVR-0.2.0.apk"
     }
    ]
   }
