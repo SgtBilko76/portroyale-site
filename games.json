@@ -583,20 +583,26 @@
     {
       "slug": "supertuxkart",
       "name": "SuperTuxKart VR",
-      "repo": "SuperTuxKart-QuestVR",
+      "repo": "SuperTuxKart-VR",
       "category": "native",
       "tagline": "The free open-source kart racer, from the driver's seat.",
       "about": [
-        "A standalone VR port of [SuperTuxKart](https://supertuxkart.net/) for Meta Quest. Races are rendered in real per-eye stereo with head tracking, layered on the normal kart-following camera, and the Touch controllers drive SuperTuxKart's standard gamepad controls."
+        "A standalone VR port of [SuperTuxKart](https://supertuxkart.net/) for Meta Quest and PICO. The same APK works on both headsets. Menus run on a head-tracked floating screen, and the Touch controllers drive SuperTuxKart's standard gamepad controls.",
+        "Races currently render flat rather than in true per-eye stereo: a resolution mismatch in the stereo path was causing corrupted graphics, so it's disabled for now in favor of a stable, playable build. Re-enabling per-eye stereo depth during races is planned.",
+        "**PICO support is brand new and not tested on PICO hardware yet**: reports are very welcome."
       ],
       "features": [
-        "Native OpenXR app on Quest",
-        "Per-eye stereo rendering with head tracking",
-        "Menus on a floating screen in VR",
-        "Touch controllers mapped to the standard gamepad controls"
+        "Native OpenXR app on Quest and PICO",
+        "Head-tracked menu screen",
+        "Touch controllers mapped to the standard gamepad controls",
+        "Runs on **PICO** headsets from the same APK (experimental)"
       ],
       "needs": [
-        "Meta Quest"
+        "Meta Quest (PICO untested)"
+      ],
+      "notes": [
+        "In-race stereo depth is temporarily disabled after a rendering bug; races display flat on the same screen used for menus.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub."
       ],
       "install": "default",
       "controls": {
