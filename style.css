@@ -78,16 +78,28 @@ code {
 
 /* ---------- home hero */
 .hero {
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(207, 23, 23, .35), transparent 55%),
-    radial-gradient(ellipse at 100% 100%, rgba(245, 130, 32, .18), transparent 50%),
-    var(--surface);
+  position: relative;
+  isolation: isolate;
+  background: var(--surface);
   border-bottom: 1px solid var(--line);
 }
-.hero-inner { display: grid; grid-template-columns: minmax(240px, 360px) 1fr; gap: 56px; align-items: center; padding: 72px 0; }
-.hero-shot { position: relative; margin: 0; }
-.hero-shot > img:first-child { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0, 0, 0, .55); }
-.hero-badge { position: absolute; right: -18px; bottom: -18px; width: 120px; height: auto; filter: drop-shadow(0 0 14px rgba(255, 255, 255, .25)) drop-shadow(0 6px 16px rgba(0, 0, 0, .6)); }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("images/site/hero-pirate.jpg") center 28% / cover no-repeat;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to right, rgba(17, 26, 40, .93) 45%, rgba(17, 26, 40, .55) 75%, rgba(17, 26, 40, .35)),
+    linear-gradient(to bottom, rgba(17, 26, 40, .7), rgba(17, 26, 40, .35) 45%, var(--bg));
+}
+.hero-inner { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; padding: 72px 0; position: relative; z-index: 1; }
 .hero-logo { width: 220px; height: auto; filter: drop-shadow(0 0 18px rgba(255, 255, 255, .18)) drop-shadow(0 12px 24px rgba(0, 0, 0, .5)); }
 .brand img, .footer img { filter: drop-shadow(0 0 6px rgba(255, 255, 255, .25)); }
 .eyebrow { color: var(--orange); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; margin-bottom: .6em; }
@@ -239,8 +251,7 @@ code {
 }
 @media (max-width: 640px) {
   .hero-inner { grid-template-columns: 1fr; gap: 24px; padding: 48px 0; }
-  .hero-shot { max-width: 320px; margin-inline: auto; }
-  .hero-badge { width: 84px; right: -6px; bottom: -6px; }
+  .hero-logo { width: 140px; }
   .section { padding: 48px 0; }
   .game-hero { min-height: 380px; }
   .game-hero-inner { padding-top: 120px; }
