@@ -424,5 +424,26 @@
     }
    ]
   }
+ ],
+ "Wipeout-Rewrite-VR": [
+  {
+   "tag": "v0.1.0-beta1",
+   "name": "Wipeout Rewrite VR 0.1.0-beta1 \u2013 Quest + PICO",
+   "date": "2026-09-25T08:36:47Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Wipeout-Rewrite-VR/releases/tag/v0.1.0-beta1",
+   "assets": [
+    {
+     "name": "WipeoutRewriteVR-0.1.0-beta1-pico.apk",
+     "size": 1028642,
+     "url": "https://github.com/SgtBilko76/Wipeout-Rewrite-VR/releases/download/v0.1.0-beta1/WipeoutRewriteVR-0.1.0-beta1-pico.apk"
+    },
+    {
+     "name": "WipeoutRewriteVR-0.1.0-beta1-quest.apk",
+     "size": 1028642,
+     "url": "https://github.com/SgtBilko76/Wipeout-Rewrite-VR/releases/download/v0.1.0-beta1/WipeoutRewriteVR-0.1.0-beta1-quest.apk"
+    }
+   ]
+  }
  ]
 }
