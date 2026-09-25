@@ -185,7 +185,6 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
       <a href="index.html#emulator">Emulators</a>
       <a href="index.html#winlator">WinlatorXR</a>
       <a href="https://github.com/{esc(site['github_user'])}" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn btn-kofi btn-sm" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
     </nav>
   </div>
 </header>
