@@ -179,7 +179,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
 <a class="skip" href="#main">Skip to main content</a>
 <header class="topbar">
   <div class="wrap topbar-inner">
-    <a class="brand" href="index.html"><img src="images/site/logo.png" alt="" width="44" height="44"><span>{esc(site['title'])}</span></a>
+    <a class="brand" href="index.html"><span>{esc(site['title'])}</span></a>
     <nav class="nav" aria-label="Main">
       <a href="index.html#native">Ports</a>
       <a href="index.html#emulator">Emulators</a>
@@ -195,7 +195,6 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
 <footer class="footer">
   <div class="wrap footer-inner">
     <div>
-      <img src="images/site/logo.png" alt="" width="64" height="64">
       <p class="footer-title">{esc(site['title'])}</p>
       <p>{esc(site['tagline'])}</p>
     </div>
@@ -241,7 +240,6 @@ def build_index(site, cats, games, rels):
     parts = [f"""
 <section class="hero">
   <div class="wrap hero-inner">
-    <img class="hero-logo" src="images/site/logo.png" alt="PortRoyale logo" width="220" height="220">
     <div>
       <p class="eyebrow">Welcome to {esc(site['title'])}</p>
       <h1>{esc(site['tagline'])}</h1>
