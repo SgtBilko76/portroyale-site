@@ -253,3 +253,4 @@ code {
 .btn-kofi:hover { background: #e14b48; color: #fff; }
 .sponsor-card .btn + .btn { margin-top: 10px; }
 .footer .btn + .btn { margin-top: 10px; }
+.sponsor-heart { color: #ff5e5b; }
