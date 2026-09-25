@@ -207,6 +207,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
       <p class="footer-head">Support the ports</p>
       <p>Every port is free. If you enjoy them, sponsoring keeps new ones coming.</p>
       <a class="btn btn-sponsor" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor on GitHub</a>
+      <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Buy me a coffee</a>
     </div>
   </div>
   <p class="wrap fineprint">All game names and trademarks belong to their owners. Ports of commercial games contain no game data: you need your own copy.</p>
@@ -218,6 +219,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
 
 HEART = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.3 1.9 8.4A3.8 3.8 0 0 1 8 3.6a3.8 3.8 0 0 1 6.1 4.8Z"/></svg>'
 GH = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.5 15.6c.4 0 .5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.6 7.6 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.6 3.9.3.3.5.8.5 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 8 0Z"/></svg>'
+KOFI = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h9.2a3.3 3.3 0 0 1 0 6.6h-.6A4 4 0 0 1 6.7 13H5.3A3.3 3.3 0 0 1 2 9.7Zm9.2 4.9a1.6 1.6 0 0 0 0-3.2h-.5v3.2ZM1.5 14h10v1.5h-10Z"/></svg>'
 DL = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M7 1h2v7.2l2.6-2.6L13 7l-5 5-5-5 1.4-1.4L7 8.2ZM2 13h12v2H2Z"/></svg>'
 
 
@@ -291,7 +293,10 @@ def build_index(site, cats, games, rels):
       <h2>Keep the ports coming</h2>
       <p>Every port here is free and open source. Sponsoring on GitHub pays for the hours that go into the next one.</p>
     </div>
-    <a class="btn btn-sponsor btn-lg" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor SgtBilko76</a>
+    <div class="actions">
+      <a class="btn btn-sponsor btn-lg" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor on GitHub</a>
+      <a class="btn btn-kofi btn-lg" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
+    </div>
   </div>
 </section>""")
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": site["title"],
@@ -462,7 +467,8 @@ def build_game(site, cats, game, rels, prev_g, next_g):
       <p class="sponsor-heart">{HEART}</p>
       <h3>Enjoying {esc(game['name'])}?</h3>
       <p>This port is free. Sponsoring on GitHub supports its development and the next ports.</p>
-      <a class="btn btn-sponsor btn-block" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">Sponsor on GitHub</a>
+      <a class="btn btn-sponsor btn-block" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor on GitHub</a>
+      <a class="btn btn-kofi btn-block" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Buy me a coffee</a>
     </aside>
   </div>
 </section>
