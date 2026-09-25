@@ -84,7 +84,10 @@ code {
     var(--surface);
   border-bottom: 1px solid var(--line);
 }
-.hero-inner { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; padding: 72px 0; }
+.hero-inner { display: grid; grid-template-columns: minmax(240px, 360px) 1fr; gap: 56px; align-items: center; padding: 72px 0; }
+.hero-shot { position: relative; margin: 0; }
+.hero-shot > img:first-child { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0, 0, 0, .55); }
+.hero-badge { position: absolute; right: -18px; bottom: -18px; width: 120px; height: auto; filter: drop-shadow(0 0 14px rgba(255, 255, 255, .25)) drop-shadow(0 6px 16px rgba(0, 0, 0, .6)); }
 .hero-logo { width: 220px; height: auto; filter: drop-shadow(0 0 18px rgba(255, 255, 255, .18)) drop-shadow(0 12px 24px rgba(0, 0, 0, .5)); }
 .brand img, .footer img { filter: drop-shadow(0 0 6px rgba(255, 255, 255, .25)); }
 .eyebrow { color: var(--orange); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; margin-bottom: .6em; }
@@ -236,7 +239,8 @@ code {
 }
 @media (max-width: 640px) {
   .hero-inner { grid-template-columns: 1fr; gap: 24px; padding: 48px 0; }
-  .hero-logo { width: 140px; }
+  .hero-shot { max-width: 320px; margin-inline: auto; }
+  .hero-badge { width: 84px; right: -6px; bottom: -6px; }
   .section { padding: 48px 0; }
   .game-hero { min-height: 380px; }
   .game-hero-inner { padding-top: 120px; }

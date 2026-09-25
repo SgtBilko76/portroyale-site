@@ -241,7 +241,10 @@ def build_index(site, cats, games, rels):
     parts = [f"""
 <section class="hero">
   <div class="wrap hero-inner">
-    <img class="hero-logo" src="images/site/logo.png" alt="PortRoyale logo" width="220" height="220">
+    <figure class="hero-shot">
+      <img src="images/site/hero-pirate.jpg" alt="A pirate wearing a Meta Quest headset on the deck of a sailing ship" width="896" height="1086">
+      <img class="hero-badge" src="images/site/logo.png" alt="PortRoyale logo" width="120" height="120">
+    </figure>
     <div>
       <p class="eyebrow">Welcome to {esc(site['title'])}</p>
       <h1>{esc(site['tagline'])}</h1>
