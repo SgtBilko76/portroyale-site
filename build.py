@@ -203,9 +203,8 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
       <p>{esc(site['thanks'])}</p>
     </div>
     <div>
-      <p class="footer-head">Support the ports</p>
-      <p>Every port is free. If you enjoy them, a coffee keeps new ones coming.</p>
-      <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Buy me a coffee</a>
+      <p class="footer-head">Source</p>
+      <p>Every port is free and open source on <a href="https://github.com/{esc(site['github_user'])}" target="_blank" rel="noopener">GitHub</a>.</p>
     </div>
   </div>
   <p class="wrap fineprint">All game names and trademarks belong to their owners. Ports of commercial games contain no game data: you need your own copy.</p>
