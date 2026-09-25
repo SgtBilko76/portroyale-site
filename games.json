@@ -1460,7 +1460,7 @@
     },
     {
       "slug": "snes9x",
-      "name": "Snes9x VR",
+      "name": "Snes9x 3D",
       "repo": "snes9x-3D",
       "category": "emulator",
       "tagline": "SNES on a curved screen, with real depth and true Mode 7 perspective.",
