@@ -185,7 +185,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
       <a href="index.html#emulator">Emulators</a>
       <a href="index.html#winlator">WinlatorXR</a>
       <a href="https://github.com/{esc(site['github_user'])}" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn btn-sponsor btn-sm" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor</a>
+      <a class="btn btn-kofi btn-sm" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
     </nav>
   </div>
 </header>
@@ -205,8 +205,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
     </div>
     <div>
       <p class="footer-head">Support the ports</p>
-      <p>Every port is free. If you enjoy them, sponsoring keeps new ones coming.</p>
-      <a class="btn btn-sponsor" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor on GitHub</a>
+      <p>Every port is free. If you enjoy them, a coffee keeps new ones coming.</p>
       <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Buy me a coffee</a>
     </div>
   </div>
@@ -249,7 +248,7 @@ def build_index(site, cats, games, rels):
       <p class="lead">{esc(site['intro'])}</p>
       <div class="actions">
         <a class="btn btn-primary" href="#native">Browse the ports</a>
-        <a class="btn btn-sponsor" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor</a>
+        <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
       </div>
       <ul class="stats">
         <li><strong>{len(games)}</strong> VR ports</li>
@@ -291,11 +290,10 @@ def build_index(site, cats, games, rels):
   <div class="wrap sponsor-inner">
     <div>
       <h2>Keep the ports coming</h2>
-      <p>Every port here is free and open source. Sponsoring on GitHub pays for the hours that go into the next one.</p>
+      <p>Every port here is free and open source. A coffee on Ko-fi pays for the hours that go into the next one.</p>
     </div>
     <div class="actions">
-      <a class="btn btn-sponsor btn-lg" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor on GitHub</a>
-      <a class="btn btn-kofi btn-lg" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
+      <a class="btn btn-kofi btn-lg" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Buy me a coffee</a>
     </div>
   </div>
 </section>""")
@@ -419,7 +417,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     <div class="actions">
       {dl_btn}
       <a class="btn btn-ghost" href="{repo_url}" target="_blank" rel="noopener">{GH} GitHub</a>
-      <a class="btn btn-sponsor" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor</a>
+      <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
     </div>
   </div>
 </section>
@@ -464,10 +462,9 @@ def build_game(site, cats, game, rels, prev_g, next_g):
       <p class="note">All releases: <a href="{repo_url}/releases" target="_blank" rel="noopener">{repo_url.replace('https://', '')}/releases</a></p>
     </div>
     <aside class="sponsor-card">
-      <p class="sponsor-heart">{HEART}</p>
+      <p class="sponsor-heart">{KOFI}</p>
       <h3>Enjoying {esc(game['name'])}?</h3>
-      <p>This port is free. Sponsoring on GitHub supports its development and the next ports.</p>
-      <a class="btn btn-sponsor btn-block" href="{esc(site['sponsor_url'])}" target="_blank" rel="noopener">{HEART} Sponsor on GitHub</a>
+      <p>This port is free. A coffee on Ko-fi supports its development and the next ports.</p>
       <a class="btn btn-kofi btn-block" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Buy me a coffee</a>
     </aside>
   </div>
