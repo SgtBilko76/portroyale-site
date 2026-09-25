@@ -1376,6 +1376,89 @@
       "credits": "Based on [Luanti](https://www.luanti.org/) by the Luanti contributors, LGPL 2.1+. Pictures (desktop version) from the [luanti.org gallery](https://www.luanti.org/#gallery): [Minetest Game](https://content.luanti.org/packages/Minetest/minetest_game/), [Soothing 32](https://content.luanti.org/packages/Zughy/soothing32/), [Steampunk Blimp](https://content.luanti.org/packages/apercy/steampunk_blimp/), [Animalia](https://content.luanti.org/packages/ElCeejo/animalia/), [RPG16](https://content.luanti.org/packages/Hugues%20Ross/rpg16/) and [Glitch](https://content.luanti.org/packages/Wuzzy/glitch/)."
     },
     {
+      "slug": "wipeout",
+      "name": "Wipeout Rewrite VR",
+      "repo": "Wipeout-Rewrite-VR",
+      "category": "native",
+      "tagline": "Anti-gravity racing from 1995, now in stereo 3D around you.",
+      "about": [
+        "A native port of [wipEout Rewrite](https://github.com/phoboslab/wipeout-rewrite), the open-source re-implementation of the 1995 PSX classic, for Meta Quest and PICO. Races are rendered in stereo 3D with head tracking on top of the game camera, the HUD floats in front of you, and the intro, title and menus play on a large virtual screen.",
+        "The cockpit view (**Y**) puts you right in the ship.",
+        "**PICO support is brand new and not tested on PICO hardware yet**: reports are very welcome."
+      ],
+      "features": [
+        "Stereo 3D races with head tracking",
+        "HUD on a floating panel, menus on a virtual screen",
+        "Music from your game data",
+        "90 Hz on Quest 3, 4x MSAA",
+        "Runs on **PICO** headsets with a separate APK (experimental)"
+      ],
+      "needs": [
+        "Meta Quest (Quest 3 tested), or PICO 4 / 4 Ultra / Neo3 (untested)",
+        "The game data from your own copy of the **PSX NTSC** version of wipEout (not included)",
+        "A PC with `adb` to copy the game data to the headset"
+      ],
+      "notes": [
+        "**The game data is not included.** Prepare a `wipeout/` folder as described in the [README](https://github.com/SgtBilko76/Wipeout-Rewrite-VR#running), put it into a checkout of the repo and run `android/push_data.sh` with the headset connected. The game unpacks it on its next start.",
+        "Music is optional: it's read from `wipeout/music/trackNN.qoa` in [QOA format](https://github.com/phoboslab/qoa).",
+        "Download the APK for your headset: `-quest.apk` for Meta Quest, `-pico.apk` for PICO.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "Known issues: opening the system menu during a race doesn't pause the game; a few menu models that only exist in the PC version are skipped."
+      ],
+      "install": "default",
+      "install_extra": "After installing, copy the game data with `android/push_data.sh` (see the notes above) before the first start. SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader) and launch it from your library.",
+      "controls": {
+        "columns": [
+          "Input",
+          "Menus",
+          "Race"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Navigate",
+            "Steer"
+          ],
+          [
+            "A",
+            "Select",
+            ""
+          ],
+          [
+            "B",
+            "Back",
+            ""
+          ],
+          [
+            "Right trigger",
+            "",
+            "Thrust"
+          ],
+          [
+            "Left trigger",
+            "",
+            "Fire weapon"
+          ],
+          [
+            "Left / right grip",
+            "",
+            "Left / right airbrake"
+          ],
+          [
+            "Y",
+            "",
+            "Change view (cockpit / chase)"
+          ],
+          [
+            "Menu button",
+            "Start",
+            "Pause menu"
+          ]
+        ]
+      },
+      "credits": "Based on [wipEout Rewrite](https://github.com/phoboslab/wipeout-rewrite) by Dominic Szablewski. wipEout is a trademark of Sony Interactive Entertainment; this port contains no game data. Header picture: the *wipEout Rewrite Enhanced Fantomas Edition* desktop mod, not this port."
+    },
+    {
       "slug": "snes9x",
       "name": "Snes9x VR",
       "repo": "snes9x-3D",
