@@ -445,5 +445,21 @@
     }
    ]
   }
+ ],
+ "SuperTux-3D": [
+  {
+   "tag": "Beta0.2",
+   "name": "SuperTux 3D Beta 0.2 (Quest + PICO)",
+   "date": "2026-09-23T14:51:47Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/SuperTux-3D/releases/tag/Beta0.2",
+   "assets": [
+    {
+     "name": "SuperTux-Beta0.2-quest-pico-arm64-v8a.apk",
+     "size": 294152462,
+     "url": "https://github.com/SgtBilko76/SuperTux-3D/releases/download/Beta0.2/SuperTux-Beta0.2-quest-pico-arm64-v8a.apk"
+    }
+   ]
+  }
  ]
 }

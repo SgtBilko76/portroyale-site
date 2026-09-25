@@ -633,8 +633,8 @@
     },
     {
       "slug": "supertux",
-      "name": "SuperTux VR",
-      "repo": "SuperTux-QuestVR",
+      "name": "SuperTux 3D",
+      "repo": "SuperTux-3D",
       "category": "native",
       "tagline": "The classic jump'n'run as a layered 3D diorama on Meta Quest and PICO.",
       "about": [
