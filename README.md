@@ -1,6 +1,6 @@
-# PortRoyale site
+# Port Royale site
 
-Static website for the PortRoyale VR ports. There's one page per GitHub repo, with pictures, a manual (install steps and controller mapping), download links and the GitHub Sponsors button.
+Static website for the Port Royale VR ports. There's one page per GitHub repo, with pictures, a manual (install steps and controller mapping), download links and the GitHub Sponsors button.
 
 ## Build
 

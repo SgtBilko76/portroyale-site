@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the PortRoyale site into public/.
+"""Build the Port Royale site into public/.
 
     python3 build.py            build from games.json and the cached release data
     python3 build.py --refresh  also fetch the latest releases from GitHub first
