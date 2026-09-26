@@ -1915,13 +1915,13 @@
       ],
       "needs": [
         "Meta Quest 3",
-        "WinlatorXR cats-27 or public v27 (avoid the dawn/Turnip builds)",
+        "WinlatorXR - a current build (works on the newer dawn line; cats-27 / v27 also work)",
         "Your own Far Cry (2004), e.g. the Steam version"
       ],
       "install": [
-        "Download and unzip `FarCryVR-Installer-Beta-0.2.zip`.",
+        "Download and unzip `FarCryVR-Installer-Beta-0.3.zip`.",
         "Follow `README_INSTALL.txt`: copy the game and mod to the headset, create the WinlatorXR container and point the shortcut at it.",
-        "Use the recommended **1591×1440** screen preset."
+        "Recommended **1792×1624** preset (locked 72 fps) - patch `FarCry.exe` to be large-address-aware first (see the README), or use **1591×1440** without the patch."
       ],
       "controls": {
         "columns": [
@@ -1977,7 +1977,7 @@
       },
       "notes": [
         "The main menu is unstable on this engine, so the package loads straight into Training: use the in-game pause menu to save and load.",
-        "Maximum screen width is about 1792 (32-bit memory limit).",
+        "The 1792×1624 preset holds a locked 72 fps once `FarCry.exe` is patched large-address-aware; without the patch use 1591×1440.",
         "Play with more than 50% battery."
       ],
       "videos": [

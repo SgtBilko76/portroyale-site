@@ -190,16 +190,16 @@
  ],
  "Farcry_vrmod-WinlatorXR": [
   {
-   "tag": "quest-beta-0.2",
-   "name": "Far Cry VR (Quest) \u2014 Beta 0.2",
-   "date": "2026-09-16T10:57:50Z",
+   "tag": "quest-beta-0.3",
+   "name": "Far Cry VR (Quest) \u2014 Beta 0.3",
+   "date": "2026-09-26T00:00:00Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Farcry_vrmod-WinlatorXR/releases/tag/quest-beta-0.2",
+   "url": "https://github.com/SgtBilko76/Farcry_vrmod-WinlatorXR/releases/tag/quest-beta-0.3",
    "assets": [
     {
-     "name": "FarCryVR-Installer-Beta-0.2.zip",
-     "size": 1141320,
-     "url": "https://github.com/SgtBilko76/Farcry_vrmod-WinlatorXR/releases/download/quest-beta-0.2/FarCryVR-Installer-Beta-0.2.zip"
+     "name": "FarCryVR-Installer-Beta-0.3.zip",
+     "size": 1135319,
+     "url": "https://github.com/SgtBilko76/Farcry_vrmod-WinlatorXR/releases/download/quest-beta-0.3/FarCryVR-Installer-Beta-0.3.zip"
     }
    ]
   }
