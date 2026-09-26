@@ -133,7 +133,7 @@
     {
       "slug": "unreal-tournament",
       "name": "Unreal Tournament VR",
-      "repo": "Unreal-Tournament-QuestVR",
+      "repo": "Unreal-Tournament-VR",
       "category": "native",
       "tagline": "UT99 in VR, standalone on Meta Quest and PICO.",
       "about": [
@@ -231,7 +231,7 @@
     {
       "slug": "unreal-gold",
       "name": "Unreal Gold VR",
-      "repo": "Unreal-Gold-QuestVR",
+      "repo": "Unreal-Gold-VR",
       "category": "native",
       "tagline": "The 1998 classic Unreal in VR, standalone on Meta Quest and PICO.",
       "about": [
