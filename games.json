@@ -147,7 +147,8 @@
         "Sniper rifle zoom shown as a scope screen above the gun",
         "Redeemer guided shell steered with the right controller",
         "Curved menu panel operated by pointing and clicking",
-        "Installs side by side with Unreal Gold VR"
+        "Installs side by side with Unreal Gold VR",
+        "Flat, readable menu panel with an on-screen keyboard you point-and-click to type (e.g. your player name)"
       ],
       "needs": [
         "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
@@ -214,6 +215,10 @@
             "Open / close the game menu"
           ],
           [
+            "Left thumbstick (click)",
+            "Show / hide the on-screen keyboard (in menus)"
+          ],
+          [
             "Meta / Home button (long press)",
             "Recenter"
           ]
@@ -245,7 +250,8 @@
         "Curved menu panel operated by pointing and clicking",
         "VR-tuned controls for translator, inventory and crouch",
         "Save games persist on the headset",
-        "Installs side by side with Unreal Tournament VR"
+        "Installs side by side with Unreal Tournament VR",
+        "Flat, readable menu panel with an on-screen keyboard you point-and-click to type (e.g. your player name)"
       ],
       "needs": [
         "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
@@ -310,6 +316,10 @@
           [
             "Left menu button",
             "Open / close the game menu"
+          ],
+          [
+            "Left thumbstick (click)",
+            "Show / hide the on-screen keyboard (in menus)"
           ],
           [
             "Meta / Home button (long press)",
