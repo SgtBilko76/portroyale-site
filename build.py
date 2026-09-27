@@ -188,6 +188,12 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
     </nav>
   </div>
 </header>
+<aside class="wrap promo" aria-label="Sponsored">
+  <a href="https://www.amvrshop.com/?ref=portroyale" target="_blank" rel="sponsored noopener">
+    <img src="images/site/amvr-banner.jpg" width="1500" height="500" alt="AMVR: VR accessories for Meta Quest">
+  </a>
+  <p class="promo-note">Affiliate link</p>
+</aside>
 <main id="main">
 {body}
 </main>
