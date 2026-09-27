@@ -212,7 +212,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
     </div>
     <div>
       <p class="footer-head">Best regards to</p>
-      <p>{esc(site['thanks'])}</p>
+      <p>{inline(site['thanks'])}</p>
     </div>
     <div>
       <p class="footer-head">Source</p>
