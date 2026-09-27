@@ -167,7 +167,7 @@ PROMO = """<aside class="wrap promo" aria-label="Sponsored">
   <a href="https://www.amvrshop.com/?ref=portroyale" target="_blank" rel="sponsored noopener">
     <img src="images/site/amvr-banner.jpg" width="1500" height="500" alt="AMVR: VR accessories for Meta Quest">
   </a>
-  <p class="promo-note">Affiliate - Please visit our sponsor to support us</p>
+  <p class="promo-note">High-Quality VR accessories - Visit our partner to support us</p>
 </aside>
 """
 
