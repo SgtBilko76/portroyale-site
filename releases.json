@@ -366,5 +366,21 @@
         }
       ]
     }
+  ],
+  "CrashBandicoot-Launcher": [
+    {
+      "tag": "v2.0.0-beta.1",
+      "name": "2.0.0-beta.1 — Meta Quest / Pico VR public beta",
+      "date": "2026-09-27T07:57:45Z",
+      "prerelease": true,
+      "url": "https://github.com/SgtBilko76/CrashBandicoot-Launcher/releases/tag/v2.0.0-beta.1",
+      "assets": [
+        {
+          "name": "CrashBandicoot-2.0.0-beta.1.apk",
+          "size": 58428084,
+          "url": "https://github.com/SgtBilko76/CrashBandicoot-Launcher/releases/download/v2.0.0-beta.1/CrashBandicoot-2.0.0-beta.1.apk"
+        }
+      ]
+    }
   ]
 }
