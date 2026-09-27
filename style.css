@@ -81,6 +81,7 @@ code {
 .promo a { display: block; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .promo img { display: block; width: 100%; height: auto; }
 .promo a:hover img { filter: brightness(1.05); }
+.promo-note { margin: 6px 0 0; color: var(--muted); font-size: .85rem; text-align: center; }
 
 /* ---------- home hero */
 .hero {
