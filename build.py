@@ -160,7 +160,15 @@ def seo_head(site, title, desc, path, image, ld):
     return "\n".join(tags)
 
 
-def page(site, title, body, desc="", path="", image=None, ld=None):
+PROMO = """<aside class="wrap promo" aria-label="Sponsored">
+  <a href="https://www.amvrshop.com/?ref=portroyale" target="_blank" rel="sponsored noopener">
+    <img src="images/site/amvr-banner.jpg" width="1500" height="500" alt="AMVR: VR accessories for Meta Quest">
+  </a>
+</aside>
+"""
+
+
+def page(site, title, body, desc="", path="", image=None, ld=None, promo=False):
     desc = desc or site["tagline"]
     return f"""<!doctype html>
 <html lang="en">
@@ -188,12 +196,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
     </nav>
   </div>
 </header>
-<aside class="wrap promo" aria-label="Sponsored">
-  <a href="https://www.amvrshop.com/?ref=portroyale" target="_blank" rel="sponsored noopener">
-    <img src="images/site/amvr-banner.jpg" width="1500" height="500" alt="AMVR: VR accessories for Meta Quest">
-  </a>
-</aside>
-<main id="main">
+{PROMO if promo else ''}<main id="main">
 {body}
 </main>
 <footer class="footer">
@@ -300,7 +303,7 @@ def build_index(site, cats, games, rels):
 </section>""")
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": site["title"],
           "url": site["url"] + "/", "description": site["intro"]}
-    return page(site, f"{site['title']} | {site['tagline']}", "".join(parts), site["intro"], "", None, ld)
+    return page(site, f"{site['title']} | {site['tagline']}", "".join(parts), site["intro"], "", None, ld, promo=True)
 
 
 # ---------------------------------------------------------------- game page
