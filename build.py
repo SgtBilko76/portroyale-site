@@ -8,6 +8,7 @@ Pictures: drop files into images/<slug>/. They are shown in name order, the
 first one is the page's hero picture, unless the game sets "hero" to a file name. Files with "logo", "banner", "splash" or "product"
 in the name are shown whole instead of cropped.
 """
+import hashlib
 import html
 import json
 import os
@@ -21,6 +22,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "public"
 IMAGES = ROOT / "images"
+# Cache-buster so browsers fetch style.css again whenever it changes.
+CSS_VERSION = hashlib.sha1((ROOT / "style.css").read_bytes()).hexdigest()[:8]
 CACHE = ROOT / "releases.json"
 IMG_EXT = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 
@@ -182,7 +185,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
 <link rel="icon" href="images/site/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={CSS_VERSION}">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
