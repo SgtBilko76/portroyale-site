@@ -1352,7 +1352,7 @@
         "Sprites, menus, the map and videos have no depth and sit at screen depth.",
         "The Android build uses .NET's CoreCLR runtime, which .NET 10 still marks as experimental."
       ],
-      "credits": "Based on the [Crash Bandicoot Launcher](https://github.com/Matteo842/CrashBandicoot-Launcher) by Matteo842 and [RecompOne](https://github.com/BlackLabelHQ/RecompOne). Unofficial fan project, not affiliated with Sony, Activision or Naughty Dog. Photo: PlayStation by [Evan-Amos](https://commons.wikimedia.org/wiki/File:PSX-Console-wController.jpg) (public domain)."
+      "credits": "Based on the [Crash Bandicoot Launcher](https://github.com/Matteo842/CrashBandicoot-Launcher) by Matteo842 and [RecompOne](https://github.com/BlackLabelHQ/RecompOne). Unofficial fan project, not affiliated with Sony, Activision or Naughty Dog. Banner from the Crash Bandicoot Launcher by Matteo842."
     },
     {
       "slug": "luanti",
