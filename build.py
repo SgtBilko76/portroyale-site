@@ -168,7 +168,7 @@ PROMO = """<aside class="wrap promo" aria-label="Sponsored">
 """
 
 
-def page(site, title, body, desc="", path="", image=None, ld=None, promo=False):
+def page(site, title, body, desc="", path="", image=None, ld=None):
     desc = desc or site["tagline"]
     return f"""<!doctype html>
 <html lang="en">
@@ -196,7 +196,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None, promo=False):
     </nav>
   </div>
 </header>
-{PROMO if promo else ''}<main id="main">
+<main id="main">
 {body}
 </main>
 <footer class="footer">
@@ -261,7 +261,7 @@ def build_index(site, cats, games, rels):
       </ul>
     </div>
   </div>
-</section>"""]
+</section>""", PROMO]
     for c in cats:
         members = [g for g in games if g["category"] == c["id"]]
         if not members:
@@ -303,7 +303,7 @@ def build_index(site, cats, games, rels):
 </section>""")
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": site["title"],
           "url": site["url"] + "/", "description": site["intro"]}
-    return page(site, f"{site['title']} | {site['tagline']}", "".join(parts), site["intro"], "", None, ld, promo=True)
+    return page(site, f"{site['title']} | {site['tagline']}", "".join(parts), site["intro"], "", None, ld)
 
 
 # ---------------------------------------------------------------- game page

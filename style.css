@@ -77,7 +77,7 @@ code {
 .nav a:not(.btn):hover { color: var(--orange); }
 
 /* ---------- affiliate banner */
-.promo { margin-block: 16px; max-width: 580px; }
+.promo { margin-top: 40px; max-width: 580px; }
 .promo a { display: block; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .promo img { display: block; width: 100%; height: auto; }
 .promo a:hover img { filter: brightness(1.05); }
