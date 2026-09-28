@@ -323,21 +323,28 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     cat = next(c for c in cats if c["id"] == game["category"])
 
     primary = None
+    multi_assets = False
     if rel and rel["assets"]:
+        non_pico = [a for a in rel["assets"] if "pico" not in a["name"].lower()]
         # A release with separate Quest and PICO APKs lists them
         # alphabetically, PICO first; the main button is for Quest.
-        primary = next((a for a in rel["assets"] if "pico" not in a["name"].lower()),
-                       rel["assets"][0])
-    dl_btn = (f'<a class="btn btn-primary" href="{esc(primary["url"])}">{DL} Download {esc(rel["tag"])}</a>'
-              if primary else
-              f'<a class="btn btn-primary" href="{repo_url}/releases" target="_blank" rel="noopener">{DL} Releases</a>')
+        primary = non_pico[0] if non_pico else rel["assets"][0]
+        # more than one downloadable package (e.g. a dawn zip + a .cmd installer):
+        # send people to the release page to choose rather than guessing one asset.
+        multi_assets = len(non_pico) > 1
+    if rel and multi_assets:
+        dl_btn = f'<a class="btn btn-primary" href="{esc(rel["url"])}" target="_blank" rel="noopener">{DL} Downloads ({esc(rel["tag"])})</a>'
+    elif primary:
+        dl_btn = f'<a class="btn btn-primary" href="{esc(primary["url"])}">{DL} Download {esc(rel["tag"])}</a>'
+    else:
+        dl_btn = f'<a class="btn btn-primary" href="{repo_url}/releases" target="_blank" rel="noopener">{DL} Releases</a>' 
 
     facts = []
     if rel:
         facts.append(("Latest release", f'<a href="{esc(rel["url"])}" target="_blank" rel="noopener">{esc(rel["name"])}</a>'))
         if human_date(rel["date"]):
             facts.append(("Released", human_date(rel["date"])))
-        if primary:
+        if primary and not multi_assets:
             facts.append(("Download size", human_size(primary["size"])))
     facts.append(("Type", esc(cat["name"])))
     facts.append(("Source", f'<a href="{repo_url}" target="_blank" rel="noopener">{esc(game["repo"])}</a>'))
@@ -500,7 +507,9 @@ def build_game(site, cats, game, rels, prev_g, next_g):
         ld["image"] = f"{site['url']}/{image}"
     if rel:
         ld["softwareVersion"] = rel["tag"]
-        if primary:
+        if multi_assets:
+            ld["downloadUrl"] = rel["url"]
+        elif primary:
             ld["downloadUrl"] = primary["url"]
     return page(site, f"{game['name']} | {site['title']}", body, desc, f"{game['slug']}.html", image, ld)
 
