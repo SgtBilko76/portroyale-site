@@ -40,6 +40,11 @@
    "url": "https://github.com/SgtBilko76/Crysis-VR-WinlatorXR/releases/tag/Beta-0.3",
    "assets": [
     {
+     "name": "CrysisVR-Dawn-0.3.zip",
+     "size": 2552278,
+     "url": "https://github.com/SgtBilko76/Crysis-VR-WinlatorXR/releases/download/Beta-0.3/CrysisVR-Dawn-0.3.zip"
+    },
+    {
      "name": "CrysisVR-Installer-Beta-0.3.zip",
      "size": 5383897,
      "url": "https://github.com/SgtBilko76/Crysis-VR-WinlatorXR/releases/download/Beta-0.3/CrysisVR-Installer-Beta-0.3.zip"

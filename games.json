@@ -1915,13 +1915,13 @@
       ],
       "needs": [
         "Meta Quest 3",
-        "WinlatorXR cats-27 (avoid the dawn builds)",
+        "WinlatorXR cats-27 (tested), or a current dawn build with the Dawn package (untested so far)",
         "Your own Crysis (2007, Steam or GOG, **not** Remastered)"
       ],
       "install": [
-        "Install WinlatorXR **cats-27** and create a container: screen `1592x1440` (or `1792x1624` for a sharper image), DXVK, wrapper/Turnip, drive `D:` mapped to `/sdcard/Download`.",
-        "Copy Crysis to `/sdcard/Download/Crysis` and the unzipped package to `/sdcard/Download/CrysisVR-Setup`.",
-        "Run `install.cmd` inside the container.",
+        "**cats-27:** unzip `CrysisVR-Installer-Beta-0.3.zip`, copy Crysis to `/sdcard/Download/Crysis` and the package to `/sdcard/Download/CrysisVR-Setup`, then run `install.cmd` inside the container.",
+        "**dawn:** unzip `CrysisVR-Dawn-0.3.zip` straight into your Crysis folder and import the included `.wxrprofile.json` container profile - no installer. See `README_DAWN.txt`.",
+        "Container: screen `1792x1624` (or `1592x1440` for a few more fps), DXVK, wrapper/Turnip, drive `D:` mapped to `/sdcard/Download`.",
         "Launch `D:\\Crysis\\Bin32\\CrysisVR.exe` (use the **32-bit** launcher)."
       ],
       "controls": {
@@ -1986,7 +1986,8 @@
       },
       "notes": [
         "Water quality must stay above Low, or the ocean is drawn across the sky.",
-        "Menus follow your head (WinlatorXR's flat screen)."
+        "The default preset is **1792×1624**; the VR launcher is already large-address-aware, so no exe patch is needed. Use **1592×1440** for a few more fps.",
+        "Menus are shown on WinlatorXR's flat screen and follow your head. `vr_winlatorxr_menu_panel 1` pins them in the room (experimental)."
       ],
       "video": "rVGW-ZcZUpk",
       "video_label": "PC VR version · trailer by fholger",
