@@ -17,6 +17,25 @@
  ],
  "Battlefield-1942-WinlatorXR": [
   {
+   "tag": "quest-beta3",
+   "name": "BFVR Quest Beta 3",
+   "date": "2026-09-28T15:08:40Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Battlefield-1942-WinlatorXR/releases/tag/quest-beta3",
+   "assets": [
+    {
+     "name": "BFVR-Quest-Dawn-Beta3.zip",
+     "size": 2437720,
+     "url": "https://github.com/SgtBilko76/Battlefield-1942-WinlatorXR/releases/download/quest-beta3/BFVR-Quest-Dawn-Beta3.zip"
+    },
+    {
+     "name": "BFVR-Quest-Installer-Beta3.zip",
+     "size": 2458207,
+     "url": "https://github.com/SgtBilko76/Battlefield-1942-WinlatorXR/releases/download/quest-beta3/BFVR-Quest-Installer-Beta3.zip"
+    }
+   ]
+  },
+  {
    "tag": "quest-beta2",
    "name": "BFVR Quest Beta 2",
    "date": "2026-09-18T11:00:24Z",

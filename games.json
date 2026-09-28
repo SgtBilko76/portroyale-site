@@ -1807,26 +1807,27 @@
       "category": "winlator",
       "tagline": "Classic Battlefield in virtual reality, standalone on Meta Quest 3.",
       "about": [
-        "BFVR, the Battlefield 1942 VR mod by JayBiggsGaming, running **standalone on Meta Quest 3** through WinlatorXR. Includes launchers for the expansions *The Road to Rome* and *Secret Weapons of WWII*."
+        "BFVR, the Battlefield 1942 VR mod by JayBiggsGaming, running **standalone on Meta Quest 3** through WinlatorXR. Beta 3 renders a full **1792×1624** image per eye and uses the same controls as PC VR. Includes launchers for the expansions *The Road to Rome* and *Secret Weapons of WWII*."
       ],
       "features": [
-        "Stereoscopic VR rendering with head tracking",
+        "Stereoscopic VR rendering with head tracking, 1792×1624 per eye",
         "Tracked-controller aiming and two-handed weapon grip",
         "VR Quick Menu and VR settings (turning, HUD, comfort vignette and more)",
+        "Same button layout as PC VR",
         "Shortcuts for the base game and both expansions"
       ],
       "needs": [
         "Meta Quest 3",
-        "WinlatorXR cats-27",
+        "WinlatorXR Dawn (with the Dawn package) or cats-27 (with the installer)",
         "Battlefield 1942 from the MoonGamers \"BF1942 & Expansions\" installer (dgVoodoo version)",
         "About 2 GB free space"
       ],
       "install": [
         "Install the MoonGamers package on a PC and copy the complete `Battlefield 1942` folder to the headset as `Download/BF1942`.",
-        "Copy the zip's `BF1942` folder contents into `Download/BF1942`, and its `Winlator` folder to `Download/Winlator`.",
-        "In WinlatorXR, create a container: screen **3120x1430**, drive `D:` = `/sdcard/Download`, Wine `proton-9.0-x86_64`, Box64, **DXVK 1.10.x** with Async. The full tested settings (including the controller key mapping) are in `README-QUEST.md`.",
-        "Start the container and run `D:\\BF1942\\Setup-BFVR-Quest.bat` once, then optionally `Install-BFVR-Shortcut.bat`.",
-        "Play with `D:\\BF1942\\BFVR-VR.bat` or the **BFVR-VR** shortcut. The first start takes a few minutes."
+        "**Dawn:** unzip `BFVR-Quest-Dawn-Beta3.zip` straight into `Download/BF1942` and import the included `.wxrprofile.json` container profiles (screen **1792x1624**, DXVK with Async, wrapper/Turnip, Box64). Run `D:\\BF1942\\Install-BFVR-Shortcut.bat` once. See `README_DAWN.txt`.",
+        "**cats-27:** unzip `BFVR-Quest-Installer-Beta3.zip`, copy its folder to `Download` (e.g. `Download/BFVR-Setup`), set the container up (screen **1792x1624**, drive `D:` = `/sdcard/Download`, DXVK with Async) and run `install.cmd` inside it. See `README_INSTALL.txt`.",
+        "Map every XR controller button to a numpad key the game does not use (the tested mapping is in the README), so WinlatorXR's own keys don't reach the game.",
+        "Start the **BFVR-VR** shortcut. The first start sets the game up and takes a few minutes."
       ],
       "controls": {
         "columns": [
@@ -1840,19 +1841,19 @@
           ],
           [
             "Right grip",
-            "Secondary fire"
+            "Aim / secondary fire"
           ],
           [
             "Left trigger",
-            "Use"
+            "Use, enter and leave vehicles"
           ],
           [
-            "A",
+            "A (hold)",
+            "Quick Menu: point with the right hand, release to choose"
+          ],
+          [
+            "B",
             "Reload"
-          ],
-          [
-            "B (short press)",
-            "Next weapon"
           ],
           [
             "B (hold 2 s)",
@@ -1860,7 +1861,7 @@
           ],
           [
             "Left stick",
-            "Move"
+            "Move; click: map"
           ],
           [
             "Right stick",
@@ -1879,16 +1880,17 @@
             "Hold the weapon with both hands"
           ],
           [
-            "Left stick click (hold)",
-            "Quick Menu: point with the right hand, release to choose"
-          ],
-          [
             "Left menu button",
             "Game menu"
+          ],
+          [
+            "Right stick click",
+            "WinlatorXR menu"
           ]
         ]
       },
       "notes": [
+        "The container screen size must be **1792×1624**; otherwise the game falls back to a blurry 640×480 picture.",
         "Secret Weapons of WWII runs slower than the base game; lower View Distance.",
         "Occasionally the screen stays black with music after starting: restart the game.",
         "Play with more than 50% battery; the Quest throttles below that."
