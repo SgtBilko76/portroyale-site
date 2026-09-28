@@ -2071,7 +2071,7 @@
         ]
       },
       "notes": [
-        "The main menu is unstable on this engine, so the package loads straight into Training: use the in-game pause menu to save and load.",
+        "Boots to the main menu (stable on current WinlatorXR builds); start or load a game there. Level loads can crash intermittently in the engine's renderer - just relaunch and load again.",
         "The 1792×1624 preset holds a locked 72 fps once `FarCry.exe` is patched large-address-aware; without the patch use 1591×1440.",
         "Play with more than 50% battery."
       ],
