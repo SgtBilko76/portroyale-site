@@ -1824,7 +1824,7 @@
       ],
       "install": [
         "Install the MoonGamers package on a PC and copy the complete `Battlefield 1942` folder to the headset as `Download/BF1942`.",
-        "**Dawn:** unzip `BFVR-Quest-Dawn-Beta3.zip` straight into `Download/BF1942` and import the included `.wxrprofile.json` container profiles (screen **1792x1624**, DXVK with Async, wrapper/Turnip, Box64). Run `D:\\BF1942\\Install-BFVR-Shortcut.bat` once. See `README_DAWN.txt`.",
+        "**Dawn:** unzip `BFVR-Quest-Dawn-Beta3.zip` straight into `Download/BF1942`, create a shortcut for `D:\\BF1942\\BFVR\\BFVR.exe` and import the included `.wxrprofile.json` shortcut profile (screen **1792x1624**, DXVK with Async, wrapper/Turnip, Box64). No batch files: BFVR sets the game up itself. See `README_DAWN.txt`.",
         "**cats-27:** unzip `BFVR-Quest-Installer-Beta3.zip`, copy its folder to `Download` (e.g. `Download/BFVR-Setup`), set the container up (screen **1792x1624**, drive `D:` = `/sdcard/Download`, DXVK with Async) and run `install.cmd` inside it. See `README_INSTALL.txt`.",
         "Map every XR controller button to a numpad key the game does not use (the tested mapping is in the README), so WinlatorXR's own keys don't reach the game.",
         "Start the **BFVR-VR** shortcut. The first start sets the game up and takes a few minutes."
