@@ -441,5 +441,26 @@
     }
    ]
   }
+ ],
+ "TrackManiaForeverOpenXR": [
+  {
+   "tag": "quest-beta-0.1",
+   "name": "TrackMania Forever VR (Quest) \u2014 Beta 0.1",
+   "date": "2026-09-30T11:48:12Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/TrackManiaForeverOpenXR/releases/tag/quest-beta-0.1",
+   "assets": [
+    {
+     "name": "TMFOXR-Quest-Dawn-Beta-0.1.zip",
+     "size": 1490156,
+     "url": "https://github.com/SgtBilko76/TrackManiaForeverOpenXR/releases/download/quest-beta-0.1/TMFOXR-Quest-Dawn-Beta-0.1.zip"
+    },
+    {
+     "name": "TMFOXR-Quest-Installer-Beta-0.1.zip",
+     "size": 1494238,
+     "url": "https://github.com/SgtBilko76/TrackManiaForeverOpenXR/releases/download/quest-beta-0.1/TMFOXR-Quest-Installer-Beta-0.1.zip"
+    }
+   ]
+  }
  ]
 }
