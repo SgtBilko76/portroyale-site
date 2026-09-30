@@ -197,6 +197,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
       <a href="index.html#emulator">Emulators</a>
       <a href="index.html#winlator">WinlatorXR</a>
       <a href="https://github.com/{esc(site['github_user'])}" target="_blank" rel="noopener">GitHub</a>
+      {discord_link(site, '<a href="{url}" target="_blank" rel="noopener">Discord</a>')}
     </nav>
   </div>
 </header>
@@ -217,6 +218,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
     <div>
       <p class="footer-head">Source</p>
       <p>Every port is free and open source on <a href="https://github.com/{esc(site['github_user'])}" target="_blank" rel="noopener">GitHub</a>.</p>
+      {discord_link(site, '<p>Questions, bug reports and new releases: join us on <a href="{url}" target="_blank" rel="noopener">Discord</a>.</p>')}
     </div>
   </div>
   <p class="wrap fineprint">All game names and trademarks belong to their owners. Ports of commercial games contain no game data: you need your own copy.</p>
@@ -229,7 +231,14 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
 HEART = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.3 1.9 8.4A3.8 3.8 0 0 1 8 3.6a3.8 3.8 0 0 1 6.1 4.8Z"/></svg>'
 GH = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.5 15.6c.4 0 .5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.6 7.6 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.6 3.9.3.3.5.8.5 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 8 0Z"/></svg>'
 KOFI = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h9.2a3.3 3.3 0 0 1 0 6.6h-.6A4 4 0 0 1 6.7 13H5.3A3.3 3.3 0 0 1 2 9.7Zm9.2 4.9a1.6 1.6 0 0 0 0-3.2h-.5v3.2ZM1.5 14h10v1.5h-10Z"/></svg>'
+DISCORD = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 3.1A13 13 0 0 0 10.3 2l-.4.8a12 12 0 0 0-3.8 0L5.7 2a13 13 0 0 0-3.2 1.1C.5 6.2 0 9.2.2 12.1a13 13 0 0 0 4 2l.8-1.3a8.4 8.4 0 0 1-1.3-.6l.3-.3a9.3 9.3 0 0 0 8 0l.3.3-1.3.6.8 1.3a13 13 0 0 0 4-2c.3-3.4-.6-6.4-2.3-9ZM5.4 10.3c-.8 0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6Zm5.2 0c-.8 0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6Z"/></svg>'
 DL = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M7 1h2v7.2l2.6-2.6L13 7l-5 5-5-5 1.4-1.4L7 8.2ZM2 13h12v2H2Z"/></svg>'
+
+
+def discord_link(site, html):
+    """html with {url} filled in, or nothing while games.json has no discord_url."""
+    url = site.get("discord_url")
+    return html.format(url=esc(url)) if url else ""
 
 
 def picture(game, img, cls="", eager=False):
@@ -258,6 +267,7 @@ def build_index(site, cats, games, rels):
       <p class="lead">{esc(site['intro'])}</p>
       <div class="actions">
         <a class="btn btn-primary" href="#native">Browse the ports</a>
+        {discord_link(site, '<a class="btn btn-discord" href="{url}" target="_blank" rel="noopener">' + DISCORD + ' Join the Discord</a>')}
         <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
       </div>
       <ul class="stats">
@@ -477,6 +487,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
       <h2 class="section-title">Download</h2>
       {''.join(downloads)}
       <p class="note">All releases: <a href="{repo_url}/releases" target="_blank" rel="noopener">{repo_url.replace('https://', '')}/releases</a></p>
+      {discord_link(site, '<div class="help-box"><p><strong>Need help or found a bug?</strong> Ask in <strong>#support</strong> on our Discord, and get new releases in <strong>#new-releases</strong>.</p><a class="btn btn-discord" href="{url}" target="_blank" rel="noopener">' + DISCORD + ' Join the Discord</a></div>')}
     </div>
     <aside class="sponsor-card">
       <p class="sponsor-heart">{KOFI}</p>

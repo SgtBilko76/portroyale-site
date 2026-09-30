@@ -276,3 +276,7 @@ code {
 .sponsor-card .btn + .btn { margin-top: 10px; }
 .footer .btn + .btn { margin-top: 10px; }
 .sponsor-heart { color: #ff5e5b; }
+.btn-discord { background: #5865f2; color: #fff; }
+.btn-discord:hover { background: #4752c4; color: #fff; }
+.help-box { margin-top: 28px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #5865f2; border-radius: var(--radius); display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; }
+.help-box p { margin: 0; flex: 1 1 240px; }
