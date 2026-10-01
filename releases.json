@@ -510,5 +510,21 @@
     }
    ]
   }
+ ],
+ "Bugdom2": [
+  {
+   "tag": "v4.0.1-vr-beta1",
+   "name": "Bugdom 2 VR 4.0.1 beta 1 (Meta Quest / PICO)",
+   "date": "2026-10-01T12:47:54Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Bugdom2/releases/tag/v4.0.1-vr-beta1",
+   "assets": [
+    {
+     "name": "Bugdom2-VR-4.0.1-beta1.apk",
+     "size": 145253229,
+     "url": "https://github.com/SgtBilko76/Bugdom2/releases/download/v4.0.1-vr-beta1/Bugdom2-VR-4.0.1-beta1.apk"
+    }
+   ]
+  }
  ]
 }

@@ -2371,6 +2371,105 @@
         "Bugdom is licensed CC BY-NC-SA 4.0: free to share, not for sale."
       ],
       "credits": "Based on [Bugdom](https://github.com/jorio/Bugdom) by Iliyas Jorio, approved by Pangea Software. Bugdom © 1999 Pangea Software, Inc. License: CC BY-NC-SA 4.0. Pictures: captured on a Meta Quest 3."
+    },
+    {
+      "slug": "bugdom2",
+      "name": "Bugdom 2 VR",
+      "repo": "Bugdom2",
+      "category": "native",
+      "tagline": "Pangea's 2002 sequel in stereo 3D, standalone on Meta Quest.",
+      "about": [
+        "[Bugdom 2](https://github.com/jorio/Bugdom2), Pangea Software's 2002 3D platformer in Iliyas Jorio's modern port, running natively on Meta Quest through OpenXR. You play Skip the grasshopper, out to get his stolen backpack back from the Bully Bee across gardens, sewers, a playroom and the park.",
+        "The world is rendered in stereo 3D around you, with the chase camera behind Skip and the horizon kept level. The tunnel rides, the balsa plane flight and the level intros play in VR too. The HUD floats on a panel in front of you, with the info bars at the top and bottom edges of your view.",
+        "The game data is free and comes inside the APK, so there is nothing else to copy. PICO support is built in but **not tested on PICO hardware yet**: reports are very welcome."
+      ],
+      "features": [
+        "Stereoscopic 3D with head tracking, 4x antialiasing",
+        "Chase camera with a level horizon and 30° snap turns",
+        "Tunnel rides, balsa plane flight and level intros in VR",
+        "Recenter: automatic on start, or hold the right stick click for 1 second (sets forward and eye height, seated or standing)",
+        "HUD on a floating panel, info bars at the edges of your view",
+        "Correct colors (sRGB output) and smooth fades",
+        "One APK for Quest and PICO; game data included"
+      ],
+      "needs": [
+        "Meta Quest 2 / Pro / 3 / 3S (Quest 3 tested), or PICO 4 / Neo 3 (untested)"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK below.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Bugdom2-VR-4.0.1-beta1.apk`. On PICO use adb or whichever sideloader you already use.",
+        "Launch *Bugdom 2* from *Library → Unknown Sources* on Quest, or from your library on PICO. The first start takes a little longer, while the game data is unpacked."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "In game",
+          "In menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Walk",
+            "Move through the menu"
+          ],
+          [
+            "Right stick left / right",
+            "Snap turn (30°)",
+            "–"
+          ],
+          [
+            "Right stick click (hold 1 s)",
+            "Recenter",
+            "Recenter"
+          ],
+          [
+            "A",
+            "Jump",
+            "Confirm"
+          ],
+          [
+            "B",
+            "Pick up / drop",
+            "Back"
+          ],
+          [
+            "X or right trigger",
+            "Kick",
+            "–"
+          ],
+          [
+            "Y",
+            "Launch buddy",
+            "–"
+          ],
+          [
+            "Left stick click",
+            "Camera distance",
+            "–"
+          ],
+          [
+            "Left / right grip",
+            "–",
+            "Previous / next"
+          ],
+          [
+            "Menu button",
+            "Pause",
+            "–"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
+      "notes": [
+        "This is the first public beta, tested on Quest 3. Please report problems on GitHub.",
+        "Menus are used with the stick and A/B for now; the laser pointer from Bugdom VR isn't in this beta yet.",
+        "The lens flare is turned off in VR.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "The APK is signed with a debug key (sideload only).",
+        "Bugdom 2 is licensed CC BY-NC-SA 4.0: free to share, not for sale."
+      ],
+      "credits": "Based on [Bugdom 2](https://github.com/jorio/Bugdom2) by Iliyas Jorio, approved by Pangea Software. Bugdom 2 © 2002 Pangea Software, Inc. License: CC BY-NC-SA 4.0. Pictures: captured on a Meta Quest 3."
     }
   ]
 }
