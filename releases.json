@@ -462,5 +462,21 @@
     }
    ]
   }
+ ],
+ "ARMSX1": [
+  {
+   "tag": "v0.2.0-beta1",
+   "name": "ARMSX1 Quest VR 0.2.0-beta1",
+   "date": "2026-10-01T10:44:36Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/ARMSX1/releases/tag/v0.2.0-beta1",
+   "assets": [
+    {
+     "name": "ARMSX1-0.2.0-beta1-quest-arm64-v8a.apk",
+     "size": 38082054,
+     "url": "https://github.com/SgtBilko76/ARMSX1/releases/download/v0.2.0-beta1/ARMSX1-0.2.0-beta1-quest-arm64-v8a.apk"
+    }
+   ]
+  }
  ]
 }
