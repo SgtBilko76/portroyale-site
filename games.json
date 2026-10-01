@@ -1631,8 +1631,8 @@
     },
     {
       "slug": "armsx1",
-      "name": "ARMSX1 VR",
-      "repo": "ARMSX1",
+      "name": "ARMSX1 3D",
+      "repo": "ARMSX1-3D",
       "category": "emulator",
       "tagline": "PlayStation 1 in stereoscopic 3D on a curved virtual screen.",
       "about": [
