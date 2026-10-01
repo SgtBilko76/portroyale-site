@@ -2268,6 +2268,109 @@
         "Play with more than 50% battery; the Quest throttles below that."
       ],
       "credits": "Based on [TrackManiaForeverOpenXR](https://github.com/jiink/TrackManiaForeverOpenXR) by jiink (MIT). TrackMania Nations Forever is © Nadeo / Ubisoft. TMLoader by tomashu. Pictures: captured on a Meta Quest 3. No game files included."
+    },
+    {
+      "slug": "bugdom",
+      "name": "Bugdom VR",
+      "repo": "Bugdom",
+      "category": "native",
+      "hero": "2-rollie.jpg",
+      "tagline": "Pangea's 1999 bug adventure in stereo 3D, standalone on Meta Quest.",
+      "about": [
+        "[Bugdom](https://github.com/jorio/Bugdom), Pangea Software's 1999 3D platformer in Iliyas Jorio's modern port, running natively on Meta Quest through OpenXR. You play Rollie McFly, a pill bug out to free the ladybugs from King Thorax.",
+        "The world is rendered in stereo 3D around you, with the chase camera behind Rollie and the horizon kept level. The HUD floats on a panel in front of you, and menus are point-and-click with the controller laser.",
+        "The game data is free and comes inside the APK, so there is nothing else to copy. PICO support is built in but **not tested on PICO hardware yet**: reports are very welcome."
+      ],
+      "features": [
+        "Stereoscopic 3D with head tracking, 4x antialiasing",
+        "Chase camera with a level horizon and 30° snap turns",
+        "Recenter: automatic on start, or hold the right stick click for 1 second (sets forward and eye height, seated or standing)",
+        "In-game HUD bars moved toward the edges of your view, so they don't cover the action",
+        "Point-and-click menus with the right controller's laser",
+        "Correct colors (sRGB output, no washed-out look)",
+        "One APK for Quest and PICO; game data included"
+      ],
+      "needs": [
+        "Meta Quest 2 / Pro / 3 / 3S (Quest 3 tested), or PICO 4 / Neo 3 (untested)"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK below.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Bugdom-VR-1.3.5-beta1.apk`. On PICO use adb or whichever sideloader you already use.",
+        "Launch *Bugdom* from *Library → Unknown Sources* on Quest, or from your library on PICO."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "In game",
+          "In menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Move",
+            "–"
+          ],
+          [
+            "Right stick left / right",
+            "Snap turn (30°)",
+            "–"
+          ],
+          [
+            "Right stick up / down",
+            "Camera",
+            "–"
+          ],
+          [
+            "Right stick click (hold 1 s)",
+            "Recenter",
+            "Recenter"
+          ],
+          [
+            "A",
+            "Jump",
+            "Confirm"
+          ],
+          [
+            "B",
+            "Roll into a ball",
+            "–"
+          ],
+          [
+            "X or right trigger",
+            "Kick",
+            "Confirm"
+          ],
+          [
+            "Y",
+            "Buddy attack",
+            "–"
+          ],
+          [
+            "Left / right grip",
+            "Zoom camera in / out",
+            "–"
+          ],
+          [
+            "Menu button",
+            "Pause",
+            "–"
+          ],
+          [
+            "Right controller laser",
+            "–",
+            "Point at items"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
+      "notes": [
+        "This is the first public beta, tested on Quest 3. Please report problems on GitHub.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "The APK is signed with a debug key (sideload only).",
+        "Bugdom is licensed CC BY-NC-SA 4.0: free to share, not for sale."
+      ],
+      "credits": "Based on [Bugdom](https://github.com/jorio/Bugdom) by Iliyas Jorio, approved by Pangea Software. Bugdom © 1999 Pangea Software, Inc. License: CC BY-NC-SA 4.0. Pictures: captured on a Meta Quest 3."
     }
   ]
 }
