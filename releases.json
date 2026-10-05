@@ -117,16 +117,16 @@
  ],
  "Xonotic-VR": [
   {
-   "tag": "Beta-0.4",
-   "name": "Beta 0.4",
-   "date": "2026-09-23T12:58:09Z",
+   "tag": "Beta-0.5",
+   "name": "Beta 0.5",
+   "date": "2026-10-05T09:38:53Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/tag/Beta-0.4",
+   "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/tag/Beta-0.5",
    "assets": [
     {
      "name": "Xonotic-VR-full-release.apk",
      "size": 1196771346,
-     "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.4/Xonotic-VR-full-release.apk"
+     "url": "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.5/Xonotic-VR-full-release.apk"
     }
    ]
   }
