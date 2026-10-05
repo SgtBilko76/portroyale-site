@@ -250,16 +250,16 @@
  ],
  "SuperTuxKart-VR": [
   {
-   "tag": "v0.10.0-beta1",
-   "name": "v0.10.0-beta1",
-   "date": "2026-09-24T10:24:15Z",
+   "tag": "v0.9",
+   "name": "v0.9",
+   "date": "2026-10-05T09:05:28Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/tag/v0.10.0-beta1",
+   "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/tag/v0.9",
    "assets": [
     {
-     "name": "supertuxkart-beta1.apk",
-     "size": 738912133,
-     "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/download/v0.10.0-beta1/supertuxkart-beta1.apk"
+     "name": "supertuxkartquest.apk",
+     "size": 735777769,
+     "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/download/v0.9/supertuxkartquest.apk"
     }
    ]
   }
