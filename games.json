@@ -2099,7 +2099,7 @@
       "category": "winlator",
       "tagline": "The classic stunt racer from the cockpit, standalone on Meta Quest 3.",
       "about": [
-        "jiink's TrackMania Forever VR mod (TMFOXR), rebuilt to run **standalone on Meta Quest 3** through WinlatorXR (Wine + Box64 + DXVK). Races are in stereo 3D with head tracking. The main menu stays on WinlatorXR's sharp flat screen, and VR switches on by itself when a race starts."
+        "jiink's TrackMania Forever VR mod (TMFOXR), rebuilt to run **standalone on Meta Quest 3** through WinlatorXR (Wine + Box64 + DXVK). Races are in stereo 3D with head tracking. The main menu stays on WinlatorXR's sharp flat screen, and VR switches on by itself when a race starts. Beta 0.2 adds a **ready-made container image**: import it, and it downloads the free game from Nadeo and sets everything up."
       ],
       "features": [
         "Stereoscopic 3D races with head tracking, 1728×1728 per eye, 4x antialiasing",
@@ -2110,16 +2110,16 @@
       ],
       "needs": [
         "Meta Quest 3",
-        "WinlatorXR Dawn (with the Dawn package) or cats-27 (with the installer, untested)",
-        "TrackMania Nations Forever (free on Steam)",
-        "The [TMLoader](https://tomashu.dev/software/tmloader/) \"prepackaged\" mod loader"
+        "WinlatorXR Dawn",
+        "Internet on the first start: the image downloads TrackMania Nations Forever (free, 530 MB) from Nadeo",
+        "Only for the manual packages: TrackMania Nations Forever and the [TMLoader](https://tomashu.dev/software/tmloader/) \"prepackaged\" mod loader"
       ],
       "install": [
-        "Copy your TrackMania Nations Forever folder to the headset as `Download/TmForever` and extract the TMLoader \"prepackaged\" zip into it.",
-        "**Dawn:** unzip `TMFOXR-Quest-Dawn-Beta-0.1.zip` straight into `Download/TmForever`, create a shortcut for `D:\\TmForever\\TmForever.exe` and import the included `TMFOXR-VR.wxrprofile.json` (screen **3456x1728**, Turnip driver, Box64 Performance). Set the DX wrapper to **DXVK 2.4 with Async** by hand. See `README_DAWN.txt`.",
-        "**cats-27:** unzip `TMFOXR-Quest-Installer-Beta-0.1.zip`, copy its folder to `Download`, set the container up (screen **3456x1728**, drive `D:` = `/sdcard/Download`, DXVK with Async) and run `install.cmd` inside it. See `README_INSTALL.txt`.",
-        "Recommended: lower the graphics quality once in `TmForeverLauncher.exe` (Settings). It raised races from about 23 to 30–45 fps.",
-        "Start the shortcut with the headset on. The main menu appears flat, and VR starts with the race."
+        "**Easiest (container image):** download `TrackMania-VR-Beta-0.2.tzst` to the headset. In WinlatorXR, go to Containers → menu → **Import** and pick it.",
+        "Start the **TrackMania VR** shortcut with the headset on. On the first start it downloads TrackMania Nations Forever from Nadeo's official server, installs it and starts the game. The main menu appears flat, and VR starts with the race.",
+        "Recommended: lower the graphics quality once in `C:\\TmForever\\TmForeverLauncher.exe` (Settings). It raised races from about 23 to 30–45 fps.",
+        "**Manual alternative (Dawn):** copy your TrackMania folder to `Download/TmForever` with the TMLoader \"prepackaged\" zip, unzip `TMFOXR-Quest-Dawn-Beta-0.2.zip` into it and import the included `TMFOXR-VR.wxrprofile.json`. Set the DX wrapper to **DXVK 2.4 with Async** by hand. See `README_DAWN.txt`.",
+        "**Manual alternative (cats-27, untested):** run `install.cmd` from `TMFOXR-Quest-Installer-Beta-0.2.zip` inside your container. See `README_INSTALL.txt`."
       ],
       "controls": {
         "columns": [
@@ -2176,13 +2176,14 @@
         ]
       },
       "notes": [
+        "The container image contains no game files; the game comes from Nadeo's server on the first start. Offline, put Nadeo's `tmnationsforever_setup.exe` into the headset's `Download` folder first.",
         "Races run at about 30–45 fps. The limit is TrackMania's main thread under Box64, so lower graphics quality helps most.",
         "Use a 2:1 screen size (3456x1728, 2880x1440 or 1920x1080); WinlatorXR crashed with screens wider than about 3500 pixels.",
         "Short stutters the first time new objects appear, while shaders compile; DXVK async reduces them.",
         "Only TrackMania **Nations** Forever (Stadium) was tested.",
         "Play with more than 50% battery; the Quest throttles below that."
       ],
-      "credits": "Based on [TrackManiaForeverOpenXR](https://github.com/jiink/TrackManiaForeverOpenXR) by jiink (MIT). TrackMania Nations Forever is © Nadeo / Ubisoft. TMLoader by tomashu. Pictures: captured on a Meta Quest 3. No game files included."
+      "credits": "Based on [TrackManiaForeverOpenXR](https://github.com/jiink/TrackManiaForeverOpenXR) by jiink (MIT). TrackMania Nations Forever is © Nadeo / Ubisoft and is downloaded from Nadeo's server; no game files are included. TMLoader by tomashu. Pictures: captured on a Meta Quest 3."
     },
     {
       "slug": "bugdom",
