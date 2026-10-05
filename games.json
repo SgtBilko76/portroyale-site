@@ -517,10 +517,12 @@
       "category": "native",
       "tagline": "The fast-paced open-source arena shooter, standalone on Meta Quest and PICO.",
       "about": [
-        "A native OpenXR port of Xonotic 0.8.6 for Meta Quest and PICO. The same APK works on both headsets, the right controller bindings and OpenXR extensions are picked automatically at startup. The APK is self-contained: the full game data is bundled, no extra download needed."
+        "A native OpenXR port of Xonotic 0.8.6 for Meta Quest and PICO. The same APK works on both headsets, the right controller bindings and OpenXR extensions are picked automatically at startup. The APK is self-contained: the full game data is bundled, no extra download needed.",
+        "Online play uses the game's own server browser and the standard Xonotic 0.8.6 data; offline matches against bots work too."
       ],
       "features": [
         "Single-pass stereo rendering (multiview) and GPU skeletal skinning",
+        "Fixed foveated rendering: 70-72 fps on Quest 3",
         "Controller-attached weapons with the game's own crosshair along the aim",
         "Sniper zoom and haptics",
         "VR text input in menus and chat",
@@ -587,10 +589,15 @@
         ]
       },
       "notes": [
+        "Settings live in `/sdcard/XonoticVR/data/vr.cfg`. A release that ships new VR defaults rewrites that file, so keep personal settings in a file of your own and add `+exec myconfig.cfg` to `commandline.txt`, which is never overwritten.",
+        "More framerate: raise `vr_foveation` (0-3) or lower `vr_supersampling`. Quest Games Optimizer's resolution setting has no effect - the port clamps the eye buffer to the panel baseline on purpose, `vr_supersampling` is the knob.",
+        "If the sky or background shows through walls, `vr_novis 1` draws the whole level as a workaround (at a framerate cost), and an issue with the map name is welcome.",
+        "A weapon that looks washed out: lower `r_reflectcube_neutral` (`0` disables the reflection entirely), raise it toward `1` if weapons look flat.",
         "The APK is signed with a debug key.",
         "The PICO build is untested: if it does not start, or the buttons are mapped differently, please open an issue on GitHub."
       ],
-      "credits": "Based on [Xonotic](https://xonotic.org/) by Team Xonotic. Pictures (desktop version) via Wikimedia Commons, GPL: [Xonotic developers](https://commons.wikimedia.org/wiki/File:Xonotic_0.8.2_rocket.jpg), [greewrfdsfsf](https://commons.wikimedia.org/wiki/File:Xonotic_Game_Play_-_Silent_Siege.jpg)."
+      "credits": "Based on [Xonotic](https://xonotic.org/) by Team Xonotic. Pictures (desktop version) via Wikimedia Commons, GPL: [Xonotic developers](https://commons.wikimedia.org/wiki/File:Xonotic_0.8.2_rocket.jpg), [greewrfdsfsf](https://commons.wikimedia.org/wiki/File:Xonotic_Game_Play_-_Silent_Siege.jpg).",
+      "controls_note": "Button names are those of the Meta Quest controllers, PICO controllers use the same layout. The weapon points where the aiming hand points. Set `cl_righthanded 0` to aim with the left hand."
     },
     {
       "slug": "supertuxkart",
