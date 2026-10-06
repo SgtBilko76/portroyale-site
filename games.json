@@ -1803,6 +1803,97 @@
       "credits": "Based on [ARMSX2](https://github.com/ARMSX2/ARMSX2) and the [PCSX2](https://pcsx2.net) project. Photos: DualShock 2 and PlayStation 2 by [Evan-Amos](https://commons.wikimedia.org/wiki/File:DualShock_2.jpg) (public domain)."
     },
     {
+      "slug": "cod4",
+      "name": "Call of Duty 4 VR",
+      "repo": "CallOfDuty4_VR",
+      "category": "winlator",
+      "tagline": "Call of Duty 4 (2007) in VR, standalone on Meta Quest via WinlatorXR.",
+      "about": [
+        "KisakCOD VR with a WinlatorXR XrAPI backend: Call of Duty 4: Modern Warfare (2007) in VR, standalone on a **Meta Quest**, with no PC and no OpenXR or SteamVR runtime.",
+        "Beta 0.2 runs on **WinlatorXR Dawn** with a ready-made container profile. Tested on Quest 3 with dawn-33 at 2388×1080: Crew Expendable runs at about 26–50 fps, menus and videos at 72."
+      ],
+      "features": [
+        "Stereo rendering with head and controller tracking, paced to the headset's frame rate",
+        "Physical weapon handling: aiming, two-hand grip, magazine reloads and belt grenades",
+        "Physical scope (experimental): scoped weapons get a magnified view on a round lens on the optic",
+        "Menus and cinematics on a screen fixed in the room, navigated like a gamepad",
+        "Campaign played from the intro through F.N.G. into Crew Expendable"
+      ],
+      "needs": [
+        "Meta Quest 3",
+        "WinlatorXR Dawn (dawn-33 or newer, with the Dawn package) or cats-27",
+        "Your own Call of Duty 4 (2007) game folder"
+      ],
+      "install": [
+        "Copy your COD4 folder (the one with `iw3sp.exe`) to the headset as `Download/CallOfDuty4`.",
+        "**Dawn:** unzip `KisakCOD-VR-WinlatorXR-Dawn-v0.2.0-beta.1.zip` straight into that folder and import the included `.wxrprofile.json` container profile (screen **2388x1080**, DXVK 1.10.1, Turnip wrapper, Box64 Performance). See `README_DAWN.txt`.",
+        "**cats-27:** unzip `KisakCOD-VR-WinlatorXR-v0.2.0-beta.1.zip` into that folder and set the container up by hand (screen **2388x1080**, DXVK, Turnip, XR API on, drive `D:` = `/sdcard/Download`). See `README-FIRST.txt`.",
+        "Create a shortcut for `wine C:\\windows\\system32\\cmd.exe` with the arguments `/c D:\\CallOfDuty4\\Launch-KisakCOD-VR-WinlatorXR.bat`, or use the included `CallOfDuty4-VR.desktop`.",
+        "Start it with the headset on. The first start compiles shaders and takes a while.",
+        "Updating from Beta 0.1: replacing `KisakCOD-sp.exe` is enough."
+      ],
+      "controls": {
+        "columns": [
+          "Action",
+          "Button"
+        ],
+        "rows": [
+          [
+            "Fire",
+            "Right trigger"
+          ],
+          [
+            "Use / pick up",
+            "X"
+          ],
+          [
+            "Reload / eject magazine",
+            "A"
+          ],
+          [
+            "Crouch / stance",
+            "B"
+          ],
+          [
+            "Next weapon",
+            "Y"
+          ],
+          [
+            "Pause",
+            "Menu"
+          ],
+          [
+            "Support grip, magazines, grenades",
+            "Left grip"
+          ],
+          [
+            "Grenade launcher",
+            "Right grip"
+          ],
+          [
+            "Sprint",
+            "Left stick click"
+          ],
+          [
+            "Melee",
+            "Left trigger + left stick up"
+          ],
+          [
+            "Night vision, airstrike, C4",
+            "Left trigger + left stick down / left / right"
+          ]
+        ]
+      },
+      "controls_note": "Reloading is physical: eject with A, take a fresh magazine from the off-hand hip with the left grip and release it at the magazine well. In menus the left stick moves the selection, A confirms and B goes back. The right stick click is left free for WinlatorXR's menu.",
+      "notes": [
+        "The physical scope is new and still needs confirming on every scoped weapon.",
+        "No manual recenter for the virtual screen.",
+        "WinlatorXR's right-stick-click menu can switch back to a flat window; click again to return to VR.",
+        "Quest 2 and Pico are untested."
+      ],
+      "credits": "Based on [KisakCOD VR](https://github.com/jplakon/CallOfDuty4_VR) and [KisakCOD](https://github.com/SwagSoftware/KisakCOD). Contains no Call of Duty game data. Photo: night patrol, U.S. Army photo by [Staff Sgt. Jason Bailey](https://commons.wikimedia.org/wiki/File:Al_Jadida_Night_Time_Foot_Patrol_DVIDS75291.jpg) (public domain)."
+    },
+    {
       "slug": "bf1942",
       "name": "BFVR: Battlefield 1942 VR",
       "repo": "Battlefield-1942-WinlatorXR",
