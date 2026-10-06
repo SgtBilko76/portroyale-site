@@ -531,5 +531,26 @@
     }
    ]
   }
+ ],
+ "CallOfDuty4_VR": [
+  {
+   "tag": "v0.2.0-beta.1",
+   "name": "KisakCOD VR WinlatorXR beta 0.2.0-beta.1",
+   "date": "2026-10-06T09:08:51Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/CallOfDuty4_VR/releases/tag/v0.2.0-beta.1",
+   "assets": [
+    {
+     "name": "KisakCOD-VR-WinlatorXR-Dawn-v0.2.0-beta.1.zip",
+     "size": 5107679,
+     "url": "https://github.com/SgtBilko76/CallOfDuty4_VR/releases/download/v0.2.0-beta.1/KisakCOD-VR-WinlatorXR-Dawn-v0.2.0-beta.1.zip"
+    },
+    {
+     "name": "KisakCOD-VR-WinlatorXR-v0.2.0-beta.1.zip",
+     "size": 5129003,
+     "url": "https://github.com/SgtBilko76/CallOfDuty4_VR/releases/download/v0.2.0-beta.1/KisakCOD-VR-WinlatorXR-v0.2.0-beta.1.zip"
+    }
+   ]
+  }
  ]
 }
