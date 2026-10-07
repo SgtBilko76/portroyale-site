@@ -1380,10 +1380,11 @@
       ],
       "notes": [
         "Luanti is an engine: pick a game on the first start. Mineclonia, VoxeLibre and Minetest Game can be installed from the **Content** tab.",
+        "**Installed 0.1.1-beta? It crashed right at start.** Update to 0.1.2-beta: it installs over it and keeps your worlds.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub.",
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "The package name is `net.minetest.minetest`, the same as the regular Luanti Android app, so the two can't be installed side by side.",
-        "Settings starting with `vr_` in `minetest.conf` adjust resolution, MSAA, panel size and snap turn angle."
+        "Settings starting with `vr_` in `minetest.conf` adjust resolution (`vr_resolution_scale`, `vr_max_eye_width`), MSAA, panel size and snap turn angle."
       ],
       "install": "default",
       "install_extra": "The first start unpacks the game files, which takes a few seconds. SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader) and launch it from your library.",
