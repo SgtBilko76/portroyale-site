@@ -262,20 +262,6 @@
      "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/download/v1.0.1/SuperTuxKart-VR-1.0.1.apk"
     }
    ]
-  },
-  {
-   "tag": "v0.9",
-   "name": "v0.9",
-   "date": "2026-10-05T09:05:28Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/tag/v0.9",
-   "assets": [
-    {
-     "name": "supertuxkartquest.apk",
-     "size": 735777769,
-     "url": "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/download/v0.9/supertuxkartquest.apk"
-    }
-   ]
   }
  ],
  "Luanti-VR": [
