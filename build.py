@@ -163,14 +163,6 @@ def seo_head(site, title, desc, path, image, ld):
     return "\n".join(tags)
 
 
-PROMO = """<aside class="wrap promo" aria-label="Sponsored">
-  <a href="https://www.amvrshop.com/?ref=portroyale" target="_blank" rel="sponsored noopener">
-    <img src="images/site/amvr-banner.jpg" width="1500" height="500" alt="AMVR: VR accessories for Meta Quest">
-  </a>
-  <p class="promo-note">AMVR High-Quality VR Accessories</p>
-</aside>
-"""
-
 
 def page(site, title, body, desc="", path="", image=None, ld=None):
     desc = desc or site["tagline"]
@@ -277,7 +269,7 @@ def build_index(site, cats, games, rels):
       </ul>
     </div>
   </div>
-</section>""", PROMO]
+</section>"""]
     for c in cats:
         members = [g for g in games if g["category"] == c["id"]]
         if not members:
@@ -302,6 +294,18 @@ def build_index(site, cats, games, rels):
     <h2 class="section-title">{esc(c['name'])}</h2>
     <p class="section-blurb">{esc(c['blurb'])}</p>
     <div class="grid">{''.join(cards)}
+    </div>
+  </div>
+</section>""")
+    parts.append(f"""
+<section class="section sponsor-band">
+  <div class="wrap sponsor-inner">
+    <div>
+      <h2>Keep the ports coming</h2>
+      <p>Every port here is free and open source. A coffee on Ko-fi pays for the hours that go into the next one.</p>
+    </div>
+    <div class="actions">
+      <a class="btn btn-kofi btn-lg" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Buy me a coffee</a>
     </div>
   </div>
 </section>""")
