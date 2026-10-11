@@ -305,18 +305,6 @@ def build_index(site, cats, games, rels):
     </div>
   </div>
 </section>""")
-    parts.append(f"""
-<section class="section sponsor-band">
-  <div class="wrap sponsor-inner">
-    <div>
-      <h2>Keep the ports coming</h2>
-      <p>Every port here is free and open source. A coffee on Ko-fi pays for the hours that go into the next one.</p>
-    </div>
-    <div class="actions">
-      <a class="btn btn-kofi btn-lg" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Buy me a coffee</a>
-    </div>
-  </div>
-</section>""")
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": site["title"],
           "url": site["url"] + "/", "description": site["intro"]}
     return page(site, f"{site['title']} | {site['tagline']}", "".join(parts), site["intro"], "", None, ld)

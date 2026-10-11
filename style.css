@@ -240,10 +240,6 @@ code {
 .credits { padding: 28px 0; color: var(--muted); font-size: .92rem; border-top: 1px solid var(--line); }
 .credits p { margin: 0; }
 .pager { display: flex; justify-content: space-between; gap: 16px; padding: 0 0 48px; font-weight: 700; flex-wrap: wrap; }
-.sponsor-band { background: linear-gradient(120deg, var(--red-dark), #5c0909 60%, var(--surface)); }
-.sponsor-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-.sponsor-inner h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); }
-.sponsor-inner p { color: #f3d6d6; max-width: 60ch; margin: 0; }
 .footer { background: #0b121d; border-top: 3px solid var(--red); padding: 48px 0 24px; color: var(--muted); font-size: .93rem; }
 .footer-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .footer-title { font-family: var(--head); color: #fff; font-size: 1.4rem; margin: .4em 0 .2em; }
