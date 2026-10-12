@@ -675,7 +675,7 @@
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
       ],
       "credits": "Based on [OpenTIE](https://github.com/elyosh/OpenTIE) and the Aeron engine by elyosh. Pictures: captured on a Meta Quest 3.",
-      "hero": "1-3d-cockpit.jpg"
+      "hero": "1-cockpit-capital-ship.jpg"
     },
     {
       "slug": "xwingrevival",
