@@ -2240,6 +2240,94 @@
       "credits": "Based on [KisakCOD VR](https://github.com/jplakon/CallOfDuty4_VR) and [KisakCOD](https://github.com/SwagSoftware/KisakCOD). Contains no Call of Duty game data. Photo: night patrol, U.S. Army photo by [Staff Sgt. Jason Bailey](https://commons.wikimedia.org/wiki/File:Al_Jadida_Night_Time_Foot_Patrol_DVIDS75291.jpg) (public domain)."
     },
     {
+      "slug": "redfaction",
+      "name": "Red Faction VR",
+      "repo": "alpinefactionVR",
+      "category": "winlator",
+      "tagline": "Red Faction (2001) in VR, standalone on Meta Quest 3 via WinlatorXR.",
+      "about": [
+        "Alpine Faction VR by Cactus VR Studios, extended with a WinlatorXR backend so Red Faction runs **standalone on a Meta Quest 3** (Wine + Box64 + DXVK). No PC needed while playing.",
+        "Beta 0.1 is tested on Quest 3 with WinlatorXR dawn-33 and the GOG version in the first levels: about 72 fps most of the time."
+      ],
+      "features": [
+        "Stereo VR with head and controller tracking at the headset's 72 fps",
+        "Tracked weapons with two-hand grip, laser sight and shake-to-reload",
+        "Big HUD in front of you with health and ammo near the center",
+        "Pause menu on WinlatorXR's sharp 2D screen; sniper zoom on a screen fixed in the room",
+        "Settings file for HUD, menu, graphics and CPU tuning, most of them applied while playing"
+      ],
+      "needs": [
+        "Meta Quest 3",
+        "WinlatorXR dawn-33 or newer",
+        "Your own Red Faction (2001); the GOG version is converted automatically"
+      ],
+      "install": [
+        "Copy your complete Red Faction folder (with `RF.exe`) to the headset as `Download/RedFaction`.",
+        "Unzip `RedFactionVR-Quest-WinlatorXR-v0.1.0-beta.zip` into that folder.",
+        "Create a WinlatorXR container: screen **2388x1080**, DXVK with Async, Wrapper/Turnip driver, XR API on, drive `D:` = `/sdcard/Download`.",
+        "Start `D:\\RedFaction\\RedFactionVR.bat` from the container's file manager, or make a shortcut for `wine C:\\windows\\system32\\cmd.exe` with the arguments `/c D:\\RedFaction\\RedFactionVR.bat`.",
+        "The first start converts the GOG `RF.exe` to `RF_120na.exe` and takes a little longer. Steam and retail versions: see `README-WinlatorXR.txt`."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Left trigger",
+            "Alternate fire / sniper zoom"
+          ],
+          [
+            "Left grip",
+            "Use; hold the weapon with both hands"
+          ],
+          [
+            "A",
+            "Crouch"
+          ],
+          [
+            "B",
+            "Jump"
+          ],
+          [
+            "X",
+            "Reload (or shake the right controller down)"
+          ],
+          [
+            "Y",
+            "Headlamp"
+          ],
+          [
+            "Left stick",
+            "Move; click: holster"
+          ],
+          [
+            "Right stick",
+            "Snap turn; up/down: previous/next weapon"
+          ],
+          [
+            "Right stick click",
+            "Laser sight on/off"
+          ],
+          [
+            "Left menu button",
+            "Pause menu (point and click)"
+          ]
+        ]
+      },
+      "notes": [
+        "The container screen size must be **2388x1080**.",
+        "Beta: only the first levels are tested. Multiplayer, Quest 2 and Pico are untested.",
+        "HUD size and position, the menu mode and graphics can be changed in `afvr_winlatorxr.ini` in the game folder."
+      ],
+      "credits": "Based on [Alpine Faction VR](https://github.com/CactusVRStudios/alpinefactionVR) by Cactus VR Studios and [Alpine Faction](https://github.com/GooberRF/alpinefaction) by GooberRF. Red Faction is © THQ Nordic. No game files included. Logo: Cactus VR Studios."
+    },
+    {
       "slug": "bf1942",
       "name": "BFVR: Battlefield 1942 VR",
       "repo": "Battlefield-1942-WinlatorXR",
