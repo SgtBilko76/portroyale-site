@@ -690,6 +690,7 @@
         "Head-tracked stereo 3D from the cockpit at 72 Hz",
         "Menus on a big screen that stays in place, with a laser pointer",
         "Full flight control on the Touch controllers, remappable in *Controls*",
+        "**Fly Online** joins the X-Wing Revival VR server (`217.154.211.69:7000`), where Quest and PC pilots meet",
         "Single player, LAN and online games with Quest and PC players",
         "Dedicated server for Linux (no graphics card needed)"
       ],
@@ -698,7 +699,7 @@
         "The free X-Wing Revival 0.6.1 game data (official download, about 275 MB)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r X-Wing-Revival-VR-v0.1.0-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r X-Wing-Revival-VR-v0.1.1-beta.apk`.",
         "Download the official [X-Wing Revival 0.6.1 zip](https://github.com/Raptor007/X-Wing-Revival/releases/download/v0.6.1-alpha/X-Wing.Revival.0.6.1.Alpha.zip) and unzip it on your PC.",
         "From the `X-Wing Revival` folder copy `Fonts`, `Missions`, `Models`, `Music`, `Shaders`, `Ships`, `Sounds` and `Textures` to `/sdcard/XWingRevival/` on the headset.",
         "Start **X-Wing Revival VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
@@ -777,7 +778,8 @@
       "notes": [
         "The APK contains no game data; X-Wing Revival itself is free to download.",
         "Big fleet battles run at about 45-65 FPS on Quest 3; the engine draws each eye separately.",
-        "Graphics are set lighter than on PC; raise them in *Preferences* if you like."
+        "Graphics are set lighter than on PC; raise them in *Preferences* if you like.",
+        "PC players with the original X-Wing Revival 0.6.1 join the same server via *Custom / LAN* → *Connect to IP Address* `217.154.211.69:7000`."
       ],
       "credits": "X-Wing Revival and RaptorEngine by [Raptor007](https://github.com/Raptor007). Pictures: captured on a Meta Quest 3.",
       "hero": "1-cockpit.jpg"
