@@ -552,5 +552,65 @@
     }
    ]
   }
+ ],
+ "OpenXWA-VR": [
+  {
+   "tag": "v0.1.2-beta",
+   "name": "OpenXWA VR v0.1.2-beta (Meta Quest + PICO)",
+   "date": "2026-10-12T09:06:06Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/tag/v0.1.2-beta",
+   "assets": [
+    {
+     "name": "OpenXWA-VR-v0.1.2-beta.apk",
+     "size": 6814344,
+     "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/download/v0.1.2-beta/OpenXWA-VR-v0.1.2-beta.apk"
+    }
+   ]
+  },
+  {
+   "tag": "v0.1.1-beta",
+   "name": "OpenXWA VR v0.1.1-beta (Meta Quest 3)",
+   "date": "2026-10-12T07:42:29Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/tag/v0.1.1-beta",
+   "assets": [
+    {
+     "name": "OpenXWA-VR-v0.1.1-beta.apk",
+     "size": 6814644,
+     "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/download/v0.1.1-beta/OpenXWA-VR-v0.1.1-beta.apk"
+    }
+   ]
+  }
+ ],
+ "OpenTIE-VR": [
+  {
+   "tag": "v0.1.1-beta",
+   "name": "OpenTIE VR v0.1.1-beta (Meta Quest + PICO)",
+   "date": "2026-10-12T09:06:10Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/OpenTIE-VR/releases/tag/v0.1.1-beta",
+   "assets": [
+    {
+     "name": "OpenTIE-VR-v0.1.1-beta.apk",
+     "size": 5871659,
+     "url": "https://github.com/SgtBilko76/OpenTIE-VR/releases/download/v0.1.1-beta/OpenTIE-VR-v0.1.1-beta.apk"
+    }
+   ]
+  },
+  {
+   "tag": "v0.1.0-beta",
+   "name": "OpenTIE VR v0.1.0-beta (Meta Quest 3)",
+   "date": "2026-10-12T08:40:17Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/OpenTIE-VR/releases/tag/v0.1.0-beta",
+   "assets": [
+    {
+     "name": "OpenTIE-VR-v0.1.0-beta.apk",
+     "size": 5871931,
+     "url": "https://github.com/SgtBilko76/OpenTIE-VR/releases/download/v0.1.0-beta/OpenTIE-VR-v0.1.0-beta.apk"
+    }
+   ]
+  }
  ]
 }
