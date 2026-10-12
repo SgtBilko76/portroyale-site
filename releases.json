@@ -587,6 +587,25 @@
  ],
  "X-Wing-Revival-VR": [
   {
+   "tag": "v0.1.1-beta",
+   "name": "X-Wing Revival VR v0.1.1-beta (Meta Quest + Linux server)",
+   "date": "2026-10-12T11:03:10Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/tag/v0.1.1-beta",
+   "assets": [
+    {
+     "name": "X-Wing-Revival-VR-server-v0.1.0-beta-linux-x86_64.tar.gz",
+     "size": 2757065,
+     "url": "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/download/v0.1.1-beta/X-Wing-Revival-VR-server-v0.1.0-beta-linux-x86_64.tar.gz"
+    },
+    {
+     "name": "X-Wing-Revival-VR-v0.1.1-beta.apk",
+     "size": 3320983,
+     "url": "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/download/v0.1.1-beta/X-Wing-Revival-VR-v0.1.1-beta.apk"
+    }
+   ]
+  },
+  {
    "tag": "v0.1.0-beta",
    "name": "X-Wing Revival VR v0.1.0-beta (Meta Quest + Linux server)",
    "date": "2026-10-12T10:38:56Z",
@@ -595,7 +614,7 @@
    "assets": [
     {
      "name": "X-Wing-Revival-VR-server-v0.1.0-beta-linux-x86_64.tar.gz",
-     "size": 2135566,
+     "size": 2757065,
      "url": "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/download/v0.1.0-beta/X-Wing-Revival-VR-server-v0.1.0-beta-linux-x86_64.tar.gz"
     },
     {
