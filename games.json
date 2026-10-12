@@ -455,6 +455,7 @@
         "Head-tracked stereo 3D cockpit and space in flight",
         "Full flight control on the controllers, remappable in the game's controller options",
         "Laser pointer for the concourse, hangar and in-flight menus",
+        "Virtual keyboard for pilot names and other text fields",
         "Menus over passthrough on Meta Quest",
         "Controller vibration"
       ],
@@ -463,7 +464,7 @@
         "Your own copy of *Star Wars: X-Wing Alliance* (Steam or GOG)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.3-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.4-beta.apk`.",
         "Copy your whole X-Wing Alliance game folder (the one with `STRINGS.TXT`) to the headset's internal storage as `OpenXWA`, so that `/sdcard/OpenXWA/STRINGS.TXT` exists.",
         "Start **OpenXWA VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
         "Optional: to make hyperspace selectable in *Options → Game Controller Options*, add the line `!KEY_H!104 H Hyperspace` to `/sdcard/OpenXWA/JOYSTICK.TXT`."
