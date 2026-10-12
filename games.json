@@ -568,24 +568,27 @@
       "name": "OpenTIE VR",
       "repo": "OpenTIE-VR",
       "category": "native",
-      "tagline": "Star Wars: TIE Fighter from inside a 3D TIE cockpit, standalone on Meta Quest and PICO.",
+      "tagline": "Star Wars: TIE Fighter from inside a 3D cockpit, standalone on Meta Quest and PICO.",
       "about": [
-        "A VR port of [OpenTIE](https://github.com/elyosh/OpenTIE), the open source rebuild of *Star Wars: TIE Fighter*, running standalone. Space is rendered in stereo around you and you sit in a 3D TIE Fighter cockpit, with the original instruments mounted on its panels. The concourse, briefings and cutscenes play on a big virtual screen."
+        "A VR port of [OpenTIE](https://github.com/elyosh/OpenTIE), the open source rebuild of *Star Wars: TIE Fighter*, running standalone. Space is rendered in stereo around you and you sit in a 3D cockpit, with each craft's original instruments mounted around you. The concourse, briefings and cutscenes play on a big virtual screen."
       ],
       "features": [
         "Head-tracked stereo 3D space in flight",
-        "3D TIE Fighter cockpit with the original live instruments around you",
+        "3D cockpits for every TIE craft (with X-Wing Alliance's cockpit models), lit by the sun like the ships",
+        "Each craft's original live instruments around you",
         "Full flight control on the controllers, remappable in *Settings → Controller*",
         "Laser pointer and an on-screen keyboard for the menus and pilot names",
         "Menus over passthrough on Meta Quest"
       ],
       "needs": [
         "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested)",
-        "Your own copy of *Star Wars: TIE Fighter Special Edition* (Steam)"
+        "Your own copy of *Star Wars: TIE Fighter Special Edition* (Steam)",
+        "Optional: your own copy of *Star Wars: X-Wing Alliance* for the 3D cockpits of all craft"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenTIE-VR-v0.1.1-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenTIE-VR-v0.1.2-beta.apk`.",
         "From the Steam folder `STAR WARS Tie Fighter`, copy `collectors_cd` to `/sdcard/OpenTIE/TIE95` and `remastered` to `/sdcard/OpenTIE/TIE98` on the headset.",
+        "Optional, for the 3D cockpits: copy your X-Wing Alliance game folder to `/sdcard/OpenXWA` (the same folder OpenXWA VR uses), or just copy `FLIGHTMODELS/TIECOCKPIT.OPT` and `FLIGHTMODELS/TIEBOMBERCOCKPIT.OPT` to `/sdcard/OpenTIE/`. Without them the TIE Fighter gets a built-in 3D cockpit and the other craft their flat cockpit picture.",
         "Start **OpenTIE VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
       "controls": {
@@ -665,7 +668,7 @@
       "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. The star map, goals and in-flight menus use the menu controls.",
       "notes": [
         "The APK contains no game data: you need your own copy of the game.",
-        "Only the TIE Fighter has the 3D cockpit so far; the other craft show their flat cockpit picture in front of the 3D view.",
+        "X-Wing Alliance has no Gunboat or Missile Boat cockpit, so those use the TIE ball cockpit, as in X-Wing Alliance.",
         "Motion blur, temporal upscaling and ambient occlusion are off in VR.",
         "Passthrough behind the menus works on Meta Quest only; on PICO the menus float in front of black.",
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
