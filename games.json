@@ -452,7 +452,7 @@
         "A VR port of [OpenXWA](https://github.com/elyosh/OpenXWA), the open source rebuild of *Star Wars: X-Wing Alliance*, running standalone. You sit in the 3D cockpit of your ship and look around freely while you fly with the Touch controllers. The concourse, briefings and cutscenes play on a big virtual screen."
       ],
       "features": [
-        "Head-tracked stereo 3D cockpit and space in flight",
+        "Head-tracked stereo 3D cockpit and space in flight, including the hyperspace jump",
         "Full flight control on the controllers, remappable in the game's controller options",
         "Laser pointer for the concourse, hangar and in-flight menus",
         "Virtual keyboard for pilot names and other text fields",
@@ -464,7 +464,7 @@
         "Your own copy of *Star Wars: X-Wing Alliance* (Steam or GOG)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.4-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.5-beta.apk`.",
         "Copy your whole X-Wing Alliance game folder (the one with `STRINGS.TXT`) to the headset's internal storage as `OpenXWA`, so that `/sdcard/OpenXWA/STRINGS.TXT` exists.",
         "Start **OpenXWA VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
         "Optional: to make hyperspace selectable in *Options → Game Controller Options*, add the line `!KEY_H!104 H Hyperspace` to `/sdcard/OpenXWA/JOYSTICK.TXT`."
@@ -508,7 +508,7 @@
           ],
           [
             "X / Y",
-            "Fighters targeting you / nearest fighter",
+            "Pick up targeted cargo / release carried cargo",
             "Y = Space"
           ],
           [
@@ -533,7 +533,7 @@
           ],
           [
             "Left grip + X / Y",
-            "Previous target / target components",
+            "Fighters targeting you / nearest fighter",
             ""
           ],
           [
@@ -543,7 +543,7 @@
           ],
           [
             "Left grip + left trigger",
-            "Pick up targeted cargo",
+            "Target components",
             ""
           ],
           [

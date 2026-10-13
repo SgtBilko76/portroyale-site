@@ -555,16 +555,16 @@
  ],
  "OpenXWA-VR": [
   {
-   "tag": "v0.1.4-beta",
-   "name": "OpenXWA VR v0.1.4-beta (Meta Quest + PICO)",
-   "date": "2026-10-12T15:17:19Z",
+   "tag": "v0.1.5-beta",
+   "name": "OpenXWA VR v0.1.5-beta (Meta Quest + PICO)",
+   "date": "2026-10-13T08:31:40Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/tag/v0.1.4-beta",
+   "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/tag/v0.1.5-beta",
    "assets": [
     {
-     "name": "OpenXWA-VR-v0.1.4-beta.apk",
-     "size": 6833724,
-     "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/download/v0.1.4-beta/OpenXWA-VR-v0.1.4-beta.apk"
+     "name": "OpenXWA-VR-v0.1.5-beta.apk",
+     "size": 6833536,
+     "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/download/v0.1.5-beta/OpenXWA-VR-v0.1.5-beta.apk"
     }
    ]
   }
