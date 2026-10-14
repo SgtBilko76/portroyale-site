@@ -571,16 +571,16 @@
  ],
  "OpenTIE-VR": [
   {
-   "tag": "v0.1.2-beta",
-   "name": "OpenTIE VR v0.1.2-beta (Meta Quest + PICO)",
-   "date": "2026-10-12T10:15:35Z",
+   "tag": "v0.1.3-beta",
+   "name": "OpenTIE VR v0.1.3-beta (Meta Quest + PICO)",
+   "date": "2026-10-14T08:51:13Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/OpenTIE-VR/releases/tag/v0.1.2-beta",
+   "url": "https://github.com/SgtBilko76/OpenTIE-VR/releases/tag/v0.1.3-beta",
    "assets": [
     {
-     "name": "OpenTIE-VR-v0.1.2-beta.apk",
-     "size": 5875167,
-     "url": "https://github.com/SgtBilko76/OpenTIE-VR/releases/download/v0.1.2-beta/OpenTIE-VR-v0.1.2-beta.apk"
+     "name": "OpenTIE-VR-v0.1.3-beta.apk",
+     "size": 5876475,
+     "url": "https://github.com/SgtBilko76/OpenTIE-VR/releases/download/v0.1.3-beta/OpenTIE-VR-v0.1.3-beta.apk"
     }
    ]
   }
