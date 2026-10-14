@@ -700,10 +700,9 @@
         "Nothing else: the full APK has the free X-Wing Revival 0.6.1 game data built in"
       ],
       "install": [
-        "Sideload the full APK with SideQuest or `adb install -r X-Wing-Revival-VR-v1.0.1-full.apk`.",
+        "Sideload the full APK with SideQuest or `adb install -r X-Wing-Revival-VR-v1.0.2-full.apk`.",
         "Start **X-Wing Revival VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
         "The first start unpacks the game data to `/sdcard/XWingRevival/` (about 310 MB, takes a moment), then the menu appears.",
-        "Small APK instead: install `X-Wing-Revival-VR-v1.0.1.apk`, download the official [X-Wing Revival 0.6.1 zip](https://github.com/Raptor007/X-Wing-Revival/releases/download/v0.6.1-alpha/X-Wing.Revival.0.6.1.Alpha.zip) and copy its `Fonts`, `Missions`, `Models`, `Music`, `Shaders`, `Ships`, `Sounds` and `Textures` folders to `/sdcard/XWingRevival/`.",
         "Dedicated server: unpack the `server` download on a Linux PC and run `./start-server.sh`. It fetches the game data it needs on the first start; players join on TCP port 7000.",
         "Custom missions: copy the mission's `.def` file to `/sdcard/XWingRevival/Missions/` (or the server's `Missions` folder) and pick it in the lobby under *Game Type → Mission*, or send it to the server with *Upload Mission*."
       ],
@@ -778,7 +777,7 @@
       },
       "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. All flight controls can be changed in the game's *Controls* menu.",
       "notes": [
-        "Two APKs: the *full* one contains the X-Wing Revival 0.6.1 game data (by Raptor007, ship models by XWA Upgrade); the small one has no game data.",
+        "The APK contains the X-Wing Revival 0.6.1 game data (by Raptor007, ship models by XWA Upgrade).",
         "Big fleet battles run at about 45-65 FPS on Quest 3; the engine draws each eye separately.",
         "Graphics are set lighter than on PC; raise them in *Preferences* if you like.",
         "PC players with the original X-Wing Revival 0.6.1 join the same server via *Custom / LAN* → *Connect to IP Address* `217.154.211.69:7000`.",
