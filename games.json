@@ -800,6 +800,7 @@
         "HUD fixed in front of the ship, with crosshair, target brackets and lead indicators lined up with your guns",
         "Full flight control on the controllers: throttle lever on the right stick, a second button layer on the left grip, remappable in *Options → Controls*",
         "Chase view behind your ship",
+      "Full lighting with ship shine, environment reflections and anti-aliasing",
         "Laser pointer for the menus"
       ],
       "needs": [
@@ -807,7 +808,7 @@
         "The free *Wing Commander Saga* 0.9.65 game data (about 7 GB, see Install)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r WCSaga-VR-v0.1.1-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r WCSaga-VR-v0.1.2-beta.apk`.",
         "Put the game data on the headset so that the folder `/sdcard/WCSaga/Wing_Commander_Saga/data` exists. Easiest, on a PC with Python 3 and 7-Zip and the Quest connected by USB: download [get_wcs_data.py](https://github.com/SgtBilko76/WCSaga-VR/blob/quest-vr/tools/quest/get_wcs_data.py) and run `python3 get_wcs_data.py WCSaga --push`. Or install *Wing Commander Saga* with [Knossos.NET](https://knossos.net) and copy the mod folder (the one that contains `data`) to `/sdcard/WCSaga/Wing_Commander_Saga` with SideQuest.",
         "Start **Wing Commander Saga VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
@@ -883,7 +884,8 @@
       "controls_note": "Button names are those of the Meta Quest controllers. In the comms menu, left stick up/down picks an order, A or a trigger confirms it and Y closes the menu. Every flight binding can be changed in *Options → Controls*; \"Reset to default\" brings this layout back.",
       "notes": [
         "The APK contains no game data; Wing Commander Saga is free and downloaded separately.",
-        "Flight runs at about 30 fps; menus run at full speed.",
+        "Flight runs at about 26–30 fps; menus run at full speed.",
+      "Shadows are off by default to keep the frame rate up; you can turn them on in *Options → Graphics → Shadow Quality*.",
         "There is no 3D cockpit: Wing Commander Saga has no cockpit models.",
         "Tested on Meta Quest 3 only."
       ],
