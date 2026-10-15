@@ -787,6 +787,110 @@
       "hero": "1-cockpit.jpg"
     },
     {
+      "slug": "wcsaga",
+      "name": "Wing Commander Saga VR",
+      "repo": "WCSaga-VR",
+      "category": "native",
+      "tagline": "The free Wing Commander fan game Wing Commander Saga in stereo 3D, standalone on Meta Quest.",
+      "about": [
+        "A VR port of *Wing Commander Saga*, the free fan-made Wing Commander game, running standalone on the [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) engine. Space is rendered in stereo around you, the HUD floats in front of your ship and lines up with your guns, and the menus, briefings and cutscenes play on a big virtual screen."
+      ],
+      "features": [
+        "Head-tracked stereo 3D space in flight",
+        "HUD fixed in front of the ship, with crosshair, target brackets and lead indicators lined up with your guns",
+        "Full flight control on the controllers: throttle lever on the right stick, a second button layer on the left grip, remappable in *Options → Controls*",
+        "Chase view behind your ship",
+        "Laser pointer for the menus"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
+        "The free *Wing Commander Saga* 0.9.65 game data (about 7 GB, see Install)"
+      ],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r WCSaga-VR-v0.1.1-beta.apk`.",
+        "Put the game data on the headset so that the folder `/sdcard/WCSaga/Wing_Commander_Saga/data` exists. Easiest, on a PC with Python 3 and 7-Zip and the Quest connected by USB: download [get_wcs_data.py](https://github.com/SgtBilko76/WCSaga-VR/blob/quest-vr/tools/quest/get_wcs_data.py) and run `python3 get_wcs_data.py WCSaga --push`. Or install *Wing Commander Saga* with [Knossos.NET](https://knossos.net) and copy the mod folder (the one that contains `data`) to `/sdcard/WCSaga/Wing_Commander_Saga` with SideQuest.",
+        "Start **Wing Commander Saga VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Flight",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Pitch and turn",
+            ""
+          ],
+          [
+            "Right stick",
+            "Roll (left/right), throttle (up/down, stays where you leave it)",
+            ""
+          ],
+          [
+            "Right / left trigger",
+            "Guns / missiles",
+            "Click"
+          ],
+          [
+            "Right grip (hold)",
+            "Afterburner",
+            ""
+          ],
+          [
+            "A / B",
+            "Target nearest enemy / target ship in crosshair",
+            "Enter / Escape"
+          ],
+          [
+            "X / Y",
+            "Next missile type / next gun type",
+            ""
+          ],
+          [
+            "Left / right stick click",
+            "Autopilot / match target speed",
+            ""
+          ],
+          [
+            "Left Menu button",
+            "Pause menu",
+            "Escape"
+          ],
+          [
+            "Left grip + A / B",
+            "Next target / target your target's attacker",
+            ""
+          ],
+          [
+            "Left grip + X / Y",
+            "Next subsystem on target / comms menu",
+            ""
+          ],
+          [
+            "Left grip + right stick up / down",
+            "Full speed / full stop",
+            ""
+          ],
+          [
+            "Left grip + left / right stick click",
+            "Look behind / chase view on and off",
+            ""
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers. In the comms menu, left stick up/down picks an order, A or a trigger confirms it and Y closes the menu. Every flight binding can be changed in *Options → Controls*; \"Reset to default\" brings this layout back.",
+      "notes": [
+        "The APK contains no game data; Wing Commander Saga is free and downloaded separately.",
+        "Flight runs at about 30 fps; menus run at full speed.",
+        "There is no 3D cockpit: Wing Commander Saga has no cockpit models.",
+        "Tested on Meta Quest 3 only."
+      ],
+      "credits": "Wing Commander Saga by the Wing Commander Saga team; [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) by the Source Code Project. Wing Commander is a trademark of Electronic Arts; Wing Commander Saga is a non-commercial fan project. Pictures: captured on a Meta Quest 3.",
+      "hero": "1-chase-view.jpg"
+    },
+    {
       "slug": "sauerbraten",
       "name": "SauerQuest: Cube 2 Sauerbraten VR",
       "repo": "Sauerbraten-VR",
