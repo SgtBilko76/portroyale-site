@@ -809,7 +809,7 @@
       ],
       "install": [
         "Sideload the APK with SideQuest or `adb install -r WCSaga-VR-v0.1.2-beta.apk`.",
-        "Put the game data on the headset so that the folder `/sdcard/WCSaga/Wing_Commander_Saga/data` exists. Easiest, on a PC with Python 3 and 7-Zip and the Quest connected by USB: download [get_wcs_data.py](https://github.com/SgtBilko76/WCSaga-VR/blob/quest-vr/tools/quest/get_wcs_data.py) and run `python3 get_wcs_data.py WCSaga --push`. Or install *Wing Commander Saga* with [Knossos.NET](https://knossos.net) and copy the mod folder (the one that contains `data`) to `/sdcard/WCSaga/Wing_Commander_Saga` with SideQuest.",
+        "Put the game data on the headset so that the folder `/sdcard/WCSaga/Wing_Commander_Saga/data` exists. Easiest, on a PC with Python 3 and 7-Zip and the Quest connected by USB: download [get_wcs_data.py](https://github.com/SgtBilko76/WCSaga-VR/blob/quest-vr/tools/quest/get_wcs_data.py) and run `python3 get_wcs_data.py WCSaga --push`. Or, on a Windows PC: download the full game and patch v1.1.0.7822 from [wcsaga.com](https://www.wcsaga.com/downloads/), install the game, then the patch, and copy the whole installed game folder to `/sdcard/WCSaga/Wing_Commander_Saga` on the headset with SideQuest.",
         "Start **Wing Commander Saga VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
       "controls": {
