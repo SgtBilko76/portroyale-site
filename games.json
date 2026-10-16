@@ -464,7 +464,7 @@
         "Your own copy of *Star Wars: X-Wing Alliance* (Steam or GOG)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.5-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.6-beta.apk`.",
         "Copy your whole X-Wing Alliance game folder (the one with `STRINGS.TXT`) to the headset's internal storage as `OpenXWA`, so that `/sdcard/OpenXWA/STRINGS.TXT` exists.",
         "Start **OpenXWA VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
         "Optional: to make hyperspace selectable in *Options → Game Controller Options*, add the line `!KEY_H!104 H Hyperspace` to `/sdcard/OpenXWA/JOYSTICK.TXT`."
@@ -508,7 +508,7 @@
           ],
           [
             "X / Y",
-            "Pick up targeted cargo / release carried cargo",
+            "Fighters targeting you / nearest fighter",
             "Y = Space"
           ],
           [
@@ -533,7 +533,7 @@
           ],
           [
             "Left grip + X / Y",
-            "Fighters targeting you / nearest fighter",
+            "Pick up targeted cargo / release carried cargo",
             ""
           ],
           [
@@ -543,6 +543,11 @@
           ],
           [
             "Left grip + left trigger",
+            "Dock with / board the targeted craft",
+            ""
+          ],
+          [
+            "Left grip + right grip",
             "Target components",
             ""
           ],
