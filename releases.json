@@ -624,16 +624,16 @@
  ],
  "WCSaga-VR": [
   {
-   "tag": "v0.1.3-beta",
-   "name": "Wing Commander Saga VR v0.1.3-beta (Meta Quest 3)",
-   "date": "2026-10-16T10:10:01Z",
+   "tag": "v0.1.4-beta",
+   "name": "Wing Commander Saga VR v0.1.4-beta (Meta Quest 3)",
+   "date": "2026-10-17T08:55:57Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/WCSaga-VR/releases/tag/v0.1.3-beta",
+   "url": "https://github.com/SgtBilko76/WCSaga-VR/releases/tag/v0.1.4-beta",
    "assets": [
     {
-     "name": "WCSaga-VR-v0.1.3-beta.apk",
-     "size": 21985145,
-     "url": "https://github.com/SgtBilko76/WCSaga-VR/releases/download/v0.1.3-beta/WCSaga-VR-v0.1.3-beta.apk"
+     "name": "WCSaga-VR-v0.1.4-beta.apk",
+     "size": 20617180,
+     "url": "https://github.com/SgtBilko76/WCSaga-VR/releases/download/v0.1.4-beta/WCSaga-VR-v0.1.4-beta.apk"
     }
    ]
   }
