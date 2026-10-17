@@ -1,6 +1,7 @@
 // "Install from your browser" box for native ports: one APK (or a Quest + PICO pair).
 import { PackageManager } from "@yume-chan/android-bin";
 import { pmInstallStream } from "./pm-install.js";
+import { makeDataSteps } from "./data.js";
 import { state, onChange, el, fmtSize, connect, friendlyError, relayFetch, makeChrome, usbSupported, NO_USB_TEXT, CONNECT_PROMPT } from "./common.js";
 
 // Pick the APK that fits the connected headset: names with "pico" are PICO builds.
@@ -33,6 +34,7 @@ export function mountApk(root, cfg) {
   const fileRow = el("p", { class: "inst-small", hidden: true }, "Or ", fileLink, ".");
   fileLink.addEventListener("click", () => fileInput.click());
 
+  const data = makeDataSteps(cfg, (fn) => run(fn), ui);
   const asset = () => (chosen && assets.find((a) => a.name === chosen)) || pickAsset(assets);
 
   function render() {
@@ -48,6 +50,8 @@ export function mountApk(root, cfg) {
     installBtn.textContent = `Install ${a.name} (${fmtSize(a.size)})`;
     fileRow.hidden = !conn;
     fileLink.disabled = busy;
+    appStep.hidden = !conn || !data.count;
+    data.render(busy);
     if (!supported) setMsg(NO_USB_TEXT, "warn");
     else if (!busy && !conn && !ui.msg.textContent) setMsg("Plug your headset into this computer with a USB cable (developer mode on), then press Connect.");
   }
@@ -78,7 +82,8 @@ export function mountApk(root, cfg) {
     setMsg(CONNECT_PROMPT);
     const c = await connect(setMsg);
     if (!c) { setMsg("No headset picked. Press Connect to try again."); return; }
-    setMsg(assets.length > 1 ? `Ready. The ${c.isPico ? "PICO" : "Quest"} APK is selected.` : "Ready to install.", "ok");
+    setMsg(data.count ? "Connected. Work through the steps below." : assets.length > 1 ? `Ready. The ${c.isPico ? "PICO" : "Quest"} APK is selected.` : "Ready to install.", "ok");
+    await data.refresh();
   }));
 
   async function installStream(size, stream, label) {
@@ -95,7 +100,9 @@ export function mountApk(root, cfg) {
     setBar(0);
     await pmInstallStream(state.conn.adb, size, stream.pipeThrough(counter));
     setBar(null);
-    setMsg(`**${cfg.game || "The port"} is installed.** On Quest, find it in Library → Unknown Sources; on PICO, in your library. If this port needs game files, follow the manual on this page.`, "ok");
+    setMsg(data.count
+      ? `**${cfg.game || "The port"} is installed.** Now copy the game files below.`
+      : `**${cfg.game || "The port"} is installed.** On Quest, find it in Library → Unknown Sources; on PICO, in your library.`, "ok");
   }
 
   installBtn.addEventListener("click", () => run(async () => {
@@ -113,9 +120,10 @@ export function mountApk(root, cfg) {
     run(() => installStream(f.size, f.stream(), f.name));
   });
 
+  const appStep = el("div", { class: "inst-step-head", hidden: true }, el("span", { class: "inst-num" }, "1"), el("strong", {}, `${cfg.game || "The"} app`));
   root.replaceChildren(
     ui.status,
-    el("div", { class: "inst-body" }, selectRow, ui.msg, ui.barWrap, connectBtn, installBtn, extraBtn, fileRow, fileInput),
+    el("div", { class: "inst-body" }, ui.msg, ui.barWrap, connectBtn, appStep, selectRow, installBtn, extraBtn, fileRow, fileInput, ...data.boxes),
   );
   render();
 }
