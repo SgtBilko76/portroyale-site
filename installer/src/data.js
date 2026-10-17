@@ -14,6 +14,7 @@
 //                                Android/data aren't readable by the app)
 //   names:    ["sf64.o2r"],      files: required file names (checked on the headset)
 //   accept:   ".chd,.cue,.bin",  files: file picker filter
+//   check:    ["cstrike/liblist.gam"]  paths below target that must all exist (overrides the default check)
 //   optional: true
 // }]
 import { state, el, fmtSize } from "./common.js";
@@ -176,6 +177,10 @@ export async function pushList(list, destOf, { setMsg, setBar }, label) {
 const whereOf = (item) => item.target.replace(/^\/sdcard\//, "");
 
 export async function checkItem(item) {
+  if (item.check) { // explicit list of paths that must all exist below target
+    for (const c of item.check) if (!(await exists(`${item.target}/${c}`))) return false;
+    return true;
+  }
   if (item.tar) return (await exists(`${item.target}/${item.tar}/${item.marker}`)) || (await exists(`${item.target}/${item.tar}.tar`));
   if (item.kind === "folder" && item.marker && !item.keep_name) return exists(`${item.target}/${item.marker}`);
   if (item.kind === "files" && item.names) {
