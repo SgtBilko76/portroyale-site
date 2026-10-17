@@ -15,7 +15,8 @@
     "@yume-chan/adb-daemon-webusb": "^2.3.2",
     "@yume-chan/android-bin": "^2.1.0",
     "@yume-chan/stream-extra": "^2.6.1",
-    "esbuild": "^0.28.2"
+    "esbuild": "^0.28.2",
+    "fflate": "^0.8.3"
   },
   "private": "true"
 }

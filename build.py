@@ -406,7 +406,39 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 
     installer = ""
     apks = [a for a in (rel["assets"] if rel else []) if a["name"].lower().endswith(".apk")]
-    if apks and site.get("apk_relay") and INSTALLER_JS.exists():
+    wi = game.get("winlator_install")
+    wxr = rels.get("_winlatorxr")
+    mod_asset = next((a for a in (rel["assets"] if rel else []) if wi and wi["asset"] in a["name"]), None)
+    if wi and mod_asset and wxr and site.get("apk_relay") and INSTALLER_JS.exists():
+        mod = {"kind": wi.get("kind", "zip"), "name": mod_asset["name"], "url": mod_asset["url"], "size": mod_asset["size"]}
+        if mod["kind"] == "zip":
+            mod.update(folder=wi["folder"], marker=wi["marker"], game_label=wi["game_label"])
+        cfg = {"mode": "winlator", "relay": site["apk_relay"], "game": game["name"], "next": wi.get("next", ""),
+               "winlatorxr": {"package": "com.winlator.cmod", "name": wxr["name"], "url": wxr["download"],
+                              "size": wxr["size"], "release_url": wxr["url"]},
+               "mod": mod}
+        if mod["kind"] == "zip":
+            what = f"installs or updates WinlatorXR, copies your own {esc(wi['game_label'])} folder and unpacks the VR mod into it"
+        else:
+            what = "installs or updates WinlatorXR and copies the ready-made container image to the headset"
+        installer = f"""
+      <div class="install-card" id="install">
+        <h3>Install from your browser</h3>
+        <p class="inst-small">Over USB, for Meta Quest 3: {what}. It checks for the <a href="{esc(wxr['url'])}" target="_blank" rel="noopener">newest WinlatorXR release</a> ({esc(wxr['name'])}) first. Works in Chrome or Edge on a PC or Mac.</p>
+        <div class="installer" data-config="{esc(json.dumps(cfg, ensure_ascii=False))}"><p class="inst-msg">The installer needs JavaScript. Use the manual download below.</p></div>
+        <details class="inst-help">
+          <summary>First time? Before you start</summary>
+          <ol>
+            <li>Turn on developer mode: Meta Horizon app on your phone → Devices → your headset → Headset settings → Developer mode.</li>
+            <li>Connect the headset to this computer with a USB cable that carries data (not a charge-only cable).</li>
+            <li>Close SideQuest and Meta Quest Developer Hub. If you use adb, run <code>adb kill-server</code> first: only one program can talk to the headset at a time.</li>
+            <li>Windows: if the headset doesn't show up in the list, install the <a href="https://developers.meta.com/horizon/downloads/package/oculus-adb-drivers/" target="_blank" rel="noopener">Meta Quest ADB driver</a>.</li>
+            <li>After pressing Connect, put on the headset and allow USB debugging for this computer.</li>
+            <li>Copying a game folder takes a few minutes for big games; keep the headset plugged in and awake.</li>
+          </ol>
+        </details>
+      </div>"""
+    elif apks and site.get("apk_relay") and INSTALLER_JS.exists():
         cfg = {"relay": site["apk_relay"], "game": game["name"],
                "assets": [{"name": a["name"], "url": a["url"], "size": a["size"]} for a in apks]}
         installer = f"""
@@ -555,6 +587,14 @@ def main():
     if "--refresh" in sys.argv or not rels:
         print("Fetching releases from GitHub...")
         rels.update(fetch_releases(site["github_user"], games))
+        try:  # newest public WinlatorXR, offered by the WinlatorXR mod installers
+            x = _gh_json("https://api.github.com/repos/WinlatorXR/WinlatorXR/releases/latest")
+            apk = next(a for a in x["assets"] if a["name"].endswith(".apk"))
+            rels["_winlatorxr"] = {"tag": x["tag_name"], "url": x["html_url"], "name": apk["name"],
+                                   "size": apk["size"], "download": apk["browser_download_url"]}
+            print(f"  WinlatorXR: {apk['name']}")
+        except Exception as e:
+            print(f"  ! WinlatorXR: {e}")
         CACHE.write_text(json.dumps(rels, indent=1))
 
     if OUT.exists():
