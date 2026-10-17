@@ -792,17 +792,16 @@
       "name": "X-Wing Revival VR",
       "repo": "X-Wing-Revival-VR",
       "category": "full",
-      "tagline": "Free Star Wars space combat in the cockpit, standalone on Meta Quest and PICO, with a Linux dedicated server.",
+      "tagline": "Free Star Wars space combat in the cockpit, standalone on Meta Quest and PICO.",
       "about": [
-        "A native VR port of [X-Wing Revival](https://github.com/Raptor007/X-Wing-Revival) by Raptor007, a free Star Wars space combat game with 25 flyable ships, fleet battles, the Death Star trench run and online multiplayer. You fly from the cockpit in head-tracked stereo 3D; in the menus space surrounds you and the menu floats in front of you, with a laser pointer and an on-screen keyboard. A headless dedicated server for Linux lets Quest and PC pilots fly together."
+        "A native VR port of [X-Wing Revival](https://github.com/Raptor007/X-Wing-Revival) by Raptor007, a free Star Wars space combat game with 25 flyable ships, fleet battles, the Death Star trench run and online multiplayer. You fly from the cockpit in head-tracked stereo 3D; in the menus space surrounds you and the menu floats in front of you, with a laser pointer and an on-screen keyboard. Quest, PICO and PC pilots fly together online."
       ],
       "features": [
         "Head-tracked stereo 3D from the cockpit at 72 Hz",
         "Menus floating in front of you with space all around, laser pointer and on-screen keyboard",
         "Full flight control on the controllers, remappable in *Controls*",
         "**Fly Online** joins the X-Wing Revival VR server (`217.154.211.69:7000`), where Quest, PICO and PC pilots meet",
-        "Custom missions, including an *Upload Mission* button in the lobby",
-        "Dedicated server for Linux (no graphics card needed)"
+        "Custom missions, including an *Upload Mission* button in the lobby"
       ],
       "needs": [
         "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested, PICO OS 5.9.0 or newer)",
@@ -812,8 +811,7 @@
         "Sideload the full APK with SideQuest or `adb install -r X-Wing-Revival-VR-v1.0.2-full.apk`.",
         "Start **X-Wing Revival VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
         "The first start unpacks the game data to `/sdcard/XWingRevival/` (about 310 MB, takes a moment), then the menu appears.",
-        "Dedicated server: unpack the `server` download on a Linux PC and run `./start-server.sh`. It fetches the game data it needs on the first start; players join on TCP port 7000.",
-        "Custom missions: copy the mission's `.def` file to `/sdcard/XWingRevival/Missions/` (or the server's `Missions` folder) and pick it in the lobby under *Game Type → Mission*, or send it to the server with *Upload Mission*."
+        "Custom missions: copy the mission's `.def` file to `/sdcard/XWingRevival/Missions/` and pick it in the lobby under *Game Type → Mission*, or send it to the server with *Upload Mission*."
       ],
       "controls": {
         "columns": [
