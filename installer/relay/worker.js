@@ -8,6 +8,8 @@ const ALLOWED_ORIGINS = [
   "https://portroyale.online",
   "https://www.portroyale.online",
   "https://sgtbilko76.github.io",
+  "https://csvr.online",
+  "https://www.csvr.online",
   "http://localhost:8000",
   "http://127.0.0.1:8000",
 ];
