@@ -1,0 +1,21 @@
+{
+  "name": "portroyale-installer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "esbuild src/installer.js --bundle --minify --format=esm --target=chrome100 --legal-comments=eof --outfile=../installer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@yume-chan/adb": "^2.6.4",
+    "@yume-chan/adb-credential-web": "^2.1.0",
+    "@yume-chan/adb-daemon-webusb": "^2.3.2",
+    "@yume-chan/android-bin": "^2.1.0",
+    "@yume-chan/stream-extra": "^2.6.1",
+    "esbuild": "^0.28.2"
+  },
+  "private": "true"
+}

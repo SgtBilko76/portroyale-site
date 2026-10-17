@@ -25,6 +25,9 @@ IMAGES = ROOT / "images"
 # Cache-buster so browsers fetch style.css again whenever it changes.
 CSS_VERSION = hashlib.sha1((ROOT / "style.css").read_bytes()).hexdigest()[:8]
 CACHE = ROOT / "releases.json"
+# Browser installer bundle (built from installer/src by `npm run build` in installer/).
+INSTALLER_JS = ROOT / "installer.js"
+INSTALLER_VERSION = hashlib.sha1(INSTALLER_JS.read_bytes()).hexdigest()[:8] if INSTALLER_JS.exists() else "0"
 IMG_EXT = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 
 DEFAULT_INSTALL = [
@@ -224,6 +227,7 @@ HEART = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.
 GH = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.5 15.6c.4 0 .5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.6 7.6 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.6 3.9.3.3.5.8.5 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 8 0Z"/></svg>'
 KOFI = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h9.2a3.3 3.3 0 0 1 0 6.6h-.6A4 4 0 0 1 6.7 13H5.3A3.3 3.3 0 0 1 2 9.7Zm9.2 4.9a1.6 1.6 0 0 0 0-3.2h-.5v3.2ZM1.5 14h10v1.5h-10Z"/></svg>'
 DISCORD = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 3.1A13 13 0 0 0 10.3 2l-.4.8a12 12 0 0 0-3.8 0L5.7 2a13 13 0 0 0-3.2 1.1C.5 6.2 0 9.2.2 12.1a13 13 0 0 0 4 2l.8-1.3a8.4 8.4 0 0 1-1.3-.6l.3-.3a9.3 9.3 0 0 0 8 0l.3.3-1.3.6.8 1.3a13 13 0 0 0 4-2c.3-3.4-.6-6.4-2.3-9ZM5.4 10.3c-.8 0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6Zm5.2 0c-.8 0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6Z"/></svg>'
+USB = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0l2.5 3H9v6.4l2.5-1.6V6H11V3.5h2.5V6H13v2.7L9 11.3v1.8a1.5 1.5 0 1 1-2 0v-2.6L3 8V5.9a1.25 1.25 0 1 1 1.5 0V7.2L7 8.8V3H5.5Z"/></svg>'
 DL = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M7 1h2v7.2l2.6-2.6L13 7l-5 5-5-5 1.4-1.4L7 8.2ZM2 13h12v2H2Z"/></svg>'
 
 
@@ -400,6 +404,28 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     if not downloads:
         downloads.append(f'<p class="note">No release yet: check the <a href="{repo_url}" target="_blank" rel="noopener">repository</a>.</p>')
 
+    installer = ""
+    apks = [a for a in (rel["assets"] if rel else []) if a["name"].lower().endswith(".apk")]
+    if apks and site.get("apk_relay") and INSTALLER_JS.exists():
+        cfg = {"relay": site["apk_relay"], "game": game["name"],
+               "assets": [{"name": a["name"], "url": a["url"], "size": a["size"]} for a in apks]}
+        installer = f"""
+      <div class="install-card" id="install">
+        <h3>Install from your browser</h3>
+        <p class="inst-small">One click over USB, for Meta Quest and PICO: no SideQuest needed. Works in Chrome or Edge on a PC, Mac or Android phone.</p>
+        <div class="installer" data-config="{esc(json.dumps(cfg, ensure_ascii=False))}"><p class="inst-msg">The installer needs JavaScript. Use the manual download below.</p></div>
+        <details class="inst-help">
+          <summary>First time? Before you start</summary>
+          <ol>
+            <li>Turn on developer mode. <strong>Quest:</strong> Meta Horizon app on your phone → Devices → your headset → Headset settings → Developer mode. <strong>PICO:</strong> Settings → General → About → tap <em>Software version</em> 7 times, then Settings → Developer → turn on USB debugging.</li>
+            <li>Connect the headset to this computer with a USB cable that carries data (not a charge-only cable).</li>
+            <li>Close SideQuest and Meta Quest Developer Hub. If you use adb, run <code>adb kill-server</code> first: only one program can talk to the headset at a time.</li>
+            <li>Windows: if the headset doesn't show up in the list, install the <a href="https://developers.meta.com/horizon/downloads/package/oculus-adb-drivers/" target="_blank" rel="noopener">Meta Quest ADB driver</a>.</li>
+            <li>After pressing Connect, put on the headset and allow USB debugging for this computer.</li>
+          </ol>
+        </details>
+      </div>"""
+
     gallery = ""
     extra = imgs[1:]
     videos = game.get("videos") or ([{"id": game["video"], "label": game.get("video_label", "")}] if game.get("video") else [])
@@ -426,6 +452,8 @@ def build_game(site, cats, game, rels, prev_g, next_g):
         right = f'<a href="{esc(next_g["slug"])}.html">{esc(next_g["name"])} →</a>' if next_g else "<span></span>"
         pager = f'<nav class="wrap pager" aria-label="More ports">{left}{right}</nav>'
 
+    install_btn = f'\n      <a class="btn btn-ghost" href="#install">{USB} Install on headset</a>' if installer else ""
+    script = f'\n<script type="module" src="installer.js?v={INSTALLER_VERSION}"></script>' if installer else ""
     body = f"""
 <section class="game-hero">
   <div class="game-hero-media">{picture(game, hero_image(game, imgs), "game-hero-img", eager=True)}</div>
@@ -434,7 +462,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     <h1>{esc(game['name'])}</h1>
     <p class="lead">{inline(game['tagline'])}</p>
     <div class="actions">
-      {dl_btn}
+      {dl_btn}{install_btn}
       <a class="btn btn-ghost" href="{repo_url}" target="_blank" rel="noopener">{GH} GitHub</a>
       <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
     </div>
@@ -476,7 +504,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 <section class="section" id="download">
   <div class="wrap two-col">
     <div>
-      <h2 class="section-title">Download</h2>
+      <h2 class="section-title">Download</h2>{installer}
       {''.join(downloads)}
       <p class="note">All releases: <a href="{repo_url}/releases" target="_blank" rel="noopener">{repo_url.replace('https://', '')}/releases</a></p>
       {discord_link(site, '<div class="help-box"><p><strong>Need help or found a bug?</strong> Ask in <strong>#support</strong> on our Discord, and get new releases in <strong>#new-releases</strong>.</p><a class="btn btn-discord" href="{url}" target="_blank" rel="noopener">' + DISCORD + ' Join the Discord</a></div>')}
@@ -493,7 +521,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 <section class="section credits">
   <div class="wrap"><p><strong>Credits:</strong> {inline(game.get('credits', ''))}</p></div>
 </section>
-{pager}
+{pager}{script}
 """
     desc = re.sub(r"[*`\[\]]", "", game["tagline"])
     image = next((p.relative_to(ROOT).as_posix() for p in imgs if p.suffix.lower() != ".svg"), None)
@@ -533,6 +561,8 @@ def main():
         shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copy(ROOT / "style.css", OUT / "style.css")
+    if INSTALLER_JS.exists():
+        shutil.copy(INSTALLER_JS, OUT / "installer.js")
     shutil.copytree(IMAGES, OUT / "images")
 
     (OUT / "index.html").write_text(build_index(site, cats, games, rels), encoding="utf-8")

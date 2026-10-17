@@ -20,3 +20,11 @@ Open `public/index.html` in a browser. To host it, upload the contents of `publi
 ## Online
 
 The site is published with GitHub Pages at https://portroyale.online. Every push to `main` rebuilds and deploys it (`.github/workflows/deploy.yml`). The workflow also runs once a day, so new GitHub releases appear on the site automatically.
+
+## Browser installer
+
+Port pages whose latest release has an APK get an "Install from your browser" box: it installs the APK on a Quest or PICO over USB (WebUSB + ADB, Chrome/Edge only).
+
+- Code: `installer/src/` (built into `installer.js` with `cd installer && npm install && npm run build`; commit the built `installer.js`).
+- GitHub release downloads have no CORS headers, so the APK is fetched through a Cloudflare Worker: `installer/relay/worker.js`, live at `site.apk_relay` in `games.json`. It only relays APKs from SgtBilko76 releases. Redeploy with `cd installer/relay && npx wrangler deploy`.
+- Test without a browser: `installer/test/node-install-test.mjs <apk-url> [relay]` (needs `npm i --no-save usb` and `adb kill-server`).
