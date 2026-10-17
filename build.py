@@ -188,6 +188,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
   <div class="wrap topbar-inner">
     <a class="brand" href="index.html"><img src="images/site/logo.png" alt="" width="44" height="44"><span>{esc(site['title'])}</span></a>
     <nav class="nav" aria-label="Main">
+      <a href="index.html#full">Complete games</a>
       <a href="index.html#native">Ports</a>
       <a href="index.html#emulator">Emulators</a>
       <a href="index.html#winlator">WinlatorXR</a>
@@ -262,7 +263,7 @@ def build_index(site, cats, games, rels):
       <h1>{esc(site['tagline'])}</h1>
       <p class="lead">{esc(site['intro'])}</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#native">Browse the ports</a>
+        <a class="btn btn-primary" href="#full">Browse the ports</a>
         {discord_link(site, '<a class="btn btn-discord" href="{url}" target="_blank" rel="noopener">' + DISCORD + ' Join the Discord</a>')}
         <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
       </div>
@@ -441,10 +442,12 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     elif apks and site.get("apk_relay") and INSTALLER_JS.exists():
         cfg = {"relay": site["apk_relay"], "game": game["name"],
                "assets": [{"name": a["name"], "url": a["url"], "size": a["size"]} for a in apks]}
+        if game.get("data"):
+            cfg["data"] = game["data"]
         installer = f"""
       <div class="install-card" id="install">
         <h3>Install from your browser</h3>
-        <p class="inst-small">One click over USB, for Meta Quest and PICO: no SideQuest needed. Works in Chrome or Edge on a PC, Mac or Android phone.</p>
+        <p class="inst-small">{"Over USB, for Meta Quest and PICO: installs the app and copies your own game files to the right place. No SideQuest, no adb." if game.get("data") else "One click over USB, for Meta Quest and PICO: no SideQuest needed."} Works in Chrome or Edge on a PC, Mac or Android phone.</p>
         <div class="installer" data-config="{esc(json.dumps(cfg, ensure_ascii=False))}"><p class="inst-msg">The installer needs JavaScript. Use the manual download below.</p></div>
         <details class="inst-help">
           <summary>First time? Before you start</summary>

@@ -14,9 +14,14 @@
   },
   "categories": [
     {
+      "id": "full",
+      "name": "Complete games",
+      "blurb": "Free games with everything inside the APK: install it and play, no game files needed."
+    },
+    {
       "id": "native",
       "name": "Native Quest ports",
-      "blurb": "Game engines ported to run directly on the headset through OpenXR."
+      "blurb": "Game engines ported to run directly on the headset through OpenXR. You need your own game files; the browser installer copies them for you."
     },
     {
       "id": "emulator",
@@ -130,7 +135,16 @@
         "The PICO build is untested: if it does not start, or the buttons are mapped differently, please open an issue on GitHub."
       ],
       "controls_note": "Button names are those of the Meta Quest controllers, PICO controllers use the same layout.",
-      "credits": "Based on [Visual Pinball](https://github.com/vpinball/vpinball) by the Visual Pinball development team."
+      "credits": "Based on [Visual Pinball](https://github.com/vpinball/vpinball) by the Visual Pinball development team.",
+      "data": [
+        {
+          "label": "Your tables",
+          "kind": "folder",
+          "target": "/sdcard/VPinball/tables",
+          "keep_name": true,
+          "hint": "one table folder (the .vpx with its pinmame/roms folder; repeat for each table)"
+        }
+      ]
     },
     {
       "slug": "unreal-tournament",
@@ -233,7 +247,28 @@
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SurrealEngine-Log:*` shows how far it gets, which is the useful thing to paste in."
       ],
       "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal Tournament is a trademark of Epic Games; this project is not affiliated with Epic Games.",
-      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout."
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
+      "data": [
+        {
+          "label": "Your UT99 game files",
+          "kind": "folder",
+          "target": "/sdcard/SurrealEngineUT",
+          "marker": "System/Botpack.u",
+          "include": [
+            "System",
+            "Maps",
+            "Textures",
+            "Sounds",
+            "Music",
+            "Help"
+          ],
+          "exclude": [
+            "System/UnrealTournament.ini",
+            "System/User.ini"
+          ],
+          "hint": "your UT99 folder (the one with System and Maps)"
+        }
+      ]
     },
     {
       "slug": "unreal-gold",
@@ -336,7 +371,28 @@
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SurrealEngine-Log:*` shows how far it gets, which is the useful thing to paste in."
       ],
       "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal is a trademark of Epic Games; this project is not affiliated with Epic Games.",
-      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout."
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
+      "data": [
+        {
+          "label": "Your Unreal Gold game files",
+          "kind": "folder",
+          "target": "/sdcard/SurrealEngine",
+          "marker": "System/UnrealShare.u",
+          "include": [
+            "System",
+            "Maps",
+            "Textures",
+            "Sounds",
+            "Music",
+            "Help"
+          ],
+          "exclude": [
+            "System/Unreal.ini",
+            "System/User.ini"
+          ],
+          "hint": "your Unreal Gold 226b folder (the one with System and Maps)"
+        }
+      ]
     },
     {
       "slug": "descent3",
@@ -441,7 +497,21 @@
         "Some disc copies lack the music; pre-v1.4 data lacks a few images and sounds.",
         "Multiplayer is untested."
       ],
-      "credits": "Based on the [Descent 3 open source engine](https://github.com/DescentDevelopers/Descent3) by the Descent community."
+      "credits": "Based on the [Descent 3 open source engine](https://github.com/DescentDevelopers/Descent3) by the Descent community.",
+      "data": [
+        {
+          "label": "Your Descent 3 game files",
+          "kind": "folder",
+          "target": "/sdcard/Android/data/com.descentdevelopers.descent3/files",
+          "marker": "d3.hog",
+          "include": [
+            "*.hog",
+            "missions",
+            "movies"
+          ],
+          "hint": "your Descent 3 folder (the one with d3.hog)"
+        }
+      ]
     },
     {
       "slug": "openxwa",
@@ -568,7 +638,16 @@
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
       ],
       "credits": "Based on [OpenXWA](https://github.com/elyosh/OpenXWA) and the Aeron engine by elyosh. Pictures: captured on a Meta Quest 3.",
-      "hero": "1-cockpit-planet.jpg"
+      "hero": "1-cockpit-planet.jpg",
+      "data": [
+        {
+          "label": "Your X-Wing Alliance folder",
+          "kind": "folder",
+          "target": "/sdcard/OpenXWA",
+          "marker": "STRINGS.TXT",
+          "hint": "your X-Wing Alliance game folder (the one with STRINGS.TXT)"
+        }
+      ]
     },
     {
       "slug": "opentie",
@@ -682,13 +761,37 @@
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
       ],
       "credits": "Based on [OpenTIE](https://github.com/elyosh/OpenTIE) and the Aeron engine by elyosh. Pictures: captured on a Meta Quest 3.",
-      "hero": "1-cockpit-capital-ship.jpg"
+      "hero": "1-cockpit-capital-ship.jpg",
+      "data": [
+        {
+          "label": "TIE Fighter 95 (collectors_cd)",
+          "kind": "folder",
+          "target": "/sdcard/OpenTIE/TIE95",
+          "marker": "BOOTTIE.EXE",
+          "hint": "the collectors_cd folder from your Steam STAR WARS Tie Fighter folder (or that whole folder)"
+        },
+        {
+          "label": "TIE Fighter 98 (remastered)",
+          "kind": "folder",
+          "target": "/sdcard/OpenTIE/TIE98",
+          "marker": "TIE95.EXE",
+          "hint": "the remastered folder from your Steam STAR WARS Tie Fighter folder (or that whole folder)"
+        },
+        {
+          "label": "X-Wing Alliance, for the 3D cockpits",
+          "kind": "folder",
+          "target": "/sdcard/OpenXWA",
+          "marker": "STRINGS.TXT",
+          "optional": true,
+          "hint": "your X-Wing Alliance game folder (the one with STRINGS.TXT)"
+        }
+      ]
     },
     {
       "slug": "xwingrevival",
       "name": "X-Wing Revival VR",
       "repo": "X-Wing-Revival-VR",
-      "category": "native",
+      "category": "full",
       "tagline": "Free Star Wars space combat in the cockpit, standalone on Meta Quest and PICO, with a Linux dedicated server.",
       "about": [
         "A native VR port of [X-Wing Revival](https://github.com/Raptor007/X-Wing-Revival) by Raptor007, a free Star Wars space combat game with 25 flyable ships, fleet battles, the Death Star trench run and online multiplayer. You fly from the cockpit in head-tracked stereo 3D; in the menus space surrounds you and the menu floats in front of you, with a laser pointer and an on-screen keyboard. A headless dedicated server for Linux lets Quest and PC pilots fly together."
@@ -897,13 +1000,22 @@
         "Tested on Meta Quest 3 only."
       ],
       "credits": "Wing Commander Saga by the Wing Commander Saga team; [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) by the Source Code Project. Wing Commander is a trademark of Electronic Arts; Wing Commander Saga is a non-commercial fan project. Picture 1: captured on a Meta Quest 3; pictures 2–5: [wcsaga.com](https://www.wcsaga.com/media/).",
-      "hero": "1-chase-view.jpg"
+      "hero": "1-chase-view.jpg",
+      "data": [
+        {
+          "label": "Wing Commander Saga game data",
+          "kind": "folder",
+          "target": "/sdcard/WCSaga/Wing_Commander_Saga",
+          "marker": "data/tables",
+          "hint": "your installed and patched Wing Commander Saga folder (the one with the data folder, about 7 GB)"
+        }
+      ]
     },
     {
       "slug": "sauerbraten",
       "name": "SauerQuest: Cube 2 Sauerbraten VR",
       "repo": "Sauerbraten-VR",
-      "category": "native",
+      "category": "full",
       "tagline": "Old school deathmatch in real 6DOF on Meta Quest and PICO.",
       "about": [
         "A standalone native port of the classic open-source shooter *Cube 2: Sauerbraten* to Meta Quest and PICO. The same APK works on both headsets, the controller bindings and OpenXR extensions are picked automatically at startup. Built directly on OpenXR, it runs the original engine on the headset with full stereoscopic rendering, room-scale head tracking and motion controls. No PC or streaming required.",
@@ -971,7 +1083,7 @@
       "slug": "xonotic",
       "name": "Xonotic VR",
       "repo": "Xonotic-VR",
-      "category": "native",
+      "category": "full",
       "tagline": "The fast-paced open-source arena shooter, standalone on Meta Quest and PICO.",
       "about": [
         "A native OpenXR port of Xonotic 0.8.6 for Meta Quest and PICO. The same APK works on both headsets, the right controller bindings and OpenXR extensions are picked automatically at startup. The APK is self-contained: the full game data is bundled, no extra download needed.",
@@ -1060,7 +1172,7 @@
       "slug": "supertuxkart",
       "name": "SuperTuxKart VR",
       "repo": "SuperTuxKart-VR",
-      "category": "native",
+      "category": "full",
       "tagline": "The free open-source kart racer, from the driver's seat.",
       "about": [
         "A standalone VR port of [SuperTuxKart](https://supertuxkart.net/) for Meta Quest. Races are rendered in real per-eye stereo with head tracking, layered on the normal kart-following camera, and the Touch controllers drive SuperTuxKart's standard gamepad controls."
@@ -1105,7 +1217,7 @@
       "slug": "supertux",
       "name": "SuperTux 3D",
       "repo": "SuperTux-3D",
-      "category": "native",
+      "category": "full",
       "tagline": "The classic jump'n'run as a layered 3D diorama on Meta Quest and PICO.",
       "about": [
         "[SuperTux](https://www.supertux.org/), the open-source jump'n'run, running standalone on Meta Quest (Quest 2 / 3 / 3S / Pro) and PICO (4, 4 Ultra, Neo 3) through OpenXR.",
@@ -1182,7 +1294,7 @@
       "slug": "extremetuxracer",
       "name": "Extreme Tux Racer VR",
       "repo": "ExtremeTuxRacer-QuestVR",
-      "category": "native",
+      "category": "full",
       "tagline": "Race Tux the penguin down icy slopes, in true stereo, on Meta Quest and PICO.",
       "about": [
         "[Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer/) running standalone on Meta Quest and PICO (4, 4 Ultra, Neo 3) in true stereo at 72 Hz. Race down the slopes, grab herrings along the way, and pull off tricks in the air.",
@@ -1249,7 +1361,7 @@
       "slug": "hurrican",
       "name": "Hurrican 3D",
       "repo": "Hurrican-3D",
-      "category": "native",
+      "category": "full",
       "tagline": "The Turrican-inspired run-and-gun as a stereoscopic diorama, on Meta Quest and PICO.",
       "about": [
         "A standalone headset port of [Hurrican](https://www.winterworks.de/project/hurrican/), the freeware run-and-gun inspired by Turrican, for Meta Quest 2 / 3 / 3S / Pro and PICO 4 / Neo 3.",
@@ -1335,7 +1447,7 @@
       "slug": "neverball",
       "name": "Neverball & Neverputt VR",
       "repo": "Neverball-and-Neverputt-QuestVR",
-      "category": "native",
+      "category": "full",
       "tagline": "Tilt the world to roll the ball, plus mini golf, on Meta Quest and PICO.",
       "about": [
         "[Neverball](https://neverball.org/) and its mini-golf sibling Neverputt, ported to Meta Quest and PICO as standalone VR apps. Each release has a Quest APK and a PICO APK: pick the one for your headset.",
@@ -1399,7 +1511,7 @@
       "slug": "vdrift",
       "name": "VDrift VR",
       "repo": "VDrift-QuestVR",
-      "category": "native",
+      "category": "full",
       "tagline": "The open-source drift racing simulator, from the driver's seat.",
       "about": [
         "A native port of [VDrift](https://vdrift.net/) for Meta Quest and PICO. The same APK works on both headsets. The race is rendered in stereo with head tracking on whichever camera you pick (in-car, hood, chase...), the HUD is a head-locked panel, and the menus float in front of you over the 3D garage scene.",
@@ -1495,7 +1607,7 @@
       "slug": "speeddreams",
       "name": "Speed Dreams VR",
       "repo": "SpeedDreams-VR",
-      "category": "native",
+      "category": "full",
       "tagline": "A full motorsport simulator, standalone on Meta Quest and PICO.",
       "about": [
         "Speed Dreams 2.4 as a standalone headset application: stereo rendering through OpenXR, a curved menu panel, and the full game in one APK. Another 74 tracks and 90 cars can be downloaded from inside the headset.",
@@ -1652,7 +1764,19 @@
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "World scale, HUD placement and refresh rate are in the *VR* menu (left stick click)."
       ],
-      "credits": "Based on [Starship](https://github.com/HarbourMasters/Starship) by the HarbourMasters team, which is itself a decompilation-based PC port of Star Fox 64."
+      "credits": "Based on [Starship](https://github.com/HarbourMasters/Starship) by the HarbourMasters team, which is itself a decompilation-based PC port of Star Fox 64.",
+      "data": [
+        {
+          "label": "Your Star Fox 64 assets",
+          "kind": "files",
+          "target": "/sdcard/Android/data/com.starship.vr/files",
+          "names": [
+            "sf64.o2r"
+          ],
+          "accept": ".o2r",
+          "hint": "the sf64.o2r you made from your ROM"
+        }
+      ]
     },
     {
       "slug": "spaghettikart",
@@ -1726,7 +1850,20 @@
         "Split-screen multiplayer is disabled in VR, so only single player can be selected.",
         "The VR settings (world scale, HUD width, panel distance, render resolution) are in `spaghettify.cfg.json` on the headset; there is no in-headset settings menu yet."
       ],
-      "credits": "Based on [SpaghettiKart](https://github.com/HarbourMasters/SpaghettiKart) by the HarbourMasters team, which is itself a decompilation-based PC port of Mario Kart 64."
+      "credits": "Based on [SpaghettiKart](https://github.com/HarbourMasters/SpaghettiKart) by the HarbourMasters team, which is itself a decompilation-based PC port of Mario Kart 64.",
+      "data": [
+        {
+          "label": "Your Mario Kart 64 assets",
+          "kind": "files",
+          "target": "/sdcard/Android/data/dev.spaghettikart.vr/files",
+          "names": [
+            "mk64.o2r",
+            "spaghetti.o2r"
+          ],
+          "accept": ".o2r",
+          "hint": "mk64.o2r and spaghetti.o2r (both at once)"
+        }
+      ]
     },
     {
       "slug": "crash-bandicoot",
@@ -1811,13 +1948,22 @@
         "Sprites, menus, the map and videos have no depth and sit at screen depth.",
         "The Android build uses .NET's CoreCLR runtime, which .NET 10 still marks as experimental."
       ],
-      "credits": "Based on the [Crash Bandicoot Launcher](https://github.com/Matteo842/CrashBandicoot-Launcher) by Matteo842 and [RecompOne](https://github.com/BlackLabelHQ/RecompOne). Unofficial fan project, not affiliated with Sony, Activision or Naughty Dog. Banner from the Crash Bandicoot Launcher by Matteo842."
+      "credits": "Based on the [Crash Bandicoot Launcher](https://github.com/Matteo842/CrashBandicoot-Launcher) by Matteo842 and [RecompOne](https://github.com/BlackLabelHQ/RecompOne). Unofficial fan project, not affiliated with Sony, Activision or Naughty Dog. Banner from the Crash Bandicoot Launcher by Matteo842.",
+      "data": [
+        {
+          "label": "Your Crash Bandicoot disc",
+          "kind": "files",
+          "target": "/sdcard/Download",
+          "accept": ".chd,.cue,.bin",
+          "hint": "your disc dump (the .chd, or the .cue together with its .bin files)"
+        }
+      ]
     },
     {
       "slug": "luanti",
       "name": "Luanti VR",
       "repo": "Luanti-VR",
-      "category": "native",
+      "category": "full",
       "tagline": "The open-source voxel game engine (formerly Minetest), block by block in VR.",
       "about": [
         "A native port of [Luanti](https://www.luanti.org/) (formerly Minetest) for Meta Quest and PICO. The same APK works on both headsets. The world is rendered in stereo with head tracking, you dig and build by pointing the right controller, and the menus, inventory and chat float in front of you on a panel you use with a laser pointer.",
@@ -2012,7 +2158,20 @@
           ]
         ]
       },
-      "credits": "Based on [wipEout Rewrite](https://github.com/phoboslab/wipeout-rewrite) by Dominic Szablewski. wipEout is a trademark of Sony Interactive Entertainment; this port contains no game data. Pictures: races in the flat (non-VR) version of the game."
+      "credits": "Based on [wipEout Rewrite](https://github.com/phoboslab/wipeout-rewrite) by Dominic Szablewski. wipEout is a trademark of Sony Interactive Entertainment; this port contains no game data. Pictures: races in the flat (non-VR) version of the game.",
+      "data": [
+        {
+          "label": "Your wipEout game data",
+          "kind": "folder",
+          "target": "/sdcard/Android/data/online.portroyale.wipeoutrewritevr/files",
+          "marker": "track01",
+          "tar": "wipeout",
+          "exclude": [
+            "game_data_goes_here.txt"
+          ],
+          "hint": "your prepared wipeout folder (the one with common, textures and track01…, see the README)"
+        }
+      ]
     },
     {
       "slug": "snes9x",
@@ -2086,7 +2245,16 @@
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub."
       ],
-      "credits": "Based on [Snes9x](https://github.com/snes9xgit/snes9x). Photo: Super Famicom by [Evan-Amos](https://commons.wikimedia.org/wiki/File:Nintendo-Super-Famicom-Set-FL.jpg) (public domain)."
+      "credits": "Based on [Snes9x](https://github.com/snes9xgit/snes9x). Photo: Super Famicom by [Evan-Amos](https://commons.wikimedia.org/wiki/File:Nintendo-Super-Famicom-Set-FL.jpg) (public domain).",
+      "data": [
+        {
+          "label": "Your SNES ROMs",
+          "kind": "files",
+          "target": "/sdcard/Android/data/com.snes9x.vr/files/roms",
+          "accept": ".sfc,.smc,.zip,.fig,.swc",
+          "hint": "your ROM files (you can pick several)"
+        }
+      ]
     },
     {
       "slug": "armsx1",
@@ -2172,7 +2340,15 @@
         "Sprites, text, menus and videos have no depth and sit at screen depth.",
         "The APK contains no BIOS and no game data."
       ],
-      "credits": "Based on [ARMSX1](https://github.com/ARMSX2/ARMSX1) by the ARMSX2 team, a fork of [psxe](https://github.com/allkern/psxe). Photo: PlayStation by [Evan-Amos](https://commons.wikimedia.org/wiki/File:PSX-Console-wController.png) (public domain)."
+      "credits": "Based on [ARMSX1](https://github.com/ARMSX2/ARMSX1) by the ARMSX2 team, a fork of [psxe](https://github.com/allkern/psxe). Photo: PlayStation by [Evan-Amos](https://commons.wikimedia.org/wiki/File:PSX-Console-wController.png) (public domain).",
+      "data": [
+        {
+          "label": "Your BIOS and PS1 games",
+          "kind": "files",
+          "target": "/sdcard/Download/ARMSX1",
+          "hint": "your PS1 BIOS and game files (you can pick several)"
+        }
+      ]
     },
     {
       "slug": "armsx2",
@@ -2258,7 +2434,15 @@
         "The PICO build is written from the OpenXR specification and has never run on PICO hardware. If it reports *VR mode unavailable* there, `adb logcat -s ARMSX2-XR` names the missing piece."
       ],
       "video": "a1_zydGhVaE",
-      "credits": "Based on [ARMSX2](https://github.com/ARMSX2/ARMSX2) and the [PCSX2](https://pcsx2.net) project. Photos: DualShock 2 and PlayStation 2 by [Evan-Amos](https://commons.wikimedia.org/wiki/File:DualShock_2.jpg) (public domain)."
+      "credits": "Based on [ARMSX2](https://github.com/ARMSX2/ARMSX2) and the [PCSX2](https://pcsx2.net) project. Photos: DualShock 2 and PlayStation 2 by [Evan-Amos](https://commons.wikimedia.org/wiki/File:DualShock_2.jpg) (public domain).",
+      "data": [
+        {
+          "label": "Your BIOS and PS2 games",
+          "kind": "files",
+          "target": "/sdcard/Download/ARMSX2",
+          "hint": "your PS2 BIOS and game files (you can pick several)"
+        }
+      ]
     },
     {
       "slug": "cod4",
@@ -2866,7 +3050,7 @@
       "slug": "bugdom",
       "name": "Bugdom VR",
       "repo": "Bugdom",
-      "category": "native",
+      "category": "full",
       "hero": "2-rollie.jpg",
       "tagline": "Pangea's 1999 bug adventure in stereo 3D, standalone on Meta Quest.",
       "about": [
@@ -2969,7 +3153,7 @@
       "slug": "bugdom2",
       "name": "Bugdom 2 VR",
       "repo": "Bugdom2",
-      "category": "native",
+      "category": "full",
       "tagline": "Pangea's 2002 sequel in stereo 3D, standalone on Meta Quest.",
       "about": [
         "[Bugdom 2](https://github.com/jorio/Bugdom2), Pangea Software's 2002 3D platformer in Iliyas Jorio's modern port, running natively on Meta Quest through OpenXR. You play Skip the grasshopper, out to get his stolen backpack back from the Bully Bee across gardens, sewers, a playroom and the park.",
