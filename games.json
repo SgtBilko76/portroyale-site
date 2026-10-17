@@ -806,7 +806,7 @@
         "HUD fixed in front of the ship, with crosshair, target brackets and lead indicators lined up with your guns",
         "Full flight control on the controllers: throttle lever on the right stick, a second button layer on the left grip, remappable in *Options → Controls*",
         "Chase view behind your ship",
-      "Full lighting with ship shine, environment reflections and anti-aliasing",
+        "Full lighting with ship shine, environment reflections and anti-aliasing",
         "Laser pointer for the menus",
         "Laser keyboard for typing your pilot callsign"
       ],
@@ -892,7 +892,7 @@
       "notes": [
         "The APK contains no game data; Wing Commander Saga is free and downloaded separately.",
         "Flight runs at about 26–30 fps; menus run at full speed.",
-      "Shadows are off by default to keep the frame rate up; you can turn them on in *Options → Graphics → Shadow Quality*.",
+        "Shadows are off by default to keep the frame rate up; you can turn them on in *Options → Graphics → Shadow Quality*.",
         "There is no 3D cockpit: Wing Commander Saga has no cockpit models.",
         "Tested on Meta Quest 3 only."
       ],
@@ -2349,7 +2349,14 @@
         "WinlatorXR's right-stick-click menu can switch back to a flat window; click again to return to VR.",
         "Quest 2 and Pico are untested."
       ],
-      "credits": "Based on [KisakCOD VR](https://github.com/jplakon/CallOfDuty4_VR) and [KisakCOD](https://github.com/SwagSoftware/KisakCOD). Contains no Call of Duty game data. Photo: night patrol, U.S. Army photo by [Staff Sgt. Jason Bailey](https://commons.wikimedia.org/wiki/File:Al_Jadida_Night_Time_Foot_Patrol_DVIDS75291.jpg) (public domain)."
+      "credits": "Based on [KisakCOD VR](https://github.com/jplakon/CallOfDuty4_VR) and [KisakCOD](https://github.com/SwagSoftware/KisakCOD). Contains no Call of Duty game data. Photo: night patrol, U.S. Army photo by [Staff Sgt. Jason Bailey](https://commons.wikimedia.org/wiki/File:Al_Jadida_Night_Time_Foot_Patrol_DVIDS75291.jpg) (public domain).",
+      "winlator_install": {
+        "asset": "Dawn",
+        "folder": "CallOfDuty4",
+        "marker": "iw3sp.exe",
+        "game_label": "Call of Duty 4",
+        "next": "create a container (Proton 9.0, x86_64, drive D: = /sdcard/Download), add a shortcut for wine C:\\windows\\system32\\cmd.exe with the arguments /c D:\\CallOfDuty4\\Launch-KisakCOD-VR-WinlatorXR.bat, and import the CallOfDuty4-VR profile in the shortcut's settings."
+      }
     },
     {
       "slug": "redfaction",
@@ -2437,7 +2444,14 @@
         "Beta: only the first levels are tested. Multiplayer, Quest 2 and Pico are untested.",
         "HUD size and position, the menu mode and graphics can be changed in `afvr_winlatorxr.ini` in the game folder."
       ],
-      "credits": "Based on [Alpine Faction VR](https://github.com/CactusVRStudios/alpinefactionVR) by Cactus VR Studios and [Alpine Faction](https://github.com/GooberRF/alpinefaction) by GooberRF. Red Faction is © THQ Nordic. No game files included. Logo: Cactus VR Studios. Pictures: captured on a Meta Quest 3."
+      "credits": "Based on [Alpine Faction VR](https://github.com/CactusVRStudios/alpinefactionVR) by Cactus VR Studios and [Alpine Faction](https://github.com/GooberRF/alpinefaction) by GooberRF. Red Faction is © THQ Nordic. No game files included. Logo: Cactus VR Studios. Pictures: captured on a Meta Quest 3.",
+      "winlator_install": {
+        "asset": ".zip",
+        "folder": "RedFaction",
+        "marker": "RF.exe",
+        "game_label": "Red Faction",
+        "next": "create a container (screen 2388x1080, DXVK with Async, Turnip, XR API on, drive D: = /sdcard/Download) and start D:\\RedFaction\\RedFactionVR.bat in it."
+      }
     },
     {
       "slug": "bf1942",
@@ -2535,7 +2549,14 @@
         "Play with more than 50% battery; the Quest throttles below that."
       ],
       "video": "htv_u67kUKw",
-      "credits": "BFVR by JayBiggsGaming. No game files included."
+      "credits": "BFVR by JayBiggsGaming. No game files included.",
+      "winlator_install": {
+        "asset": "Dawn",
+        "folder": "BF1942",
+        "marker": "BF1942.exe",
+        "game_label": "Battlefield 1942",
+        "next": "create a shortcut for D:\\BF1942\\BFVR\\BFVR.exe (drive D: = /sdcard/Download) and import the BFVR-VR profile in its settings."
+      }
     },
     {
       "slug": "crysis",
@@ -2632,7 +2653,14 @@
       ],
       "video": "rVGW-ZcZUpk",
       "video_label": "PC VR version · trailer by fholger",
-      "credits": "Based on [crysis_vrmod](https://github.com/fholger/crysis_vrmod) by fholger. Crysis is © Crytek / Electronic Arts. Screenshots and video (PC VR version of the mod): fholger, [crysis.vrmods.eu](https://crysis.vrmods.eu)."
+      "credits": "Based on [crysis_vrmod](https://github.com/fholger/crysis_vrmod) by fholger. Crysis is © Crytek / Electronic Arts. Screenshots and video (PC VR version of the mod): fholger, [crysis.vrmods.eu](https://crysis.vrmods.eu).",
+      "winlator_install": {
+        "asset": "Dawn",
+        "folder": "Crysis",
+        "marker": "Bin32/Crysis.exe",
+        "game_label": "Crysis",
+        "next": "create a shortcut for D:\\Crysis\\Bin32\\CrysisVR.exe (drive D: = /sdcard/Download) and import the CrysisVR profile in its settings."
+      }
     },
     {
       "slug": "farcry",
@@ -2727,7 +2755,14 @@
           "label": "PC VR version · trailer by fholger"
         }
       ],
-      "credits": "Based on [farcry_vrmod](https://github.com/fholger/farcry_vrmod) by fholger. No game files included. Videos: [Luboš VR](https://www.youtube.com/watch?v=6jDmnkO0UX0) and [fholger](https://www.youtube.com/watch?v=I1oiDHGzDTk)."
+      "credits": "Based on [farcry_vrmod](https://github.com/fholger/farcry_vrmod) by fholger. No game files included. Videos: [Luboš VR](https://www.youtube.com/watch?v=6jDmnkO0UX0) and [fholger](https://www.youtube.com/watch?v=I1oiDHGzDTk).",
+      "winlator_install": {
+        "asset": "Dawn",
+        "folder": "FarCry",
+        "marker": "Bin32/FarCry.exe",
+        "game_label": "Far Cry",
+        "next": "create a shortcut for wine D:\\FarCry\\Bin32\\FarCry.exe with the launch arguments -MOD:CryVR (drive D: = /sdcard/Download) and import the FarCryVR profile in its settings. For the 1792x1624 screen, patch FarCry.exe to be large-address-aware first, or use 1591x1440."
+      }
     },
     {
       "slug": "trackmania",
@@ -2820,7 +2855,12 @@
         "Only TrackMania **Nations** Forever (Stadium) was tested.",
         "Play with more than 50% battery; the Quest throttles below that."
       ],
-      "credits": "Based on [TrackManiaForeverOpenXR](https://github.com/jiink/TrackManiaForeverOpenXR) by jiink (MIT). TrackMania Nations Forever is © Nadeo / Ubisoft and is downloaded from Nadeo's server; no game files are included. TMLoader by tomashu. Pictures: captured on a Meta Quest 3."
+      "credits": "Based on [TrackManiaForeverOpenXR](https://github.com/jiink/TrackManiaForeverOpenXR) by jiink (MIT). TrackMania Nations Forever is © Nadeo / Ubisoft and is downloaded from Nadeo's server; no game files are included. TMLoader by tomashu. Pictures: captured on a Meta Quest 3.",
+      "winlator_install": {
+        "asset": ".tzst",
+        "kind": "file",
+        "next": "go to Containers, open the menu, choose Import and pick TrackMania-VR-Beta-0.2.tzst from Download. Then start the TrackMania VR shortcut with the headset on."
+      }
     },
     {
       "slug": "bugdom",

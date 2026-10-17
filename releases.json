@@ -637,5 +637,12 @@
     }
    ]
   }
- ]
+ ],
+ "_winlatorxr": {
+  "tag": "winlatorxr_dawn42",
+  "url": "https://github.com/WinlatorXR/WinlatorXR/releases/tag/winlatorxr_dawn42",
+  "name": "WinlatorXR-dawn-42.apk",
+  "size": 971495156,
+  "download": "https://github.com/WinlatorXR/WinlatorXR/releases/download/winlatorxr_dawn42/WinlatorXR-dawn-42.apk"
+ }
 }

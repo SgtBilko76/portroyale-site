@@ -1,7 +1,7 @@
 // Port Royale APK relay (Cloudflare Worker).
 // GitHub release downloads send no CORS headers, so a web page can't fetch an
 // APK itself. This worker fetches it and streams it back with CORS headers.
-// It only relays APKs from SgtBilko76's own GitHub releases.
+// It only relays files from SgtBilko76's own GitHub releases and the WinlatorXR APK.
 // Deploy: cd installer/relay && npx wrangler deploy
 
 const ALLOWED_ORIGINS = [
@@ -13,7 +13,12 @@ const ALLOWED_ORIGINS = [
   "http://localhost:8000",
   "http://127.0.0.1:8000",
 ];
-const ALLOWED_URL = /^https:\/\/github\.com\/SgtBilko76\/[A-Za-z0-9._-]+\/releases\/download\/[^?#]+\.apk$/;
+const ALLOWED_URLS = [
+  // the ports: APKs, WinlatorXR mod packages and container images
+  /^https:\/\/github\.com\/SgtBilko76\/[A-Za-z0-9._-]+\/releases\/download\/[^?#]+\.(apk|zip|tzst)$/,
+  // WinlatorXR itself (the base for the WinlatorXR mods)
+  /^https:\/\/github\.com\/WinlatorXR\/WinlatorXR\/releases\/download\/[^?#]+\.apk$/,
+];
 
 export default {
   async fetch(request) {
@@ -30,15 +35,15 @@ export default {
       return new Response("method not allowed", { status: 405, headers: cors });
     }
     const target = new URL(request.url).searchParams.get("url") || "";
-    if (!ALLOWED_URL.test(target)) {
-      return new Response("Port Royale APK relay: only SgtBilko76 release APKs are relayed.", { status: 400, headers: cors });
+    if (!ALLOWED_URLS.some((re) => re.test(target))) {
+      return new Response("Port Royale relay: only SgtBilko76 release files and WinlatorXR APKs are relayed.", { status: 400, headers: cors });
     }
     const upstream = await fetch(target, { method: request.method, redirect: "follow" });
     if (!upstream.ok) {
       return new Response(`upstream returned ${upstream.status}`, { status: 502, headers: cors });
     }
     const headers = new Headers(cors);
-    headers.set("Content-Type", "application/vnd.android.package-archive");
+    headers.set("Content-Type", target.endsWith(".apk") ? "application/vnd.android.package-archive" : "application/octet-stream");
     headers.set("Cache-Control", "no-store");
     const len = upstream.headers.get("Content-Length");
     if (len) headers.set("Content-Length", len);

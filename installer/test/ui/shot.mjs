@@ -1,0 +1,12 @@
+import puppeteer from "puppeteer-core";
+const [url, out] = process.argv.slice(2);
+const b = await puppeteer.launch({ executablePath: "/usr/bin/google-chrome", headless: "new" });
+const p = await b.newPage();
+await p.setViewport({ width: 1280, height: 900 });
+await p.goto(url, { waitUntil: "networkidle0" });
+const btn = await p.$("#install .btn-primary");
+await btn.click();
+await new Promise((r) => setTimeout(r, 1500));
+const card = await p.$("#install");
+await card.screenshot({ path: out });
+await b.close();

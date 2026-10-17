@@ -302,3 +302,11 @@ code {
 .inst-help summary { cursor: pointer; color: var(--text); font-weight: 600; }
 .inst-help ol { padding-left: 1.3em; margin: .6em 0 0; }
 .inst-help li { margin-bottom: .4em; }
+.inst-step { background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.inst-step-head { display: flex; align-items: center; gap: .6em; }
+.inst-num { width: 1.6em; height: 1.6em; border-radius: 50%; background: rgba(207, 23, 23, .25); color: var(--red-soft); font-weight: 700; font-size: .85rem; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.inst-step-text { margin: 0; font-size: .9rem; color: var(--muted); }
+.inst-step-text.inst-ok { color: #6ee7b7; }
+.inst-step-text.inst-warn { color: var(--orange); }
+.inst-step .btn { align-self: flex-start; }
+.inst-next { margin: 4px 0 0; color: var(--text); }
