@@ -1,2 +1,4 @@
 public/
 __pycache__/
+installer/node_modules/
+installer/relay/.wrangler/

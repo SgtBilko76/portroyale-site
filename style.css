@@ -275,3 +275,30 @@ code {
 .btn-discord:hover { background: #4752c4; color: #fff; }
 .help-box { margin-top: 28px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #5865f2; border-radius: var(--radius); display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; }
 .help-box p { margin: 0; flex: 1 1 240px; }
+
+/* ---------- browser installer (installer.js) */
+.install-card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 24px; }
+.install-card h3 { margin-top: 0; }
+.inst-small { color: var(--muted); font-size: .9rem; margin-bottom: .8em; }
+.inst-status { display: flex; align-items: center; gap: .55em; font-weight: 700; font-size: .92rem; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--line); }
+.inst-dot { width: 10px; height: 10px; border-radius: 50%; background: #6b7280; flex: none; }
+.inst-dot.on { background: #34d399; box-shadow: 0 0 8px #34d399; }
+.inst-body { display: flex; flex-direction: column; gap: 10px; }
+.inst-body .btn[hidden], .inst-body [hidden] { display: none; }
+.inst-body .btn { font-family: inherit; }
+.inst-body .btn:disabled { opacity: .55; cursor: progress; transform: none; }
+.inst-msg { margin: 0; font-size: .92rem; }
+.inst-ok { color: #6ee7b7; }
+.inst-warn { color: var(--orange); }
+.inst-err { color: #fca5a5; }
+.inst-bar { height: 8px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.inst-bar-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--red), var(--orange)); transition: width .2s; }
+.inst-row { display: flex; align-items: center; gap: 10px; font-size: .9rem; font-weight: 600; }
+.inst-select { flex: 1; min-width: 0; background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: .45em .6em; font: inherit; font-weight: 400; }
+.inst-link { background: none; border: 0; padding: 0; color: var(--red-soft); font: inherit; cursor: pointer; text-decoration: underline; }
+.inst-link:hover { color: var(--orange); }
+.inst-body .btn-sm { align-self: flex-start; }
+.inst-help { margin-top: 14px; font-size: .9rem; color: var(--muted); }
+.inst-help summary { cursor: pointer; color: var(--text); font-weight: 600; }
+.inst-help ol { padding-left: 1.3em; margin: .6em 0 0; }
+.inst-help li { margin-bottom: .4em; }
