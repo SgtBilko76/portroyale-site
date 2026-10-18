@@ -514,126 +514,6 @@
       ]
     },
     {
-      "slug": "forsaken",
-      "name": "Forsaken VR",
-      "repo": "Forsaken-VR",
-      "category": "native",
-      "tagline": "The 1998 six-degrees-of-freedom shooter, all around you on Meta Quest.",
-      "about": [
-        "A native VR port of [Forsaken](https://github.com/ForsakenX/forsaken), the 1998 hoverbike shooter, built on the ForsakenX community source port. It runs standalone on the Quest: the levels and the title room are rendered in stereo around you, you look around freely while the bike flies on the Touch controllers, and the HUD floats as a see-through panel in front of the ship."
-      ],
-      "features": [
-        "Stereo levels and title room with head tracking",
-        "See-through HUD panel, the crosshair lines up with your guns",
-        "Hits show as a red glow at the edge of your view",
-        "Touch controllers as a joystick, remappable in the game's joystick options",
-        "Runs at 72 Hz"
-      ],
-      "needs": [
-        "Meta Quest (Quest 3 tested)",
-        "The Forsaken game data: a free download from [ForsakenX](https://github.com/ForsakenX/forsaken-data) (about 185 MB)"
-      ],
-      "install": [
-        "Sideload the APK with SideQuest or `adb install -r Forsaken-VR-v0.1.0-beta.apk`.",
-        "Download the game data: [forsaken-data (zip)](https://github.com/ForsakenX/forsaken-data/archive/refs/heads/master.zip) and unzip it.",
-        "Copy the contents of the `forsaken-data-master` folder to `/sdcard/Forsaken/data` on the headset (so that `/sdcard/Forsaken/data/levels` exists), e.g. `adb push forsaken-data-master/. /sdcard/Forsaken/data`.",
-        "Start **Forsaken VR** from Unknown Sources. On the first start allow \"All files access\", then start it again."
-      ],
-      "controls": {
-        "columns": [
-          "Input",
-          "Flying",
-          "Menus"
-        ],
-        "rows": [
-          [
-            "Left stick",
-            "Forward/back, slide left/right",
-            "Move selection"
-          ],
-          [
-            "Right stick",
-            "Turn and pitch",
-            "Move selection"
-          ],
-          [
-            "Right trigger",
-            "Fire primary weapon",
-            "Select"
-          ],
-          [
-            "Left trigger",
-            "Fire secondary weapon",
-            ""
-          ],
-          [
-            "A",
-            "Next primary weapon",
-            "Select"
-          ],
-          [
-            "B",
-            "Next secondary weapon",
-            "Back"
-          ],
-          [
-            "X / Y",
-            "Move down / up",
-            "X = Select, Y = Back"
-          ],
-          [
-            "Grips",
-            "Roll left / right",
-            ""
-          ],
-          [
-            "Left stick click",
-            "Drop mine",
-            ""
-          ],
-          [
-            "Right stick click",
-            "Turbo",
-            ""
-          ],
-          [
-            "Menu button",
-            "In-game menu",
-            "Back"
-          ],
-          [
-            "Both stick clicks (hold 1 s)",
-            "Recenter the view",
-            "Recenter the view"
-          ]
-        ]
-      },
-      "controls_note": "Sit facing forward when a level starts: the bike's nose points where you were looking. Recenter any time with both stick clicks.",
-      "notes": [
-        "Scripts and default settings come with the APK; your pilots, settings and save games in `/sdcard/Forsaken` stay across updates.",
-        "Menus are driven with the sticks and buttons (no laser pointer needed).",
-        "Multiplayer is untested."
-      ],
-      "credits": "Based on the [ForsakenX source port](https://github.com/ForsakenX/forsaken); game data distributed by ForsakenX. Pictures: captured on a Meta Quest 3.",
-      "data": [
-        {
-          "label": "The Forsaken game data",
-          "kind": "folder",
-          "target": "/sdcard/Forsaken/data",
-          "marker": "levels",
-          "include": [
-            "bgobjects",
-            "levels",
-            "models",
-            "offsets",
-            "sound",
-            "textures"
-          ],
-          "hint": "the unzipped forsaken-data-master folder (the one with levels, models and sound)"
-        }
-      ]
-    },
-    {
       "slug": "openxwa",
       "name": "OpenXWA VR",
       "repo": "OpenXWA-VR",
@@ -1012,6 +892,110 @@
       ],
       "credits": "X-Wing Revival and RaptorEngine by [Raptor007](https://github.com/Raptor007). Pictures: captured on a Meta Quest 3.",
       "hero": "1-cockpit.jpg"
+    },
+    {
+      "slug": "forsaken",
+      "name": "Forsaken VR",
+      "repo": "Forsaken-VR",
+      "category": "full",
+      "tagline": "The 1998 six-degrees-of-freedom shooter, all around you on Meta Quest.",
+      "about": [
+        "A native VR port of [Forsaken](https://github.com/ForsakenX/forsaken), the 1998 hoverbike shooter, built on the ForsakenX community source port. It runs standalone on the Quest: the levels and the title room are rendered in stereo around you, you look around freely while the bike flies on the Touch controllers, and the HUD floats as a see-through panel in front of the ship."
+      ],
+      "features": [
+        "Stereo levels and title room with head tracking",
+        "See-through HUD panel, the crosshair lines up with your guns",
+        "Hits show as a red glow at the edge of your view",
+        "Touch controllers as a joystick, remappable in the game's joystick options",
+        "Runs at 72 Hz"
+      ],
+      "needs": [
+        "Meta Quest (Quest 3 tested)",
+        "Nothing else: the full APK has the Forsaken game data built in"
+      ],
+      "install": [
+        "Sideload the full APK with SideQuest or `adb install -r Forsaken-VR-v0.1.1-beta-full.apk`.",
+        "Start **Forsaken VR** from *Unknown Sources* and allow \"All files access\" when asked.",
+        "The first start unpacks the game data to `/sdcard/Forsaken/` (about 185 MB, takes about a minute with a black screen), then the title appears.",
+        "Small APK instead (`Forsaken-VR-v0.1.1-beta.apk`, no game data): download [forsaken-data (zip)](https://github.com/ForsakenX/forsaken-data/archive/refs/heads/master.zip), unzip it and copy the contents of `forsaken-data-master` to `/sdcard/Forsaken/data`."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Flying",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Forward/back, slide left/right",
+            "Move selection"
+          ],
+          [
+            "Right stick",
+            "Turn and pitch",
+            "Move selection"
+          ],
+          [
+            "Right trigger",
+            "Fire primary weapon",
+            "Select"
+          ],
+          [
+            "Left trigger",
+            "Fire secondary weapon",
+            ""
+          ],
+          [
+            "A",
+            "Next primary weapon",
+            "Select"
+          ],
+          [
+            "B",
+            "Next secondary weapon",
+            "Back"
+          ],
+          [
+            "X / Y",
+            "Move down / up",
+            "X = Select, Y = Back"
+          ],
+          [
+            "Grips",
+            "Roll left / right",
+            ""
+          ],
+          [
+            "Left stick click",
+            "Drop mine",
+            ""
+          ],
+          [
+            "Right stick click",
+            "Turbo",
+            ""
+          ],
+          [
+            "Menu button",
+            "In-game menu",
+            "Back"
+          ],
+          [
+            "Both stick clicks (hold 1 s)",
+            "Recenter the view",
+            "Recenter the view"
+          ]
+        ]
+      },
+      "controls_note": "Sit facing forward when a level starts: the bike's nose points where you were looking. Recenter any time with both stick clicks.",
+      "notes": [
+        "The full APK contains the [ForsakenX forsaken-data](https://github.com/ForsakenX/forsaken-data) package (original assets by Probe Entertainment / Acclaim).",
+        "Your pilots, settings and save games in `/sdcard/Forsaken` stay across updates.",
+        "Menus are driven with the sticks and buttons (no laser pointer needed).",
+        "Multiplayer is untested."
+      ],
+      "credits": "Based on the [ForsakenX source port](https://github.com/ForsakenX/forsaken); game data distributed by ForsakenX. Pictures: captured on a Meta Quest 3."
     },
     {
       "slug": "wcsaga",
