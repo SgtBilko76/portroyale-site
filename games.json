@@ -16,7 +16,7 @@
     {
       "id": "full",
       "name": "Complete games",
-      "blurb": "Free games with everything inside the APK: install it and play, no game files needed."
+      "blurb": "Free games: install and play, no game files of your own needed. Most have everything inside the APK; a few big ones get their free game data as a separate download."
     },
     {
       "id": "native",
@@ -897,7 +897,7 @@
       "slug": "wcsaga",
       "name": "Wing Commander Saga VR",
       "repo": "WCSaga-VR",
-      "category": "native",
+      "category": "full",
       "tagline": "The free Wing Commander fan game Wing Commander Saga in stereo 3D, standalone on Meta Quest.",
       "about": [
         "A VR port of *Wing Commander Saga*, the free fan-made Wing Commander game, running standalone on the [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) engine. Space is rendered in stereo around you, the HUD floats in front of your ship and lines up with your guns, and the menus, briefings and cutscenes play on a big virtual screen."
@@ -1013,7 +1013,7 @@
       "slug": "0ad",
       "name": "0 A.D. VR",
       "repo": "0AD-VR",
-      "category": "native",
+      "category": "full",
       "tagline": "Ancient-world real-time strategy on a battlefield table in front of you.",
       "about": [
         "A native port of [0 A.D.](https://play0ad.com), Wildfire Games' free real-time strategy game, for Meta Quest and PICO. The battlefield stands as a 3D table in front of you, and the menus and HUD float on a panel above it.",
