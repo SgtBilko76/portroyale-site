@@ -1194,7 +1194,7 @@
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader)."
       ],
-      "credits": "Based on [Warzone 2100](https://github.com/Warzone2100/warzone2100) by the Warzone 2100 Project (GPL v2+), campaign videos from [wz-sequences](https://github.com/Warzone2100/wz-sequences). Pictures: captured on a Meta Quest 3."
+      "credits": "Based on [Warzone 2100](https://github.com/Warzone2100/warzone2100) by the Warzone 2100 Project (GPL v2+), campaign videos from [wz-sequences](https://github.com/Warzone2100/wz-sequences). Pictures 1–3: captured on a Meta Quest 3; pictures 4–6: Warzone 2100 Project."
     },
     {
       "slug": "sauerbraten",
