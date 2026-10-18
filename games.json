@@ -1104,7 +1104,7 @@
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "Known issues: short freezes now and then while the computer players think."
       ],
-      "credits": "Based on [0 A.D.](https://play0ad.com) by Wildfire Games (code GPL v2+, art CC BY-SA 3.0). Pictures: [play0ad.com screenshots](https://play0ad.com/media/screenshots/) by Wildfire Games, CC BY-SA 3.0."
+      "credits": "Based on [0 A.D.](https://play0ad.com) by Wildfire Games (code GPL v2+, art CC BY-SA 3.0). Picture 1: captured on a Meta Quest 3; pictures 2–7: [play0ad.com screenshots](https://play0ad.com/media/screenshots/) by Wildfire Games, CC BY-SA 3.0."
     },
     {
       "slug": "sauerbraten",
