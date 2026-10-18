@@ -1108,6 +1108,7 @@
     },
     {
       "slug": "warzone2100",
+      "hero": "6-banner.jpg",
       "name": "Warzone 2100 VR",
       "repo": "Warzone2100-VR",
       "category": "full",
