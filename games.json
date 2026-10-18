@@ -916,8 +916,7 @@
       "install": [
         "Sideload the full APK with SideQuest or `adb install -r Forsaken-VR-v0.1.1-beta-full.apk`.",
         "Start **Forsaken VR** from *Unknown Sources* and allow \"All files access\" when asked.",
-        "The first start unpacks the game data to `/sdcard/Forsaken/` (about 185 MB, takes about a minute with a black screen), then the title appears.",
-        "Small APK instead (`Forsaken-VR-v0.1.1-beta.apk`, no game data): download [forsaken-data (zip)](https://github.com/ForsakenX/forsaken-data/archive/refs/heads/master.zip), unzip it and copy the contents of `forsaken-data-master` to `/sdcard/Forsaken/data`."
+        "The first start unpacks the game data to `/sdcard/Forsaken/` (about 185 MB, takes about a minute with a black screen), then the title appears."
       ],
       "controls": {
         "columns": [
