@@ -788,6 +788,134 @@
       ]
     },
     {
+      "slug": "freespace2",
+      "name": "FreeSpace 2 VR",
+      "repo": "FreeSpace2-VR",
+      "category": "native",
+      "tagline": "The space combat classic FreeSpace 2 in stereo 3D, standalone on Meta Quest.",
+      "about": [
+        "A VR port of *FreeSpace 2*, running standalone on the [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) engine. Space is rendered in stereo around you, the HUD floats in front of your ship and lines up with your guns, and the menus, briefings and cutscenes play on a big virtual screen. Bring your own copy of the game from GOG or Steam."
+      ],
+      "features": [
+        "Head-tracked stereo 3D space in flight",
+        "HUD fixed in front of the ship, with crosshair, target brackets and lead indicators lined up with your guns",
+        "Full flight control on the controllers: throttle lever on the right stick, a second button layer on the left grip, remappable in *Options → Controls*",
+        "Training missions playable with the controllers",
+        "Chase view behind your ship",
+        "Full lighting with ship shine, environment reflections and anti-aliasing",
+        "Laser pointer for the menus, skippable cutscenes",
+        "Laser keyboard for typing your pilot callsign"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
+        "Your own copy of FreeSpace 2 ([GOG](https://www.gog.com/game/freespace_2) or [Steam](https://store.steampowered.com/app/273620/)), about 1.8 GB of game files"
+      ],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.0-beta.apk`.",
+        "Copy your game files to `/sdcard/FS2` on the headset: from your GOG or Steam install folder, the nine `.vp` files (`root_fs2.vp` … `warble_fs2.vp`) and the folders `data2` and `data3` (cutscenes). The app moves the cutscenes into place on the first start.",
+        "Or, on a PC with Python 3 and the Quest on USB: [get_fs2_data.py](https://github.com/SgtBilko76/FreeSpace2-VR/blob/fs2-vr/tools/quest/get_fs2_data.py) (`python3 get_fs2_data.py <game folder or GOG setup_freespace_2_*.exe> --push`) copies them for you; the GOG offline installer is unpacked with [innoextract](https://constexpr.org/innoextract/).",
+        "Start **FreeSpace 2 VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Flight",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Pitch and turn",
+            ""
+          ],
+          [
+            "Right stick",
+            "Roll (left/right), throttle (up/down, stays where you leave it)",
+            ""
+          ],
+          [
+            "Right / left trigger",
+            "Guns / missiles",
+            "Click"
+          ],
+          [
+            "Right grip (hold)",
+            "Afterburner",
+            ""
+          ],
+          [
+            "A / B",
+            "Target nearest enemy (next ship if there is none) / target ship in crosshair",
+            "Enter / Escape"
+          ],
+          [
+            "X / Y",
+            "Next missile type / next gun type",
+            ""
+          ],
+          [
+            "Left / right stick click",
+            "Autopilot / match target speed",
+            ""
+          ],
+          [
+            "Left Menu button",
+            "Pause menu",
+            "Escape"
+          ],
+          [
+            "Left grip + A / B",
+            "Next target / target your target's attacker",
+            ""
+          ],
+          [
+            "Left grip + X / Y",
+            "Next subsystem on target / comms menu",
+            ""
+          ],
+          [
+            "Left grip + right stick up / down",
+            "Full speed / full stop",
+            ""
+          ],
+          [
+            "Left grip + left / right stick click",
+            "Look behind / chase view on and off",
+            ""
+          ],
+          [
+            "A, B, Menu or trigger",
+            "",
+            "Skip a cutscene"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers. In the comms menu, left stick up/down picks an order, A or a trigger confirms it and Y closes the menu. Every flight binding can be changed in *Options → Controls*; \"Reset to default\" brings this layout back.",
+      "notes": [
+        "The APK contains no game data; you need your own copy of FreeSpace 2.",
+        "Flight runs below the headset's refresh rate; menus run at full speed.",
+        "Shadows are off by default to keep the frame rate up; you can turn them on in *Options → Graphics → Shadow Quality*.",
+        "There is no 3D cockpit: FreeSpace 2 has no cockpit models.",
+        "Tested on Meta Quest 3 only."
+      ],
+      "credits": "FreeSpace 2 by Volition; [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) by the Source Code Project. Picture 1: captured on a Meta Quest 3; pictures 2–5: [GOG.com](https://www.gog.com/game/freespace_2).",
+      "hero": "1-nebula-training.jpg",
+      "data": [
+        {
+          "label": "Your FreeSpace 2 game files",
+          "kind": "folder",
+          "target": "/sdcard/FS2",
+          "marker": "root_fs2.vp",
+          "include": [
+            "*.vp",
+            "data2",
+            "data3"
+          ],
+          "hint": "your FreeSpace 2 folder (the one with root_fs2.vp)"
+        }
+      ]
+    },
+    {
       "slug": "xwingrevival",
       "name": "X-Wing Revival VR",
       "repo": "X-Wing-Revival-VR",

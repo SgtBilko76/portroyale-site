@@ -692,5 +692,21 @@
     }
    ]
   }
+ ],
+ "FreeSpace2-VR": [
+  {
+   "tag": "v0.1.0-beta",
+   "name": "FreeSpace 2 VR v0.1.0-beta (Meta Quest 3)",
+   "date": "2026-10-18T17:35:13Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/FreeSpace2-VR/releases/tag/v0.1.0-beta",
+   "assets": [
+    {
+     "name": "FreeSpace2-VR-v0.1.0-beta.apk",
+     "size": 20729512,
+     "url": "https://github.com/SgtBilko76/FreeSpace2-VR/releases/download/v0.1.0-beta/FreeSpace2-VR-v0.1.0-beta.apk"
+    }
+   ]
+  }
  ]
 }
