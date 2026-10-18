@@ -2639,6 +2639,7 @@
     },
     {
       "slug": "redfaction",
+      "hero": "9-logo.jpg",
       "name": "Red Faction VR",
       "repo": "alpinefactionVR",
       "category": "winlator",
