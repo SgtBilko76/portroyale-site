@@ -660,5 +660,21 @@
     }
    ]
   }
+ ],
+ "Warzone2100-VR": [
+  {
+   "tag": "v0.1.0-beta",
+   "name": "Warzone 2100 VR v0.1.0-beta (Quest / PICO)",
+   "date": "2026-10-18T12:40:50Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Warzone2100-VR/releases/tag/v0.1.0-beta",
+   "assets": [
+    {
+     "name": "Warzone2100-VR-Quest-v0.1.0-beta.apk",
+     "size": 1005087136,
+     "url": "https://github.com/SgtBilko76/Warzone2100-VR/releases/download/v0.1.0-beta/Warzone2100-VR-Quest-v0.1.0-beta.apk"
+    }
+   ]
+  }
  ]
 }

@@ -1107,6 +1107,96 @@
       "credits": "Based on [0 A.D.](https://play0ad.com) by Wildfire Games (code GPL v2+, art CC BY-SA 3.0). Picture 2: captured on a Meta Quest 3; pictures 1 and 3–7: [play0ad.com screenshots](https://play0ad.com/media/screenshots/) by Wildfire Games, CC BY-SA 3.0."
     },
     {
+      "slug": "warzone2100",
+      "name": "Warzone 2100 VR",
+      "repo": "Warzone2100-VR",
+      "category": "full",
+      "tagline": "Classic real-time strategy on a battlefield table in front of you.",
+      "about": [
+        "A native port of [Warzone 2100](https://wz2100.net), the free open-source real-time strategy game, for Meta Quest and PICO. The battlefield stands as a 3D table in front of you, and the menus and HUD float on a panel above it.",
+        "Play in **VR**, with the sky around you, or in **mixed reality** with your own room around the table. A short click on the left stick switches between them.",
+        "**PICO support is brand new and not tested on PICO hardware yet**: reports are very welcome."
+      ],
+      "features": [
+        "Battlefield as a stereo 3D tabletop with head tracking",
+        "VR and mixed reality (passthrough) modes",
+        "Laser pointer with a cursor on the battlefield and drag-to-select",
+        "Virtual keyboard for all text fields",
+        "Full game in one APK: campaign with its videos, skirmish and multiplayer",
+        "Runs on **PICO** headsets with the same APK (experimental)"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested, PICO OS 5.9.0 or newer)",
+        "Nothing else: the APK has the whole game built in, including the campaign videos"
+      ],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r Warzone2100-VR-Quest-v0.1.0-beta.apk`.",
+        "Start **Warzone 2100 VR** from *Unknown Sources*.",
+        "The first start unpacks the game data (about 700 MB, takes a minute), then the menu appears.",
+        "If the table or the panel isn't in front of you, hold both stick clicks for a second."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Left controller",
+          "Right controller"
+        ],
+        "rows": [
+          [
+            "Laser",
+            "",
+            "Mouse pointer"
+          ],
+          [
+            "Trigger",
+            "Shift (add to selection, queue orders)",
+            "Select / click, hold and drag for a selection box"
+          ],
+          [
+            "Grip",
+            "Ctrl (assign groups)",
+            "Order: move, attack, build"
+          ],
+          [
+            "Stick",
+            "Scroll the map",
+            "Rotate (left/right), zoom (up/down), scroll lists"
+          ],
+          [
+            "Stick click (short)",
+            "Switch VR / mixed reality",
+            ""
+          ],
+          [
+            "A / X",
+            "Stop / hold position",
+            "Enter"
+          ],
+          [
+            "B / Y",
+            "Back (research, intelligence)",
+            "Back / game menu"
+          ],
+          [
+            "Menu button",
+            "Game menu",
+            ""
+          ],
+          [
+            "Both sticks held 1 s",
+            "Recenter the table and the panel",
+            ""
+          ]
+        ]
+      },
+      "controls_note": "PICO controllers use the same button layout.",
+      "notes": [
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader)."
+      ],
+      "credits": "Based on [Warzone 2100](https://github.com/Warzone2100/warzone2100) by the Warzone 2100 Project (GPL v2+), campaign videos from [wz-sequences](https://github.com/Warzone2100/wz-sequences). Pictures: captured on a Meta Quest 3."
+    },
+    {
       "slug": "sauerbraten",
       "name": "SauerQuest: Cube 2 Sauerbraten VR",
       "repo": "Sauerbraten-VR",
