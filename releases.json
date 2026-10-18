@@ -679,16 +679,21 @@
  ],
  "Forsaken-VR": [
   {
-   "tag": "v0.1.0-beta",
-   "name": "Forsaken VR v0.1.0-beta (Meta Quest 3)",
-   "date": "2026-10-18T14:19:35Z",
+   "tag": "v0.1.1-beta",
+   "name": "Forsaken VR v0.1.1-beta (Meta Quest 3)",
+   "date": "2026-10-18T14:33:40Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Forsaken-VR/releases/tag/v0.1.0-beta",
+   "url": "https://github.com/SgtBilko76/Forsaken-VR/releases/tag/v0.1.1-beta",
    "assets": [
     {
-     "name": "Forsaken-VR-v0.1.0-beta.apk",
-     "size": 3215681,
-     "url": "https://github.com/SgtBilko76/Forsaken-VR/releases/download/v0.1.0-beta/Forsaken-VR-v0.1.0-beta.apk"
+     "name": "Forsaken-VR-v0.1.1-beta-full.apk",
+     "size": 151715145,
+     "url": "https://github.com/SgtBilko76/Forsaken-VR/releases/download/v0.1.1-beta/Forsaken-VR-v0.1.1-beta-full.apk"
+    },
+    {
+     "name": "Forsaken-VR-v0.1.1-beta.apk",
+     "size": 3214580,
+     "url": "https://github.com/SgtBilko76/Forsaken-VR/releases/download/v0.1.1-beta/Forsaken-VR-v0.1.1-beta.apk"
     }
    ]
   }
