@@ -811,7 +811,7 @@
         "Your own copy of FreeSpace 2 ([GOG](https://www.gog.com/game/freespace_2) or [Steam](https://store.steampowered.com/app/273620/)), about 1.8 GB of game files"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.0-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.1-beta.apk`.",
         "Copy your game files to `/sdcard/FS2` on the headset: from your GOG or Steam install folder, the nine `.vp` files (`root_fs2.vp` … `warble_fs2.vp`) and the folders `data2` and `data3` (cutscenes). The app moves the cutscenes into place on the first start.",
         "Or, on a PC with Python 3 and the Quest on USB: [get_fs2_data.py](https://github.com/SgtBilko76/FreeSpace2-VR/blob/fs2-vr/tools/quest/get_fs2_data.py) (`python3 get_fs2_data.py <game folder or GOG setup_freespace_2_*.exe> --push`) copies them for you; the GOG offline installer is unpacked with [innoextract](https://constexpr.org/innoextract/).",
         "Start **FreeSpace 2 VR** from *Unknown Sources* and allow \"access to all files\" when asked."
@@ -855,7 +855,7 @@
           ],
           [
             "Left / right stick click",
-            "Autopilot / match target speed",
+            "Autopilot (tap; hold 1 s: warp out) / match target speed",
             ""
           ],
           [
