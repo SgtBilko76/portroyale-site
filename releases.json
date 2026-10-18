@@ -639,5 +639,26 @@
   "name": "WinlatorXR-dawn-42.apk",
   "size": 971495156,
   "download": "https://github.com/WinlatorXR/WinlatorXR/releases/download/winlatorxr_dawn42/WinlatorXR-dawn-42.apk"
- }
+ },
+ "0AD-VR": [
+  {
+   "tag": "v0.1.0-beta",
+   "name": "0 A.D. VR for Meta Quest v0.1.0-beta",
+   "date": "2026-10-18T10:34:33Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/0AD-VR/releases/tag/v0.1.0-beta",
+   "assets": [
+    {
+     "name": "0AD-VR-Quest-data-v0.1.0-beta.zip",
+     "size": 1988834704,
+     "url": "https://github.com/SgtBilko76/0AD-VR/releases/download/v0.1.0-beta/0AD-VR-Quest-data-v0.1.0-beta.zip"
+    },
+    {
+     "name": "0AD-VR-Quest-v0.1.0-beta.apk",
+     "size": 28292099,
+     "url": "https://github.com/SgtBilko76/0AD-VR/releases/download/v0.1.0-beta/0AD-VR-Quest-v0.1.0-beta.apk"
+    }
+   ]
+  }
+ ]
 }

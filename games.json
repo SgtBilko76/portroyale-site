@@ -1010,6 +1010,103 @@
       ]
     },
     {
+      "slug": "0ad",
+      "name": "0 A.D. VR",
+      "repo": "0AD-VR",
+      "category": "native",
+      "tagline": "Ancient-world real-time strategy on a battlefield table in front of you.",
+      "about": [
+        "A native port of [0 A.D.](https://play0ad.com), Wildfire Games' free real-time strategy game, for Meta Quest and PICO. The battlefield stands as a 3D table in front of you, and the menus and HUD float on a panel above it.",
+        "Play in **VR**, with the sky around the table, or in **mixed reality** with your own room around it. A short click on the left stick switches between them.",
+        "**PICO support is brand new and not tested on PICO hardware yet**: reports are very welcome."
+      ],
+      "features": [
+        "Battlefield as a stereo 3D tabletop with head tracking",
+        "VR and mixed reality (passthrough) modes",
+        "Laser pointer with a cursor on the battlefield and drag-to-select",
+        "Virtual keyboard for chat, player names and the lobby",
+        "Skirmishes against the computer, all civilisations of the game",
+        "Runs on **PICO** headsets with the same APK (experimental)"
+      ],
+      "needs": [
+        "Meta Quest (Quest 3 tested), or PICO 4 / 4 Ultra / Neo3 (untested)",
+        "About 2 GB free space on the headset for the game data",
+        "A PC to copy the game data to the headset"
+      ],
+      "install": "default",
+      "install_extra": "Before the first start, download `0AD-VR-Quest-data-v0.1.0-beta.zip`, unzip it and copy the `0AD` folder to the headset's internal storage (`adb push 0AD /sdcard/`), so you end up with `/sdcard/0AD/data`. On the first start allow **All files access** and start the game again. SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader).",
+      "data": [
+        {
+          "label": "The 0 A.D. game data",
+          "kind": "folder",
+          "target": "/sdcard/0AD",
+          "marker": "data/mods/public/public.zip",
+          "hint": "the 0AD folder from the unzipped 0AD-VR-Quest-data zip (about 2 GB)"
+        }
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Left controller",
+          "Right controller"
+        ],
+        "rows": [
+          [
+            "Laser",
+            "",
+            "Mouse pointer"
+          ],
+          [
+            "Trigger",
+            "Shift (batch training, add to selection)",
+            "Select / click, hold and drag for a selection box"
+          ],
+          [
+            "Grip",
+            "Ctrl (control groups)",
+            "Order: move, attack, gather"
+          ],
+          [
+            "Stick",
+            "Scroll the map",
+            "Rotate (left/right), zoom (up/down)"
+          ],
+          [
+            "Stick click (short)",
+            "Switch VR / mixed reality",
+            ""
+          ],
+          [
+            "A / X",
+            "Select idle worker",
+            "Follow selection"
+          ],
+          [
+            "B / Y",
+            "Pause",
+            "Cancel"
+          ],
+          [
+            "Menu button",
+            "Game menu",
+            ""
+          ],
+          [
+            "Both sticks held 1 s",
+            "Recenter the table",
+            ""
+          ]
+        ]
+      },
+      "controls_note": "PICO controllers use the same button layout.",
+      "notes": [
+        "**The game data is a separate download** (about 2 GB) on the release page, next to the APK. The install box below can copy the unzipped `0AD` folder for you.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "Known issues: short freezes now and then while the computer players think."
+      ],
+      "credits": "Based on [0 A.D.](https://play0ad.com) by Wildfire Games (code GPL v2+, art CC BY-SA 3.0). Pictures: [play0ad.com screenshots](https://play0ad.com/media/screenshots/) by Wildfire Games, CC BY-SA 3.0."
+    },
+    {
       "slug": "sauerbraten",
       "name": "SauerQuest: Cube 2 Sauerbraten VR",
       "repo": "Sauerbraten-VR",
