@@ -1012,16 +1012,18 @@
         "Chase view behind your ship",
         "Full lighting with ship shine, environment reflections and anti-aliasing",
         "Laser pointer for the menus",
-        "Laser keyboard for typing your pilot callsign"
+        "Laser keyboard for typing your pilot callsign",
+        "**One-Tap Installer**: no PC needed, the app downloads and installs the free game data by itself on the first start"
       ],
       "needs": [
         "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
-        "The free *Wing Commander Saga* 0.9.65 game data (about 7 GB, see Install)"
+        "Wi-Fi and about 9 GB free space: the One-Tap Installer downloads the free *Wing Commander Saga* 0.9.65 game data (3.6 GB) on the first start"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r WCSaga-VR-v0.1.4-beta.apk`.",
-        "Put the game data on the headset so that the folder `/sdcard/WCSaga/Wing_Commander_Saga/data` exists. Easiest, on a PC with Python 3 and 7-Zip and the Quest connected by USB: download [get_wcs_data.py](https://github.com/SgtBilko76/WCSaga-VR/blob/quest-vr/tools/quest/get_wcs_data.py) and run `python3 get_wcs_data.py WCSaga --push`. Or, on a Windows PC: download the full game and patch v1.1.0.7822 from [wcsaga.com](https://www.wcsaga.com/downloads/), install the game, then the patch, and copy the whole installed game folder to `/sdcard/WCSaga/Wing_Commander_Saga` on the headset with SideQuest.",
-        "Start **Wing Commander Saga VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+        "Sideload the APK with SideQuest or `adb install -r WCSaga-VR-v0.1.5-beta.apk`.",
+        "Start **Wing Commander Saga VR** from *Unknown Sources*. The **One-Tap Installer** opens: press **Allow file access**, switch on \"Allow access\" and press Done.",
+        "Press **Download and install**. The game data is downloaded from the official FSNebula mod repository, checked and unpacked on the headset (about 10–20 minutes, depending on your Wi-Fi). Keep the headset on; if it gets interrupted, start the app again and it continues where it stopped. When it is finished, the game starts, and later starts go straight into the game.",
+        "Already have the game data? If the folder `/sdcard/WCSaga/Wing_Commander_Saga/data` exists, the installer is skipped. You can put it there yourself with [get_wcs_data.py](https://github.com/SgtBilko76/WCSaga-VR/blob/quest-vr/tools/quest/get_wcs_data.py) (`python3 get_wcs_data.py WCSaga --push`) or by copying a Windows install of the full game + patch v1.1.0.7822 from [wcsaga.com](https://www.wcsaga.com/downloads/) with SideQuest."
       ],
       "controls": {
         "columns": [
@@ -1094,23 +1096,14 @@
       },
       "controls_note": "Button names are those of the Meta Quest controllers. In the comms menu, left stick up/down picks an order, A or a trigger confirms it and Y closes the menu. Every flight binding can be changed in *Options → Controls*; \"Reset to default\" brings this layout back.",
       "notes": [
-        "The APK contains no game data; Wing Commander Saga is free and downloaded separately.",
+        "The APK contains no game data; Wing Commander Saga is free, and the One-Tap Installer downloads it on the first start.",
         "Flight runs at about 26–30 fps; menus run at full speed.",
         "Shadows are off by default to keep the frame rate up; you can turn them on in *Options → Graphics → Shadow Quality*.",
         "There is no 3D cockpit: Wing Commander Saga has no cockpit models.",
         "Tested on Meta Quest 3 only."
       ],
       "credits": "Wing Commander Saga by the Wing Commander Saga team; [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) by the Source Code Project. Wing Commander is a trademark of Electronic Arts; Wing Commander Saga is a non-commercial fan project. Picture 1: captured on a Meta Quest 3; pictures 2–5: [wcsaga.com](https://www.wcsaga.com/media/).",
-      "hero": "1-chase-view.jpg",
-      "data": [
-        {
-          "label": "Wing Commander Saga game data",
-          "kind": "folder",
-          "target": "/sdcard/WCSaga/Wing_Commander_Saga",
-          "marker": "data/tables",
-          "hint": "your installed and patched Wing Commander Saga folder (the one with the data folder, about 7 GB)"
-        }
-      ]
+      "hero": "1-chase-view.jpg"
     },
     {
       "slug": "0ad",
