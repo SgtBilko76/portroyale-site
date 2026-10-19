@@ -528,6 +528,7 @@
       ],
       "features": [
         "Head-tracked stereo 3D cockpit and space in flight, including the hyperspace jump",
+        "Detailed 3D cockpits from X-Wing Revival for the X-Wing, Y-Wing, A-Wing, B-Wing, TIE Fighter/Interceptor, TIE Bomber and Millennium Falcon",
         "Full flight control on the controllers, remappable in the game's controller options",
         "Laser pointer for the concourse, hangar and in-flight menus",
         "Virtual keyboard for pilot names and other text fields",
@@ -539,7 +540,7 @@
         "Your own copy of *Star Wars: X-Wing Alliance* (Steam or GOG)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.6-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.7-beta.apk`.",
         "Copy your whole X-Wing Alliance game folder (the one with `STRINGS.TXT`) to the headset's internal storage as `OpenXWA`, so that `/sdcard/OpenXWA/STRINGS.TXT` exists.",
         "Start **OpenXWA VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
         "Optional: to make hyperspace selectable in *Options → Game Controller Options*, add the line `!KEY_H!104 H Hyperspace` to `/sdcard/OpenXWA/JOYSTICK.TXT`."
@@ -636,12 +637,13 @@
       "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
       "notes": [
         "The APK contains no game data: you need your own copy of the game.",
+        "The small screens built into the X-Wing Revival cockpits are dark. All other craft (and gunner seats) keep X-Wing Alliance's own cockpits with their live screens.",
         "Passthrough behind the menus works on Meta Quest only; on PICO the menus float in front of black.",
         "Ambient occlusion is off in VR; the GPU runs close to its limit in busy scenes.",
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
       ],
-      "credits": "Based on [OpenXWA](https://github.com/elyosh/OpenXWA) and the Aeron engine by elyosh. Pictures: captured on a Meta Quest 3.",
+      "credits": "Based on [OpenXWA](https://github.com/elyosh/OpenXWA) and the Aeron engine by elyosh. 3D cockpit models: [X-Wing Revival](https://www.raptor007.com/xwing/) by Raptor007 and contributors (originally from the X-Wing Alliance Upgrade project). Pictures: captured on a Meta Quest 3.",
       "hero": "1-cockpit-planet.jpg",
       "data": [
         {
@@ -664,7 +666,7 @@
       ],
       "features": [
         "Head-tracked stereo 3D space in flight",
-        "3D cockpits for every TIE craft (with X-Wing Alliance's cockpit models), lit by the sun like the ships",
+        "3D cockpits from X-Wing Revival for the TIE Fighter, Advanced, Interceptor, Bomber and Gunboat (included), lit by the sun like the ships",
         "Each craft's original live instruments around you",
         "Full flight control on the controllers, remappable in *Settings → Controller*",
         "Laser pointer for the menus; click a text field (pilot name) and an on-screen keyboard opens",
@@ -676,9 +678,9 @@
         "Optional: your own copy of *Star Wars: X-Wing Alliance* for the 3D cockpits of all craft"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenTIE-VR-v0.1.4-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenTIE-VR-v0.1.5-beta.apk`.",
         "From the Steam folder `STAR WARS Tie Fighter`, copy `collectors_cd` to `/sdcard/OpenTIE/TIE95` and `remastered` to `/sdcard/OpenTIE/TIE98` on the headset.",
-        "Optional, for the 3D cockpits: copy your X-Wing Alliance game folder to `/sdcard/OpenXWA` (the same folder OpenXWA VR uses), or just copy `FLIGHTMODELS/TIECOCKPIT.OPT` and `FLIGHTMODELS/TIEBOMBERCOCKPIT.OPT` to `/sdcard/OpenTIE/`. Without them the TIE Fighter gets a built-in 3D cockpit and the other craft their flat cockpit picture.",
+        "Optional, for the TIE Defender and Missile Boat 3D cockpits: copy your X-Wing Alliance game folder to `/sdcard/OpenXWA` (the same folder OpenXWA VR uses), or just copy `FLIGHTMODELS/TIECOCKPIT.OPT` to `/sdcard/OpenTIE/`.",
         "Start **OpenTIE VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
       "controls": {
@@ -758,13 +760,13 @@
       "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. The star map, goals and in-flight menus use the menu controls.",
       "notes": [
         "The APK contains no game data: you need your own copy of the game.",
-        "X-Wing Alliance has no Gunboat or Missile Boat cockpit, so those use the TIE ball cockpit, as in X-Wing Alliance.",
+        "The TIE Defender and Missile Boat use X-Wing Alliance's TIE cockpit from your own copy (see install). The small screens built into the X-Wing Revival cockpits are dark; the original instruments are mounted around you instead.",
         "Motion blur, temporal upscaling and ambient occlusion are off in VR.",
         "Passthrough behind the menus works on Meta Quest only; on PICO the menus float in front of black.",
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
       ],
-      "credits": "Based on [OpenTIE](https://github.com/elyosh/OpenTIE) and the Aeron engine by elyosh. Pictures: captured on a Meta Quest 3.",
+      "credits": "Based on [OpenTIE](https://github.com/elyosh/OpenTIE) and the Aeron engine by elyosh. 3D cockpit models: [X-Wing Revival](https://www.raptor007.com/xwing/) by Raptor007 and contributors (originally from the X-Wing Alliance Upgrade project). Pictures: captured on a Meta Quest 3.",
       "hero": "1-cockpit-capital-ship.jpg",
       "data": [
         {
