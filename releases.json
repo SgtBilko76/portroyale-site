@@ -587,16 +587,16 @@
  ],
  "X-Wing-Revival-VR": [
   {
-   "tag": "v1.0.2",
-   "name": "X-Wing Revival VR 1.0.2 (Meta Quest + PICO)",
-   "date": "2026-10-14T08:21:46Z",
+   "tag": "v1.0.3",
+   "name": "X-Wing Revival VR 1.0.3 (Meta Quest + PICO)",
+   "date": "2026-10-19T17:36:27Z",
    "prerelease": false,
-   "url": "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/tag/v1.0.2",
+   "url": "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/tag/v1.0.3",
    "assets": [
     {
-     "name": "X-Wing-Revival-VR-v1.0.2-full.apk",
+     "name": "X-Wing-Revival-VR-v1.0.3-full.apk",
      "size": 244498408,
-     "url": "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/download/v1.0.2/X-Wing-Revival-VR-v1.0.2-full.apk"
+     "url": "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/download/v1.0.3/X-Wing-Revival-VR-v1.0.3-full.apk"
     }
    ]
   }
@@ -705,6 +705,22 @@
      "name": "FreeSpace2-VR-v0.1.1-beta.apk",
      "size": 20730620,
      "url": "https://github.com/SgtBilko76/FreeSpace2-VR/releases/download/v0.1.1-beta/FreeSpace2-VR-v0.1.1-beta.apk"
+    }
+   ]
+  }
+ ],
+ "OpenXvT-VR": [
+  {
+   "tag": "v0.1.0-beta",
+   "name": "OpenXvT VR v0.1.0-beta (Meta Quest + PICO)",
+   "date": "2026-10-19T17:35:52Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/OpenXvT-VR/releases/tag/v0.1.0-beta",
+   "assets": [
+    {
+     "name": "OpenXvT-VR-v0.1.0-beta.apk",
+     "size": 15036638,
+     "url": "https://github.com/SgtBilko76/OpenXvT-VR/releases/download/v0.1.0-beta/OpenXvT-VR-v0.1.0-beta.apk"
     }
    ]
   }
