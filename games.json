@@ -1355,7 +1355,7 @@
         "Nothing else: the APK has the whole game built in, including the campaign videos"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r Warzone2100-VR-Quest-v0.1.0-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r Warzone2100-VR-Quest-v0.1.1-beta.apk`.",
         "Start **Warzone 2100 VR** from *Unknown Sources*.",
         "The first start unpacks the game data (about 700 MB, takes a minute), then the menu appears.",
         "If the table or the panel isn't in front of you, hold both stick clicks for a second."
