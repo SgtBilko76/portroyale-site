@@ -794,6 +794,134 @@
       ]
     },
     {
+      "slug": "openxw",
+      "name": "OpenXW VR",
+      "repo": "OpenXW-VR",
+      "category": "native",
+      "tagline": "Star Wars: X-Wing from inside a 3D cockpit, standalone on Meta Quest and PICO.",
+      "about": [
+        "A VR port of [OpenXW](https://github.com/elyosh/OpenXW), the open source rebuild of *Star Wars: X-Wing*, running standalone. Space is rendered in stereo around you and you sit in a 3D cockpit of your X-Wing, Y-Wing, A-Wing or B-Wing, with the original instruments and HUD in front of you. The concourse, briefings and cutscenes play on a big virtual screen."
+      ],
+      "features": [
+        "Head-tracked stereo 3D space in flight (1998 flight engine)",
+        "3D cockpits from X-Wing Revival for the X-Wing, Y-Wing, A-Wing and B-Wing (included)",
+        "The original instruments and HUD in front of you",
+        "Full flight control on the controllers, remappable in *Settings → Controller*",
+        "Hold the right grip to look behind you",
+        "Laser pointer for the menus; click the pilot name field and an on-screen keyboard opens",
+        "Menus over passthrough on Meta Quest"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested)",
+        "Your own copy of *Star Wars: X-Wing Special Edition* (Steam)"
+      ],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r OpenXW-VR-v0.1.0-beta.apk`.",
+        "From the Steam folder `STAR WARS X-Wing`, copy `collectors_cd` to `/sdcard/OpenXW/XW94` and `remastered` to `/sdcard/OpenXW/XW98` on the headset.",
+        "Start **OpenXW VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Flight",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Pitch and yaw",
+            "Arrow keys"
+          ],
+          [
+            "Right stick",
+            "Roll (left/right), throttle lever (up/down)",
+            ""
+          ],
+          [
+            "Right trigger",
+            "Fire",
+            "Click"
+          ],
+          [
+            "Left trigger",
+            "Target / roll modifier",
+            "Click"
+          ],
+          [
+            "Right grip",
+            "Rear view (hold)",
+            "Right-click"
+          ],
+          [
+            "A / B",
+            "Next target / nearest fighter",
+            "Enter / Escape"
+          ],
+          [
+            "X / Y",
+            "Target my attacker / match target speed",
+            "Y = Space"
+          ],
+          [
+            "Left / right stick click",
+            "Forward view / hyperspace",
+            ""
+          ],
+          [
+            "Left Menu button",
+            "Pause (hold 1 s: recenter)",
+            "Escape (hold 1 s: recenter)"
+          ],
+          [
+            "Left grip + A / B",
+            "Full throttle / throttle down",
+            ""
+          ],
+          [
+            "Left grip + X / Y",
+            "Clear target / Escape",
+            ""
+          ],
+          [
+            "Left grip + left trigger",
+            "Cycle firing mode",
+            ""
+          ],
+          [
+            "Left grip + left / right stick click",
+            "Cycle weapon group / cycle shields",
+            ""
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
+      "notes": [
+        "The APK contains no game data: you need your own copy of the game.",
+        "The small screens built into the X-Wing Revival cockpits are dark; the original instruments stay in front of you instead.",
+        "Passthrough behind the menus works on Meta Quest only; on PICO the menus float in front of black.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
+      ],
+      "credits": "Based on [OpenXW](https://github.com/elyosh/OpenXW) and the Aeron engine by elyosh. 3D cockpit models: [X-Wing Revival](https://www.raptor007.com/xwing/) by Raptor007 and contributors (originally from the X-Wing Alliance Upgrade project). Pictures: captured on a Meta Quest 3.",
+      "hero": "1-cockpit.jpg",
+      "data": [
+        {
+          "label": "X-Wing 94 (collectors_cd)",
+          "kind": "folder",
+          "target": "/sdcard/OpenXW/XW94",
+          "marker": "BWING.EXE",
+          "hint": "the collectors_cd folder from your Steam STAR WARS X-Wing folder (or that whole folder)"
+        },
+        {
+          "label": "X-Wing 98 (remastered)",
+          "kind": "folder",
+          "target": "/sdcard/OpenXW/XW98",
+          "marker": "XWING95.EXE",
+          "hint": "the remastered folder from your Steam STAR WARS X-Wing folder (or that whole folder)"
+        }
+      ]
+    },
+    {
       "slug": "openxvt",
       "name": "OpenXvT VR",
       "repo": "OpenXvT-VR",
