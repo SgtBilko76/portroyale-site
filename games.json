@@ -1061,7 +1061,7 @@
         "Head-tracked stereo 3D from the cockpit at 72 Hz",
         "Menus floating in front of you with space all around, laser pointer and on-screen keyboard",
         "Full flight control on the controllers, remappable in *Controls*",
-        "**Fly Online** joins the X-Wing Revival VR server (`217.154.211.69:7000`), where Quest, PICO and PC pilots meet",
+        "**Fly Online** joins the official Raptor007 server (`www.raptor007.com:7000`), where Quest, PICO and PC pilots meet",
         "Custom missions, including an *Upload Mission* button in the lobby"
       ],
       "needs": [
@@ -1069,7 +1069,7 @@
         "Nothing else: the full APK has the free X-Wing Revival 0.6.1 game data built in"
       ],
       "install": [
-        "Sideload the full APK with SideQuest or `adb install -r X-Wing-Revival-VR-v1.0.2-full.apk`.",
+        "Sideload the full APK with SideQuest or `adb install -r X-Wing-Revival-VR-v1.0.3-full.apk`.",
         "Start **X-Wing Revival VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
         "The first start unpacks the game data to `/sdcard/XWingRevival/` (about 310 MB, takes a moment), then the menu appears.",
         "Custom missions: copy the mission's `.def` file to `/sdcard/XWingRevival/Missions/` and pick it in the lobby under *Game Type → Mission*, or send it to the server with *Upload Mission*."
@@ -1148,7 +1148,7 @@
         "The APK contains the X-Wing Revival 0.6.1 game data (by Raptor007, ship models by XWA Upgrade).",
         "Big fleet battles run at about 45-65 FPS on Quest 3; the engine draws each eye separately.",
         "Graphics are set lighter than on PC; raise them in *Preferences* if you like.",
-        "PC players with the original X-Wing Revival 0.6.1 join the same server via *Custom / LAN* → *Connect to IP Address* `217.154.211.69:7000`.",
+        "PC players with the original X-Wing Revival 0.6.1 join the same server via *Custom / LAN* → *Connect to IP Address* `www.raptor007.com:7000`.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub with the output of `adb logcat -s XWingRevival`."
       ],
       "credits": "X-Wing Revival and RaptorEngine by [Raptor007](https://github.com/Raptor007). Pictures: captured on a Meta Quest 3.",
