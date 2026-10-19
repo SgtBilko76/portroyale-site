@@ -319,16 +319,16 @@
  ],
  "Unreal-Tournament-VR": [
   {
-   "tag": "v1.0.0-beta11-ut99",
-   "name": "Unreal Tournament VR 1.0.0-beta11",
-   "date": "2026-10-19T10:58:23Z",
+   "tag": "v1.0.0-beta12-ut99",
+   "name": "Unreal Tournament VR 1.0.0-beta12",
+   "date": "2026-10-19T12:46:47Z",
    "prerelease": false,
-   "url": "https://github.com/SgtBilko76/Unreal-Tournament-VR/releases/tag/v1.0.0-beta11-ut99",
+   "url": "https://github.com/SgtBilko76/Unreal-Tournament-VR/releases/tag/v1.0.0-beta12-ut99",
    "assets": [
     {
-     "name": "UnrealTournamentVR-1.0.0-beta11.apk",
-     "size": 12306543,
-     "url": "https://github.com/SgtBilko76/Unreal-Tournament-VR/releases/download/v1.0.0-beta11-ut99/UnrealTournamentVR-1.0.0-beta11.apk"
+     "name": "UnrealTournamentVR-1.0.0-beta12.apk",
+     "size": 12310483,
+     "url": "https://github.com/SgtBilko76/Unreal-Tournament-VR/releases/download/v1.0.0-beta12-ut99/UnrealTournamentVR-1.0.0-beta12.apk"
     }
    ]
   }
