@@ -794,6 +794,133 @@
       ]
     },
     {
+      "slug": "openxvt",
+      "name": "OpenXvT VR",
+      "repo": "OpenXvT-VR",
+      "category": "native",
+      "tagline": "Star Wars: X-Wing vs. TIE Fighter from inside a 3D cockpit, standalone on Meta Quest and PICO.",
+      "about": [
+        "A VR port of [OpenXvT](https://github.com/elyosh/OpenXvT), the open source rebuild of *Star Wars: X-Wing vs. TIE Fighter* with the *Balance of Power* campaigns, running standalone. Space is rendered in stereo around you and you fly from a 3D cockpit, with the original instruments in front of you. The concourse, briefings and cutscenes play on a big virtual screen."
+      ],
+      "features": [
+        "Head-tracked stereo 3D space in flight",
+        "3D cockpits from X-Wing Revival for the X-wing, Y-wing, A-wing, B-wing, TIE Fighter, Interceptor, Bomber and Gunboat (included); the other fighters borrow the closest one",
+        "The original instruments in front of you",
+        "Full flight control on the controllers, remappable in *Settings → Controller*",
+        "Laser pointer for the menus and the in-flight pause screen; on-screen keyboard for the pilot name",
+        "Menus over passthrough on Meta Quest"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested)",
+        "Your own copy of *Star Wars: X-Wing vs. TIE Fighter - Balance of Power Campaigns* (Steam)"
+      ],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r OpenXvT-VR-v0.1.0-beta.apk`.",
+        "Copy your whole Steam folder `STAR WARS X-Wing vs TIE Fighter` (about 400 MB) to `/sdcard/OpenXvT` on the headset.",
+        "Start **OpenXvT VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Flight",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Pitch and yaw",
+            "Arrow keys"
+          ],
+          [
+            "Right stick",
+            "Roll (left/right), throttle lever (up/down, stays where you leave it)",
+            ""
+          ],
+          [
+            "Right trigger",
+            "Fire",
+            "Click"
+          ],
+          [
+            "Left trigger",
+            "Target / roll modifier",
+            "Click"
+          ],
+          [
+            "Right grip",
+            "Target the craft in your sights",
+            "Right-click"
+          ],
+          [
+            "A / B",
+            "Next target / cycle weapons",
+            "Enter / Escape"
+          ],
+          [
+            "X / Y",
+            "Target my attacker / nearest fighter",
+            "Y = Space"
+          ],
+          [
+            "Left / right stick click",
+            "Link fire / hyperspace",
+            ""
+          ],
+          [
+            "Menu button",
+            "Pause / settings",
+            "Escape"
+          ],
+          [
+            "Left grip + A / B",
+            "Laser / shield recharge rate",
+            ""
+          ],
+          [
+            "Left grip + X / Y",
+            "Shield direction / laser energy to shields",
+            ""
+          ],
+          [
+            "Left grip + left trigger",
+            "Tractor beam",
+            ""
+          ],
+          [
+            "Left grip + right grip",
+            "Next target component",
+            ""
+          ],
+          [
+            "Left grip + right / left stick click",
+            "Match target speed / nearest objective",
+            ""
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. Hold the Meta button to re-centre the view. The pause/settings screen uses the menu controls.",
+      "notes": [
+        "The APK contains no game data: you need your own copy of the game.",
+        "The Z-95, T-wing, R-41, TIE Advanced, TIE Defender and Missile Boat have no X-Wing Revival cockpit and borrow the closest one; the small screens built into the Revival cockpits are dark.",
+        "The galaxy map and the hyperspace jump are shown flat. Multiplayer is untested.",
+        "Motion blur, temporal upscaling and ambient occlusion are off in VR.",
+        "Passthrough behind the menus works on Meta Quest only; on PICO the menus float in front of black.",
+        "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
+      ],
+      "credits": "Based on [OpenXvT](https://github.com/elyosh/OpenXvT) and the Aeron engine by elyosh. 3D cockpit models: [X-Wing Revival](https://www.raptor007.com/xwing/) by Raptor007 and contributors (originally from the X-Wing Alliance Upgrade project). Pictures 1–2: captured on a Meta Quest 3; pictures 3–6: [Steam](https://store.steampowered.com/app/361690/).",
+      "hero": "1-cockpit-xwing-explosion.jpg",
+      "data": [
+        {
+          "label": "X-Wing vs. TIE Fighter",
+          "kind": "folder",
+          "target": "/sdcard/OpenXvT",
+          "marker": "STRINGS.TXT",
+          "hint": "your Steam STAR WARS X-Wing vs TIE Fighter folder (the one with STRINGS.TXT)"
+        }
+      ]
+    },
+    {
       "slug": "freespace2",
       "name": "FreeSpace 2 VR",
       "repo": "FreeSpace2-VR",
