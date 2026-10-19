@@ -1242,7 +1242,7 @@
       "about": [
         "A native port of [0 A.D.](https://play0ad.com), Wildfire Games' free real-time strategy game, for Meta Quest and PICO. The battlefield stands as a 3D table in front of you, and the menus and HUD float on a panel above it.",
         "Play in **VR**, with the sky around the table, or in **mixed reality** with your own room around it. A short click on the left stick switches between them.",
-        "**PICO support is brand new and not tested on PICO hardware yet**: reports are very welcome."
+        "**Tested on Meta Quest 3 and PICO**: the same APK runs on both."
       ],
       "features": [
         "Battlefield as a stereo 3D tabletop with head tracking",
@@ -1250,10 +1250,10 @@
         "Laser pointer with a cursor on the battlefield and drag-to-select",
         "Virtual keyboard for chat, player names and the lobby",
         "Skirmishes against the computer, all civilisations of the game",
-        "Runs on **PICO** headsets with the same APK (experimental)"
+        "Runs on **PICO** headsets with the same APK (tested)"
       ],
       "needs": [
-        "Meta Quest (Quest 3 tested), or PICO 4 / 4 Ultra / Neo3 (untested)",
+        "Meta Quest (Quest 3 tested), or PICO 4 / 4 Ultra / Neo3 (tested, PICO OS 5.9.0 or newer)",
         "About 2 GB free space on the headset for the game data",
         "A PC to copy the game data to the headset"
       ],
@@ -1340,7 +1340,7 @@
       "about": [
         "A native port of [Warzone 2100](https://wz2100.net), the free open-source real-time strategy game, for Meta Quest and PICO. The battlefield stands as a 3D table in front of you, and the menus and HUD float on a panel above it.",
         "Play in **VR**, with the sky around you, or in **mixed reality** with your own room around the table. A short click on the left stick switches between them.",
-        "**PICO support is brand new and not tested on PICO hardware yet**: reports are very welcome."
+        "**Tested on Meta Quest 3 and PICO**: the same APK runs on both."
       ],
       "features": [
         "Battlefield as a stereo 3D tabletop with head tracking",
@@ -1348,10 +1348,10 @@
         "Laser pointer with a cursor on the battlefield and drag-to-select",
         "Virtual keyboard for all text fields",
         "Full game in one APK: campaign with its videos, skirmish and multiplayer",
-        "Runs on **PICO** headsets with the same APK (experimental)"
+        "Runs on **PICO** headsets with the same APK (tested)"
       ],
       "needs": [
-        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested, PICO OS 5.9.0 or newer)",
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (tested, PICO OS 5.9.0 or newer)",
         "Nothing else: the APK has the whole game built in, including the campaign videos"
       ],
       "install": [
