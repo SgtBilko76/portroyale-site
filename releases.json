@@ -335,6 +335,20 @@
  ],
  "Unreal-Gold-VR": [
   {
+   "tag": "v1.0.0-beta11",
+   "name": "Unreal Gold VR 1.0.0-beta11",
+   "date": "2026-10-19T10:35:04Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Unreal-Gold-VR/releases/tag/v1.0.0-beta11",
+   "assets": [
+    {
+     "name": "UnrealGoldVR-1.0.0-beta11.apk",
+     "size": 12300939,
+     "url": "https://github.com/SgtBilko76/Unreal-Gold-VR/releases/download/v1.0.0-beta11/UnrealGoldVR-1.0.0-beta11.apk"
+    }
+   ]
+  },
+  {
    "tag": "v1.0.0-beta10",
    "name": "Unreal Gold VR 1.0.0-beta10",
    "date": "2026-09-26T15:17:21Z",

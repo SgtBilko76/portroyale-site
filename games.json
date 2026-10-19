@@ -272,13 +272,14 @@
     },
     {
       "slug": "unreal-gold",
+      "hero": "2-skaarj-corridor.jpg",
       "name": "Unreal Gold VR",
       "repo": "Unreal-Gold-VR",
       "category": "native",
       "tagline": "The 1998 classic Unreal in VR, standalone on Meta Quest and PICO.",
       "about": [
         "A standalone VR port for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3) and PICO 4 / Neo 3 of **Unreal Gold**, built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine), a from-scratch reimplementation of Unreal Engine 1, with an OpenXR/Vulkan stereo renderer.",
-        "No game content is included, but Unreal Gold is available **free and legally** from OldUnreal.",
+        "No game content is included, but Unreal Gold is available **free and legally** from OldUnreal, and the app downloads and installs it for you on first launch.",
         "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
@@ -288,17 +289,18 @@
         "VR-tuned controls for translator, inventory and crouch",
         "Save games persist on the headset",
         "Installs side by side with Unreal Tournament VR",
+        "Downloads and installs the free original game from OldUnreal on first launch: no file copying",
         "Flat, readable menu panel with an on-screen keyboard you point-and-click to type (e.g. your player name)"
       ],
       "needs": [
         "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
-        "Unreal Gold **226b** game files (free from [OldUnreal](https://www.oldunreal.com/downloads/unreal/full-game-installers/))"
+        "Wi-Fi for the one-time game download (645 MB, free from [OldUnreal](https://www.oldunreal.com/downloads/unreal/full-game-installers/)), or your own Unreal Gold **226b** game files"
       ],
       "install": [
-        "Get the game files. The port needs the original **226b** `System` files (from GOG/Steam, or the disc contents the OldUnreal installer extracts before it applies the 227 patch). `Maps`, `Textures`, `Sounds`, `Music` and `Help` are the same either way.",
         "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
-        "Copy the `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngine/` on the headset. Leave out your PC's `Unreal.ini` / `User.ini`.",
-        "Launch **Unreal Gold VR** from *Unknown Sources* and grant \"All files access\"."
+        "Launch **Unreal Gold VR** from *Unknown Sources* and grant \"All files access\".",
+        "On first launch a panel offers to download the free original Unreal Gold disc (645 MB) from OldUnreal, the source Epic Games approved. Press **I agree - download and install**: it installs the 226b game files and starts the game (Wi-Fi needed, about a minute).",
+        "Prefer your own files? Copy your Unreal Gold **226b** `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngine/` before the first launch (leave out `Unreal.ini` / `User.ini`) and the download is skipped."
       ],
       "controls": {
         "columns": [
@@ -370,7 +372,7 @@
         "No dynamic lighting; some movers behave oddly.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SurrealEngine-Log:*` shows how far it gets, which is the useful thing to paste in."
       ],
-      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal is a trademark of Epic Games; this project is not affiliated with Epic Games.",
+      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal is a trademark of Epic Games; this project is not affiliated with Epic Games. Pictures 2–7: captured on a Meta Quest 3.",
       "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
       "data": [
         {
