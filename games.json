@@ -287,12 +287,12 @@
       "features": [
         "Native OpenXR rendering at 72 Hz, snap turning, stick locomotion",
         "Weapons held and aimed with the right controller, with a controller-ray crosshair",
-        "Curved menu panel operated by pointing and clicking",
         "VR-tuned controls for translator, inventory and crouch",
         "Save games persist on the headset",
         "Installs side by side with Unreal Tournament VR",
         "Downloads and installs the free original game from OldUnreal on first launch: no file copying",
-        "Flat, readable menu panel with an on-screen keyboard you point-and-click to type (e.g. your player name)"
+        "Flat, readable menu panel; an on-screen keyboard pops up when you click a text field (e.g. your player name)",
+        "Correct lighting and colours in the headset"
       ],
       "needs": [
         "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
