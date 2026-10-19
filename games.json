@@ -148,13 +148,14 @@
     },
     {
       "slug": "unreal-tournament",
+      "hero": "2-bot-fight.jpg",
       "name": "Unreal Tournament VR",
       "repo": "Unreal-Tournament-VR",
       "category": "native",
       "tagline": "UT99 in VR, standalone on Meta Quest and PICO.",
       "about": [
         "A standalone VR port for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3) and PICO 4 / Neo 3 of **Unreal Tournament (UT99)**, built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine), a from-scratch reimplementation of Unreal Engine 1, with an OpenXR/Vulkan stereo renderer.",
-        "No game content is included, but UT99 is available **free and legally** from OldUnreal.",
+        "No game content is included, but UT99 is available **free and legally** from OldUnreal, and the app downloads and installs it for you on first launch.",
         "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
@@ -164,17 +165,18 @@
         "Redeemer guided shell steered with the right controller",
         "Curved menu panel operated by pointing and clicking",
         "Installs side by side with Unreal Gold VR",
+        "Downloads and installs the free original game from OldUnreal on first launch: no file copying",
         "Flat, readable menu panel with an on-screen keyboard you point-and-click to type (e.g. your player name)"
       ],
       "needs": [
         "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
-        "UT99 game files (free from [OldUnreal](https://www.oldunreal.com/downloads/unrealtournament/full-game-installers/); 469e and 436 work)"
+        "Wi-Fi for the one-time game download (620 MB, free from [OldUnreal](https://www.oldunreal.com/downloads/unrealtournament/full-game-installers/)), or your own UT99 game files (469e and 436 work)"
       ],
       "install": [
-        "Install UT99 on a PC with the OldUnreal installer.",
         "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
-        "Copy the `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngineUT/` on the headset. Leave out your PC's `UnrealTournament.ini` / `User.ini`.",
-        "Launch **Unreal Tournament VR** from *Unknown Sources* and grant \"All files access\"."
+        "Launch **Unreal Tournament VR** from *Unknown Sources* and grant \"All files access\".",
+        "On first launch a panel offers to download the free original Unreal Tournament GOTY disc (620 MB) from OldUnreal, the source Epic Games approved. Press **I agree - download and install**: it installs UT 436 with all maps and starts the game (Wi-Fi needed, about a minute).",
+        "Prefer your own files? Copy your UT99 `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngineUT/` before the first launch (leave out `UnrealTournament.ini` / `User.ini`) and the download is skipped."
       ],
       "controls": {
         "columns": [
@@ -246,7 +248,7 @@
         "No networking / multiplayer.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SurrealEngine-Log:*` shows how far it gets, which is the useful thing to paste in."
       ],
-      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal Tournament is a trademark of Epic Games; this project is not affiliated with Epic Games.",
+      "credits": "Built on [Surreal Engine](https://github.com/dpjudas/SurrealEngine) by dpjudas and contributors. Unreal Tournament is a trademark of Epic Games; this project is not affiliated with Epic Games. Pictures 2–5: captured on a Meta Quest 3.",
       "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
       "data": [
         {
