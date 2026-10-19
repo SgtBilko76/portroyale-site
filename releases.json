@@ -727,16 +727,16 @@
  ],
  "OpenXW-VR": [
   {
-   "tag": "v0.1.0-beta",
-   "name": "OpenXW VR v0.1.0-beta (Meta Quest + PICO)",
-   "date": "2026-10-19T18:09:59Z",
+   "tag": "v0.1.1-beta",
+   "name": "OpenXW VR v0.1.1-beta (Meta Quest + PICO)",
+   "date": "2026-10-19T18:24:18Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/OpenXW-VR/releases/tag/v0.1.0-beta",
+   "url": "https://github.com/SgtBilko76/OpenXW-VR/releases/tag/v0.1.1-beta",
    "assets": [
     {
-     "name": "OpenXW-VR-v0.1.0-beta.apk",
-     "size": 64536205,
-     "url": "https://github.com/SgtBilko76/OpenXW-VR/releases/download/v0.1.0-beta/OpenXW-VR-v0.1.0-beta.apk"
+     "name": "OpenXW-VR-v0.1.1-beta.apk",
+     "size": 64536217,
+     "url": "https://github.com/SgtBilko76/OpenXW-VR/releases/download/v0.1.1-beta/OpenXW-VR-v0.1.1-beta.apk"
     }
    ]
   }
