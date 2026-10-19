@@ -338,7 +338,7 @@
    "tag": "v1.0.0-beta11",
    "name": "Unreal Gold VR 1.0.0-beta11",
    "date": "2026-10-19T10:35:04Z",
-   "prerelease": true,
+   "prerelease": false,
    "url": "https://github.com/SgtBilko76/Unreal-Gold-VR/releases/tag/v1.0.0-beta11",
    "assets": [
     {
