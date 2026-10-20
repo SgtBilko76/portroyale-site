@@ -678,7 +678,7 @@
         "Optional: your own copy of *Star Wars: X-Wing Alliance* for the 3D cockpits of all craft"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenTIE-VR-v0.1.5-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenTIE-VR-v0.1.6-beta.apk`.",
         "From the Steam folder `STAR WARS Tie Fighter`, copy `collectors_cd` to `/sdcard/OpenTIE/TIE95` and `remastered` to `/sdcard/OpenTIE/TIE98` on the headset.",
         "Optional, for the TIE Defender and Missile Boat 3D cockpits: copy your X-Wing Alliance game folder to `/sdcard/OpenXWA` (the same folder OpenXWA VR uses), or just copy `FLIGHTMODELS/TIECOCKPIT.OPT` to `/sdcard/OpenTIE/`.",
         "Start **OpenTIE VR** from *Unknown Sources* and allow \"access to all files\" when asked."
