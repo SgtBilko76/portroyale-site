@@ -154,16 +154,21 @@
  ],
  "SpeedDreams-VR": [
   {
-   "tag": "speeddreams0.0.5",
-   "name": "SpeedDreams-VR 0.9.3-beta",
-   "date": "2026-09-23T10:27:53Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/tag/speeddreams0.0.5",
+   "tag": "v0.10.0-beta",
+   "name": "SpeedDreams-VR 0.10.0-beta",
+   "date": "2026-10-20T16:13:22Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/tag/v0.10.0-beta",
    "assets": [
     {
-     "name": "Speeddreams.0.9.3-beta.apk",
-     "size": 233029432,
-     "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/speeddreams0.0.5/Speeddreams.0.9.3-beta.apk"
+     "name": "sd-adhoc-relay-linux-x86_64.tar.gz",
+     "size": 428974,
+     "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/v0.10.0-beta/sd-adhoc-relay-linux-x86_64.tar.gz"
+    },
+    {
+     "name": "Speeddreams.0.10.0-beta.apk",
+     "size": 232674984,
+     "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/v0.10.0-beta/Speeddreams.0.10.0-beta.apk"
     }
    ]
   }

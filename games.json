@@ -2276,6 +2276,7 @@
     },
     {
       "slug": "speeddreams",
+      "hero": "4-rain-cockpit.jpg",
       "name": "Speed Dreams VR",
       "repo": "SpeedDreams-VR",
       "category": "full",
@@ -2287,7 +2288,7 @@
       "features": [
         "Stereo rendering through OpenXR",
         "Curved menu panel anchored in the room",
-        "Online play with ranking lists and a dedicated server",
+        "Online races: host one on your headset or join one from the list, robots included, with an online leaderboard",
         "Force feedback and rumble",
         "Extra tracks and cars in *Options → Downloads* over wifi (about 5.4 GB for the full set)"
       ],
@@ -2346,18 +2347,22 @@
           ],
           [
             "Y",
-            "Next camera; hold 1 s to recenter the menu panel"
+            "Next camera"
+          ],
+          [
+            "Meta button (right), hold",
+            "Recenter the view and the menu panel"
           ]
         ]
       },
       "controls_note": "Button names are those of the Meta Quest controllers, PICO controllers use the same layout. The driving controls are a virtual joystick either way, so they can be rebound in *Options → Players*.",
       "notes": [
-        "`/sdcard/SpeedDreamsVR/vr.cfg` holds eye buffer scale, refresh rate, antialiasing, mirror position and steering curve.",
+        "`/sdcard/SpeedDreamsVR/vr.cfg` holds eye buffer scale, refresh rate, antialiasing, foveated rendering, mirror position and steering curve.",
         "If a track won't hold frame rate, turn the sky dome off first.",
         "Practice and qualifying run one car at a time: use Quick Race or a championship to race opponents.",
         "The PICO build is untested: if it does not start, or the buttons are mapped differently, please open an issue on GitHub. `adb logcat -s SpeedDreamsVR:V TBXR:V` prints the runtime it found and the controller profile it bound, which is the useful thing to paste in."
       ],
-      "credits": "Based on [Speed Dreams](https://www.speed-dreams.net/). Picture (desktop version): [Ocirne94](https://commons.wikimedia.org/wiki/File:Speed_Dreams_car_with_headlamps_on_and_glowing_brake_disk.jpg), CC BY-SA 3.0."
+      "credits": "Based on [Speed Dreams](https://www.speed-dreams.net/). Picture (desktop version): [Ocirne94](https://commons.wikimedia.org/wiki/File:Speed_Dreams_car_with_headlamps_on_and_glowing_brake_disk.jpg), CC BY-SA 3.0. Picture 4: captured on a Meta Quest 3."
     },
     {
       "slug": "starship",
