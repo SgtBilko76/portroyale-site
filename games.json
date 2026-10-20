@@ -816,7 +816,7 @@
         "Your own copy of *Star Wars: X-Wing Special Edition* (Steam)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenXW-VR-v0.1.1-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenXW-VR-v0.1.2-beta.apk`.",
         "From the Steam folder `STAR WARS X-Wing`, copy `collectors_cd` to `/sdcard/OpenXW/XW94` and `remastered` to `/sdcard/OpenXW/XW98` on the headset.",
         "Start **OpenXW VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
