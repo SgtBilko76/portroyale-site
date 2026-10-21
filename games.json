@@ -1296,6 +1296,127 @@
       ]
     },
     {
+      "slug": "wingcommander2",
+      "name": "Wing Commander II VR",
+      "repo": "wc2-re-vr",
+      "category": "native",
+      "tagline": "Wing Commander II: Vengeance of the Kilrathi in stereo 3D, standalone on Meta Quest.",
+      "about": [
+        "A VR port of *Wing Commander II: Vengeance of the Kilrathi*, running standalone on [wc2-re](https://github.com/neuromancer/wc2-re), the source reconstruction of the game. In flight, space is rendered in stereo around you: Kilrathi fighters, missiles and capital ships sit at their real distance, stars stay fixed at infinity, and you can look around freely. You sit in a 3D cockpit built from the original cockpit art, with live displays and HUD. Briefings, cutscenes and the menus play on a big virtual screen. Bring your own copy of the game."
+      ],
+      "features": [
+        "Head-tracked stereo 3D space in flight, ships at their real depth",
+        "3D cockpit made from the original cockpit art, with live displays and targeting",
+        "Reticle and target brackets lined up with the ships",
+        "Full flight control on the Touch controllers, with a soft centre for precise aiming",
+        "Laser pointer for the menus, VR keyboard for your pilot name and callsign",
+        "Settings file for stick response and cockpit distance"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
+        "Your own copy of *Wing Commander II* (the DOS CD-ROM edition with Special Operations 1 and 2 is tested; *Kilrathi Saga* data should also work), about 26 MB of game files"
+      ],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r WingCommanderIIVR-1.0.0.apk`.",
+        "Copy `WC2.EXE` and the `GAMEDAT` folder (the `WING2` folder of the CD, or your installed game folder) to `/sdcard/WingCommander2` on the headset.",
+        "Start **Wing Commander II VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Flight",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Pitch and yaw",
+            ""
+          ],
+          [
+            "Right stick",
+            "Roll (left/right), throttle (up/down)",
+            ""
+          ],
+          [
+            "Right / left trigger",
+            "Guns / missile",
+            "Click"
+          ],
+          [
+            "Right grip",
+            "Afterburner",
+            "Right-click"
+          ],
+          [
+            "A",
+            "Cycle target",
+            "Enter / confirm"
+          ],
+          [
+            "B",
+            "Select missile",
+            "Escape"
+          ],
+          [
+            "X / Y",
+            "Select guns / pause",
+            "N / Y (Yes/No in \"Are you sure?\", then A)"
+          ],
+          [
+            "Left stick click",
+            "Nav map (hold 1 s: recenter)",
+            "Hold 1 s: recenter"
+          ],
+          [
+            "Right stick click",
+            "Autopilot",
+            ""
+          ],
+          [
+            "Menu button",
+            "Escape",
+            "Escape"
+          ],
+          [
+            "Left grip + A / B",
+            "Lock target / full stop",
+            ""
+          ],
+          [
+            "Left grip + X / Y",
+            "Comms / full speed (in the comms menu: left grip + Y/B choose, A send, X close)",
+            ""
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers. Point the laser at the screen and pull either trigger to click; the hand that pulls last aims.",
+      "notes": [
+        "The APK contains no game data: you need your own copy of the game.",
+        "To land, target your carrier (A), open comms (left grip + X), pick it and *request landing*, then fly in at normal speed. Clearance is only given once you've done something in the mission and no Kilrathi are close.",
+        "With the DOS CD-ROM data the game plays AdLib music and synthesized sound effects, as the DOS original did.",
+        "Stick response and cockpit distance can be tuned in `/sdcard/WingCommander2/vr.cfg` (`stick_sensitivity`, `stick_expo`, `stick_deadzone`, `dash_distance`; `cockpit3d=0` brings back the flat cockpit). Restart the game after editing.",
+        "Ships are the game's original sprites, so in 3D they are flat pictures at the right depth rather than models."
+      ],
+      "credits": "Based on [wc2-re](https://github.com/neuromancer/wc2-re), the Wing Commander II source reconstruction by neuromancer. Pictures: original 320x200 game captures from the [wc2-re](https://github.com/neuromancer/wc2-re) repository.",
+      "hero": "1-cockpit.jpg",
+      "data": [
+        {
+          "label": "Your Wing Commander II folder",
+          "kind": "folder",
+          "target": "/sdcard/WingCommander2",
+          "marker": "GAMEDAT/COCKPIT.VGA",
+          "include": [
+            "WC2.EXE",
+            "SO1.EXE",
+            "SO2.EXE",
+            "GAMEDAT"
+          ],
+          "hint": "the WING2 folder of the CD, or your installed game folder (the one with WC2.EXE and GAMEDAT)"
+        }
+      ]
+    },
+    {
       "slug": "xwingrevival",
       "name": "X-Wing Revival VR",
       "repo": "X-Wing-Revival-VR",

@@ -761,5 +761,26 @@
     }
    ]
   }
+ ],
+ "wc2-re-vr": [
+  {
+   "tag": "quest-vr-1.0.0",
+   "name": "Wing Commander II VR 1.0.0",
+   "date": "2026-10-21T20:04:00Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/wc2-re-vr/releases/tag/quest-vr-1.0.0",
+   "assets": [
+    {
+     "name": "WingCommanderIIVR-1.0.0.apk",
+     "size": 1707110,
+     "url": "https://github.com/SgtBilko76/wc2-re-vr/releases/download/quest-vr-1.0.0/WingCommanderIIVR-1.0.0.apk"
+    },
+    {
+     "name": "WingCommanderIIVR-1.0.0.zip",
+     "size": 1660974,
+     "url": "https://github.com/SgtBilko76/wc2-re-vr/releases/download/quest-vr-1.0.0/WingCommanderIIVR-1.0.0.zip"
+    }
+   ]
+  }
  ]
 }
