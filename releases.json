@@ -161,11 +161,6 @@
    "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/tag/v0.10.0-beta",
    "assets": [
     {
-     "name": "sd-adhoc-relay-linux-x86_64.tar.gz",
-     "size": 428974,
-     "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/v0.10.0-beta/sd-adhoc-relay-linux-x86_64.tar.gz"
-    },
-    {
      "name": "Speeddreams.0.10.0-beta.apk",
      "size": 232674984,
      "url": "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/v0.10.0-beta/Speeddreams.0.10.0-beta.apk"
@@ -742,6 +737,27 @@
      "name": "OpenXW-VR-v0.1.2-beta.apk",
      "size": 64536201,
      "url": "https://github.com/SgtBilko76/OpenXW-VR/releases/download/v0.1.2-beta/OpenXW-VR-v0.1.2-beta.apk"
+    }
+   ]
+  }
+ ],
+ "wc1-re-vr": [
+  {
+   "tag": "quest-vr-1.0.0",
+   "name": "Wing Commander VR 1.0.0",
+   "date": "2026-10-21T19:05:38Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/wc1-re-vr/releases/tag/quest-vr-1.0.0",
+   "assets": [
+    {
+     "name": "WingCommanderVR-1.0.0.apk",
+     "size": 1756214,
+     "url": "https://github.com/SgtBilko76/wc1-re-vr/releases/download/quest-vr-1.0.0/WingCommanderVR-1.0.0.apk"
+    },
+    {
+     "name": "WingCommanderVR-1.0.0.zip",
+     "size": 1709657,
+     "url": "https://github.com/SgtBilko76/wc1-re-vr/releases/download/quest-vr-1.0.0/WingCommanderVR-1.0.0.zip"
     }
    ]
   }
