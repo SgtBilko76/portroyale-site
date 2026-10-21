@@ -150,7 +150,7 @@ def fetch_releases(user, games):
 
 def seo_head(site, title, desc, path, image, ld):
     url = f"{site['url']}/{path}"
-    img = f"{site['url']}/{image}" if image else f"{site['url']}/images/site/logo.png"
+    img = f"{site['url']}/{image}" if image else f"{site['url']}/images/site/share.jpg"
     tags = [
         f'<link rel="canonical" href="{esc(url)}">',
         '<meta property="og:type" content="website">',
@@ -159,6 +159,7 @@ def seo_head(site, title, desc, path, image, ld):
         f'<meta property="og:description" content="{esc(desc)}">',
         f'<meta property="og:url" content="{esc(url)}">',
         f'<meta property="og:image" content="{esc(img)}">',
+        *(['<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">'] if not image else []),
         '<meta name="twitter:card" content="summary_large_image">',
     ]
     if ld:
