@@ -2876,6 +2876,104 @@
       ]
     },
     {
+      "slug": "ctr-turbocharged",
+      "name": "CTR: Turbocharged VR",
+      "repo": "CTR-Turbocharged-VR",
+      "category": "native",
+      "hero": "1-lava-race.jpg",
+      "tagline": "Crash Team Racing in real stereoscopic 3D, with you sitting right behind the kart.",
+      "about": [
+        "A VR port of [Crash Team Racing: Turbocharged](https://github.com/CameronRedmore/Crash-Team-Racing-Turbocharged), the native PC source port of the PlayStation classic. The game is not emulated and not shown on a virtual screen during races: every frame is drawn twice, once per eye, so the karts, tracks and power-ups have real depth around you.",
+        "You sit at the game's own chase camera and can look around freely with your head while the race goes on. The race HUD floats on its own panel in front of you; menus and split-screen show on a large virtual screen."
+      ],
+      "features": [
+        "True per-eye stereo 3D with head tracking in races, the Adventure hub and every other 1-player 3D scene",
+        "Race HUD (position, laps, Wumpa, map) on a panel fixed in the room",
+        "Track and scenery stay visible when you turn your head away from the driving line",
+        "60 fps gameplay on a 120 Hz display",
+        "Racing controls on the triggers, steering tuned for the Touch thumbstick",
+        "Adjustable world scale, HUD panel and steering sensitivity; 3D can be switched off for a flat screen"
+      ],
+      "needs": [
+        "Meta Quest (tested on Quest 3)",
+        "Your own *Crash Team Racing* disc image, NTSC-U (SCUS-94426), as a raw `.bin`"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r CTR-Turbocharged-VR-v0.1.0.apk`.",
+        "Rename your disc image to `ctr-u.bin` and copy it onto the headset into `CTR/assets/`, for example `adb push ctr-u.bin /sdcard/CTR/assets/ctr-u.bin`.",
+        "Launch it from *Library → Unknown Sources*. On the first start, allow file access, then start the app again."
+      ],
+      "controls": {
+        "columns": [
+          "Race",
+          "Touch"
+        ],
+        "rows": [
+          [
+            "Steer",
+            "Left stick"
+          ],
+          [
+            "Accelerate",
+            "Right trigger (or A)"
+          ],
+          [
+            "Brake / reverse",
+            "Left trigger (or X)"
+          ],
+          [
+            "Hop / power-slide",
+            "Right grip"
+          ],
+          [
+            "Turbo during a power-slide",
+            "Left grip (tap)"
+          ],
+          [
+            "Weapon",
+            "B"
+          ],
+          [
+            "Camera near / far",
+            "Right stick click"
+          ],
+          [
+            "Menus",
+            "Right stick, A to confirm, B to go back"
+          ],
+          [
+            "Pause",
+            "Left menu button"
+          ],
+          [
+            "Recentre the view",
+            "Both stick clicks, hold 1 s"
+          ]
+        ]
+      },
+      "controls_note": "The Touch controllers act as a PlayStation pad, so the game's own controller menu can remap the buttons.",
+      "notes": [
+        "This is the first release, tested on Quest 3.",
+        "Only the NTSC-U release (SCUS-94426) is supported. The APK contains no game data.",
+        "Split-screen multiplayer runs on the flat virtual screen, not in 3D.",
+        "The VR settings (3D on/off, world scale, HUD panel, steering) are in `/sdcard/CTR/vr.cfg` on the headset; the list is in the repository's README-QUEST.md."
+      ],
+      "credits": "Based on [Crash Team Racing: Turbocharged](https://github.com/CameronRedmore/Crash-Team-Racing-Turbocharged) by CameronRedmore, a fork of [CTR: High Octane](https://github.com/Rinnegatamante/Crash-Team-Racing-High-Octane) and the [ctr-native](https://github.com/CTR-tools/ctr-native) decompilation. Unofficial fan project, not affiliated with Sony, Activision or Naughty Dog. Pictures: captured on a Meta Quest 3.",
+      "data": [
+        {
+          "label": "Your Crash Team Racing disc image",
+          "kind": "files",
+          "target": "/sdcard/CTR/assets",
+          "names": [
+            "ctr-u.bin"
+          ],
+          "accept": ".bin",
+          "hint": "your NTSC-U disc image, renamed to ctr-u.bin"
+        }
+      ]
+    },
+    {
       "slug": "luanti",
       "name": "Luanti VR",
       "repo": "Luanti-VR",

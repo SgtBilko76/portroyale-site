@@ -782,5 +782,21 @@
     }
    ]
   }
+ ],
+ "CTR-Turbocharged-VR": [
+  {
+   "tag": "v0.1.0",
+   "name": "CTR: Turbocharged VR v0.1.0",
+   "date": "2026-10-22T11:39:34Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/CTR-Turbocharged-VR/releases/tag/v0.1.0",
+   "assets": [
+    {
+     "name": "CTR-Turbocharged-VR-v0.1.0.apk",
+     "size": 3698443,
+     "url": "https://github.com/SgtBilko76/CTR-Turbocharged-VR/releases/download/v0.1.0/CTR-Turbocharged-VR-v0.1.0.apk"
+    }
+   ]
+  }
  ]
 }
