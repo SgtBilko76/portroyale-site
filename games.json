@@ -44,7 +44,7 @@
       "tagline": "Real pinball tables in VR and mixed reality on Meta Quest 3 and PICO.",
       "about": [
         "Visual Pinball X standalone for **Meta Quest 3** (OpenXR, Vulkan), based on vpinball 10.8.1. Stand in front of real and original tables, with the cabinet and backglass around you, or play them in your own room with passthrough.",
-        "A **PICO build** is available as well, with controller support for PICO Neo 3, PICO 4 and PICO G3. It is brand new and **not tested on PICO hardware yet**: reports are very welcome."
+        "A **PICO build** is available as well, with controller support for PICO Neo 3, PICO 4 and PICO G3, and it installs on Android 10 (PICO 4, Neo 3). It is **not tested on PICO hardware yet**: reports are very welcome."
       ],
       "features": [
         "**Mixed Reality (passthrough):** see your real room around the table, switchable instantly while playing. The VR room of the table is hidden, so only the machine stands in your room",
@@ -56,11 +56,11 @@
         "The menu pauses the game"
       ],
       "needs": [
-        "Meta Quest 3 or a PICO headset",
+        "Meta Quest 3, or PICO 4 / Neo 3 (untested)",
         "Your own `.vpx` tables and ROMs"
       ],
       "install": [
-        "Sideload the APK for your headset with SideQuest or `adb install -r <apk>`: `VPinball-QuestVR-Beta-0.38.apk` for Meta Quest, `VPinball-PicoVR-Beta-0.5.apk` for PICO.",
+        "Sideload the APK for your headset with SideQuest or `adb install -r <apk>`: `VPinball-QuestVR-Beta-0.38.apk` for Meta Quest, `VPinball-PicoVR-Beta-0.6.apk` for PICO.",
         "Put each table in its own folder, with its ROMs next to it: `VPinball/tables/<Table name>/<table>.vpx` and `VPinball/tables/<Table name>/pinmame/roms/<rom>.zip`.",
         "Start VPinball (*Library → Unknown Sources*) and select the `VPinball/tables` folder in the settings."
       ],
