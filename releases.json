@@ -814,5 +814,21 @@
     }
    ]
   }
+ ],
+ "RVGL-VR": [
+  {
+   "tag": "v0.1.0",
+   "name": "RVGL-VR v0.1.0",
+   "date": "2026-10-23T21:03:17Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/RVGL-VR/releases/tag/v0.1.0",
+   "assets": [
+    {
+     "name": "RVGL-VR-v0.1.0.apk",
+     "size": 19886786,
+     "url": "https://github.com/SgtBilko76/RVGL-VR/releases/download/v0.1.0/RVGL-VR-v0.1.0.apk"
+    }
+   ]
+  }
  ]
 }
