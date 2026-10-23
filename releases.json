@@ -817,16 +817,16 @@
  ],
  "RVGL-VR": [
   {
-   "tag": "v0.1.0",
-   "name": "RVGL-VR v0.1.0",
-   "date": "2026-10-23T21:03:17Z",
+   "tag": "v0.1.1",
+   "name": "RVGL-VR v0.1.1",
+   "date": "2026-10-23T21:22:47Z",
    "prerelease": false,
-   "url": "https://github.com/SgtBilko76/RVGL-VR/releases/tag/v0.1.0",
+   "url": "https://github.com/SgtBilko76/RVGL-VR/releases/tag/v0.1.1",
    "assets": [
     {
-     "name": "RVGL-VR-v0.1.0.apk",
-     "size": 19886786,
-     "url": "https://github.com/SgtBilko76/RVGL-VR/releases/download/v0.1.0/RVGL-VR-v0.1.0.apk"
+     "name": "RVGL-VR-v0.1.1.apk",
+     "size": 19887482,
+     "url": "https://github.com/SgtBilko76/RVGL-VR/releases/download/v0.1.1/RVGL-VR-v0.1.1.apk"
     }
    ]
   }
