@@ -2724,6 +2724,107 @@
       "credits": "Based on [Speed Dreams](https://www.speed-dreams.net/). Picture (desktop version): [Ocirne94](https://commons.wikimedia.org/wiki/File:Speed_Dreams_car_with_headlamps_on_and_glowing_brake_disk.jpg), CC BY-SA 3.0. Picture 4: captured on a Meta Quest 3."
     },
     {
+      "slug": "rvgl",
+      "hero": "2-jungle-kobra-king.jpg",
+      "name": "RVGL VR",
+      "repo": "RVGL-VR",
+      "category": "full",
+      "tagline": "Re-Volt, the 1999 R/C car racer, in VR: standalone on Meta Quest.",
+      "about": [
+        "A standalone VR port of **Re-Volt** for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3), built on the official Android build of [RVGL](https://rvgl.org), the community's modern Re-Volt engine. A native OpenXR host puts the menus on a big virtual screen and renders the races in head-tracked stereo 3D.",
+        "No game content is included in the APK. On first launch the app downloads the Re-Volt game files and soundtrack from [Re-Volt I/O](https://re-volt.io), plus the [RV 25th Anniversary pack](https://www.revoltworld.net/dl/rv25-pack/) from Re-Volt World, and installs them for you."
+      ],
+      "features": [
+        "Races in head-tracked stereo 3D at 72 Hz: look around the track from the car",
+        "HUD on a floating panel in front of you; menus on a big virtual screen",
+        "Touch controller layout set up automatically for every new profile, and still changeable in RVGL's own controller settings",
+        "All 19 original tracks plus the RV25 pack's 13 tracks and 14 cars",
+        "Downloads and installs the free game data on first launch: no file copying",
+        "Hold both stick clicks for 1 s to re-centre the view"
+      ],
+      "needs": [
+        "Meta Quest 2 / Pro / 3 / 3S",
+        "Wi-Fi for the one-time download (about 225 MB, 500 MB on the headset), or your own RVGL data in `/sdcard/RVGL`"
+      ],
+      "install": [
+        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r RVGL-VR-v0.1.0.apk`.",
+        "Launch **RVGL VR** from *Unknown Sources*. A setup panel opens: press **Allow file access**, switch it on and press *Done*.",
+        "Press **Download and install**. The game files, soundtrack and RV25 pack are fetched from the official sources and installed (Wi-Fi needed, a minute or two), and then the game starts by itself.",
+        "Create your profile: turn the wheel with the left stick and press **A** for each letter, then turn to **END** and press **A**.",
+        "Already have RVGL data, for example from the Android version? Copy it to `/sdcard/RVGL` before the first launch, and the packs that are present are not downloaded again."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Race",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Steer",
+            "Move / turn the name wheel"
+          ],
+          [
+            "Right trigger",
+            "Accelerate",
+            ""
+          ],
+          [
+            "Left trigger",
+            "Brake / reverse",
+            ""
+          ],
+          [
+            "A",
+            "Fire weapon",
+            "Select / add letter"
+          ],
+          [
+            "B",
+            "Reset car",
+            "Back"
+          ],
+          [
+            "X",
+            "Reposition car",
+            ""
+          ],
+          [
+            "Y",
+            "Change camera",
+            ""
+          ],
+          [
+            "Right grip",
+            "Rear view",
+            ""
+          ],
+          [
+            "Right stick click",
+            "Horn",
+            ""
+          ],
+          [
+            "Left menu button",
+            "Pause",
+            "Back"
+          ],
+          [
+            "Both stick clicks, hold 1 s",
+            "Re-centre the view",
+            "Re-centre the view"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers.",
+      "notes": [
+        "Single player only for now: split-screen and online play are untested in VR.",
+        "Menus are on the flat virtual screen; only the races are in 3D."
+      ],
+      "credits": "Built on [RVGL](https://rvgl.org) by the RVGL team (redistributable engine, CC BY-NC-SA 4.0). Re-Volt is © Acclaim / WeGo Interactive; game data and soundtrack from [Re-Volt I/O](https://re-volt.io). RV 25th Anniversary pack by the Re-Volt community, compiled by Crimson Fury ([Re-Volt World](https://www.revoltworld.net/dl/rv25-pack/)). This port is unofficial and not affiliated with the RVGL team or WeGo Interactive. Logo: RVGL. Pictures 2–5: captured on a Meta Quest 3; pictures 6–9: [rvgl.org](https://rvgl.org/#screenshots)."
+    },
+    {
       "slug": "starship",
       "name": "Starship-VR",
       "repo": "Starship-VR",
