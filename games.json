@@ -2824,7 +2824,7 @@
         "Menus are on the flat virtual screen; only the races are in 3D.",
         "PICO needs PICO OS 5.9.0 or newer. The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s RVGLQuest:*` shows how far it gets, which is the useful thing to paste in."
       ],
-      "credits": "Built on [RVGL](https://rvgl.org) by the RVGL team (redistributable engine, CC BY-NC-SA 4.0). Re-Volt is © Acclaim / WeGo Interactive; game data and soundtrack from [Re-Volt I/O](https://re-volt.io). RV 25th Anniversary pack by the Re-Volt community, compiled by Crimson Fury ([Re-Volt World](https://www.revoltworld.net/dl/rv25-pack/)). This port is unofficial and not affiliated with the RVGL team or WeGo Interactive. Logo: RVGL. Pictures 2–5: captured on a Meta Quest 3; pictures 6–9: [rvgl.org](https://rvgl.org/#screenshots)."
+      "credits": "Built on [RVGL](https://rvgl.org) by the RVGL team (redistributable engine, CC BY-NC-SA 4.0). Re-Volt is © Acclaim / WeGo Interactive; game data and soundtrack from [Re-Volt I/O](https://re-volt.io). RV 25th Anniversary pack by the Re-Volt community, compiled by Crimson Fury ([Re-Volt World](https://www.revoltworld.net/dl/rv25-pack/)). This port is unofficial and not affiliated with the RVGL team or WeGo Interactive. Logo: RVGL. Pictures 2–4: captured on a Meta Quest 3; pictures 5–8: [rvgl.org](https://rvgl.org/#screenshots)."
     },
     {
       "slug": "starship",
