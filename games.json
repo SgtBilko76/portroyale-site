@@ -2080,6 +2080,125 @@
       "controls_note": "Button names are those of the Meta Quest controllers, PICO controllers use the same layout. The weapon points where the aiming hand points. Set `cl_righthanded 0` to aim with the left hand."
     },
     {
+      "slug": "urbanterror",
+      "hero": "1-courtyard.jpg",
+      "name": "UrbanTerror4-VR",
+      "repo": "UrbanTerror4-VR",
+      "category": "full",
+      "tagline": "The free tactical shooter Urban Terror 4.3 in VR, standalone on Meta Quest and PICO.",
+      "about": [
+        "A standalone 6DoF VR port of **Urban Terror 4.3** for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3) and PICO 4 / Neo 3. It is built on Team Beef's [ioq3quest](https://github.com/Team-Beef-Studios/ioq3quest), with the VR handling modelled on QuakeQuest.",
+        "[Urban Terror](https://www.urbanterror.info/) is a free multiplayer shooter by FrozenSand, a \"Hollywood tactical shooter\": somewhat realism based, but the motto is \"fun over realism\". The game data is not inside the APK: the app downloads the free Urban Terror 4.3.4 from FrozenSand's official server on first launch.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
+      ],
+      "features": [
+        "Head tracking with your real eye height, aiming with the right controller and a 3D crosshair",
+        "Visible hands: the right hand holds the gun, the left arm follows the left controller",
+        "HUD on a panel that follows your view",
+        "Menus on a curved screen with a laser pointer",
+        "Virtual keyboard for your player name, passwords and chat",
+        "Online play with the game's own server browser, or offline matches against bots",
+        "Downloads and installs the free game from FrozenSand on first launch: no file copying"
+      ],
+      "needs": [
+        "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
+        "Wi-Fi for the one-time game download (1.4 GB, free from [FrozenSand](https://www.urbanterror.info/downloads/)) and about 3 GB of free space while it installs, or your own Urban Terror 4.3.4 files"
+      ],
+      "install": [
+        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r UrbanTerror4-VR-v1.0.0.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Launch **UrbanTerror4-VR** from *Unknown Sources* and grant \"All files access\".",
+        "On first launch a panel offers to download Urban Terror 4.3.4 (1.4 GB) from FrozenSand's official server. Press **I agree - download and install**: the app checks the download, installs it to `/sdcard/UrTQuest/q3ut4` and starts the game (Wi-Fi needed, a few minutes). An interrupted download continues where it stopped.",
+        "Already have Urban Terror 4.3.4? Copy its `q3ut4` folder to `/sdcard/UrTQuest/` before the first launch (leave out `q3config.cfg`) and the download is skipped."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Right grip",
+            "Reload"
+          ],
+          [
+            "Right stick up / down",
+            "Next / previous weapon"
+          ],
+          [
+            "Right stick left / right",
+            "Snap-turn"
+          ],
+          [
+            "Right stick click",
+            "Bandage"
+          ],
+          [
+            "B",
+            "Jump"
+          ],
+          [
+            "A",
+            "Crouch"
+          ],
+          [
+            "X",
+            "Fire mode"
+          ],
+          [
+            "Y (hold)",
+            "Scoreboard"
+          ],
+          [
+            "Left trigger",
+            "Use: doors, defuse the bomb, pick up"
+          ],
+          [
+            "Left stick",
+            "Move"
+          ],
+          [
+            "Left stick click (hold)",
+            "Sprint"
+          ],
+          [
+            "Left grip",
+            "Steady the weapon"
+          ],
+          [
+            "Menus",
+            "Point with the right controller, trigger = click"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. Buttons can be remapped in `/sdcard/UrTQuest/q3ut4/autoexec.cfg`.",
+      "notes": [
+        "Servers that require an Urban Terror account login are not supported yet; all other servers in the list work.",
+        "Your player name starts as `QuestPlayer`: change it in the player setup (click the name field to open the keyboard).",
+        "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub."
+      ],
+      "credits": "Based on [ioq3quest](https://github.com/Team-Beef-Studios/ioq3quest) by Team Beef and [ioquake3](https://ioquake3.org/). Urban Terror © FrozenSand Games Limited; the game data is downloaded from FrozenSand and not redistributed by this project, which is not affiliated with FrozenSand. Pictures 1–4: captured on a Meta Quest 3; pictures 5–8: [urbanterror.info](https://www.urbanterror.info/home/).",
+      "data": [
+        {
+          "label": "Your Urban Terror 4.3.4 files",
+          "kind": "folder",
+          "target": "/sdcard/UrTQuest",
+          "marker": "q3ut4/zUrT43_qvm.pk3",
+          "include": [
+            "q3ut4"
+          ],
+          "exclude": [
+            "q3ut4/q3config.cfg",
+            "q3ut4/autoexec.cfg"
+          ],
+          "hint": "your Urban Terror folder (the one with q3ut4 inside)"
+        }
+      ]
+    },
+    {
       "slug": "supertuxkart",
       "name": "SuperTuxKart VR",
       "repo": "SuperTuxKart-VR",

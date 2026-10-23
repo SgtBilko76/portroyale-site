@@ -798,5 +798,21 @@
     }
    ]
   }
+ ],
+ "UrbanTerror4-VR": [
+  {
+   "tag": "v1.0.0",
+   "name": "UrbanTerror4-VR 1.0.0",
+   "date": "2026-10-23T15:28:36Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/UrbanTerror4-VR/releases/tag/v1.0.0",
+   "assets": [
+    {
+     "name": "UrbanTerror4-VR-v1.0.0.apk",
+     "size": 11207881,
+     "url": "https://github.com/SgtBilko76/UrbanTerror4-VR/releases/download/v1.0.0/UrbanTerror4-VR-v1.0.0.apk"
+    }
+   ]
+  }
  ]
 }
