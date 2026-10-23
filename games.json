@@ -2729,10 +2729,11 @@
       "name": "RVGL VR",
       "repo": "RVGL-VR",
       "category": "full",
-      "tagline": "Re-Volt, the 1999 R/C car racer, in VR: standalone on Meta Quest.",
+      "tagline": "Re-Volt, the 1999 R/C car racer, in VR: standalone on Meta Quest and PICO.",
       "about": [
-        "A standalone VR port of **Re-Volt** for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3), built on the official Android build of [RVGL](https://rvgl.org), the community's modern Re-Volt engine. A native OpenXR host puts the menus on a big virtual screen and renders the races in head-tracked stereo 3D.",
-        "No game content is included in the APK. On first launch the app downloads the Re-Volt game files and soundtrack from [Re-Volt I/O](https://re-volt.io), plus the [RV 25th Anniversary pack](https://www.revoltworld.net/dl/rv25-pack/) from Re-Volt World, and installs them for you."
+        "A standalone VR port of **Re-Volt** for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3) and PICO 4 / Neo 3, built on the official Android build of [RVGL](https://rvgl.org), the community's modern Re-Volt engine. A native OpenXR host puts the menus on a big virtual screen and renders the races in head-tracked stereo 3D.",
+        "No game content is included in the APK. On first launch the app downloads the Re-Volt game files and soundtrack from [Re-Volt I/O](https://re-volt.io), plus the [RV 25th Anniversary pack](https://www.revoltworld.net/dl/rv25-pack/) from Re-Volt World, and installs them for you.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "Races in head-tracked stereo 3D at 72 Hz: look around the track from the car",
@@ -2743,11 +2744,11 @@
         "Hold both stick clicks for 1 s to re-centre the view"
       ],
       "needs": [
-        "Meta Quest 2 / Pro / 3 / 3S",
+        "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
         "Wi-Fi for the one-time download (about 225 MB, 500 MB on the headset), or your own RVGL data in `/sdcard/RVGL`"
       ],
       "install": [
-        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r RVGL-VR-v0.1.0.apk`.",
+        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r RVGL-VR-v0.1.1.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Launch **RVGL VR** from *Unknown Sources*. A setup panel opens: press **Allow file access**, switch it on and press *Done*.",
         "Press **Download and install**. The game files, soundtrack and RV25 pack are fetched from the official sources and installed (Wi-Fi needed, a minute or two), and then the game starts by itself.",
         "Create your profile: turn the wheel with the left stick and press **A** for each letter, then turn to **END** and press **A**.",
@@ -2817,10 +2818,11 @@
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers.",
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
       "notes": [
         "Single player only for now: split-screen and online play are untested in VR.",
-        "Menus are on the flat virtual screen; only the races are in 3D."
+        "Menus are on the flat virtual screen; only the races are in 3D.",
+        "PICO needs PICO OS 5.9.0 or newer. The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s RVGLQuest:*` shows how far it gets, which is the useful thing to paste in."
       ],
       "credits": "Built on [RVGL](https://rvgl.org) by the RVGL team (redistributable engine, CC BY-NC-SA 4.0). Re-Volt is © Acclaim / WeGo Interactive; game data and soundtrack from [Re-Volt I/O](https://re-volt.io). RV 25th Anniversary pack by the Re-Volt community, compiled by Crimson Fury ([Re-Volt World](https://www.revoltworld.net/dl/rv25-pack/)). This port is unofficial and not affiliated with the RVGL team or WeGo Interactive. Logo: RVGL. Pictures 2–5: captured on a Meta Quest 3; pictures 6–9: [rvgl.org](https://rvgl.org/#screenshots)."
     },
