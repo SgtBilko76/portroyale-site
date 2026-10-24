@@ -1181,27 +1181,29 @@
       "name": "Wing Commander VR",
       "repo": "wc1-re-vr",
       "category": "native",
-      "tagline": "The 1990 space combat classic Wing Commander in stereo 3D, standalone on Meta Quest.",
+      "tagline": "The 1990 space combat classic Wing Commander in stereo 3D, standalone on Meta Quest and PICO.",
       "about": [
-        "A VR port of *Wing Commander*, running standalone on [wc1-re](https://github.com/neuromancer/wc1-re), the source reconstruction of the DOS original. In flight, space is rendered in stereo around you: Kilrathi fighters, missiles and capital ships sit at their real distance, stars stay fixed at infinity, and you can look around freely. You sit in a 3D cockpit built from the original cockpit art, with live gauges, radar and HUD. The Tiger's Claw, the bar, briefings and cutscenes play on a big virtual screen. Bring your own copy of the game from GOG."
+        "A VR port of *Wing Commander*, running standalone on [wc1-re](https://github.com/neuromancer/wc1-re), the source reconstruction of the DOS original. In flight, space is rendered in stereo around you: Kilrathi fighters, missiles and capital ships sit at their real distance, stars stay fixed at infinity, and you can look around freely. You sit in a 3D cockpit built from the original cockpit art, with live gauges, radar and HUD. The Tiger's Claw, the bar, briefings and cutscenes play on a big virtual screen. Bring your own copy of the game from GOG.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "Head-tracked stereo 3D space in flight, ships at their real depth",
         "3D cockpit made from the original cockpit art, with live gauges, radar and targeting display",
         "Reticle and target brackets lined up with the ships",
         "Full flight control on the Touch controllers, with a soft centre for precise aiming",
+        "Runs on PICO 4 / Neo 3 too, from the same APK (untested)",
         "Laser pointer for the menus, A/B answer Yes/No prompts",
         "VR keyboard for your pilot name and callsign",
         "Settings file for stick response and cockpit distance"
       ],
       "needs": [
-        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested), or PICO 4 / Neo 3 (untested)",
         "Your own copy of *Wing Commander* (DOS, [GOG](https://www.gog.com/game/wing_commander)), about 8 MB of game files"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r WingCommanderVR-1.0.0.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r WingCommanderVR-1.0.1.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "From your GOG *Wing Commander* folder, copy `WC.EXE`, `SM2.EXE` and the `GAMEDAT` folder to `/sdcard/WingCommander` on the headset. Without Windows, the GOG offline installer unpacks with [innoextract](https://constexpr.org/innoextract/).",
-        "Start **Wing Commander VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+        "Start **Wing Commander VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
       ],
       "controls": {
         "columns": [
@@ -1272,9 +1274,10 @@
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers. Point the laser at the screen and pull either trigger to click; the hand that pulls last aims.",
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. Point the laser at the screen and pull either trigger to click; the hand that pulls last aims.",
       "notes": [
         "The APK contains no game data: you need your own copy of the game.",
+        "PICO needs PICO OS 5.9.0 or newer. The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s WC1VR:*` shows how far it gets, which is the useful thing to paste in.",
         "Stick response and cockpit distance can be tuned in `/sdcard/WingCommander/vr.cfg` (`stick_sensitivity`, `stick_expo`, `stick_deadzone`, `dash_distance`; `cockpit3d=0` brings back the flat cockpit). Restart the game after editing.",
         "Ships are the game's original sprites, so in 3D they are flat pictures at the right depth rather than models."
       ],
@@ -1300,26 +1303,28 @@
       "name": "Wing Commander II VR",
       "repo": "wc2-re-vr",
       "category": "native",
-      "tagline": "Wing Commander II: Vengeance of the Kilrathi in stereo 3D, standalone on Meta Quest.",
+      "tagline": "Wing Commander II: Vengeance of the Kilrathi in stereo 3D, standalone on Meta Quest and PICO.",
       "about": [
-        "A VR port of *Wing Commander II: Vengeance of the Kilrathi*, running standalone on [wc2-re](https://github.com/neuromancer/wc2-re), the source reconstruction of the game. In flight, space is rendered in stereo around you: Kilrathi fighters, missiles and capital ships sit at their real distance, stars stay fixed at infinity, and you can look around freely. You sit in a 3D cockpit built from the original cockpit art, with live displays and HUD. Briefings, cutscenes and the menus play on a big virtual screen. Bring your own copy of the game."
+        "A VR port of *Wing Commander II: Vengeance of the Kilrathi*, running standalone on [wc2-re](https://github.com/neuromancer/wc2-re), the source reconstruction of the game. In flight, space is rendered in stereo around you: Kilrathi fighters, missiles and capital ships sit at their real distance, stars stay fixed at infinity, and you can look around freely. You sit in a 3D cockpit built from the original cockpit art, with live displays and HUD. Briefings, cutscenes and the menus play on a big virtual screen. Bring your own copy of the game.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "Head-tracked stereo 3D space in flight, ships at their real depth",
         "3D cockpit made from the original cockpit art, with live displays and targeting",
         "Reticle and target brackets lined up with the ships",
         "Full flight control on the Touch controllers, with a soft centre for precise aiming",
+        "Runs on PICO 4 / Neo 3 too, from the same APK (untested)",
         "Laser pointer for the menus, VR keyboard for your pilot name and callsign",
         "Settings file for stick response and cockpit distance"
       ],
       "needs": [
-        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested), or PICO 4 / Neo 3 (untested)",
         "Your own copy of *Wing Commander II* (the DOS CD-ROM edition with Special Operations 1 and 2 is tested; *Kilrathi Saga* data should also work), about 26 MB of game files"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r WingCommanderIIVR-1.0.0.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r WingCommanderIIVR-1.0.1.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Copy `WC2.EXE` and the `GAMEDAT` folder (the `WING2` folder of the CD, or your installed game folder) to `/sdcard/WingCommander2` on the headset.",
-        "Start **Wing Commander II VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+        "Start **Wing Commander II VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
       ],
       "controls": {
         "columns": [
@@ -1390,9 +1395,10 @@
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers. Point the laser at the screen and pull either trigger to click; the hand that pulls last aims.",
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. Point the laser at the screen and pull either trigger to click; the hand that pulls last aims.",
       "notes": [
         "The APK contains no game data: you need your own copy of the game.",
+        "PICO needs PICO OS 5.9.0 or newer. The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s WC2VR:*` shows how far it gets, which is the useful thing to paste in.",
         "To land, target your carrier (A), open comms (left grip + X), pick it and *request landing*, then fly in at normal speed. Clearance is only given once you've done something in the mission and no Kilrathi are close.",
         "With the DOS CD-ROM data the game plays AdLib music and synthesized sound effects, as the DOS original did.",
         "Stick response and cockpit distance can be tuned in `/sdcard/WingCommander2/vr.cfg` (`stick_sensitivity`, `stick_expo`, `stick_deadzone`, `dash_distance`; `cockpit3d=0` brings back the flat cockpit). Restart the game after editing.",
