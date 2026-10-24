@@ -1053,9 +1053,10 @@
       "name": "FreeSpace 2 VR",
       "repo": "FreeSpace2-VR",
       "category": "native",
-      "tagline": "The space combat classic FreeSpace 2 in stereo 3D, standalone on Meta Quest.",
+      "tagline": "The space combat classic FreeSpace 2 in stereo 3D, standalone on Meta Quest and PICO.",
       "about": [
-        "A VR port of *FreeSpace 2*, running standalone on the [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) engine. Space is rendered in stereo around you, the HUD floats in front of your ship and lines up with your guns, and the menus, briefings and cutscenes play on a big virtual screen. Bring your own copy of the game from GOG or Steam."
+        "A VR port of *FreeSpace 2*, running standalone on the [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) engine. Space is rendered in stereo around you, the HUD floats in front of your ship and lines up with your guns, and the menus, briefings and cutscenes play on a big virtual screen. Bring your own copy of the game from GOG or Steam.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "Head-tracked stereo 3D space in flight",
@@ -1065,17 +1066,18 @@
         "Chase view behind your ship",
         "Full lighting with ship shine, environment reflections and anti-aliasing",
         "Laser pointer for the menus, skippable cutscenes",
-        "Laser keyboard for typing your pilot callsign"
+        "Laser keyboard for typing your pilot callsign",
+        "Runs on PICO 4 / Neo 3 too, from the same APK (untested)"
       ],
       "needs": [
-        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested), or PICO 4 / Neo 3 (untested)",
         "Your own copy of FreeSpace 2 ([GOG](https://www.gog.com/game/freespace_2) or [Steam](https://store.steampowered.com/app/273620/)), about 1.8 GB of game files"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.1-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.2-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Copy your game files to `/sdcard/FS2` on the headset: from your GOG or Steam install folder, the nine `.vp` files (`root_fs2.vp` … `warble_fs2.vp`) and the folders `data2` and `data3` (cutscenes). The app moves the cutscenes into place on the first start.",
         "Or, on a PC with Python 3 and the Quest on USB: [get_fs2_data.py](https://github.com/SgtBilko76/FreeSpace2-VR/blob/fs2-vr/tools/quest/get_fs2_data.py) (`python3 get_fs2_data.py <game folder or GOG setup_freespace_2_*.exe> --push`) copies them for you; the GOG offline installer is unpacked with [innoextract](https://constexpr.org/innoextract/).",
-        "Start **FreeSpace 2 VR** from *Unknown Sources* and allow \"access to all files\" when asked."
+        "Start **FreeSpace 2 VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
       ],
       "controls": {
         "columns": [
@@ -1151,13 +1153,13 @@
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers. In the comms menu, left stick up/down picks an order, A or a trigger confirms it and Y closes the menu. Every flight binding can be changed in *Options → Controls*; \"Reset to default\" brings this layout back.",
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. In the comms menu, left stick up/down picks an order, A or a trigger confirms it and Y closes the menu. Every flight binding can be changed in *Options → Controls*; \"Reset to default\" brings this layout back.",
       "notes": [
         "The APK contains no game data; you need your own copy of FreeSpace 2.",
         "Flight runs below the headset's refresh rate; menus run at full speed.",
         "Shadows are off by default to keep the frame rate up; you can turn them on in *Options → Graphics → Shadow Quality*.",
         "There is no 3D cockpit: FreeSpace 2 has no cockpit models.",
-        "Tested on Meta Quest 3 only."
+        "Tested on Meta Quest 3 only. PICO needs PICO OS 5.9.0 or newer and is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s FS2VR:* QuestVR:*` shows how far it gets, which is the useful thing to paste in."
       ],
       "credits": "FreeSpace 2 by Volition; [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) by the Source Code Project. Picture 1: captured on a Meta Quest 3; pictures 2–5: [GOG.com](https://www.gog.com/game/freespace_2).",
       "hero": "1-nebula-training.jpg",
