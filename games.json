@@ -2577,6 +2577,99 @@
       "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout (the grip buttons stand in for Quest's analog grips). Everything can be rebound in *Options → Define Buttons*."
     },
     {
+      "slug": "lionheart",
+      "name": "Lionheart 3D",
+      "repo": "lionheart-remake-vr",
+      "category": "full",
+      "tagline": "Thalion's Amiga classic in stereoscopic 3D, standalone on Meta Quest.",
+      "about": [
+        "[Lionheart Remake](https://github.com/b3dgs/lionheart-remake), Byron 3D Games Studio's faithful remake of Thalion's 1993 Amiga platformer, running on Meta Quest as a VR app. You play Valdyn, the lionheart, on his quest to save the kingdom: swamps, spider caves, the underworld, an ancient town, lava fields, an airship, dragonfly flights and the tower of Norka.",
+        "The famous parallax backgrounds become real depth: the sky hangs far away, the middle layers sit in between, the scrolling ground runs tilted into the distance, and the playfield with Valdyn floats on a large curved screen in front of you, with water, lava and the HUD closer still.",
+        "Press the left stick to swap the game's skies for your own room in passthrough. The whole game is inside the APK, so there is nothing else to copy."
+      ],
+      "features": [
+        "Stereoscopic 3D: every parallax layer at its own depth",
+        "Large curved screen around you (2.6 m wide at 2.2 m)",
+        "Passthrough mode on the left stick click, remembered between starts",
+        "Smoothed pixel art (edge-directed 4x upscaling) and sharpening",
+        "72 FPS, Touch controllers mapped onto the game's own gamepad support",
+        "Screen size, curve, 3D depth and smoothing adjustable in a settings file",
+        "Complete game inside the APK"
+      ],
+      "needs": [
+        "Meta Quest 2 / Pro / 3 / 3S (Quest 3 tested)"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK below.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Lionheart-3D-v0.1.0-beta.apk`.",
+        "Launch *Lionheart 3D* from *Library → Unknown Sources*."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "In game",
+          "In menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Move Valdyn",
+            "Choose an entry / change a value"
+          ],
+          [
+            "Left stick click",
+            "Passthrough on / off",
+            "Passthrough on / off"
+          ],
+          [
+            "A",
+            "Attack",
+            "Confirm"
+          ],
+          [
+            "B",
+            "Jump",
+            "–"
+          ],
+          [
+            "Y",
+            "Pause",
+            "–"
+          ],
+          [
+            "X",
+            "Quit",
+            "Back"
+          ],
+          [
+            "Left grip",
+            "Player list",
+            "–"
+          ],
+          [
+            "Right grip",
+            "Cheat menu",
+            "–"
+          ],
+          [
+            "Left trigger",
+            "Page down",
+            "–"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers. The right stick is not used.",
+      "notes": [
+        "This is the first public beta, tested on Quest 3. Please report problems on GitHub.",
+        "Settings: copy [vr.cfg.example](https://github.com/SgtBilko76/lionheart-remake-vr/blob/quest-vr/java/lionheart-quest/vr.cfg.example) to `/sdcard/Android/data/com.b3dgs.lionheart.quest/files/vr.cfg` to change screen size and distance, curve, 3D depth, smoothing and sharpening.",
+        "The APK is signed with a debug key (sideload only).",
+        "Lionheart Remake is licensed GPL-3.0; the Quest port is GPL-3.0 too."
+      ],
+      "credits": "Based on [Lionheart Remake](https://github.com/b3dgs/lionheart-remake) and LionEngine by Pierre-Alexandre / [Byron 3D Games Studio](https://lionheart.b3dgs.com), GPL-3.0. Original *Lionheart* © 1993 Thalion Software. OpenXR host modelled on [QuakeQuest](https://github.com/DrBeef/QuakeQuest). Pictures: desktop screenshots from the [Lionheart Remake website](https://lionheart.b3dgs.com/Screenshots.html).",
+      "hero": "1-swamp.jpg"
+    },
+    {
       "slug": "neverball",
       "name": "Neverball & Neverputt VR",
       "repo": "Neverball-and-Neverputt-QuestVR",
