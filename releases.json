@@ -830,5 +830,21 @@
     }
    ]
   }
+ ],
+ "OpenArena-VR": [
+  {
+   "tag": "v1.0.0",
+   "name": "OpenArena-VR 1.0.0",
+   "date": "2026-10-25T09:33:41Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/OpenArena-VR/releases/tag/v1.0.0",
+   "assets": [
+    {
+     "name": "OpenArena-VR-v1.0.0.apk",
+     "size": 420505520,
+     "url": "https://github.com/SgtBilko76/OpenArena-VR/releases/download/v1.0.0/OpenArena-VR-v1.0.0.apk"
+    }
+   ]
+  }
  ]
 }

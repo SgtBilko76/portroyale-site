@@ -2207,6 +2207,96 @@
       ]
     },
     {
+      "slug": "openarena",
+      "hero": "1-gargoyle.jpg",
+      "name": "OpenArena-VR",
+      "repo": "OpenArena-VR",
+      "category": "full",
+      "tagline": "The free arena shooter OpenArena in VR, standalone on Meta Quest.",
+      "about": [
+        "A standalone 6DoF VR port of **OpenArena 0.8.8** for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3). It is built on Team Beef's [ioq3quest](https://github.com/Team-Beef-Studios/ioq3quest) (Quake3Quest), merged with OpenArena's own open-source game code.",
+        "[OpenArena](https://openarena.ws/) is a free, open-source arena shooter in the style of Quake III Arena, with its own maps, characters and weapons. The whole game is inside the APK: no PC, no extra download and no files to copy.",
+        "Play offline against bots, or online on the real OpenArena servers, including pure servers and mod servers."
+      ],
+      "features": [
+        "The full OpenArena 0.8.8: all maps, characters, weapons and game modes",
+        "Aiming with the right controller, weapon wheel, snap turning and comfort options",
+        "3D crosshair coloured by your health",
+        "Single player and skirmish matches against bots",
+        "Online play on the official OpenArena server list, with automatic download of missing maps and mod files (ratmod, Clan Arena, freeze tag, defrag, ...)",
+        "Virtual keyboard for your player name and other text fields"
+      ],
+      "needs": [
+        "Meta Quest 2 / Pro / 3 / 3S",
+        "About 1 GB of free space (the 420 MB APK plus the unpacked game data)"
+      ],
+      "install": [
+        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r OpenArena-VR-v1.0.0.apk`.",
+        "Launch **OpenArena-VR** from *Unknown Sources* and allow file access.",
+        "The first start unpacks the game data to `/sdcard/OpenArenaVR/` (about a minute), then the main menu opens."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Right trigger",
+            "Fire"
+          ],
+          [
+            "Right grip (hold)",
+            "Weapon wheel: point at a weapon, release"
+          ],
+          [
+            "Right stick left / right",
+            "Snap-turn"
+          ],
+          [
+            "A / left trigger",
+            "Jump"
+          ],
+          [
+            "B",
+            "Crouch"
+          ],
+          [
+            "X",
+            "Use item"
+          ],
+          [
+            "Y",
+            "Gesture"
+          ],
+          [
+            "Left stick",
+            "Move"
+          ],
+          [
+            "Left stick click",
+            "Scoreboard"
+          ],
+          [
+            "Left grip",
+            "Steady the weapon with both hands"
+          ],
+          [
+            "Menus",
+            "Point with the controller, trigger = click"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers. Other layouts (weapon wheel on the stick, next / previous weapon) and the comfort settings are in the VR options of the menu.",
+      "notes": [
+        "Online: Multiplayer, set the source to **Internet** and press Refresh. Servers running a mod download its files before you join (ratmod is about 100 MB); the screen shows \"0 of 0 bytes\" for a few seconds before the progress appears. Downloaded files are kept, so the next join is fast.",
+        "Mod servers run with the built-in VR game code: the mod's maps, textures and sounds work, special mod rules or HUD features may not. Plain OpenArena servers are the most reliable.",
+        "Some servers turn away players with a high ping, e.g. US servers when you play from Europe.",
+        "The APK is signed with a debug key."
+      ],
+      "credits": "Based on [ioq3quest](https://github.com/Team-Beef-Studios/ioq3quest) by Team Beef, [ioquake3](https://ioquake3.org/) and [OpenArena](https://openarena.ws/) by the OpenArena team (engine, game code and game data, GPL). Not affiliated with id Software, Team Beef or the OpenArena team. Pictures (desktop version) via Wikimedia Commons, GPL: OpenArena developers / [VaLouille](https://commons.wikimedia.org/wiki/File:OpenArena-Gargoyle.jpg), [Drummyfish](https://commons.wikimedia.org/wiki/File:OpenArena_0.8.8_rocket.jpg)."
+    },
+    {
       "slug": "supertuxkart",
       "name": "SuperTuxKart VR",
       "repo": "SuperTuxKart-VR",
