@@ -2101,7 +2101,9 @@
       ],
       "features": [
         "Head tracking with your real eye height, aiming with the right controller and a 3D crosshair",
-        "Visible hands: the right hand holds the gun, the left arm follows the left controller",
+        "Visible hands: the right hand holds the gun, the left hand follows the left controller or grabs the front grip for two-handed aiming",
+        "Every weapon at its real size and shape, solid from all sides, its barrel lined up with the crosshair",
+        "Scope zoom that follows your hand, with the game's own scope reticle",
         "HUD on a panel that follows your view",
         "Menus on a curved screen with a laser pointer",
         "Virtual keyboard for your player name, passwords and chat",
@@ -2113,7 +2115,7 @@
         "Wi-Fi for the one-time game download (1.4 GB, free from [FrozenSand](https://www.urbanterror.info/downloads/)) and about 3 GB of free space while it installs, or your own Urban Terror 4.3.4 files"
       ],
       "install": [
-        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r UrbanTerror4-VR-v1.0.0.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Sideload the APK with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r UrbanTerror4-VR-v1.0.1.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Launch **UrbanTerror4-VR** from *Unknown Sources* and grant \"All files access\".",
         "On first launch a panel offers to download Urban Terror 4.3.4 (1.4 GB) from FrozenSand's official server. Press **I agree - download and install**: the app checks the download, installs it to `/sdcard/UrTQuest/q3ut4` and starts the game (Wi-Fi needed, a few minutes). An interrupted download continues where it stopped.",
         "Already have Urban Terror 4.3.4? Copy its `q3ut4` folder to `/sdcard/UrTQuest/` before the first launch (leave out `q3config.cfg`) and the download is skipped."
@@ -2142,7 +2144,7 @@
           ],
           [
             "Right stick click",
-            "Bandage"
+            "Scope zoom (one step per press, then back to no zoom)"
           ],
           [
             "B",
@@ -2157,8 +2159,8 @@
             "Fire mode"
           ],
           [
-            "Y (hold)",
-            "Scoreboard"
+            "Y",
+            "Bandage"
           ],
           [
             "Left trigger",
@@ -2173,8 +2175,8 @@
             "Sprint"
           ],
           [
-            "Left grip",
-            "Steady the weapon"
+            "Left grip (hand near the gun)",
+            "Grab the front grip: two-handed aiming"
           ],
           [
             "Menus",
