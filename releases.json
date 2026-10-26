@@ -226,7 +226,7 @@
    "assets": [
     {
      "name": "Starship-VR-1.0-beta1.apk",
-     "size": 6394674,
+     "size": 6407336,
      "url": "https://github.com/SgtBilko76/Starship-VR/releases/download/v1.0-beta1/Starship-VR-1.0-beta1.apk"
     }
    ]
@@ -290,12 +290,12 @@
    "assets": [
     {
      "name": "WipeoutRewriteVR-0.1.0-beta1-pico.apk",
-     "size": 1028642,
+     "size": 1147461,
      "url": "https://github.com/SgtBilko76/Wipeout-Rewrite-VR/releases/download/v0.1.0-beta1/WipeoutRewriteVR-0.1.0-beta1-pico.apk"
     },
     {
      "name": "WipeoutRewriteVR-0.1.0-beta1-quest.apk",
-     "size": 1028642,
+     "size": 1147461,
      "url": "https://github.com/SgtBilko76/Wipeout-Rewrite-VR/releases/download/v0.1.0-beta1/WipeoutRewriteVR-0.1.0-beta1-quest.apk"
     }
    ]
