@@ -862,5 +862,21 @@
     }
    ]
   }
+ ],
+ "NoGravity-VR": [
+  {
+   "tag": "v0.1.0-beta",
+   "name": "No Gravity VR 0.1.0-beta (first release)",
+   "date": "2026-10-26T15:47:34Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/NoGravity-VR/releases/tag/v0.1.0-beta",
+   "assets": [
+    {
+     "name": "NoGravity-VR-v0.1.0-beta.apk",
+     "size": 39840041,
+     "url": "https://github.com/SgtBilko76/NoGravity-VR/releases/download/v0.1.0-beta/NoGravity-VR-v0.1.0-beta.apk"
+    }
+   ]
+  }
  ]
 }

@@ -1531,6 +1531,113 @@
       "hero": "1-cockpit.jpg"
     },
     {
+      "slug": "nogravity",
+      "name": "No Gravity VR",
+      "repo": "NoGravity-VR",
+      "category": "full",
+      "tagline": "realtech VR's 1997 space shooter in stereo 3D, standalone on Meta Quest.",
+      "about": [
+        "A native VR port of **No Gravity**, the arcade space combat game by realtech VR (1997), later released as open source under the GPL. Fight across five worlds against fighters, capital ships and space stations, with missions, wingmen and upgrades between flights.",
+        "You fly in head-tracked stereo 3D: look around while ships, planets and explosions sit at real depth, with the HUD and crosshair fixed in front of you. Menus float on a large screen. The whole game is inside the APK, so there is nothing else to copy."
+      ],
+      "features": [
+        "Head-tracked stereo 3D in flight at 72 Hz, 2400 x 2400 per eye with 4x anti-aliasing",
+        "HUD and crosshair lined up with your guns; hit and explosion flashes fill your whole view",
+        "Touch controllers as the flight stick: analog pitch, turn and roll, plus a throttle lever",
+        "Menus on a large floating screen, on-screen keyboard for the pilot name",
+        "Complete game inside the APK"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
+        "Nothing else: the APK has the free No Gravity game data built in"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK below.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r NoGravity-VR-v0.1.0-beta.apk`.",
+        "Launch *No Gravity VR* from *Library → Unknown Sources*. The first start takes a few seconds longer while the game data is unpacked."
+      ],
+      "controls": {
+        "columns": [
+          "Input",
+          "Flight",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Pitch and turn",
+            "Move the selection"
+          ],
+          [
+            "Right stick",
+            "Roll (left/right), throttle lever (up/down)",
+            "Move the selection"
+          ],
+          [
+            "Right trigger",
+            "Fire",
+            "Select"
+          ],
+          [
+            "Left trigger",
+            "Missile / use item",
+            ""
+          ],
+          [
+            "A / B",
+            "Lock target / next weapon",
+            "Select / back"
+          ],
+          [
+            "X / Y",
+            "Next item / next navpoint",
+            ""
+          ],
+          [
+            "Right grip",
+            "Booster",
+            ""
+          ],
+          [
+            "Left grip",
+            "Reverse booster",
+            ""
+          ],
+          [
+            "Right stick click",
+            "HUD info",
+            ""
+          ],
+          [
+            "Left stick click",
+            "Radar mode",
+            ""
+          ],
+          [
+            "Left Menu button",
+            "Pause menu",
+            "Back / quit question"
+          ],
+          [
+            "Both stick clicks (hold 1 s)",
+            "Recenter view",
+            "Recenter view"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers. Flight buttons can be changed in the game's joystick options. Pilot name keyboard: stick moves, A types, B deletes, X adds a space, Y is OK.",
+      "notes": [
+        "This is the first public beta, tested on Quest 3. Please report problems on GitHub.",
+        "To quit, press the Menu button in the main menu and answer *Yes*: the game closes and you're back in the Quest home.",
+        "Resolution and anti-aliasing can be lowered without reinstalling: put `NGQ_EYE_SIZE=2000` or `NGQ_MSAA=0` lines in `/sdcard/Android/data/com.bilko.nogravityvr/files/env.txt`.",
+        "The APK is signed with a debug key (sideload only).",
+        "The port's code is GPL-3.0; the No Gravity game data is GPL-2.0."
+      ],
+      "credits": "No Gravity by realtech VR (Stéphane Denis), open source on [SourceForge](https://sourceforge.net/projects/nogravity/), GPL. Pictures: captured on a Meta Quest 3.",
+      "hero": "1-planet.jpg"
+    },
+    {
       "slug": "forsaken",
       "name": "Forsaken VR",
       "repo": "Forsaken-VR",
@@ -2219,7 +2326,7 @@
         "A standalone 6DoF VR port of **OpenArena 0.8.8** for Meta Quest 2 / Pro / 3 / 3S (tested on Quest 3) and PICO 4 / Neo 3. It is built on Team Beef's [ioq3quest](https://github.com/Team-Beef-Studios/ioq3quest) (Quake3Quest), merged with OpenArena's own open-source game code.",
         "[OpenArena](https://openarena.ws/) is a free, open-source arena shooter in the style of Quake III Arena, with its own maps, characters and weapons. The whole game is inside the APK: no PC, no extra download and no files to copy.",
         "Play offline against bots, or online on the real OpenArena servers, including pure servers and mod servers.",
-      "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "The full OpenArena 0.8.8: all maps, characters, weapons and game modes",
@@ -2228,7 +2335,7 @@
         "Single player and skirmish matches against bots",
         "Online play on the official OpenArena server list, with automatic download of missing maps and mod files (ratmod, Clan Arena, freeze tag, defrag, ...)",
         "Virtual keyboard for your player name and other text fields",
-      "Runs on PICO 4 / Neo 3 too, from the same APK (untested)"
+        "Runs on PICO 4 / Neo 3 too, from the same APK (untested)"
       ],
       "needs": [
         "Meta Quest 2 / Pro / 3 / 3S, or PICO 4 / Neo 3 (untested)",
@@ -2297,7 +2404,7 @@
         "Mod servers run with the built-in VR game code: the mod's maps, textures and sounds work, special mod rules or HUD features may not. Plain OpenArena servers are the most reliable.",
         "Some servers turn away players with a high ping, e.g. US servers when you play from Europe.",
         "The APK is signed with a debug key.",
-      "PICO needs PICO OS 5.9.0 or newer. The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s Quake3:*` shows how far it gets."
+        "PICO needs PICO OS 5.9.0 or newer. The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s Quake3:*` shows how far it gets."
       ],
       "credits": "Based on [ioq3quest](https://github.com/Team-Beef-Studios/ioq3quest) by Team Beef, [ioquake3](https://ioquake3.org/) and [OpenArena](https://openarena.ws/) by the OpenArena team (engine, game code and game data, GPL). Not affiliated with id Software, Team Beef or the OpenArena team. Pictures (desktop version) via Wikimedia Commons, GPL: OpenArena developers / [VaLouille](https://commons.wikimedia.org/wiki/File:OpenArena-Gargoyle.jpg), [Drummyfish](https://commons.wikimedia.org/wiki/File:OpenArena_0.8.8_rocket.jpg)."
     },
