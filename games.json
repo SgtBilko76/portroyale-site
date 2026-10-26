@@ -1535,27 +1535,29 @@
       "name": "No Gravity VR",
       "repo": "NoGravity-VR",
       "category": "full",
-      "tagline": "realtech VR's 1997 space shooter in stereo 3D, standalone on Meta Quest.",
+      "tagline": "realtech VR's 1997 space shooter in stereo 3D, on Meta Quest and PICO.",
       "about": [
         "A native VR port of **No Gravity**, the arcade space combat game by realtech VR (1997), later released as open source under the GPL. Fight across five worlds against fighters, capital ships and space stations, with missions, wingmen and upgrades between flights.",
-        "You fly in head-tracked stereo 3D: look around while ships, planets and explosions sit at real depth, with the HUD and crosshair fixed in front of you. Menus float on a large screen. The whole game is inside the APK, so there is nothing else to copy."
+        "You fly in head-tracked stereo 3D: look around while ships, planets and explosions sit at real depth, with the HUD and crosshair fixed in front of you. Menus float on a large screen. The whole game is inside the APK, so there is nothing else to copy.",
+      "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
       ],
       "features": [
         "Head-tracked stereo 3D in flight at 72 Hz, 2400 x 2400 per eye with 4x anti-aliasing",
         "HUD and crosshair lined up with your guns; hit and explosion flashes fill your whole view",
         "Touch controllers as the flight stick: analog pitch, turn and roll, plus a throttle lever",
         "Menus on a large floating screen, on-screen keyboard for the pilot name",
-        "Complete game inside the APK"
+        "Complete game inside the APK",
+      "Runs on PICO 4 / Neo 3 too, from the same APK (untested)"
       ],
       "needs": [
-        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested), or PICO 4 / Neo 3 (untested)",
         "Nothing else: the APK has the free No Gravity game data built in"
       ],
       "install": [
         "Enable developer mode on your headset.",
         "Download the APK below.",
-        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r NoGravity-VR-v0.1.0-beta.apk`.",
-        "Launch *No Gravity VR* from *Library → Unknown Sources*. The first start takes a few seconds longer while the game data is unpacked."
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r NoGravity-VR-v0.1.1-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Launch *No Gravity VR* from *Library → Unknown Sources* (on PICO: *Library*). The first start takes a few seconds longer while the game data is unpacked."
       ],
       "controls": {
         "columns": [
@@ -1626,13 +1628,14 @@
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers. Flight buttons can be changed in the game's joystick options. Pilot name keyboard: stick moves, A types, B deletes, X adds a space, Y is OK.",
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. Flight buttons can be changed in the game's joystick options. Pilot name keyboard: stick moves, A types, B deletes, X adds a space, Y is OK.",
       "notes": [
         "This is the first public beta, tested on Quest 3. Please report problems on GitHub.",
         "To quit, press the Menu button in the main menu and answer *Yes*: the game closes and you're back in the Quest home.",
         "Resolution and anti-aliasing can be lowered without reinstalling: put `NGQ_EYE_SIZE=2000` or `NGQ_MSAA=0` lines in `/sdcard/Android/data/com.bilko.nogravityvr/files/env.txt`.",
         "The APK is signed with a debug key (sideload only).",
-        "The port's code is GPL-3.0; the No Gravity game data is GPL-2.0."
+        "The port's code is GPL-3.0; the No Gravity game data is GPL-2.0.",
+      "PICO needs PICO OS 5.9.0 or newer. The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s NoGravityVR:*` shows how far it gets."
       ],
       "credits": "No Gravity by realtech VR (Stéphane Denis), open source on [SourceForge](https://sourceforge.net/projects/nogravity/), GPL. Pictures: captured on a Meta Quest 3.",
       "hero": "1-planet.jpg"
