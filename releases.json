@@ -109,7 +109,7 @@
    "assets": [
     {
      "name": "Descent3-VR-0.3-beta.apk",
-     "size": 8647374,
+     "size": 8774433,
      "url": "https://github.com/SgtBilko76/Descent3-VR/releases/download/quest-v0.3-beta/Descent3-VR-0.3-beta.apk"
     }
    ]
@@ -141,12 +141,12 @@
    "assets": [
     {
      "name": "Hurrican-PicoVR-v1.1.0.apk",
-     "size": 43285038,
+     "size": 43901853,
      "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-PicoVR-v1.1.0.apk"
     },
     {
      "name": "Hurrican-QuestVR-v1.1.0.apk",
-     "size": 43285122,
+     "size": 43901853,
      "url": "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-QuestVR-v1.1.0.apk"
     }
    ]
@@ -178,7 +178,7 @@
    "assets": [
     {
      "name": "sauerbraten-vr.apk",
-     "size": 1017061305,
+     "size": 1017883839,
      "url": "https://github.com/SgtBilko76/Sauerbraten-VR/releases/download/Beta-0.2/sauerbraten-vr.apk"
     }
    ]
@@ -375,12 +375,12 @@
    "assets": [
     {
      "name": "extremetuxracer-pico.apk",
-     "size": 53073914,
+     "size": 53183048,
      "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-pico.apk"
     },
     {
      "name": "extremetuxracer-quest.apk",
-     "size": 53073782,
+     "size": 53183048,
      "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-quest.apk"
     }
    ]
@@ -510,7 +510,7 @@
    "assets": [
     {
      "name": "ARMSX1-0.2.0-beta1-quest-arm64-v8a.apk",
-     "size": 38082054,
+     "size": 38258182,
      "url": "https://github.com/SgtBilko76/ARMSX1-3D/releases/download/v0.2.0-beta1/ARMSX1-0.2.0-beta1-quest-arm64-v8a.apk"
     }
    ]
@@ -563,7 +563,7 @@
    "assets": [
     {
      "name": "OpenXWA-VR-v0.1.7-beta.apk",
-     "size": 91523486,
+     "size": 92177473,
      "url": "https://github.com/SgtBilko76/OpenXWA-VR/releases/download/v0.1.7-beta/OpenXWA-VR-v0.1.7-beta.apk"
     }
    ]
