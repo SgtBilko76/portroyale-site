@@ -80,21 +80,21 @@
  ],
  "VPinball-VR": [
   {
-   "tag": "pico-v0.6-beta",
-   "name": "Quest Beta 0.38 + PICO Beta 0.6",
-   "date": "2026-10-22T11:08:25Z",
+   "tag": "v0.39-beta",
+   "name": "Quest Beta 0.39: Table Downloader (+ PICO Beta 0.6)",
+   "date": "2026-10-26T17:49:20Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/VPinball-VR/releases/tag/pico-v0.6-beta",
+   "url": "https://github.com/SgtBilko76/VPinball-VR/releases/tag/v0.39-beta",
    "assets": [
     {
      "name": "VPinball-PicoVR-Beta-0.6.apk",
      "size": 127406372,
-     "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/pico-v0.6-beta/VPinball-PicoVR-Beta-0.6.apk"
+     "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.39-beta/VPinball-PicoVR-Beta-0.6.apk"
     },
     {
-     "name": "VPinball-QuestVR-Beta-0.38.apk",
-     "size": 284958736,
-     "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/pico-v0.6-beta/VPinball-QuestVR-Beta-0.38.apk"
+     "name": "VPinball-QuestVR-Beta-0.39.apk",
+     "size": 271096000,
+     "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.39-beta/VPinball-QuestVR-Beta-0.39.apk"
     }
    ]
   }
