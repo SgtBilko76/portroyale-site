@@ -598,16 +598,16 @@
  ],
  "alpinefactionVR": [
   {
-   "tag": "quest-v0.1.0-beta",
-   "name": "Red Faction VR for Quest (WinlatorXR) 0.1.0 Beta",
-   "date": "2026-10-12T17:33:56Z",
+   "tag": "quest-v0.2.0-beta",
+   "name": "Red Faction VR for Quest (WinlatorXR) 0.2.0 Beta",
+   "date": "2026-10-27T16:36:03Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/alpinefactionVR/releases/tag/quest-v0.1.0-beta",
+   "url": "https://github.com/SgtBilko76/alpinefactionVR/releases/tag/quest-v0.2.0-beta",
    "assets": [
     {
-     "name": "RedFactionVR-Quest-WinlatorXR-v0.1.0-beta.zip",
-     "size": 12432016,
-     "url": "https://github.com/SgtBilko76/alpinefactionVR/releases/download/quest-v0.1.0-beta/RedFactionVR-Quest-WinlatorXR-v0.1.0-beta.zip"
+     "name": "RedFactionVR-Quest-WinlatorXR-v0.2.0-beta.zip",
+     "size": 12419504,
+     "url": "https://github.com/SgtBilko76/alpinefactionVR/releases/download/quest-v0.2.0-beta/RedFactionVR-Quest-WinlatorXR-v0.2.0-beta.zip"
     }
    ]
   }

@@ -4105,14 +4105,15 @@
       "tagline": "Red Faction (2001) in VR, standalone on Meta Quest 3 via WinlatorXR.",
       "about": [
         "Alpine Faction VR by Cactus VR Studios, extended with a WinlatorXR backend so Red Faction runs **standalone on a Meta Quest 3** (Wine + Box64 + DXVK). No PC needed while playing.",
-        "Beta 0.1 is tested on Quest 3 with WinlatorXR dawn-33 and the GOG version in the first levels: about 72 fps most of the time."
+        "Beta 0.2 is tested on Quest 3 with WinlatorXR dawn-33 and the GOG version, in singleplayer and in multiplayer (as host), at 3200x1448 (1600x1448 per eye)."
       ],
       "features": [
-        "Stereo VR with head and controller tracking at the headset's 72 fps",
+        "Sharp stereo VR at 1600x1448 per eye with head and controller tracking",
         "Tracked weapons with two-hand grip, laser sight and shake-to-reload",
         "Big HUD in front of you with health and ammo near the center",
-        "Pause menu on WinlatorXR's sharp 2D screen; sniper zoom on a screen fixed in the room",
-        "Settings file for HUD, menu, graphics and CPU tuning, most of them applied while playing"
+        "Pause menu on WinlatorXR's sharp 2D screen; sniper and precision rifle zoom with crosshair, aimed with your hand",
+        "Multiplayer: shots, rockets, grenades and the flamethrower follow your hand and laser",
+        "Weapon size, HUD, menu, graphics and CPU tuning in a settings file, most of them applied while playing"
       ],
       "needs": [
         "Meta Quest 3",
@@ -4121,8 +4122,8 @@
       ],
       "install": [
         "Copy your complete Red Faction folder (with `RF.exe`) to the headset as `Download/RedFaction`.",
-        "Unzip `RedFactionVR-Quest-WinlatorXR-v0.1.0-beta.zip` into that folder.",
-        "Create a WinlatorXR container: screen **2388x1080**, DXVK with Async, Wrapper/Turnip driver, XR API on, drive `D:` = `/sdcard/Download`.",
+        "Unzip `RedFactionVR-Quest-WinlatorXR-v0.2.0-beta.zip` into that folder.",
+        "Create a WinlatorXR container: screen **3200x1448**, DXVK with Async, Wrapper/Turnip driver, XR API on, drive `D:` = `/sdcard/Download`.",
         "Start `D:\\RedFaction\\RedFactionVR.bat` from the container's file manager, or make a shortcut for `wine C:\\windows\\system32\\cmd.exe` with the arguments `/c D:\\RedFaction\\RedFactionVR.bat`.",
         "The first start converts the GOG `RF.exe` to `RF_120na.exe` and takes a little longer. Steam and retail versions: see `README-WinlatorXR.txt`."
       ],
@@ -4138,7 +4139,7 @@
           ],
           [
             "Left trigger",
-            "Alternate fire / sniper zoom"
+            "Alternate fire; hold: sniper zoom"
           ],
           [
             "Left grip",
@@ -4179,9 +4180,9 @@
         ]
       },
       "notes": [
-        "The container screen size must be **2388x1080**.",
-        "Beta: only the first levels are tested. Multiplayer, Quest 2 and Pico are untested.",
-        "HUD size and position, the menu mode and graphics can be changed in `afvr_winlatorxr.ini` in the game folder."
+        "The container screen size must be **3200x1448**. Updating from 0.1: change it from 2388x1080 to 3200x1448.",
+        "Beta: only some levels are tested. Multiplayer is tested as host; on other people's servers, automatic weapons and the flamethrower may still fire in the body direction. Quest 2 and Pico are untested.",
+        "HUD size and position, weapon size (`weapon_scale`), the menu mode and graphics can be changed in `afvr_winlatorxr.ini` in the game folder."
       ],
       "credits": "Based on [Alpine Faction VR](https://github.com/CactusVRStudios/alpinefactionVR) by Cactus VR Studios and [Alpine Faction](https://github.com/GooberRF/alpinefaction) by GooberRF. Red Faction is © THQ Nordic. No game files included. Logo: Cactus VR Studios. Pictures: captured on a Meta Quest 3.",
       "winlator_install": {
@@ -4189,7 +4190,7 @@
         "folder": "RedFaction",
         "marker": "RF.exe",
         "game_label": "Red Faction",
-        "next": "create a container (screen 2388x1080, DXVK with Async, Turnip, XR API on, drive D: = /sdcard/Download) and start D:\\RedFaction\\RedFactionVR.bat in it."
+        "next": "create a container (screen 3200x1448, DXVK with Async, Turnip, XR API on, drive D: = /sdcard/Download) and start D:\\RedFaction\\RedFactionVR.bat in it."
       }
     },
     {
