@@ -2704,8 +2704,10 @@
         "Stereoscopic 3D: every parallax layer at its own depth",
         "Large curved screen around you (2.6 m wide at 2.2 m)",
         "Passthrough mode on the left stick click, remembered between starts",
-        "Smoothed pixel art (edge-directed 4x upscaling) and sharpening",
-        "72 FPS, Touch controllers mapped onto the game's own gamepad support",
+        "Smoothed pixel art (edge-directed 4x upscaling) and sharpening, or the original sharp pixels at the click of the right stick",
+        "Quick save / load menu: 5 slots at your last checkpoint plus the automatic save at every level start",
+        "Sharp, high resolution text for menus and messages",
+        "72 FPS, triggers for jump and attack, two-button controls",
         "Screen size, curve, 3D depth and smoothing adjustable in a settings file",
         "Complete game inside the APK"
       ],
@@ -2715,7 +2717,7 @@
       "install": [
         "Enable developer mode on your headset.",
         "Download the APK below.",
-        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Lionheart-3D-v0.1.0-beta.apk`.",
+        "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Lionheart-3D-v0.2.0-beta.apk`.",
         "Launch *Lionheart 3D* from *Library → Unknown Sources*."
       ],
       "controls": {
@@ -2727,8 +2729,23 @@
         "rows": [
           [
             "Left stick",
-            "Move Valdyn",
+            "Move Valdyn (up = climb, up + attack = upward attack)",
             "Choose an entry / change a value"
+          ],
+          [
+            "Right trigger or A",
+            "Attack",
+            "Confirm"
+          ],
+          [
+            "Left trigger or B",
+            "Jump",
+            "–"
+          ],
+          [
+            "Menu button",
+            "Quick save / load menu",
+            "–"
           ],
           [
             "Left stick click",
@@ -2736,14 +2753,9 @@
             "Passthrough on / off"
           ],
           [
-            "A",
-            "Attack",
-            "Confirm"
-          ],
-          [
-            "B",
-            "Jump",
-            "–"
+            "Right stick click",
+            "Soft picture / sharp pixels",
+            "Soft picture / sharp pixels"
           ],
           [
             "Y",
@@ -2764,17 +2776,14 @@
             "Right grip",
             "Cheat menu",
             "–"
-          ],
-          [
-            "Left trigger",
-            "Page down",
-            "–"
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers. The right stick is not used.",
+      "controls_note": "Button names are those of the Meta Quest controllers. In the quick menu the stick chooses the slot and switches between LOAD and SAVE, A confirms and B closes.",
       "notes": [
-        "This is the first public beta, tested on Quest 3. Please report problems on GitHub.",
+        "This is a public beta, tested on Quest 3. Please report problems on GitHub.",
+        "Saving works in the story mode. *Continue* in the main menu and *AUTO* in the quick menu load the automatic save from the start of the last level; the five slots resume at the checkpoint where you saved.",
+        "Stick up only jumps in the game's original one-button mode (*Options → Joystick*).",
         "Settings: copy [vr.cfg.example](https://github.com/SgtBilko76/lionheart-remake-vr/blob/quest-vr/java/lionheart-quest/vr.cfg.example) to `/sdcard/Android/data/com.b3dgs.lionheart.quest/files/vr.cfg` to change screen size and distance, curve, 3D depth, smoothing and sharpening.",
         "The APK is signed with a debug key (sideload only).",
         "Lionheart Remake is licensed GPL-3.0; the Quest port is GPL-3.0 too."
