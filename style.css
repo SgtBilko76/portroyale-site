@@ -186,6 +186,8 @@ code {
 
 .manual { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 48px; }
 .manual h3:first-child { margin-top: 0; }
+.controls-diagram { margin: 0 0 40px; }
+.controls-diagram img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
 .steps li { counter-increment: step; position: relative; padding: 0 0 1.1em 3em; min-height: 2.2em; }
 .steps li::before {

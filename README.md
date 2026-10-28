@@ -15,6 +15,7 @@ Open `public/index.html` in a browser. To host it, upload the contents of `publi
 - **Pictures:** put them in `images/<slug>/`. They're shown in file-name order, and the first one is the header picture. Files with `logo`, `banner` or `splash` in the name are shown whole instead of cropped. A port with no pictures gets a red title card.
 - **Downloads:** these come from each repo's GitHub releases. Run `--refresh` after publishing a release.
 - **Videos:** `"videos": [{"id": "<YouTube id>", "label": "caption"}]` in `games.json` (a single `"video"` + `"video_label"` also works).
+- **Controller picture:** add `controls_diagram` to a game in `games.json` (which label goes on which button, see the top of `tools/controls_diagram.py`), then run `uv run --with pillow tools/controls_diagram.py <slug>`. It writes `images/controls/<slug>.webp` (two Quest controllers over a blurred picture of the game), and the page shows it at the top of the Manual. Commit the `.webp`; the table stays for the details.
 - **Look:** `style.css`.
 
 ## Online

@@ -2122,6 +2122,29 @@
         "Meta Quest, or a PICO headset (untested on real PICO hardware)"
       ],
       "install": "default",
+      "controls_diagram": {
+        "left": {
+          "stick": "directions - move",
+          "y": "scoreboard",
+          "x": "use",
+          "menu": "menu",
+          "trigger": "jump",
+          "grip": "grappling hook"
+        },
+        "right": {
+          "stick": [
+            "press - recenter view",
+            "up - zoom",
+            "down - crouch",
+            "left/right - turn"
+          ],
+          "b": "previous weapon",
+          "a": "next weapon",
+          "system": "system menu",
+          "trigger": "fire",
+          "grip": "secondary fire"
+        }
+      },
       "controls": {
         "columns": [
           "Input",

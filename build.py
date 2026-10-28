@@ -388,6 +388,12 @@ def build_game(site, cats, game, rels, prev_g, next_g):
       <h3 id="controls">Controller mapping</h3>
       <p class="note">The controller mapping is documented in the <a href="{repo_url}#readme" target="_blank" rel="noopener">repository README</a>.</p>"""
 
+    diagram = ""
+    if (IMAGES / "controls" / f"{game['slug']}.webp").exists():
+        src = f"images/controls/{game['slug']}.webp"
+        diagram = f"""
+    <figure class="controls-diagram"><a href="{src}" target="_blank" rel="noopener"><img src="{src}" alt="{esc(game['name'])} controller mapping" width="1680" height="800" loading="lazy"></a></figure>"""
+
     notes = ""
     if game.get("notes"):
         notes = "<h3>Good to know</h3><ul class=\"notes\">" + "".join(f"<li>{inline(n)}</li>" for n in game["notes"]) + "</ul>"
@@ -524,7 +530,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 
 <section class="section section-alt" id="manual">
   <div class="wrap">
-    <h2 class="section-title">Manual</h2>
+    <h2 class="section-title">Manual</h2>{diagram}
     <div class="manual">
       <div>
         <h3>Installation</h3>
