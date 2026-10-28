@@ -360,67 +360,6 @@
    ]
   }
  ],
- "ExtremeTuxRacer-QuestVR": [
-  {
-   "tag": "Tuxracer0.0.2",
-   "name": "ExtremeTuxRacer VR 0.0.2 \u2013 Quest & Pico (beta)",
-   "date": "2026-09-23T15:06:44Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/tag/Tuxracer0.0.2",
-   "assets": [
-    {
-     "name": "extremetuxracer-pico.apk",
-     "size": 53183048,
-     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-pico.apk"
-    },
-    {
-     "name": "extremetuxracer-quest.apk",
-     "size": 53183048,
-     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-quest.apk"
-    }
-   ]
-  }
- ],
- "Neverball-and-Neverputt-QuestVR": [
-  {
-   "tag": "neverball-0814",
-   "name": "NeverBall-QuestVR",
-   "date": "2026-09-08T13:07:53Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/tag/neverball-0814",
-   "assets": [
-    {
-     "name": "neverballquest.apk",
-     "size": 61765029,
-     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/neverball-0814/neverballquest.apk"
-    },
-    {
-     "name": "pico-neverball.apk",
-     "size": 61764973,
-     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/neverball-0814/pico-neverball.apk"
-    }
-   ]
-  },
-  {
-   "tag": "puttnik-0507",
-   "name": "NeverPutt-QuestVR",
-   "date": "2026-09-08T13:09:28Z",
-   "prerelease": true,
-   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/tag/puttnik-0507",
-   "assets": [
-    {
-     "name": "neverputtquest.apk",
-     "size": 36833396,
-     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/puttnik-0507/neverputtquest.apk"
-    },
-    {
-     "name": "pico-neverputt.apk",
-     "size": 36833340,
-     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/puttnik-0507/pico-neverputt.apk"
-    }
-   ]
-  }
- ],
  "VDrift-QuestVR": [
   {
    "tag": "v0.2.0",
@@ -870,6 +809,67 @@
      "name": "NoGravity-VR-v0.1.1-beta.apk",
      "size": 39840801,
      "url": "https://github.com/SgtBilko76/NoGravity-VR/releases/download/v0.1.1-beta/NoGravity-VR-v0.1.1-beta.apk"
+    }
+   ]
+  }
+ ],
+ "ExtremeTuxRacer-VR": [
+  {
+   "tag": "Tuxracer0.0.2",
+   "name": "ExtremeTuxRacer VR 0.0.2 \u2013 Quest & Pico (beta)",
+   "date": "2026-09-23T15:06:44Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/tag/Tuxracer0.0.2",
+   "assets": [
+    {
+     "name": "extremetuxracer-pico.apk",
+     "size": 53183048,
+     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-pico.apk"
+    },
+    {
+     "name": "extremetuxracer-quest.apk",
+     "size": 53183048,
+     "url": "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-quest.apk"
+    }
+   ]
+  }
+ ],
+ "Neverball-and-Neverputt-VR": [
+  {
+   "tag": "neverball-0814",
+   "name": "NeverBall-QuestVR",
+   "date": "2026-09-08T13:07:53Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/tag/neverball-0814",
+   "assets": [
+    {
+     "name": "neverballquest.apk",
+     "size": 61765029,
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/neverball-0814/neverballquest.apk"
+    },
+    {
+     "name": "pico-neverball.apk",
+     "size": 61764973,
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/neverball-0814/pico-neverball.apk"
+    }
+   ]
+  },
+  {
+   "tag": "puttnik-0507",
+   "name": "NeverPutt-QuestVR",
+   "date": "2026-09-08T13:09:28Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/tag/puttnik-0507",
+   "assets": [
+    {
+     "name": "neverputtquest.apk",
+     "size": 36833396,
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/puttnik-0507/neverputtquest.apk"
+    },
+    {
+     "name": "pico-neverputt.apk",
+     "size": 36833340,
+     "url": "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/puttnik-0507/pico-neverputt.apk"
     }
    ]
   }

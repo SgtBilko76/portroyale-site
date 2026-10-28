@@ -3250,7 +3250,7 @@
     {
       "slug": "extremetuxracer",
       "name": "Extreme Tux Racer VR",
-      "repo": "ExtremeTuxRacer-QuestVR",
+      "repo": "ExtremeTuxRacer-VR",
       "category": "full",
       "tagline": "Race Tux the penguin down icy slopes, in true stereo, on Meta Quest and PICO.",
       "about": [
@@ -3575,7 +3575,7 @@
     {
       "slug": "neverball",
       "name": "Neverball & Neverputt VR",
-      "repo": "Neverball-and-Neverputt-QuestVR",
+      "repo": "Neverball-and-Neverputt-VR",
       "category": "full",
       "tagline": "Tilt the world to roll the ball, plus mini golf, on Meta Quest and PICO.",
       "about": [
@@ -4198,16 +4198,24 @@
             "Left trigger"
           ],
           [
-            "C buttons",
-            "Right stick"
+            "L",
+            "Left grip"
           ],
           [
-            "Start",
+            "C-down / C-left",
+            "X / Y"
+          ],
+          [
+            "C-up / C-right",
+            "Right stick up / right"
+          ],
+          [
+            "Start (pause)",
             "Left menu button"
           ]
         ]
       },
-      "controls_note": "Everything is remappable in SpaghettiKart's controller menu, and Bluetooth gamepads work too.",
+      "controls_note": "Hold the Meta button (PICO: the PICO button) to recenter the view and the menu panel. Everything is remappable in SpaghettiKart's controller menu, and Bluetooth gamepads work too.",
       "notes": [
         "This is the first beta. Tested on Quest 3; the PICO build is untested, so please open an issue on GitHub if it does not start or the controllers do nothing.",
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
