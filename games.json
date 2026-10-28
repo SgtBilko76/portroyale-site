@@ -66,6 +66,38 @@
         "Start VPinball (*Library → Unknown Sources*) and get tables with **+ → Download from Archive.org**: the table, its ROM and backglass are installed for you.",
         "Or use your own tables: put each in its own folder, with its ROMs next to it (`VPinball/tables/<Table name>/<table>.vpx` and `VPinball/tables/<Table name>/pinmame/roms/<rom>.zip`), and select the `VPinball/tables` folder in the settings."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - nudge",
+            "press - size & distance"
+          ],
+          "y": [
+            "view mode",
+            "hold - reset view"
+          ],
+          "x": "hold - move away",
+          "menu": [
+            "menu",
+            "hold - next vr room"
+          ],
+          "trigger": "left flipper",
+          "grip": "magna save"
+        },
+        "right": {
+          "stick": [
+            "up/down - plunger",
+            "press - launch ball"
+          ],
+          "b": "insert coin",
+          "a": [
+            "start game",
+            "(hold 1 s while ball moves)"
+          ],
+          "trigger": "right flipper",
+          "grip": "magna save"
+        }
+      },
       "controls": {
         "columns": [
           "Button",
@@ -181,6 +213,31 @@
         "On first launch a panel offers to download the free original Unreal Tournament GOTY disc (620 MB) from OldUnreal, the source Epic Games approved. Press **I agree - download and install**: it installs UT 436 with all maps and starts the game (Wi-Fi needed, about a minute).",
         "Prefer your own files? Copy your UT99 `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngineUT/` before the first launch (leave out `UnrealTournament.ini` / `User.ini`) and the download is skipped."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": "directions - move",
+          "y": "scoreboard",
+          "x": "next inventory item",
+          "menu": "game menu",
+          "trigger": "jump",
+          "grip": "hold - crouch"
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up - next weapon",
+            "down - previous weapon"
+          ],
+          "b": "f2 key",
+          "a": "use inventory item",
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "fire",
+          "grip": "alt-fire"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -307,6 +364,31 @@
         "On first launch a panel offers to download the free original Unreal Gold disc (645 MB) from OldUnreal, the source Epic Games approved. Press **I agree - download and install**: it installs the 226b game files and starts the game (Wi-Fi needed, about a minute).",
         "Prefer your own files? Copy your Unreal Gold **226b** `System`, `Maps`, `Textures`, `Sounds`, `Music` and `Help` folders to `/sdcard/SurrealEngine/` before the first launch (leave out `Unreal.ini` / `User.ini`) and the download is skipped."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": "directions - move",
+          "y": "scoreboard",
+          "x": "next inventory item",
+          "menu": "game menu",
+          "trigger": "jump",
+          "grip": "hold - crouch"
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up - next weapon",
+            "down - previous weapon"
+          ],
+          "b": "universal translator",
+          "a": "use inventory item",
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "fire",
+          "grip": "alt-fire"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -427,6 +509,43 @@
         "From GOG/Steam: after copying with adb, make the folders readable for the app with `adb shell \"cd /sdcard/Android/data/com.descentdevelopers.descent3/files && find . -mindepth 1 -type d -exec chmod 2777 {} +\"`.",
         "From the original CDs: [quest/tools/stage_gamedata.sh](https://github.com/SgtBilko76/Descent3-VR/tree/quest-vr-port/quest/tools) in the source repository extracts the data from CD images and pushes it to the headset."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "up/down - thrust",
+            "left/right - slide",
+            "press - next secondary",
+            "hold - headlight"
+          ],
+          "y": "slide up",
+          "x": "slide down",
+          "menu": [
+            "pause menu",
+            "hold - automap"
+          ],
+          "trigger": "fire secondary",
+          "grip": "bank left"
+        },
+        "right": {
+          "stick": [
+            "up/down - pitch",
+            "left/right - turn",
+            "press - countermeasure",
+            "hold - next countermeasure"
+          ],
+          "b": [
+            "flare",
+            "hold - next primary"
+          ],
+          "a": "afterburner",
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "fire primary",
+          "grip": "bank right"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -548,6 +667,42 @@
         "Copy your whole X-Wing Alliance game folder (the one with `STRINGS.TXT`) to the headset's internal storage as `OpenXWA`, so that `/sdcard/OpenXWA/STRINGS.TXT` exists.",
         "Start **OpenXWA VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/yaw",
+            "press - hyperspace",
+            "+ grip press - nearest fighter"
+          ],
+          "y": "link fire",
+          "x": "cycle weapons",
+          "menu": "options screen",
+          "trigger": "counter- measure",
+          "grip": [
+            "hold - radial menu:",
+            "energy & ship"
+          ]
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - match speed"
+          ],
+          "b": "fighters targeting you",
+          "a": "next target",
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "fire",
+          "grip": [
+            "tap - target in sights",
+            "hold - radial menu:",
+            "targeting & wingmen"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -675,6 +830,54 @@
         "Optional, for the TIE Defender and Missile Boat 3D cockpits: copy your X-Wing Alliance game folder to `/sdcard/OpenXWA` (the same folder OpenXWA VR uses), or just copy `FLIGHTMODELS/TIECOCKPIT.OPT` to `/sdcard/OpenTIE/`.",
         "Start **OpenTIE VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/yaw",
+            "press - cockpit view",
+            "+ grip press - cycle weapon"
+          ],
+          "y": [
+            "match target speed",
+            "+ grip - flight menu"
+          ],
+          "x": [
+            "target my attacker",
+            "+ grip - clear target"
+          ],
+          "menu": [
+            "pause",
+            "hold - recenter view"
+          ],
+          "trigger": [
+            "target / roll modifier",
+            "+ grip - firing mode"
+          ],
+          "grip": "hold - shift"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - hyperspace",
+            "+ L grip press - shields"
+          ],
+          "b": [
+            "nearest fighter",
+            "+ L grip - throttle down"
+          ],
+          "a": [
+            "next target",
+            "+ L grip - full throttle"
+          ],
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "fire",
+          "grip": "high-angle view"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -812,6 +1015,54 @@
         "From the Steam folder `STAR WARS X-Wing`, copy `collectors_cd` to `/sdcard/OpenXW/XW94` and `remastered` to `/sdcard/OpenXW/XW98` on the headset.",
         "Start **OpenXW VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/yaw",
+            "press - forward view",
+            "+ grip press - weapon group"
+          ],
+          "y": [
+            "match target speed",
+            "+ grip - escape"
+          ],
+          "x": [
+            "target my attacker",
+            "+ grip - clear target"
+          ],
+          "menu": [
+            "pause",
+            "hold - recenter view"
+          ],
+          "trigger": [
+            "target / roll modifier",
+            "+ grip - firing mode"
+          ],
+          "grip": "hold - shift"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - hyperspace",
+            "+ L grip press - shields"
+          ],
+          "b": [
+            "nearest fighter",
+            "+ L grip - throttle down"
+          ],
+          "a": [
+            "next target",
+            "+ L grip - full throttle"
+          ],
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "fire",
+          "grip": "hold - rear view"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -939,6 +1190,54 @@
         "Copy your whole Steam folder `STAR WARS X-Wing vs TIE Fighter` (about 400 MB) to `/sdcard/OpenXvT` on the headset.",
         "Start **OpenXvT VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/yaw",
+            "press - link fire",
+            "+ grip press - objective"
+          ],
+          "y": [
+            "nearest fighter",
+            "+ grip - laser to shields"
+          ],
+          "x": [
+            "target my attacker",
+            "+ grip - shield direction"
+          ],
+          "menu": "pause / settings",
+          "trigger": [
+            "target / roll modifier",
+            "+ grip - tractor beam"
+          ],
+          "grip": "hold - shift"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - hyperspace",
+            "+ L grip press - match speed"
+          ],
+          "b": [
+            "cycle weapons",
+            "+ L grip - shield recharge"
+          ],
+          "a": [
+            "next target",
+            "+ L grip - laser recharge"
+          ],
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "fire",
+          "grip": [
+            "target in sights",
+            "+ L grip - next component"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1071,6 +1370,45 @@
         "Or, on a PC with Python 3 and the Quest on USB: [get_fs2_data.py](https://github.com/SgtBilko76/FreeSpace2-VR/blob/fs2-vr/tools/quest/get_fs2_data.py) (`python3 get_fs2_data.py <game folder or GOG setup_freespace_2_*.exe> --push`) copies them for you; the GOG offline installer is unpacked with [innoextract](https://constexpr.org/innoextract/).",
         "Start **FreeSpace 2 VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/turn",
+            "press - autopilot",
+            "hold - warp out",
+            "+ grip press - look behind"
+          ],
+          "y": [
+            "next gun type",
+            "+ grip - comms menu"
+          ],
+          "x": [
+            "next missile type",
+            "+ grip - next subsystem"
+          ],
+          "menu": "pause menu",
+          "trigger": "missiles",
+          "grip": "hold - shift"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - match speed",
+            "+ L grip - max/stop, chase"
+          ],
+          "b": [
+            "target in crosshair",
+            "+ L grip - target attacker"
+          ],
+          "a": [
+            "nearest enemy",
+            "+ L grip - next target"
+          ],
+          "trigger": "guns",
+          "grip": "hold - afterburner"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1199,6 +1537,43 @@
         "From your GOG *Wing Commander* folder, copy `WC.EXE`, `SM2.EXE` and the `GAMEDAT` folder to `/sdcard/WingCommander` on the headset. Without Windows, the GOG offline installer unpacks with [innoextract](https://constexpr.org/innoextract/).",
         "Start **Wing Commander VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/yaw",
+            "press - nav map",
+            "hold - recenter view"
+          ],
+          "y": [
+            "pause",
+            "+ grip - full speed"
+          ],
+          "x": [
+            "select guns",
+            "+ grip - comms"
+          ],
+          "menu": "escape",
+          "trigger": "fire missile",
+          "grip": "hold - shift"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - autopilot"
+          ],
+          "b": [
+            "select missile",
+            "+ L grip - full stop"
+          ],
+          "a": [
+            "cycle target",
+            "+ L grip - lock target"
+          ],
+          "trigger": "guns",
+          "grip": "hold - afterburner"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1320,6 +1695,43 @@
         "Copy `WC2.EXE` and the `GAMEDAT` folder (the `WING2` folder of the CD, or your installed game folder) to `/sdcard/WingCommander2` on the headset.",
         "Start **Wing Commander II VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/yaw",
+            "press - nav map",
+            "hold - recenter view"
+          ],
+          "y": [
+            "pause",
+            "+ grip - full speed"
+          ],
+          "x": [
+            "select guns",
+            "+ grip - comms"
+          ],
+          "menu": "escape",
+          "trigger": "fire missile",
+          "grip": "hold - shift"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - autopilot"
+          ],
+          "b": [
+            "select missile",
+            "+ L grip - full stop"
+          ],
+          "a": [
+            "cycle target",
+            "+ L grip - lock target"
+          ],
+          "trigger": "guns",
+          "grip": "hold - afterburner"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1442,6 +1854,31 @@
         "The first start unpacks the game data to `/sdcard/XWingRevival/` (about 310 MB, takes a moment), then the menu appears.",
         "Custom missions: copy the mission's `.def` file to `/sdcard/XWingRevival/Missions/` and pick it in the lobby under *Game Type → Mission*, or send it to the server with *Upload Mission*."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/yaw",
+            "press - scoreboard",
+            "both pressed - recenter"
+          ],
+          "y": "target newest incoming",
+          "x": "shield direction",
+          "menu": "pause menu",
+          "trigger": "target ahead",
+          "grip": "firing mode"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - target objective"
+          ],
+          "b": "nearest attacker",
+          "a": "nearest enemy",
+          "trigger": "fire",
+          "grip": "switch weapon"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1551,6 +1988,31 @@
         "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r NoGravity-VR-v0.1.1-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Launch *No Gravity VR* from *Library → Unknown Sources* (on PICO: *Library*). The first start takes a few seconds longer while the game data is unpacked."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/turn",
+            "press - radar mode",
+            "both pressed - recenter"
+          ],
+          "y": "next navpoint",
+          "x": "next item",
+          "menu": "pause menu",
+          "trigger": "missile / use item",
+          "grip": "reverse booster"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - hud info"
+          ],
+          "b": "next weapon",
+          "a": "lock target",
+          "trigger": "fire",
+          "grip": "booster"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1657,6 +2119,31 @@
         "Start **Forsaken VR** from *Unknown Sources* and allow \"All files access\" when asked.",
         "The first start unpacks the game data to `/sdcard/Forsaken/` (about 185 MB, takes about a minute with a black screen), then the title appears."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "up/down - forward/back",
+            "left/right - slide",
+            "press - drop mine",
+            "both pressed - recenter"
+          ],
+          "y": "move up",
+          "x": "move down",
+          "menu": "in-game menu",
+          "trigger": "secondary weapon",
+          "grip": "roll left"
+        },
+        "right": {
+          "stick": [
+            "directions - turn/pitch",
+            "press - turbo"
+          ],
+          "b": "next secondary",
+          "a": "next primary",
+          "trigger": "primary weapon",
+          "grip": "roll right"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1764,6 +2251,44 @@
         "Press **Download and install**. The game data is downloaded from the official FSNebula mod repository, checked and unpacked on the headset (about 10–20 minutes, depending on your Wi-Fi). Keep the headset on; if it gets interrupted, start the app again and it continues where it stopped. When it is finished, the game starts, and later starts go straight into the game.",
         "Already have the game data? If the folder `/sdcard/WCSaga/Wing_Commander_Saga/data` exists, the installer is skipped. You can put it there yourself with [get_wcs_data.py](https://github.com/SgtBilko76/WCSaga-VR/blob/quest-vr/tools/quest/get_wcs_data.py) (`python3 get_wcs_data.py WCSaga --push`) or by copying a Windows install of the full game + patch v1.1.0.7822 from [wcsaga.com](https://www.wcsaga.com/downloads/) with SideQuest."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/turn",
+            "press - autopilot",
+            "+ grip press - look behind"
+          ],
+          "y": [
+            "next gun type",
+            "+ grip - comms menu"
+          ],
+          "x": [
+            "next missile type",
+            "+ grip - next subsystem"
+          ],
+          "menu": "pause menu",
+          "trigger": "missiles",
+          "grip": "hold - shift"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - match speed",
+            "+ L grip - max/stop, chase"
+          ],
+          "b": [
+            "target in crosshair",
+            "+ L grip - target attacker"
+          ],
+          "a": [
+            "nearest enemy",
+            "+ L grip - next target"
+          ],
+          "trigger": "guns",
+          "grip": "hold - afterburner"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1879,6 +2404,41 @@
           "hint": "the 0AD folder from the unzipped 0AD-VR-Quest-data zip (about 2 GB)"
         }
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - scroll map",
+            "press - vr / mixed reality",
+            "both held - recenter table"
+          ],
+          "y": "pause",
+          "x": "idle worker",
+          "menu": "game menu",
+          "trigger": [
+            "shift (batch train,",
+            "add to selection)"
+          ],
+          "grip": [
+            "ctrl (control groups)"
+          ]
+        },
+        "right": {
+          "stick": [
+            "left/right - rotate",
+            "up/down - zoom"
+          ],
+          "b": "cancel",
+          "a": "follow selection",
+          "trigger": [
+            "select / click",
+            "hold & drag - box select"
+          ],
+          "grip": [
+            "order: move,",
+            "attack, gather"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -1971,6 +2531,39 @@
         "The first start unpacks the game data (about 700 MB, takes a minute), then the menu appears.",
         "If the table or the panel isn't in front of you, hold both stick clicks for a second."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - scroll map",
+            "press - vr / mixed reality",
+            "both held - recenter table"
+          ],
+          "y": "back (research, intel)",
+          "x": "stop / hold position",
+          "menu": "game menu",
+          "trigger": [
+            "shift (add to selection,",
+            "queue orders)"
+          ],
+          "grip": "ctrl (assign groups)"
+        },
+        "right": {
+          "stick": [
+            "left/right - rotate",
+            "up/down - zoom"
+          ],
+          "b": "back / game menu",
+          "a": "enter",
+          "trigger": [
+            "select / click",
+            "hold & drag - box select"
+          ],
+          "grip": [
+            "order: move,",
+            "attack, build"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2053,6 +2646,22 @@
         "Meta Quest 2 or 3, or a PICO headset (untested on real PICO hardware)"
       ],
       "install": "default",
+      "controls_diagram": {
+        "left": {
+          "stick": "directions - move",
+          "y": "hold - scoreboard",
+          "menu": "main menu",
+          "trigger": "jump"
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up/down - switch weapon"
+          ],
+          "b": "back",
+          "trigger": "fire"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2246,6 +2855,36 @@
         "On first launch a panel offers to download Urban Terror 4.3.4 (1.4 GB) from FrozenSand's official server. Press **I agree - download and install**: the app checks the download, installs it to `/sdcard/UrTQuest/q3ut4` and starts the game (Wi-Fi needed, a few minutes). An interrupted download continues where it stopped.",
         "Already have Urban Terror 4.3.4? Copy its `q3ut4` folder to `/sdcard/UrTQuest/` before the first launch (leave out `q3config.cfg`) and the download is skipped."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "hold press - sprint"
+          ],
+          "y": "bandage",
+          "x": "fire mode",
+          "menu": "menu",
+          "trigger": [
+            "use: doors, defuse,",
+            "pick up"
+          ],
+          "grip": [
+            "hand near the gun -",
+            "two-handed aim"
+          ]
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up/down - next/prev weapon",
+            "press - scope zoom"
+          ],
+          "b": "jump",
+          "a": "crouch",
+          "trigger": "fire",
+          "grip": "reload"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2365,6 +3004,29 @@
         "Launch **OpenArena-VR** from *Unknown Sources* and allow file access.",
         "The first start unpacks the game data to `/sdcard/OpenArenaVR/` (about a minute), then the main menu opens."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "press - scoreboard"
+          ],
+          "y": "gesture",
+          "x": "use item",
+          "menu": "menu",
+          "trigger": "jump",
+          "grip": "steady the weapon"
+        },
+        "right": {
+          "stick": "left/right - snap turn",
+          "b": "crouch",
+          "a": "jump",
+          "trigger": "fire",
+          "grip": [
+            "hold - weapon wheel",
+            "point, release - pick"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2446,6 +3108,23 @@
         "Meta Quest"
       ],
       "install": "default",
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "press - drift"
+          ],
+          "y": "look back",
+          "x": "rescue",
+          "menu": "pause",
+          "trigger": "brake"
+        },
+        "right": {
+          "b": "fire",
+          "a": "nitro",
+          "trigger": "accelerate"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2497,6 +3176,25 @@
         "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r <file>.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "press - recenter screen"
+          ],
+          "y": "item",
+          "x": "action (run, grab, shoot)",
+          "menu": "pause",
+          "trigger": "jump",
+          "grip": "peek left"
+        },
+        "right": {
+          "stick": "directions - peek",
+          "a": "jump",
+          "trigger": "action (run, grab, shoot)",
+          "grip": "peek right"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2573,6 +3271,33 @@
         "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r <file>.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": "left/right - steer",
+          "x": [
+            "jump",
+            "(hold to charge)"
+          ],
+          "menu": "menu / abort race",
+          "trigger": "brake",
+          "grip": [
+            "trick",
+            "(hold + steer in the air)"
+          ]
+        },
+        "right": {
+          "b": "pause",
+          "a": [
+            "jump",
+            "(hold to charge)"
+          ],
+          "trigger": "paddle",
+          "grip": [
+            "trick",
+            "(hold + steer in the air)"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2642,6 +3367,27 @@
         "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r <file>.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Launch it from *Library → Unknown Sources*."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - move",
+            "up - look up",
+            "down - duck",
+            "both pressed - recenter"
+          ],
+          "y": "grenade",
+          "x": "powerline",
+          "menu": "pause",
+          "trigger": "smart bomb"
+        },
+        "right": {
+          "stick": "up/down - look up/down",
+          "b": "lightning",
+          "a": "jump",
+          "trigger": "shoot",
+          "grip": "cycle weapon"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2733,6 +3479,28 @@
         "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Lionheart-3D-v0.2.0-beta.apk`.",
         "Launch *Lionheart 3D* from *Library → Unknown Sources*."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "up - climb",
+            "up + attack - up attack",
+            "press - passthrough"
+          ],
+          "y": "pause",
+          "x": "quit",
+          "menu": "quick save / load",
+          "trigger": "jump",
+          "grip": "player list"
+        },
+        "right": {
+          "stick": "press - soft / sharp pixels",
+          "b": "jump",
+          "a": "attack",
+          "trigger": "attack",
+          "grip": "cheat menu"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2823,6 +3591,23 @@
         "Meta Quest, or a PICO headset (untested on real PICO hardware)"
       ],
       "install": "default",
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - tilt floor",
+            "neverputt: aim / power"
+          ],
+          "x": "pause",
+          "trigger": "start / putt",
+          "grip": "hold - camera left"
+        },
+        "right": {
+          "stick": "left/right - turn camera",
+          "a": "start / putt",
+          "trigger": "start / putt",
+          "grip": "hold - camera right"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2898,6 +3683,29 @@
       ],
       "install": "default",
       "install_extra": "The first start can take a minute or two while the game data is extracted. Grant \"All files access\" when asked. SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader) and launch it from your library.",
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "press - reverse gear"
+          ],
+          "y": [
+            "next camera",
+            "hold - recenter view"
+          ],
+          "x": "handbrake",
+          "menu": "pause menu",
+          "trigger": "brake",
+          "grip": "shift down"
+        },
+        "right": {
+          "stick": "press - rollover recover",
+          "b": "pause menu",
+          "a": "start engine",
+          "trigger": "throttle",
+          "grip": "shift up"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -2993,6 +3801,28 @@
         "Launch it from *Library → Unknown Sources*."
       ],
       "install_extra": "The first launch takes an extra half minute while the game data is unpacked to `/sdcard/SpeedDreamsVR`. Updates reuse it: just install the new APK.",
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "press - reverse gear"
+          ],
+          "y": "next camera",
+          "x": "asr (traction control)",
+          "trigger": "brake",
+          "grip": "shift down"
+        },
+        "right": {
+          "stick": "press - rear-view mirror",
+          "a": "abs",
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "throttle",
+          "grip": "shift up"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -3085,6 +3915,25 @@
         "Create your profile: turn the wheel with the left stick and press **A** for each letter, then turn to **END** and press **A**.",
         "Already have RVGL data, for example from the Android version? Copy it to `/sdcard/RVGL` before the first launch, and the packs that are present are not downloaded again."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "both held - recenter"
+          ],
+          "y": "change camera",
+          "x": "reposition car",
+          "menu": "pause",
+          "trigger": "brake / reverse"
+        },
+        "right": {
+          "stick": "press - horn",
+          "b": "reset car",
+          "a": "fire weapon",
+          "trigger": "accelerate",
+          "grip": "rear view"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -3187,6 +4036,29 @@
         "Copy the assets onto the headset: `adb push sf64.o2r /sdcard/Android/data/com.starship.vr/files/sf64.o2r`",
         "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - control stick",
+            "press - starship menu"
+          ],
+          "y": "C-down",
+          "x": "C-left",
+          "menu": "start",
+          "trigger": "N64 B",
+          "grip": "N64 Z"
+        },
+        "right": {
+          "stick": [
+            "up - C-up",
+            "right - C-right"
+          ],
+          "b": "N64 B",
+          "a": "N64 A",
+          "trigger": "N64 A",
+          "grip": "N64 R"
+        }
+      },
       "controls": {
         "columns": [
           "N64",
@@ -3276,6 +4148,29 @@
         "Copy the game data onto the headset: `adb push mk64.o2r spaghetti.o2r /sdcard/Android/data/dev.spaghettikart.vr/files/`",
         "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": "left/right - steer",
+          "y": "C-left",
+          "x": "C-down",
+          "menu": "pause",
+          "trigger": "use item"
+        },
+        "right": {
+          "stick": [
+            "up - C-up",
+            "right - C-right"
+          ],
+          "b": "brake",
+          "a": "accelerate",
+          "system": [
+            "system menu",
+            "hold - recenter view"
+          ],
+          "trigger": "accelerate",
+          "grip": "hop / drift"
+        }
+      },
       "controls": {
         "columns": [
           "N64",
@@ -3365,6 +4260,30 @@
         "Copy your disc dump onto the headset, for example into `Download/`.",
         "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO. Allow *All files access*, select the disc and press **Start Game**."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - d-pad",
+            "press - passthrough"
+          ],
+          "y": "triangle",
+          "x": "square",
+          "menu": "start",
+          "trigger": "L1",
+          "grip": "L2"
+        },
+        "right": {
+          "stick": [
+            "up/down - screen size",
+            "left/right - 3d depth",
+            "press - select"
+          ],
+          "b": "circle",
+          "a": "cross",
+          "trigger": "R1",
+          "grip": "R2"
+        }
+      },
       "controls": {
         "columns": [
           "PS1",
@@ -3457,6 +4376,28 @@
         "Rename your disc image to `ctr-u.bin` and copy it onto the headset into `CTR/assets/`, for example `adb push ctr-u.bin /sdcard/CTR/assets/ctr-u.bin`.",
         "Launch it from *Library → Unknown Sources*. On the first start, allow file access, then start the app again."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "both held - recenter"
+          ],
+          "x": "brake / reverse",
+          "menu": "pause",
+          "trigger": "brake / reverse",
+          "grip": "tap in slide - turbo"
+        },
+        "right": {
+          "stick": "press - camera near/far",
+          "b": "weapon",
+          "a": "accelerate",
+          "trigger": "accelerate",
+          "grip": [
+            "hop / power-slide",
+            "(hold while steering)"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Race",
@@ -3558,6 +4499,30 @@
       ],
       "install": "default",
       "install_extra": "The first start unpacks the game files, which takes a few seconds. SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader) and launch it from your library.",
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - walk",
+            "press - toggle fly"
+          ],
+          "y": "inventory",
+          "x": "sprint",
+          "menu": "pause menu",
+          "trigger": "place / use",
+          "grip": "drop item"
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up/down - hotbar slot",
+            "press - chat"
+          ],
+          "b": "sneak",
+          "a": "jump",
+          "trigger": "dig / attack",
+          "grip": "place / use"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -3676,6 +4641,22 @@
       ],
       "install": "default",
       "install_extra": "After installing, copy the game data with `android/push_data.sh` (see the notes above) before the first start. SideQuest is a Quest tool, so on PICO install with `adb install -r` (or your usual sideloader) and launch it from your library.",
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "up/down - pitch"
+          ],
+          "y": "change view",
+          "menu": "pause menu",
+          "trigger": "fire weapon",
+          "grip": "left airbrake"
+        },
+        "right": {
+          "trigger": "thrust",
+          "grip": "right airbrake"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -3769,6 +4750,22 @@
         "Put ROMs in `/sdcard/Android/data/com.snes9x.vr/files/roms`, or choose any folder in *Settings → ROM folder* and grant storage access there.",
         "Launch it from *Library → Unknown Sources* on Quest, or from your library on PICO: the app opens on the ROM list."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": "directions - d-pad",
+          "y": "SNES X",
+          "x": "SNES Y",
+          "menu": "options menu",
+          "trigger": "SNES L",
+          "grip": "select"
+        },
+        "right": {
+          "b": "SNES A",
+          "a": "SNES B",
+          "trigger": "SNES R",
+          "grip": "start"
+        }
+      },
       "controls": {
         "columns": [
           "SNES",
@@ -3854,6 +4851,41 @@
         "Copy your BIOS and games onto the headset, for example into `Download/`.",
         "Launch *ARMSX* from *Library → Unknown Sources*, allow file access and point it at your BIOS and games."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - left analog",
+            "hard push - d-pad",
+            "press - start",
+            "+ menu press - L3"
+          ],
+          "y": "triangle",
+          "x": "square",
+          "menu": [
+            "tap - pause menu",
+            "hold - shift"
+          ],
+          "trigger": "L2",
+          "grip": "L1"
+        },
+        "right": {
+          "stick": [
+            "directions - right analog",
+            "press - select",
+            "+ menu press - R3"
+          ],
+          "b": [
+            "circle",
+            "+ menu - d-pad on/off"
+          ],
+          "a": "cross",
+          "trigger": [
+            "R2",
+            "+ menu - recenter"
+          ],
+          "grip": "R1"
+        }
+      },
       "controls": {
         "columns": [
           "Quest",
@@ -3946,6 +4978,41 @@
         "Grant storage access and point the app at your games.",
         "Uninstall any other ARMSX2 build first if the install fails with a signature mismatch."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - left analog",
+            "hard push - d-pad",
+            "press - start",
+            "+ menu press - L3"
+          ],
+          "y": "triangle",
+          "x": "square",
+          "menu": [
+            "tap - armsx2 menu",
+            "hold - shift"
+          ],
+          "trigger": "L2",
+          "grip": "L1"
+        },
+        "right": {
+          "stick": [
+            "directions - right analog",
+            "press - select",
+            "+ menu press - R3"
+          ],
+          "b": [
+            "circle",
+            "+ menu - d-pad on/off"
+          ],
+          "a": "cross",
+          "trigger": [
+            "R2",
+            "+ menu - recenter"
+          ],
+          "grip": "R1"
+        }
+      },
       "controls": {
         "columns": [
           "Quest",
@@ -4041,6 +5108,42 @@
         "Start it with the headset on. The first start compiles shaders and takes a while.",
         "Updating from Beta 0.1: replacing `KisakCOD-sp.exe` is enough."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "press - sprint"
+          ],
+          "y": "next weapon",
+          "x": "use / pick up",
+          "menu": "pause",
+          "trigger": [
+            "hold + stick:",
+            "melee (up),",
+            "night vision,",
+            "airstrike, c4"
+          ],
+          "grip": [
+            "support grip,",
+            "magazines, grenades"
+          ]
+        },
+        "right": {
+          "stick": [
+            "left/right - turn",
+            "up - jump",
+            "down - lower stance",
+            "press - WinlatorXR menu"
+          ],
+          "b": [
+            "crouch / stance",
+            "hold - prone"
+          ],
+          "a": "reload / eject magazine",
+          "trigger": "fire",
+          "grip": "grenade launcher"
+        }
+      },
       "controls": {
         "columns": [
           "Action",
@@ -4140,6 +5243,39 @@
         "Start `D:\\RedFaction\\RedFactionVR.bat` from the container's file manager, or make a shortcut for `wine C:\\windows\\system32\\cmd.exe` with the arguments `/c D:\\RedFaction\\RedFactionVR.bat`.",
         "The first start converts the GOG `RF.exe` to `RF_120na.exe` and takes a little longer. Steam and retail versions: see `README-WinlatorXR.txt`."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "press - holster"
+          ],
+          "y": "headlamp",
+          "x": [
+            "reload",
+            "(or shake right hand down)"
+          ],
+          "menu": "pause menu",
+          "trigger": [
+            "alternate fire",
+            "hold - sniper zoom"
+          ],
+          "grip": [
+            "use",
+            "hold - two-handed grip"
+          ]
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up/down - prev/next weapon",
+            "press - laser sight"
+          ],
+          "b": "jump",
+          "a": "crouch",
+          "trigger": "fire",
+          "grip": "+ trigger - alt fire"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -4235,6 +5371,43 @@
         "Map every XR controller button to a numpad key the game does not use (the tested mapping is in the README), so WinlatorXR's own keys don't reach the game.",
         "Start the **BFVR-VR** shortcut. The first start sets the game up and takes a few minutes."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "press - map"
+          ],
+          "y": "hold - scoreboard",
+          "x": "prone",
+          "menu": "game menu",
+          "trigger": [
+            "use, enter and",
+            "leave vehicles"
+          ],
+          "grip": [
+            "near the weapon -",
+            "two-handed grip"
+          ]
+        },
+        "right": {
+          "stick": [
+            "left/right - turn",
+            "up - jump",
+            "down - crouch",
+            "press - WinlatorXR menu"
+          ],
+          "b": [
+            "reload",
+            "hold 2 s - recenter"
+          ],
+          "a": [
+            "hold - quick menu",
+            "(point, release)"
+          ],
+          "trigger": "fire",
+          "grip": "aim / secondary fire"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -4339,6 +5512,43 @@
         "Container: screen `1792x1624` (or `1592x1440` for a few more fps), DXVK, wrapper/Turnip, drive `D:` mapped to `/sdcard/Download`.",
         "Launch `D:\\Crysis\\Bin32\\CrysisVR.exe` (use the **32-bit** launcher)."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "press - sprint"
+          ],
+          "y": [
+            "tap - armor mode",
+            "hold - suit menu"
+          ],
+          "x": "binoculars",
+          "menu": "game menu / objectives",
+          "trigger": "use / pick up",
+          "grip": "grab weapon two-handed"
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up - jump",
+            "down - crouch / prone",
+            "press - WinlatorXR menu"
+          ],
+          "b": [
+            "tap - cycle grenade",
+            "hold - throw grenade"
+          ],
+          "a": [
+            "tap - reload",
+            "hold - fire mode"
+          ],
+          "trigger": "fire",
+          "grip": [
+            "holster / switch weapon",
+            "hold + swing - melee"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -4441,6 +5651,46 @@
         "Follow `README_INSTALL.txt`: copy the game and mod to the headset, create the WinlatorXR container and point the shortcut at it.",
         "Recommended **1792×1624** preset (locked 72 fps) - patch `FarCry.exe` to be large-address-aware first (see the README), or use **1591×1440** without the patch."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - move",
+            "press - sprint"
+          ],
+          "y": [
+            "tap - cycle grenade",
+            "hold - throw grenade"
+          ],
+          "x": "binoculars",
+          "menu": "game menu",
+          "trigger": "use / interact",
+          "grip": [
+            "grab (two-handed",
+            "weapon, ladders)"
+          ]
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up - jump",
+            "down - crouch",
+            "press - WinlatorXR menu"
+          ],
+          "b": [
+            "tap - switch weapon",
+            "hold - drop weapon"
+          ],
+          "a": [
+            "tap - reload",
+            "hold - fire mode"
+          ],
+          "trigger": "fire",
+          "grip": [
+            "grab (two-handed",
+            "weapon, ladders)"
+          ]
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -4546,6 +5796,23 @@
         "**Manual alternative (Dawn):** copy your TrackMania folder to `Download/TmForever` with the TMLoader \"prepackaged\" zip, unzip `TMFOXR-Quest-Dawn-Beta-0.2.zip` into it and import the included `TMFOXR-VR.wxrprofile.json`. Set the DX wrapper to **DXVK 2.4 with Async** by hand. See `README_DAWN.txt`.",
         "**Manual alternative (cats-27, untested):** run `install.cmd` from `TMFOXR-Quest-Installer-Beta-0.2.zip` inside your container. See `README_INSTALL.txt`."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "hold press - recenter"
+          ],
+          "y": "next camera",
+          "menu": "pause menu",
+          "trigger": "brake / reverse"
+        },
+        "right": {
+          "stick": "press - WinlatorXR menu",
+          "b": "restart the track",
+          "a": "respawn at checkpoint",
+          "trigger": "accelerate"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -4645,6 +5912,26 @@
         "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Bugdom-VR-1.3.5-beta1.apk`. On PICO use adb or whichever sideloader you already use.",
         "Launch *Bugdom* from *Library → Unknown Sources* on Quest, or from your library on PICO."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": "directions - move",
+          "y": "buddy attack",
+          "x": "kick",
+          "menu": "pause",
+          "grip": "zoom camera in"
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "up/down - camera",
+            "hold press - recenter"
+          ],
+          "b": "roll into a ball",
+          "a": "jump",
+          "trigger": "kick",
+          "grip": "zoom camera out"
+        }
+      },
       "controls": {
         "columns": [
           "Input",
@@ -4747,6 +6034,26 @@
         "Sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r Bugdom2-VR-4.0.1-beta1.apk`. On PICO use adb or whichever sideloader you already use.",
         "Launch *Bugdom 2* from *Library → Unknown Sources* on Quest, or from your library on PICO. The first start takes a little longer, while the game data is unpacked."
       ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - walk",
+            "press - camera distance"
+          ],
+          "y": "launch buddy",
+          "x": "kick",
+          "menu": "pause"
+        },
+        "right": {
+          "stick": [
+            "left/right - snap turn",
+            "hold press - recenter"
+          ],
+          "b": "pick up / drop",
+          "a": "jump",
+          "trigger": "kick"
+        }
+      },
       "controls": {
         "columns": [
           "Input",

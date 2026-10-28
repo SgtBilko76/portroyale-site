@@ -93,6 +93,18 @@ def hero_image(game, imgs):
     return imgs[0] if imgs else None
 
 
+def webp_size(path):
+    """(width, height) of a WebP file, or None."""
+    d = path.read_bytes()[:30]
+    if d[:4] != b"RIFF" or d[8:12] != b"WEBP":
+        return None
+    if d[12:16] == b"VP8 ":
+        return int.from_bytes(d[26:28], "little") & 0x3FFF, int.from_bytes(d[28:30], "little") & 0x3FFF
+    if d[12:16] == b"VP8X":
+        return int.from_bytes(d[24:27], "little") + 1, int.from_bytes(d[27:30], "little") + 1
+    return None
+
+
 def is_whole(path):
     return any(k in path.name.lower() for k in ("logo", "banner", "splash", "product"))
 
@@ -389,10 +401,13 @@ def build_game(site, cats, game, rels, prev_g, next_g):
       <p class="note">The controller mapping is documented in the <a href="{repo_url}#readme" target="_blank" rel="noopener">repository README</a>.</p>"""
 
     diagram = ""
-    if (IMAGES / "controls" / f"{game['slug']}.webp").exists():
+    dpath = IMAGES / "controls" / f"{game['slug']}.webp"
+    if dpath.exists():
         src = f"images/controls/{game['slug']}.webp"
+        size = webp_size(dpath)
+        dims = f' width="{size[0]}" height="{size[1]}"' if size else ""
         diagram = f"""
-    <figure class="controls-diagram"><a href="{src}" target="_blank" rel="noopener"><img src="{src}" alt="{esc(game['name'])} controller mapping" width="1680" height="800" loading="lazy"></a></figure>"""
+    <figure class="controls-diagram"><a href="{src}" target="_blank" rel="noopener"><img src="{src}" alt="{esc(game['name'])} controller mapping"{dims} loading="lazy"></a></figure>"""
 
     notes = ""
     if game.get("notes"):

@@ -38,7 +38,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONT_FILE = os.path.join(ROOT, "tools", "fonts", "OpenSans-Bold.ttf")
 OUT_DIR = os.path.join(ROOT, "images", "controls")
 
-W, H = 1680, 800
+BASE_W, BASE_H = 1680, 800
+W, H = BASE_W, BASE_H
 CX = W / 2
 FS = 30            # label font size
 LH = 38            # label line height
@@ -69,7 +70,7 @@ ANCHORS = {
     "btn1": (BTN_X[0] - 8, BTN_X[1] - 19),
     "menu": (BTN_MENU[0] - 8, BTN_MENU[1] - 12),
     "trigger": (450, 330),
-    "grip": (318, 470),
+    "grip": (268, 560),
 }
 # Round parts a leader line must not cross: slot -> (center, rx, ry), local coordinates.
 PARTS = {
@@ -199,31 +200,71 @@ def layout(spec):
             h = len(it["lines"]) * LH
             ax, ay = it["anchor"]
             y = max(y, ay - h / 2 - 46)
-            mid = y + h / 2
+            near = [px for px, py in edge if y - 6 <= py <= y + h + 6]
             if hand == "left":
-                near = [px for px, py in edge if abs(py - mid) < 30]
                 lim = min(near) - 22 if near else ax - 80
                 xe = min(ax - 80, lim)
             else:
-                near = [px for px, py in edge if abs(py - mid) < 30]
                 lim = max(near) + 22 if near else ax + 80
                 xe = max(ax + 80, lim)
             it.update(x=xe, y=y, align="end" if hand == "left" else "start")
             blocks.append(it)
             y += h + 26
-        for it in center:
-            it["align"] = "middle"
         blocks.extend(center)
     # center column: the four trigger/grip labels in rows between the handles
-    order = [("left", "trigger"), ("right", "trigger"), ("left", "grip"), ("right", "grip")]
-    y = 470
-    for hand, slot in order:
-        for it in blocks:
-            if it["hand"] == hand and it["slot"] == slot:
-                it["x"] = CX + (-30 if hand == "left" else 30)
-                it["y"] = y
-                y += len(it["lines"]) * LH + 30
+    # two columns between the handles: left hand's labels end left of the centre line,
+    # the right hand's start right of it; each label moves down until it clears the drawing
+    mask = controller_mask()
+    for it in blocks:
+        if it["slot"] == "trigger":
+            it["lines"] = wrap(it["lines"], 200)
+            it.update(x=CX - 16 if it["hand"] == "left" else CX + 16, y=450, center=True,
+                      align="end" if it["hand"] == "left" else "start")
+            while mask.crop(tuple(int(v) for v in label_box(it))).getbbox() and it["y"] < 1400:
+                it["y"] += 6
+    # grip labels sit under the handles, the line runs up to the grip button (as on Meta's own diagrams)
+    for it in blocks:
+        if it["slot"] == "grip":
+            it.update(x=it["anchor"][0], y=TY + 690, center=True, align="middle")
+            for o in blocks:
+                if o is not it and "y" in o and o["slot"] != "grip":
+                    a, b = label_box(it), label_box(o)
+                    if a[0] < b[2] and b[0] < a[2] and it["y"] < b[3] + 10:
+                        it["y"] = b[3] + 14
     return blocks
+
+
+def wrap(lines, maxw):
+    """Word-wrap each line to maxw pixels (keeps the given line breaks)."""
+    out = []
+    for line in lines:
+        cur = ""
+        for word in line.split(" "):
+            test = (cur + " " + word).strip()
+            if cur and text_w(test) > maxw:
+                out.append(cur)
+                cur = word
+            else:
+                cur = test
+        out.append(cur)
+    return out
+
+
+def label_box(b):
+    w = max(text_w(s) for s in b["lines"])
+    x0 = {"end": b["x"] - w, "start": b["x"], "middle": b["x"] - w / 2}[b["align"]]
+    return (x0 - 4, b["y"] + 4, x0 + w + 4, b["y"] + len(b["lines"]) * LH - 2)
+
+
+def controller_mask(height=1500):
+    from PIL import ImageDraw
+    mask = Image.new("L", (int(W), height), 0)
+    dr = ImageDraw.Draw(mask)
+    shapes = [hull(ellipse_pts(**FACE) + ellipse_pts(**UNDER)), sample_path(HANDLE), sample_path(TRIGGER)]
+    for hand in ("left", "right"):
+        for s in shapes:
+            dr.polygon([to_canvas(p, hand) for p in s], fill=255)
+    return mask
 
 
 def seg_hits(p, q, part, pad=7):
@@ -256,20 +297,27 @@ def pick_anchor(b, start):
     return best[1]
 
 
+def leader_start(b):
+    """Where a label's leader line leaves the text."""
+    x0, _, x1, _ = label_box(b)
+    n = len(b["lines"])
+    ax, ay = b["anchor"]
+    if b.get("center"):
+        if x0 + 10 <= ax <= x1 - 10 or b["slot"] == "trigger":
+            return min(max(ax, x0 + 12), x1 - 12), b["y"] - 4   # top edge
+        return (x0 - 6 if ax < x0 else x1 + 6), b["y"] + LH / 2 - 4   # side facing the anchor
+    if b["align"] == "end":
+        return b["x"] + 10, b["y"] + n * LH / 2 - 4
+    return b["x"] - 10, b["y"] + n * LH / 2 - 4
+
+
 def label_svg(b):
     out = []
     n = len(b["lines"])
     x, y = b["x"], b["y"]
     widths = [text_w(s) for s in b["lines"]]
     wmax = max(widths)
-    ax, ay = b["anchor"]
-    if b["align"] == "end":
-        sx, sy = x + 10, y + n * LH / 2 - 4
-    elif b["align"] == "start":
-        sx, sy = x - 10, y + n * LH / 2 - 4
-    else:  # centered label below the anchor: start at the top edge
-        sx = min(max(ax, x - wmax / 2 + 10), x + wmax / 2 - 10)
-        sy = y - 6
+    sx, sy = leader_start(b)
     ax, ay = pick_anchor(b, (sx, sy))
     out.append(f'<line x1="{sx:.1f}" y1="{sy:.1f}" x2="{ax:.1f}" y2="{ay:.1f}" class="lead"/>')
     out.append(f'<circle cx="{ax:.1f}" cy="{ay:.1f}" r="5" class="dot"/>')
@@ -278,9 +326,26 @@ def label_svg(b):
     return "".join(out)
 
 
-def build_html(spec, bg_path):
+def set_width(w):
+    global W, CX, LX
+    W = w
+    CX = W / 2
+    LX = CX - 505
+
+
+def build_html(spec, bg_path, slug=""):
+    global H
+    set_width(BASE_W)
     shape = controller_shape()
     blocks = layout(spec)
+    # labels too long for the side columns widen the picture
+    over = max(max(8 - label_box(b)[0], label_box(b)[2] - (W - 8)) for b in blocks)
+    if over > 0:
+        set_width(BASE_W + 2 * (int(over) + 12))
+        blocks = layout(spec)
+    # crowded layouts get a taller picture instead of smaller text
+    H = max(BASE_H, int(max(b["y"] + len(b["lines"]) * LH for b in blocks)) + 22)
+    check_layout(blocks, slug)
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <style>
  text {{ font-family: 'OS'; font-weight: 700; }}
@@ -304,6 +369,64 @@ html, body {{ margin: 0; width: {W}px; height: {H}px; overflow: hidden; backgrou
 svg {{ position: absolute; inset: 0; }}
 </style></head><body><div class="bg"></div>{svg}</body></html>"""
     return page, svg
+
+
+def sample_path(d, steps=24):
+    """Points along an SVG path made of M/C/L/Z commands."""
+    tok = d.replace(",", " ").split()
+    pts, i, cur, cmd = [], 0, (0.0, 0.0), None
+    while i < len(tok):
+        if tok[i].isalpha():
+            cmd = tok[i]
+            i += 1
+            if cmd == "Z":
+                continue
+        if cmd in ("M", "L"):
+            cur = (float(tok[i]), float(tok[i + 1]))
+            pts.append(cur)
+            i += 2
+        elif cmd == "C":
+            c1, c2, end = [(float(tok[i + k]), float(tok[i + k + 1])) for k in (0, 2, 4)]
+            for s in range(1, steps + 1):
+                t = s / steps
+                pts.append(tuple((1 - t) ** 3 * a + 3 * (1 - t) ** 2 * t * b + 3 * (1 - t) * t * t * c + t ** 3 * e
+                                 for a, b, c, e in zip(cur, c1, c2, end)))
+            cur = end
+            i += 6
+    return pts
+
+
+def check_layout(blocks, slug):
+    """Warn about labels outside the picture, on top of each other or over a controller."""
+    mask = controller_mask()
+    boxes, warn = [], []
+    for b in blocks:
+        box = label_box(b)
+        name = f'{b["hand"]} {b["slot"]} "{b["lines"][0]}"'
+        if box[0] < 8 or box[1] < 4 or box[2] > W - 8 or box[3] > H - 4:
+            warn.append(f"{name}: outside the picture {tuple(int(v) for v in box)}")
+        crop = mask.crop(tuple(int(v) for v in box))
+        if crop.getbbox():
+            warn.append(f"{name}: covers a controller")
+        for nb, ob in boxes:
+            if box[0] < ob[2] and ob[0] < box[2] and box[1] < ob[3] and ob[1] < box[3]:
+                warn.append(f"{name}: overlaps {nb}")
+        boxes.append((name, box))
+    for b in blocks:
+        s, a = leader_start(b), b["anchor"]
+        for o in blocks:
+            if o is b:
+                continue
+            x0, y0, x1, y1 = label_box(o)
+            for k in range(1, 40):
+                t = k / 40
+                px, py = s[0] + (a[0] - s[0]) * t, s[1] + (a[1] - s[1]) * t
+                if x0 + 2 < px < x1 - 2 and y0 + 2 < py < y1 - 2:
+                    warn.append(f'{b["hand"]} {b["slot"]} line crosses "{o["lines"][0]}"')
+                    break
+    for w in warn:
+        print(f"  WARNING {slug}: {w}")
+    return warn
 
 
 def find_chrome():
@@ -339,7 +462,7 @@ def header_picture(game):
 def render(game, keep_svg=False):
     spec = game["controls_diagram"]
     bg = os.path.join(ROOT, "images", game["slug"], spec["background"]) if spec.get("background") else header_picture(game)
-    page, svg = build_html(spec, bg)
+    page, svg = build_html(spec, bg, game["slug"])
     os.makedirs(OUT_DIR, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
         hp, png = os.path.join(tmp, "d.html"), os.path.join(tmp, "d.png")
