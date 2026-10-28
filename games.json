@@ -535,7 +535,8 @@
         "Full flight control on the controllers, remappable in the game's controller options",
         "Laser pointer for the concourse, hangar and in-flight menus",
         "Virtual keyboard for pilot names and other text fields",
-        "Menus over passthrough on Meta Quest",
+        "Radial menus on both grips for energy, cargo, docking, targeting and wingman orders",
+        "Hyperspace on a single stick click",
         "Controller vibration"
       ],
       "needs": [
@@ -543,10 +544,9 @@
         "Your own copy of *Star Wars: X-Wing Alliance* (Steam or GOG)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.7-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenXWA-VR-v0.1.8-beta.apk`.",
         "Copy your whole X-Wing Alliance game folder (the one with `STRINGS.TXT`) to the headset's internal storage as `OpenXWA`, so that `/sdcard/OpenXWA/STRINGS.TXT` exists.",
-        "Start **OpenXWA VR** from *Unknown Sources* and allow \"access to all files\" when asked.",
-        "Optional: to make hyperspace selectable in *Options → Game Controller Options*, add the line `!KEY_H!104 H Hyperspace` to `/sdcard/OpenXWA/JOYSTICK.TXT`."
+        "Start **OpenXWA VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
       "controls": {
         "columns": [
@@ -572,32 +572,47 @@
           ],
           [
             "Left trigger",
-            "Confirm (Space)",
+            "Countermeasure",
             "Click / launch from the hangar"
           ],
           [
-            "Right grip",
+            "Right grip (tap)",
             "Target the craft in your sights",
             "Right-click"
           ],
           [
             "A / B",
-            "Next target / cycle weapons",
+            "Next target / fighters targeting you",
             "Enter / back"
           ],
           [
             "X / Y",
-            "Fighters targeting you / nearest fighter",
+            "Cycle weapons / cycle firing mode (link fire)",
             "Y = Space"
           ],
           [
             "Left stick click",
-            "Cycle firing mode (link fire)",
+            "Hyperspace (at a hyper buoy one click jumps; otherwise the first click asks, the second jumps)",
             ""
           ],
           [
             "Right stick click",
-            "Hyperspace",
+            "Match target speed",
+            ""
+          ],
+          [
+            "Left grip + left stick click",
+            "Nearest fighter",
+            ""
+          ],
+          [
+            "Left grip (hold)",
+            "Radial menu: energy and ship",
+            ""
+          ],
+          [
+            "Right grip (hold)",
+            "Radial menu: targeting and wingmen",
             ""
           ],
           [
@@ -606,42 +621,16 @@
             "Back"
           ],
           [
-            "Left grip + A / B",
-            "Laser / shield recharge rate",
-            ""
-          ],
-          [
-            "Left grip + X / Y",
-            "Pick up targeted cargo / release carried cargo",
-            ""
-          ],
-          [
-            "Left grip + left / right stick click",
-            "Nearest objective / match target speed",
-            ""
-          ],
-          [
-            "Left grip + left trigger",
-            "Dock with / board the targeted craft",
-            ""
-          ],
-          [
-            "Left grip + right grip",
-            "Target components",
-            ""
-          ],
-          [
             "Meta button (hold)",
             "Recenter the view",
             "Recenter the view"
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
+      "controls_note": "Radial menus: hold a grip and a star of eight commands appears above that controller; tilt the same hand's stick towards one and release the grip to run it (stick centred = cancel). Left: laser and shield recharge rate, shield balance, shield/laser transfer, pick up and release cargo, dock. Right: next objective, target components, the target's attacker, map, wingmen attack/cover/ignore, reinforcements. Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
       "notes": [
         "The APK contains no game data: you need your own copy of the game.",
         "The small screens built into the X-Wing Revival cockpits are dark. All other craft (and gunner seats) keep X-Wing Alliance's own cockpits with their live screens.",
-        "Passthrough behind the menus works on Meta Quest only; on PICO the menus float in front of black.",
         "Ambient occlusion is off in VR; the GPU runs close to its limit in busy scenes.",
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
