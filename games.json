@@ -820,7 +820,7 @@
         "Each craft's original live instruments around you",
         "Full flight control on the controllers, remappable in *Settings → Controller*",
         "Laser pointer for the menus; click a text field (pilot name) and an on-screen keyboard opens",
-        "Menus over passthrough on Meta Quest"
+        "Radial menus on both grips for weapons, power, targeting and wingman orders"
       ],
       "needs": [
         "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested)",
@@ -828,7 +828,7 @@
         "Optional: your own copy of *Star Wars: X-Wing Alliance* for the 3D cockpits of all craft"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenTIE-VR-v0.1.6-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenTIE-VR-v0.1.7-beta.apk`.",
         "From the Steam folder `STAR WARS Tie Fighter`, copy `collectors_cd` to `/sdcard/OpenTIE/TIE95` and `remastered` to `/sdcard/OpenTIE/TIE98` on the headset.",
         "Optional, for the TIE Defender and Missile Boat 3D cockpits: copy your X-Wing Alliance game folder to `/sdcard/OpenXWA` (the same folder OpenXWA VR uses), or just copy `FLIGHTMODELS/TIECOCKPIT.OPT` to `/sdcard/OpenTIE/`.",
         "Start **OpenTIE VR** from *Unknown Sources* and allow \"access to all files\" when asked."
@@ -837,48 +837,38 @@
         "left": {
           "stick": [
             "directions - pitch/yaw",
-            "press - cockpit view",
-            "+ grip press - cycle weapon"
+            "up - nose down",
+            "press - cockpit view"
           ],
-          "y": [
-            "match target speed",
-            "+ grip - flight menu"
-          ],
-          "x": [
-            "target my attacker",
-            "+ grip - clear target"
-          ],
+          "y": "match target speed",
+          "x": "target my attacker",
           "menu": [
             "pause",
             "hold - recenter view"
           ],
-          "trigger": [
-            "target / roll modifier",
-            "+ grip - firing mode"
-          ],
-          "grip": "hold - shift"
+          "trigger": "target / roll modifier",
+          "grip": [
+            "hold - radial menu:",
+            "weapons & power"
+          ]
         },
         "right": {
           "stick": [
             "up/down - throttle",
             "left/right - roll",
-            "press - hyperspace",
-            "+ L grip press - shields"
+            "press - hyperspace"
           ],
-          "b": [
-            "nearest fighter",
-            "+ L grip - throttle down"
-          ],
-          "a": [
-            "next target",
-            "+ L grip - full throttle"
-          ],
+          "b": "nearest fighter",
+          "a": "next target",
           "system": [
             "system menu",
             "hold - recenter view"
           ],
           "trigger": "fire",
-          "grip": "high-angle view"
+          "grip": [
+            "hold - radial menu:",
+            "targets & orders"
+          ]
         }
       },
       "controls": {
@@ -890,7 +880,7 @@
         "rows": [
           [
             "Left stick",
-            "Pitch and yaw",
+            "Pitch and yaw (up = nose down, like a flight stick)",
             "Arrow keys, one step per push"
           ],
           [
@@ -909,8 +899,13 @@
             "Click"
           ],
           [
+            "Left grip (hold)",
+            "Radial menu: weapons and power",
+            ""
+          ],
+          [
             "Right grip",
-            "High-angle view",
+            "Hold: radial menu: targets and orders",
             "Right-click"
           ],
           [
@@ -932,35 +927,14 @@
             "Left Menu button",
             "Pause (hold 1 s: recenter)",
             "Escape (hold 1 s: recenter)"
-          ],
-          [
-            "Left grip + A / B",
-            "Full throttle / throttle down",
-            ""
-          ],
-          [
-            "Left grip + X / Y",
-            "Clear target / flight menu",
-            ""
-          ],
-          [
-            "Left grip + left trigger",
-            "Cycle firing mode",
-            ""
-          ],
-          [
-            "Left grip + left / right stick click",
-            "Cycle weapon / cycle shield direction",
-            ""
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. The star map, goals and in-flight menus use the menu controls.",
+      "controls_note": "Radial menus: hold a grip and a star of eight commands appears above that controller; tilt the same hand's stick towards one and release the grip to run it (stick centred = cancel). Left: laser and shield recharge rate, cycle weapon, full throttle, throttle down, beam weapon, firing mode, shield direction. Right: clear target, target components, map, wingmen attack/cover, mission goals, flight menu, the target's attacker. Button names are those of the Meta Quest controllers; PICO controllers use the same layout. The star map, goals and in-flight menus use the menu controls.",
       "notes": [
         "The APK contains no game data: you need your own copy of the game.",
         "The TIE Defender and Missile Boat use X-Wing Alliance's TIE cockpit from your own copy (see install). The small screens built into the X-Wing Revival cockpits are dark; the original instruments are mounted around you instead.",
         "Motion blur, temporal upscaling and ambient occlusion are off in VR.",
-        "Passthrough behind the menus works on Meta Quest only; on PICO the menus float in front of black.",
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
       ],
