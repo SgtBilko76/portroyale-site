@@ -321,12 +321,19 @@ def find_chrome():
     sys.exit("Chromium not found: set CHROME=/path/to/chrome")
 
 
+def is_logo(name):
+    return name.lower().endswith(".svg") or any(k in name.lower() for k in ("logo", "banner", "splash", "product"))
+
+
 def header_picture(game):
+    """The page's header picture, or its first game picture when the header is a logo."""
     d = os.path.join(ROOT, "images", game["slug"])
-    if game.get("hero"):
-        return os.path.join(d, game["hero"])
     imgs = sorted(f for f in os.listdir(d) if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp")))
-    return os.path.join(d, imgs[0])
+    hero = game.get("hero")
+    if hero and not is_logo(hero):
+        return os.path.join(d, hero)
+    shots = [f for f in imgs if not is_logo(f)] or imgs
+    return os.path.join(d, shots[0])
 
 
 def render(game, keep_svg=False):
