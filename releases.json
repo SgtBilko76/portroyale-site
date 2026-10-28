@@ -645,16 +645,16 @@
  ],
  "OpenXvT-VR": [
   {
-   "tag": "v0.1.0-beta",
-   "name": "OpenXvT VR v0.1.0-beta (Meta Quest + PICO)",
-   "date": "2026-10-19T17:35:52Z",
-   "prerelease": false,
-   "url": "https://github.com/SgtBilko76/OpenXvT-VR/releases/tag/v0.1.0-beta",
+   "tag": "v0.1.1-beta",
+   "name": "OpenXvT VR v0.1.1-beta (Meta Quest + PICO)",
+   "date": "2026-10-28T16:58:01Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/OpenXvT-VR/releases/tag/v0.1.1-beta",
    "assets": [
     {
-     "name": "OpenXvT-VR-v0.1.0-beta.apk",
-     "size": 15036638,
-     "url": "https://github.com/SgtBilko76/OpenXvT-VR/releases/download/v0.1.0-beta/OpenXvT-VR-v0.1.0-beta.apk"
+     "name": "OpenXvT-VR-v0.1.1-beta.apk",
+     "size": 15090977,
+     "url": "https://github.com/SgtBilko76/OpenXvT-VR/releases/download/v0.1.1-beta/OpenXvT-VR-v0.1.1-beta.apk"
     }
    ]
   }

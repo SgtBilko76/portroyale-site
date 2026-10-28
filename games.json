@@ -1127,16 +1127,15 @@
         "Head-tracked stereo 3D space in flight",
         "3D cockpits from X-Wing Revival for the X-wing, Y-wing, A-wing, B-wing, TIE Fighter, Interceptor, Bomber and Gunboat (included); the other fighters borrow the closest one",
         "The original instruments in front of you",
-        "Full flight control on the controllers, remappable in *Settings → Controller*",
-        "Laser pointer for the menus and the in-flight pause screen; on-screen keyboard for the pilot name",
-        "Menus over passthrough on Meta Quest"
+        "Full flight control on the controllers, remappable in *Settings → Controller*, plus radial menus on both grips for weapons, power, targeting and wingman orders",
+        "Laser pointer for the menus (left controller in a mission), the OpenXvT menu with the gamepad; on-screen keyboard for the pilot name"
       ],
       "needs": [
         "Meta Quest 3 (tested) or Quest 2 / 3S / Pro, or PICO 4 / 4 Ultra / Neo 3 (untested)",
         "Your own copy of *Star Wars: X-Wing vs. TIE Fighter - Balance of Power Campaigns* (Steam)"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r OpenXvT-VR-v0.1.0-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r OpenXvT-VR-v0.1.1-beta.apk`.",
         "Copy your whole Steam folder `STAR WARS X-Wing vs TIE Fighter` (about 400 MB) to `/sdcard/OpenXvT` on the headset.",
         "Start **OpenXvT VR** from *Unknown Sources* and allow \"access to all files\" when asked."
       ],
@@ -1144,47 +1143,37 @@
         "left": {
           "stick": [
             "directions - pitch/yaw",
-            "press - link fire",
-            "+ grip press - objective"
+            "up - nose down",
+            "press - forward view"
           ],
-          "y": [
-            "nearest fighter",
-            "+ grip - laser to shields"
-          ],
-          "x": [
-            "target my attacker",
-            "+ grip - shield direction"
-          ],
-          "menu": "pause / settings",
+          "y": "match target speed",
+          "x": "target my attacker",
+          "menu": "settings menu (pause)",
           "trigger": [
             "target / roll modifier",
-            "+ grip - tractor beam"
+            "tap - target in sights"
           ],
-          "grip": "hold - shift"
+          "grip": [
+            "hold - radial menu:",
+            "weapons & power"
+          ]
         },
         "right": {
           "stick": [
             "up/down - throttle",
             "left/right - roll",
-            "press - hyperspace",
-            "+ L grip press - match speed"
+            "press - hyperspace"
           ],
-          "b": [
-            "cycle weapons",
-            "+ L grip - shield recharge"
-          ],
-          "a": [
-            "next target",
-            "+ L grip - laser recharge"
-          ],
+          "b": "nearest fighter",
+          "a": "next target",
           "system": [
             "system menu",
             "hold - recenter view"
           ],
           "trigger": "fire",
           "grip": [
-            "target in sights",
-            "+ L grip - next component"
+            "hold - radial menu:",
+            "targets & orders"
           ]
         }
       },
@@ -1197,8 +1186,8 @@
         "rows": [
           [
             "Left stick",
-            "Pitch and yaw",
-            "Arrow keys"
+            "Pitch and yaw (up = nose down, like a flight stick)",
+            "Arrow keys; selection in the OpenXvT menu"
           ],
           [
             "Right stick",
@@ -1208,72 +1197,51 @@
           [
             "Right trigger",
             "Fire",
-            "Click"
+            "Click (main menus)"
           ],
           [
             "Left trigger",
-            "Target / roll modifier",
+            "Target / roll modifier (tap: target in your sights)",
             "Click"
           ],
           [
-            "Right grip",
-            "Target the craft in your sights",
+            "Left grip (hold)",
+            "Radial menu: weapons and power",
             "Right-click"
           ],
           [
+            "Right grip (hold)",
+            "Radial menu: targets and orders",
+            "Right-click (main menus)"
+          ],
+          [
             "A / B",
-            "Next target / cycle weapons",
-            "Enter / Escape"
+            "Next target / nearest fighter",
+            ""
           ],
           [
             "X / Y",
-            "Target my attacker / nearest fighter",
-            "Y = Space"
+            "Target my attacker / match target speed",
+            "Enter / Space (OpenXvT menu: select / back)"
           ],
           [
             "Left / right stick click",
-            "Link fire / hyperspace",
+            "Forward view / hyperspace",
             ""
           ],
           [
-            "Menu button",
-            "Pause / settings",
+            "Left Menu button",
+            "OpenXvT menu, pauses the game",
             "Escape"
-          ],
-          [
-            "Left grip + A / B",
-            "Laser / shield recharge rate",
-            ""
-          ],
-          [
-            "Left grip + X / Y",
-            "Shield direction / laser energy to shields",
-            ""
-          ],
-          [
-            "Left grip + left trigger",
-            "Tractor beam",
-            ""
-          ],
-          [
-            "Left grip + right grip",
-            "Next target component",
-            ""
-          ],
-          [
-            "Left grip + right / left stick click",
-            "Match target speed / nearest objective",
-            ""
           ]
         ]
       },
-      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. Hold the Meta button to re-centre the view. The pause/settings screen uses the menu controls.",
+      "controls_note": "Radial menus: hold a grip and a star of eight commands appears above that controller; tilt the same hand's stick towards one and release the grip to run it (stick centred = cancel). Left: laser and shield recharge rate, cycle weapon, full throttle, throttle down, beam weapon, firing mode, shield direction. Right: clear target, target components, map, wingmen attack/cover, mission goals, OpenXvT menu, the target's attacker. In menus the laser comes from the left controller (in the main menus from either one): trigger clicks, grip right-clicks, X = Enter, Y = Space. The OpenXvT menu (left Menu in flight, pauses the game) is used with the left controller's gamepad: stick moves the selection, X selects, Y goes back, left trigger / grip switch the page. Hold the Meta button to re-centre the view. Button names are those of the Meta Quest controllers; PICO controllers use the same layout.",
       "notes": [
         "The APK contains no game data: you need your own copy of the game.",
         "The Z-95, T-wing, R-41, TIE Advanced, TIE Defender and Missile Boat have no X-Wing Revival cockpit and borrow the closest one; the small screens built into the Revival cockpits are dark.",
         "The galaxy map and the hyperspace jump are shown flat. Multiplayer is untested.",
         "Motion blur, temporal upscaling and ambient occlusion are off in VR.",
-        "Passthrough behind the menus works on Meta Quest only; on PICO the menus float in front of black.",
         "PICO needs **PICO OS 5.9.0 or newer**: only from that version does the PICO runtime work with the generic Khronos OpenXR loader the port uses.",
         "The PICO build is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s SDL/APP:*` shows how far it gets, which is the useful thing to paste in."
       ],
