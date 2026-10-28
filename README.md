@@ -17,6 +17,7 @@ Open `public/index.html` in a browser. To host it, upload the contents of `publi
 - **Videos:** `"videos": [{"id": "<YouTube id>", "label": "caption"}]` in `games.json` (a single `"video"` + `"video_label"` also works).
 - **Controller picture:** add `controls_diagram` to a game in `games.json` (which label goes on which button, see the top of `tools/controls_diagram.py`), then run `uv run --with pillow tools/controls_diagram.py <slug>`. It writes `images/controls/<slug>.webp` (two Quest controllers over a blurred picture of the game), and the page shows it at the top of the Manual. Commit the `.webp`; the table stays for the details.
 - **Look:** `style.css`.
+- **Moved pages:** `site.redirects` in `games.json` maps an old file name to its new address (e.g. `"csvr.html": "https://www.csvr.online/"`); the build writes a forwarding page so old links and search results keep working.
 
 ## Online
 

@@ -655,6 +655,24 @@ def write_seo_files(site, ordered, rels):
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {site['url']}/sitemap.xml\n")
     if site.get("indexnow_key"):
         (OUT / f"{site['indexnow_key']}.txt").write_text(site["indexnow_key"])
+    write_redirects(site)
+
+
+def write_redirects(site):
+    """Old addresses that moved: `site.redirects` maps a file name to its new URL.
+
+    GitHub Pages has no server-side redirects; an instant meta refresh plus a canonical
+    link is what search engines treat as a permanent move. Not listed in the sitemap."""
+    for name, target in site.get("redirects", {}).items():
+        t = esc(target)
+        (OUT / name).write_text(f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Moved</title>
+<link rel="canonical" href="{t}">
+<meta http-equiv="refresh" content="0; url={t}">
+<script>location.replace({json.dumps(target)})</script>
+</head><body><p>This page has moved to <a href="{t}">{t}</a>.</p></body></html>
+""", encoding="utf-8")
 
 
 if __name__ == "__main__":
