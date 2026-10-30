@@ -4648,6 +4648,137 @@
       ]
     },
     {
+      "slug": "wipeoutpure",
+      "name": "Wipeout Pure VR",
+      "repo": "WipeoutPure-VR",
+      "category": "native",
+      "tagline": "The PSP's anti-gravity racer, in stereo 3D around you on Meta Quest and PICO.",
+      "about": [
+        "A VR port of [pure-recomp](https://github.com/erreib/pure-recomp), the native port of *Wipeout Pure* (PSP, 2005) made by static recompilation: the game's own code runs directly on the headset, no emulator. Races are drawn twice, once per eye, so the tracks, ships and weapons have real depth, and you can look around freely while you race. The HUD floats in front of you; menus, movies and the port's settings are on a large curved screen.",
+        "On the first start the app downloads the **HD texture pack** by NR74W in the background and switches to it by itself when it's done.",
+        "**PICO support is brand new and not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
+      ],
+      "features": [
+        "Stereo 3D races with head tracking: look into the corners and over the edge of the track",
+        "60 fps races at full game speed, shown at 120 Hz on Quest 3",
+        "HD texture pack downloaded on the first start, sharp eyes plus 2x MSAA",
+        "Shaders for the whole game prepared in the background: no stutter in the first races",
+        "Menus on the left stick too, the port's settings menu on both stick clicks",
+        "Runs on PICO 4 / Neo 3 too, from the same APK (untested)"
+      ],
+      "needs": [
+        "Meta Quest (tested on Quest 3; Quest 2/Pro untested, with lighter settings), or PICO 4 / 4 Ultra / Neo 3 (untested)",
+        "A disc image of your own *Wipeout Pure*, **US Greatest Hits edition (UCUS-98612, version 2.00)**, as an `.iso`",
+        "Wi-Fi on the first start for the HD textures (about 450 MB, optional)"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r WipeoutPure-VR-v0.1.0-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Start **Wipeout Pure VR** once from *Library → Unknown Sources*, so it creates its folder, then quit it with the Meta / PICO button.",
+        "Copy your disc image (any name ending in `.iso`) into `Android/data/online.portroyale.wipeoutpurevr/files/import/` on the headset: with the box above, a PC file manager, SideQuest's file manager or `adb push WipeoutPure.iso /sdcard/Android/data/online.portroyale.wipeoutpurevr/files/import/`.",
+        "Start the app again: it checks the image, sets the game up in a few seconds and starts. With Wi-Fi, the HD textures download in the background while you play."
+      ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "up/down - menus"
+          ],
+          "x": "absorb weapon",
+          "y": "change view",
+          "menu": "pause",
+          "trigger": "fire weapon",
+          "grip": "left airbrake"
+        },
+        "right": {
+          "stick": [
+            "directions - d-pad"
+          ],
+          "a": "thrust / confirm",
+          "b": "look behind / back",
+          "trigger": "thrust",
+          "grip": "right airbrake"
+        }
+      },
+      "controls": {
+        "columns": [
+          "Controller",
+          "In a race",
+          "In the menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Steer",
+            "Move the cursor"
+          ],
+          [
+            "Right trigger or A",
+            "Thrust",
+            "Confirm"
+          ],
+          [
+            "Left trigger",
+            "Fire weapon",
+            ""
+          ],
+          [
+            "Left / right grip",
+            "Left / right airbrake",
+            ""
+          ],
+          [
+            "X",
+            "Absorb the weapon (shield energy)",
+            ""
+          ],
+          [
+            "B",
+            "Look behind",
+            "Back"
+          ],
+          [
+            "Y",
+            "Change the camera view",
+            ""
+          ],
+          [
+            "Menu button or left stick click",
+            "Pause",
+            ""
+          ],
+          [
+            "Right stick",
+            "D-pad",
+            "D-pad"
+          ],
+          [
+            "Both stick clicks",
+            "The port's settings menu",
+            ""
+          ]
+        ]
+      },
+      "controls_note": "Hold the Meta / PICO button to re-centre the view. In the pause menu the left stick moves the cursor up and down while you don't thrust. PICO controllers use the same layout.",
+      "notes": [
+        "This is the first beta, tested on Quest 3. The APK contains no game data, and only the US Greatest Hits disc (UCUS-98612 v2.00) is supported: if the image is a different one, `import/SETUP-ERROR.txt` says why.",
+        "Don't want the HD textures? Create an empty file `no-hd-textures` in `Android/data/online.portroyale.wipeoutpurevr/files/` before the first start. Have the pack already? Copy its folder (the one with `textures.ini`) to `files/textures/UCUS98612/`.",
+        "Saves and settings live in the app's `files/` folder. **Uninstalling the app deletes it**, so copy it to your PC first.",
+        "PICO needs **PICO OS 5.9.0 or newer**. The PICO build is untested: if it doesn't start or the controllers do nothing, please open an issue on GitHub and attach `files/PureNative.log`.",
+        "No online (ad hoc) multiplayer yet. Settings for testers (eye resolution, MSAA, 72 fps races) are in the repository's [README-QUEST.md](https://github.com/SgtBilko76/WipeoutPure-VR/blob/main/README-QUEST.md)."
+      ],
+      "credits": "Based on [pure-recomp](https://github.com/erreib/pure-recomp) by erreib and the [PortableKit](https://github.com/TeamGDB/PortableKit) framework. HD textures: the WipEout Pure HD texture pack by NR74W, [re-uploaded by 0xf0xx0](https://github.com/0xf0xx0/WipEout-Pure-HD-Texture-Pack). WIPEOUT is a trademark of Sony Interactive Entertainment; this unofficial fan project contains no game data. Pictures: captured on a Meta Quest 3.",
+      "data": [
+        {
+          "label": "Your Wipeout Pure disc image",
+          "kind": "files",
+          "target": "/sdcard/Android/data/online.portroyale.wipeoutpurevr/files/import",
+          "accept": ".iso",
+          "hint": "your Wipeout Pure disc image (UCUS-98612, an .iso file)"
+        }
+      ]
+    },
+    {
       "slug": "snes9x",
       "name": "Snes9x 3D",
       "repo": "snes9x-3D",
