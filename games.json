@@ -2033,7 +2033,7 @@
         "Nothing else: the full APK has the Forsaken game data built in"
       ],
       "install": [
-        "Sideload the full APK with SideQuest or `adb install -r Forsaken-VR-v0.1.1-beta-full.apk`.",
+        "Sideload the full APK with SideQuest or `adb install -r Forsaken-VR-v0.1.2-full.apk`.",
         "Start **Forsaken VR** from *Unknown Sources* and allow \"All files access\" when asked.",
         "The first start unpacks the game data to `/sdcard/Forsaken/` (about 185 MB, takes about a minute with a black screen), then the title appears."
       ],
@@ -2136,7 +2136,8 @@
         "The full APK contains the [ForsakenX forsaken-data](https://github.com/ForsakenX/forsaken-data) package (original assets by Probe Entertainment / Acclaim).",
         "Your pilots, settings and save games in `/sdcard/Forsaken` stay across updates.",
         "Menus are driven with the sticks and buttons (no laser pointer needed).",
-        "Multiplayer is untested."
+        "Multiplayer is untested.",
+        "Music in v0.1.2: the Forsaken Original Game Soundtrack (Vol. 1, 2025) - main menu track *FORSAKEN Menu Music Option 1* by super_bral_mouse00, plus one looping track per level."
       ],
       "credits": "Based on the [ForsakenX source port](https://github.com/ForsakenX/forsaken); game data distributed by ForsakenX. Pictures: captured on a Meta Quest 3."
     },
