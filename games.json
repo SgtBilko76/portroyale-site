@@ -1428,6 +1428,7 @@
     },
     {
       "slug": "fotg",
+      "hidden": true,
       "name": "Fate of the Galaxy VR",
       "repo": "FotG-VR",
       "category": "native",

@@ -607,6 +607,8 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 def main():
     data = json.loads((ROOT / "games.json").read_text(encoding="utf-8"))
     site, cats, games = data["site"], data["categories"], data["games"]
+    # "hidden": true keeps a port's entry (and pictures) but leaves it off the site for now
+    games = [g for g in games if not g.get("hidden")]
 
     rels = json.loads(CACHE.read_text()) if CACHE.exists() else {}
     if "--refresh" in sys.argv or not rels:
