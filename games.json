@@ -1276,14 +1276,15 @@
         "Full lighting with ship shine, environment reflections and anti-aliasing",
         "Laser pointer for the menus, skippable cutscenes",
         "Laser keyboard for typing your pilot callsign",
-        "Runs on PICO 4 / Neo 3 too, from the same APK (untested)"
+        "Runs on PICO 4 / Neo 3 too, from the same APK (untested)",
+        "Multiplayer over your home network, or online via [PXO](https://pxo.nottheeye.com) (free account; switch PXO on in *Options → Multi*)"
       ],
       "needs": [
         "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested), or PICO 4 / Neo 3 (untested)",
         "Your own copy of FreeSpace 2 ([GOG](https://www.gog.com/game/freespace_2) or [Steam](https://store.steampowered.com/app/273620/)), about 1.8 GB of game files"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.2-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.3-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Copy your game files to `/sdcard/FS2` on the headset: from your GOG or Steam install folder, the nine `.vp` files (`root_fs2.vp` … `warble_fs2.vp`) and the folders `data2` and `data3` (cutscenes). The app moves the cutscenes into place on the first start.",
         "Or, on a PC with Python 3 and the Quest on USB: [get_fs2_data.py](https://github.com/SgtBilko76/FreeSpace2-VR/blob/fs2-vr/tools/quest/get_fs2_data.py) (`python3 get_fs2_data.py <game folder or GOG setup_freespace_2_*.exe> --push`) copies them for you; the GOG offline installer is unpacked with [innoextract](https://constexpr.org/innoextract/).",
         "Start **FreeSpace 2 VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
@@ -2158,14 +2159,15 @@
         "Full lighting with ship shine, environment reflections and anti-aliasing",
         "Laser pointer for the menus",
         "Laser keyboard for typing your pilot callsign",
-        "**One-Tap Installer**: no PC needed, the app downloads and installs the free game data by itself on the first start"
+        "**One-Tap Installer**: no PC needed, the app downloads and installs the free game data by itself on the first start",
+        "Multiplayer over your home network, or online via [PXO](https://pxo.nottheeye.com) (free account; switch PXO on in *Options → Multi*)"
       ],
       "needs": [
         "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested)",
         "Wi-Fi and about 9 GB free space: the One-Tap Installer downloads the free *Wing Commander Saga* 0.9.65 game data (3.6 GB) on the first start"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r WCSaga-VR-v0.1.5-beta.apk`.",
+        "Sideload the APK with SideQuest or `adb install -r WCSaga-VR-v0.1.6-beta.apk`.",
         "Start **Wing Commander Saga VR** from *Unknown Sources*. The **One-Tap Installer** opens: press **Allow file access**, switch on \"Allow access\" and press Done.",
         "Press **Download and install**. The game data is downloaded from the official FSNebula mod repository, checked and unpacked on the headset (about 10–20 minutes, depending on your Wi-Fi). Keep the headset on; if it gets interrupted, start the app again and it continues where it stopped. When it is finished, the game starts, and later starts go straight into the game.",
         "Already have the game data? If the folder `/sdcard/WCSaga/Wing_Commander_Saga/data` exists, the installer is skipped. You can put it there yourself with [get_wcs_data.py](https://github.com/SgtBilko76/WCSaga-VR/blob/quest-vr/tools/quest/get_wcs_data.py) (`python3 get_wcs_data.py WCSaga --push`) or by copying a Windows install of the full game + patch v1.1.0.7822 from [wcsaga.com](https://www.wcsaga.com/downloads/) with SideQuest."
