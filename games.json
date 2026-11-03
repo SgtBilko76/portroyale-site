@@ -1427,6 +1427,171 @@
       ]
     },
     {
+      "slug": "fotg",
+      "name": "Fate of the Galaxy VR",
+      "repo": "FotG-VR",
+      "category": "native",
+      "tagline": "Star Wars starfighter combat from the Original Trilogy in stereo 3D, standalone on Meta Quest and PICO.",
+      "about": [
+        "A VR port of [Fate of the Galaxy](https://www.moddb.com/games/fate-of-the-galaxy), the free fan-made total conversion set in the Star Wars Original Trilogy, running standalone on the [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) engine. Fly for the Rebel Alliance, the Empire or as a smuggler, sit in a full 3D cockpit, and look around the battle in stereo. FreeSpace 2 is **not** needed: the game itself is free.",
+        "PICO support is brand new and **not tested on PICO hardware yet**: reports are very welcome. One APK covers both makes."
+      ],
+      "features": [
+        "Head-tracked stereo 3D space in flight",
+        "Full 3D cockpits of the Original Trilogy starfighters, with working instruments",
+        "HUD fixed in front of the ship, with crosshair, target brackets and lead indicators lined up with your guns",
+        "Full flight control on the controllers: throttle lever on the right stick, a second button layer on the left grip, remappable in *Options → Controls*",
+        "Rebel, Imperial and smuggler campaigns",
+        "Locked 72 fps in flight on Quest 3",
+        "Laser pointer for the menus, laser keyboard for typing your pilot callsign",
+        "Runs on PICO 4 / Neo 3 too, from the same APK (untested)"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested) or Quest 2 / 3S / Pro (untested), or PICO 4 / Neo 3 (untested)",
+        "The free Fate of the Galaxy game data (2.6 GB download, about 9 GB on the headset)"
+      ],
+      "install": [
+        "Sideload the APK with SideQuest or `adb install -r -g FotG-VR-v0.1.0-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Get the game data onto the headset so that `/sdcard/FotG/FotG_R/data` holds the folders `tables`, `models`, `maps` and so on. The easiest way: on a PC with Python 3, [7-Zip](https://www.7-zip.org/) and the headset on USB, run [get_fotg_data.py](https://github.com/SgtBilko76/FotG-VR/blob/fotg-vr/tools/quest/get_fotg_data.py) with `python3 get_fotg_data.py --push`. It downloads the newest release from the official Nebula mod server, checks it and copies it over.",
+        "Or install Fate of the Galaxy on your PC with [Knossos.NET](https://knossosnet.github.io/Knossos-Release-Page/) and copy the `data` folder from its `FotG_R-<version>` folder to `/sdcard/FotG/FotG_R` (with the box above or SideQuest).",
+        "Start **Fate of the Galaxy VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
+      ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - pitch/turn",
+            "press - autopilot",
+            "hold - warp out",
+            "+ grip press - look behind"
+          ],
+          "y": [
+            "next gun type",
+            "+ grip - comms menu"
+          ],
+          "x": [
+            "next missile type",
+            "+ grip - next subsystem"
+          ],
+          "menu": "pause menu",
+          "trigger": "missiles",
+          "grip": "hold - shift"
+        },
+        "right": {
+          "stick": [
+            "up/down - throttle",
+            "left/right - roll",
+            "press - match speed",
+            "+ L grip - max/stop, chase"
+          ],
+          "b": [
+            "target in crosshair",
+            "+ L grip - target attacker"
+          ],
+          "a": [
+            "nearest enemy",
+            "+ L grip - next target"
+          ],
+          "trigger": "guns",
+          "grip": "hold - afterburner"
+        }
+      },
+      "controls": {
+        "columns": [
+          "Input",
+          "Flight",
+          "Menus"
+        ],
+        "rows": [
+          [
+            "Left stick",
+            "Pitch and turn",
+            ""
+          ],
+          [
+            "Right stick",
+            "Roll (left/right), throttle (up/down, stays where you leave it)",
+            ""
+          ],
+          [
+            "Right / left trigger",
+            "Guns / missiles",
+            "Click"
+          ],
+          [
+            "Right grip (hold)",
+            "Afterburner",
+            ""
+          ],
+          [
+            "A / B",
+            "Target nearest enemy (next ship if there is none) / target ship in crosshair",
+            "Enter / Escape"
+          ],
+          [
+            "X / Y",
+            "Next missile type / next gun type",
+            ""
+          ],
+          [
+            "Left / right stick click",
+            "Autopilot (tap; hold 1 s: warp out) / match target speed",
+            ""
+          ],
+          [
+            "Left Menu button",
+            "Pause menu",
+            "Escape"
+          ],
+          [
+            "Left grip + A / B",
+            "Next target / target your target's attacker",
+            ""
+          ],
+          [
+            "Left grip + X / Y",
+            "Next subsystem on target / comms menu",
+            ""
+          ],
+          [
+            "Left grip + right stick up / down",
+            "Full speed / full stop",
+            ""
+          ],
+          [
+            "Left grip + left / right stick click",
+            "Look behind / chase view on and off",
+            ""
+          ],
+          [
+            "A, B, Menu or trigger",
+            "",
+            "Skip a cutscene"
+          ]
+        ]
+      },
+      "controls_note": "Button names are those of the Meta Quest controllers; PICO controllers use the same layout. In the comms menu, left stick up/down picks an order, A or a trigger confirms it and Y closes the menu. Every flight binding can be changed in *Options → Controls*; \"Reset to default\" brings this layout back.",
+      "notes": [
+        "The APK contains no game data; the Fate of the Galaxy data is a free download (see the install steps).",
+        "Deferred lighting is off to keep 72 fps in the detailed cockpits; ships and planets are still fully lit.",
+        "Tested on Meta Quest 3 only. PICO needs PICO OS 5.9.0 or newer and is untested: if it does not start, or the controllers do nothing, please open an issue on GitHub. `adb logcat -s FotGVR:* QuestVR:*` shows how far it gets, which is the useful thing to paste in.",
+        "Fate of the Galaxy is a fan project and is not associated with Lucasfilm Ltd or Disney."
+      ],
+      "credits": "[Fate of the Galaxy](https://www.moddb.com/games/fate-of-the-galaxy) by the Fate of the Galaxy Dev Team; [FreeSpace Open](https://github.com/scp-fs2open/fs2open.github.com) by the Source Code Project. Pictures 1–2: captured on a Meta Quest 3; pictures 3–6: Fate of the Galaxy Dev Team ([Nebula release](https://fsnebula.org/mod/FotG_R)).",
+      "hero": "1-ywing-cockpit.jpg",
+      "data": [
+        {
+          "label": "Fate of the Galaxy game data",
+          "kind": "folder",
+          "target": "/sdcard/FotG/FotG_R",
+          "marker": "data/tables/fotg-anim.tbm",
+          "include": [
+            "data"
+          ],
+          "hint": "your Fate of the Galaxy folder from Knossos.NET (FotG_R-<version>, the one with the data folder) or the FotG_R folder made by get_fotg_data.py"
+        }
+      ]
+    },
+    {
       "slug": "wingcommander",
       "name": "Wing Commander VR",
       "repo": "wc1-re-vr",

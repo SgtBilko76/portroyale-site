@@ -889,5 +889,21 @@
     }
    ]
   }
+ ],
+ "FotG-VR": [
+  {
+   "tag": "v0.1.0-beta",
+   "name": "Fate of the Galaxy VR v0.1.0-beta (Meta Quest 3 and PICO)",
+   "date": "2026-11-03T12:48:15Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/FotG-VR/releases/tag/v0.1.0-beta",
+   "assets": [
+    {
+     "name": "FotG-VR-v0.1.0-beta.apk",
+     "size": 22125373,
+     "url": "https://github.com/SgtBilko76/FotG-VR/releases/download/v0.1.0-beta/FotG-VR-v0.1.0-beta.apk"
+    }
+   ]
+  }
  ]
 }
