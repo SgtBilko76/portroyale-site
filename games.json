@@ -2307,6 +2307,7 @@
         "No button combinations: everything else is on two small radial menus above your hands (hold a grip, point the stick, let go)",
         "Throttle lever on the right stick, S-foils on the right grip; remappable in *Options → Controls*",
         "Rebel, Imperial and smuggler campaigns",
+        "Multiplayer over your home network, or online via [PXO](https://pxo.nottheeye.com) (free account; switch PXO on in *Options → Multi*)",
         "Locked 72 fps in flight on Quest 3",
         "Laser pointer for the menus, laser keyboard for typing your pilot callsign",
         "Runs on PICO 4 / Neo 3 too, from the same APK (untested)"
@@ -2316,7 +2317,7 @@
         "Wi-Fi and about 7 GB free space: the One-Tap Installer downloads the free Fate of the Galaxy game data (2.6 GB download, 4.6 GB on the headset) on the first start"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r -g FotG-VR-v0.3.0-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Sideload the APK with SideQuest or `adb install -r -g FotG-VR-v0.3.1-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Start **Fate of the Galaxy VR** from *Unknown Sources*. The **One-Tap Installer** opens: press **Allow file access**, switch on \"Allow access\" and go back (on PICO: allow storage access).",
         "Press **Download and install**. The game data is downloaded from the official FSNebula mod server, checked, packed into a few archives for fast loading, and the largest ship and planet textures are halved (cockpits stay full size). About 15–30 minutes, depending on your Wi-Fi (13 minutes on our Quest 3). Keep the headset on; if it gets interrupted, start the app again and it continues where it stopped. When it is finished, the game starts, and later starts go straight into the game.",
         "Already have the game data from an earlier version in `/sdcard/FotG/FotG_R`? Then the installer is skipped. Without Wi-Fi on the headset, [get_fotg_data.py](https://github.com/SgtBilko76/FotG-VR/blob/fotg-vr/tools/quest/get_fotg_data.py) does the same on a PC (`python3 get_fotg_data.py --push`, with [pack_vp.py](https://github.com/SgtBilko76/FotG-VR/blob/fotg-vr/tools/quest/pack_vp.py) and [shrink_textures.py](https://github.com/SgtBilko76/FotG-VR/blob/fotg-vr/tools/quest/shrink_textures.py) next to it), or copy the `data` folder of a [Knossos.NET](https://knossosnet.github.io/Knossos-Release-Page/) install to `/sdcard/FotG/FotG_R` (with the box above or SideQuest; 8.7 GB, loads more slowly)."

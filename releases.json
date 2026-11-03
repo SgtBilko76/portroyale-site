@@ -892,16 +892,16 @@
  ],
  "FotG-VR": [
   {
-   "tag": "v0.3.0-beta",
-   "name": "Fate of the Galaxy VR v0.3.0-beta: One-Tap Installer",
-   "date": "2026-11-03T17:12:58Z",
+   "tag": "v0.3.1-beta",
+   "name": "Fate of the Galaxy VR v0.3.1-beta: One-Tap Installer, multiplayer fix",
+   "date": "2026-11-03T19:07:54Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/FotG-VR/releases/tag/v0.3.0-beta",
+   "url": "https://github.com/SgtBilko76/FotG-VR/releases/tag/v0.3.1-beta",
    "assets": [
     {
-     "name": "FotG-VR-v0.3.0-beta.apk",
-     "size": 23162902,
-     "url": "https://github.com/SgtBilko76/FotG-VR/releases/download/v0.3.0-beta/FotG-VR-v0.3.0-beta.apk"
+     "name": "FotG-VR-v0.3.1-beta.apk",
+     "size": 23164562,
+     "url": "https://github.com/SgtBilko76/FotG-VR/releases/download/v0.3.1-beta/FotG-VR-v0.3.1-beta.apk"
     }
    ]
   }
