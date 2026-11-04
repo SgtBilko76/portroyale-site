@@ -447,7 +447,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
         installer = f"""
       <div class="install-card" id="install">
         <h3>Install from your browser</h3>
-        <p class="inst-small">Over USB, for Meta Quest 3: {what}. It checks for the <a href="{esc(wxr['url'])}" target="_blank" rel="noopener">newest WinlatorXR release</a> ({esc(wxr['name'])}) first. Works in Chrome or Edge on a PC or Mac.</p>
+        <p class="inst-small">Over USB, for Meta Quest 3: {what}. It checks for the <a href="{esc(wxr['url'])}" target="_blank" rel="noopener">newest WinlatorXR release</a> ({esc(wxr['name'])}) first. USB install works in Chrome or Edge on a PC or Mac. On the headset, open this page in the Meta Quest Browser to download WinlatorXR and the mod directly.</p>
         <div class="installer" data-config="{esc(json.dumps(cfg, ensure_ascii=False))}"><p class="inst-msg">The installer needs JavaScript. Use the manual download below.</p></div>
         <details class="inst-help">
           <summary>First time? Before you start</summary>
@@ -469,7 +469,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
         installer = f"""
       <div class="install-card" id="install">
         <h3>Install from your browser</h3>
-        <p class="inst-small">{"Over USB, for Meta Quest and PICO: installs the app and copies your own game files to the right place. No SideQuest, no adb." if game.get("data") else "One click over USB, for Meta Quest and PICO: no SideQuest needed."} Works in Chrome or Edge on a PC, Mac or Android phone.</p>
+        <p class="inst-small">{"Over USB, for Meta Quest and PICO: installs the app and copies your own game files to the right place. No SideQuest, no adb." if game.get("data") else "One click over USB, for Meta Quest and PICO: no SideQuest needed."} USB install works in Chrome or Edge on a PC, Mac or Android phone. <strong>No PC?</strong> Open this page in the Meta Quest Browser on your headset and install it right there.</p>
         <div class="installer" data-config="{esc(json.dumps(cfg, ensure_ascii=False))}"><p class="inst-msg">The installer needs JavaScript. Use the manual download below.</p></div>
         <details class="inst-help">
           <summary>First time? Before you start</summary>

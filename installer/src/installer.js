@@ -9,9 +9,14 @@
 
 import { mountApk } from "./apk.js";
 import { mountWinlator } from "./winlator.js";
+import { mountHeadset, onHeadset } from "./headset.js";
+import { usbSupported } from "./common.js";
 
 document.querySelectorAll(".installer[data-config]").forEach((root) => {
   const cfg = JSON.parse(root.dataset.config);
-  if (cfg.mode === "winlator") mountWinlator(root, cfg);
+  // On the headset itself (Quest / PICO browser) or in browsers without WebUSB
+  // (Firefox, Safari): direct download + install with the headset's Files app.
+  if (onHeadset() || !usbSupported()) mountHeadset(root, cfg);
+  else if (cfg.mode === "winlator") mountWinlator(root, cfg);
   else mountApk(root, cfg);
 });
