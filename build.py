@@ -31,6 +31,8 @@ APKINFO = ROOT / "apkinfo.json"
 # Browser installer bundle (built from installer/src by `npm run build` in installer/).
 INSTALLER_JS = ROOT / "installer.js"
 INSTALLER_VERSION = hashlib.sha1(INSTALLER_JS.read_bytes()).hexdigest()[:8] if INSTALLER_JS.exists() else "0"
+# Newest Port Royale headset app release ({"url", "name", "size", "tag", "release_url"}), set in main().
+APP = None
 IMG_EXT = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
 
 DEFAULT_INSTALL = [
@@ -210,6 +212,7 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
       <a href="index.html#winlator">WinlatorXR</a>
       <a href="https://github.com/{esc(site['github_user'])}" target="_blank" rel="noopener">GitHub</a>
       {discord_link(site, '<a href="{url}" target="_blank" rel="noopener">Discord</a>')}
+      {f'<a class="btn btn-primary btn-sm nav-app" href="{esc(APP["url"])}" title="Port Royale app {esc(APP["tag"])}: install and update the ports right on your headset">{DL} Get the app</a>' if APP else ''}
     </nav>
   </div>
 </header>
@@ -291,6 +294,8 @@ def build_index(site, cats, games, rels):
     </div>
   </div>
 </section>"""]
+    if APP:
+        parts.append(app_section())
     for c in cats:
         members = [g for g in games if g["category"] == c["id"]]
         if not members:
@@ -333,6 +338,38 @@ def build_index(site, cats, games, rels):
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": site["title"],
           "url": site["url"] + "/", "description": site["intro"]}
     return page(site, f"{site['title']} | {site['tagline']}", "".join(parts), site["intro"], "", None, ld)
+
+
+def app_section():
+    """Index band for the Port Royale headset app (installer + updater)."""
+    a = APP
+    return f"""
+<section class="section section-alt app-band" id="app">
+  <div class="wrap app-inner">
+    <div>
+      <p class="eyebrow">New: the Port Royale app</p>
+      <h2 class="section-title">Install and update every port right on your headset</h2>
+      <p class="lead">One app for all ports: browse them with pictures, install with one press, and get a notification when a new version is out. No PC, no SideQuest after the first install.</p>
+      <ul class="app-features">
+        <li><strong>One-press install</strong>: picks the right APK for Meta Quest or PICO.</li>
+        <li><strong>Update notifications</strong>: checks for new releases every few hours; <em>Update all</em> does everything at once.</li>
+        <li><strong>Game files</strong>: shows what's missing, downloads free game data and moves your copied game folders into place.</li>
+        <li><strong>WinlatorXR mods</strong>: installs or updates WinlatorXR and unpacks the VR mod with its profile.</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="{esc(a['url'])}">{DL} Download the app ({esc(a['tag'])}, {human_size(a['size'])})</a>
+        <a class="btn btn-ghost" href="{esc(a['release_url'])}" target="_blank" rel="noopener">{GH} Release notes &amp; source</a>
+      </div>
+      <ol class="app-steps">
+        <li>On the headset: open this page in the Meta Quest Browser and press <strong>Download the app</strong>, then open it from <strong>Files → Downloads</strong> and install. Or sideload it from a PC with <a href="https://sidequestvr.com/setup-howto" target="_blank" rel="noopener">SideQuest</a> or <code>adb install -r {esc(a['name'])}</code>.</li>
+        <li>Start <strong>Port Royale</strong> from <strong>Library → Unknown Sources</strong>.</li>
+        <li>On the first install, allow Port Royale to install apps when asked. For game data and WinlatorXR mods, allow <strong>All files access</strong>.</li>
+      </ol>
+      <p class="note">Tested on Meta Quest 3. PICO 4 / Neo 3 are supported but untested.</p>
+    </div>
+    <a class="app-shot" href="{esc(a['release_url'])}" target="_blank" rel="noopener"><img src="images/site/app-library.jpg" alt="The Port Royale app on a Meta Quest 3: the port library" width="1600" height="1000" loading="lazy"></a>
+  </div>
+</section>"""
 
 
 # ---------------------------------------------------------------- game page
@@ -628,6 +665,11 @@ def main():
         except Exception as e:
             print(f"  ! WinlatorXR: {e}")
         CACHE.write_text(json.dumps(rels, indent=1))
+
+    global APP
+    r = latest(rels.get(site.get("app_repo", ""), [])) if site.get("app_repo") else None
+    apk = next((x for x in (r["assets"] if r else []) if x["name"].endswith(".apk")), None)
+    APP = {"url": apk["url"], "name": apk["name"], "size": apk["size"], "tag": r["tag"], "release_url": r["url"]} if apk else None
 
     if OUT.exists():
         shutil.rmtree(OUT)

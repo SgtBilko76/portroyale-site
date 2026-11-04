@@ -314,3 +314,13 @@ code {
 .inst-next { margin: 4px 0 0; color: var(--text); }
 .inst-steps { padding-left: 1.3em; margin: 0; font-size: .92rem; }
 .inst-steps li { margin-bottom: .45em; }
+
+/* ---------- Port Royale app (header button + index band) */
+.nav .nav-app { margin-left: 4px; }
+.app-inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.app-features { margin: 1.2em 0 0; padding-left: 1.2em; }
+.app-features li { margin-bottom: .45em; }
+.app-steps { margin: 1.4em 0 .6em; padding-left: 1.4em; color: var(--muted); }
+.app-steps li { margin-bottom: .45em; }
+.app-shot img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); display: block; }
+@media (max-width: 900px) { .app-inner { grid-template-columns: 1fr; } }

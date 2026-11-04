@@ -905,5 +905,21 @@
     }
    ]
   }
+ ],
+ "PortRoyale-App": [
+  {
+   "tag": "v0.1.0-beta",
+   "name": "Port Royale app 0.1.0-beta",
+   "date": "2026-11-04T12:57:59Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/PortRoyale-App/releases/tag/v0.1.0-beta",
+   "assets": [
+    {
+     "name": "PortRoyale-App-v0.1.0-beta.apk",
+     "size": 222604,
+     "url": "https://github.com/SgtBilko76/PortRoyale-App/releases/download/v0.1.0-beta/PortRoyale-App-v0.1.0-beta.apk"
+    }
+   ]
+  }
  ]
 }
