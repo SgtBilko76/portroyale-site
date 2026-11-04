@@ -1,0 +1,293 @@
+{
+ "https://github.com/SgtBilko76/0AD-VR/releases/download/v0.1.0-beta/0AD-VR-Quest-data-v0.1.0-beta.zip#data/mods/public/public.zip": "0AD/",
+ "https://github.com/SgtBilko76/0AD-VR/releases/download/v0.1.0-beta/0AD-VR-Quest-v0.1.0-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.zeroadvr",
+  "versionCode": 1,
+  "versionName": "0.1.0-beta"
+ },
+ "https://github.com/SgtBilko76/ARMSX1-3D/releases/download/v0.2.0-beta1/ARMSX1-0.2.0-beta1-quest-arm64-v8a.apk": {
+  "minSdk": 26,
+  "package": "com.nanodata.armsx.quest",
+  "versionCode": 9,
+  "versionName": "0.2.0-beta1-quest"
+ },
+ "https://github.com/SgtBilko76/ARMSX2-3D/releases/download/v0.3-beta/ARMSX2-3D-0.3-beta.apk": {
+  "minSdk": 26,
+  "package": "com.armsx2",
+  "versionCode": 1088,
+  "versionName": "2.6.1"
+ },
+ "https://github.com/SgtBilko76/Bugdom/releases/download/v1.3.5-vr-beta1/Bugdom-VR-1.3.5-beta1.apk": {
+  "minSdk": 29,
+  "package": "io.jor.bugdom",
+  "versionCode": 1,
+  "versionName": "1.3.5-vr-beta1"
+ },
+ "https://github.com/SgtBilko76/Bugdom2/releases/download/v4.0.1-vr-beta1/Bugdom2-VR-4.0.1-beta1.apk": {
+  "minSdk": 29,
+  "package": "io.jor.bugdom2",
+  "versionCode": 1,
+  "versionName": "4.0.1-vr-beta1"
+ },
+ "https://github.com/SgtBilko76/CTR-Turbocharged-VR/releases/download/v0.1.0/CTR-Turbocharged-VR-v0.1.0.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.ctrvr",
+  "versionCode": 1,
+  "versionName": "0.1.0"
+ },
+ "https://github.com/SgtBilko76/CrashBandicoot-Launcher/releases/download/v2.0.0-beta.1/CrashBandicoot-2.0.0-beta.1.apk": {
+  "minSdk": 26,
+  "package": "io.github.matteo842.crashlauncher.runtime",
+  "versionCode": 15,
+  "versionName": "2.0.0-beta.1"
+ },
+ "https://github.com/SgtBilko76/Descent3-VR/releases/download/quest-v0.3-beta/Descent3-VR-0.3-beta.apk": {
+  "minSdk": 29,
+  "package": "com.descentdevelopers.descent3",
+  "versionCode": 300,
+  "versionName": "0.3-beta"
+ },
+ "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-pico.apk": {
+  "minSdk": 29,
+  "package": "org.etr.vr",
+  "versionCode": 1,
+  "versionName": "0.7.99-vr-beta1-pico"
+ },
+ "https://github.com/SgtBilko76/ExtremeTuxRacer-VR/releases/download/Tuxracer0.0.2/extremetuxracer-quest.apk": {
+  "minSdk": 29,
+  "package": "org.etr.vr",
+  "versionCode": 1,
+  "versionName": "0.7.99-vr-beta1"
+ },
+ "https://github.com/SgtBilko76/Forsaken-VR/releases/download/v0.1.2/Forsaken-VR-v0.1.2-full.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.forsakenvr",
+  "versionCode": 3,
+  "versionName": "0.1.2"
+ },
+ "https://github.com/SgtBilko76/FotG-VR/releases/download/v0.3.1-beta/FotG-VR-v0.3.1-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.fotgvr",
+  "versionCode": 5,
+  "versionName": "0.3.1-beta"
+ },
+ "https://github.com/SgtBilko76/FreeSpace2-VR/releases/download/v0.1.3-beta/FreeSpace2-VR-v0.1.3-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.fs2vr",
+  "versionCode": 4,
+  "versionName": "0.1.3-beta"
+ },
+ "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-PicoVR-v1.1.0.apk": {
+  "minSdk": 29,
+  "package": "com.hurricangame.pico",
+  "versionCode": 2,
+  "versionName": "1.1.0"
+ },
+ "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-QuestVR-v1.1.0.apk": {
+  "minSdk": 29,
+  "package": "com.hurricangame.quest",
+  "versionCode": 2,
+  "versionName": "1.1.0"
+ },
+ "https://github.com/SgtBilko76/Luanti-VR/releases/download/v0.1.2-beta/LuantiVR-0.1.2-beta.apk": {
+  "minSdk": 29,
+  "package": "net.minetest.minetest",
+  "versionCode": 5180002,
+  "versionName": "0.1.2-beta"
+ },
+ "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/neverball-0814/neverballquest.apk": {
+  "minSdk": 29,
+  "package": "org.neverball",
+  "versionCode": 1,
+  "versionName": "1.7.0-alpha.3"
+ },
+ "https://github.com/SgtBilko76/Neverball-and-Neverputt-VR/releases/download/neverball-0814/pico-neverball.apk": {
+  "minSdk": 29,
+  "package": "org.neverball",
+  "versionCode": 1,
+  "versionName": "1.4.0"
+ },
+ "https://github.com/SgtBilko76/NoGravity-VR/releases/download/v0.1.1-beta/NoGravity-VR-v0.1.1-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.nogravityvr",
+  "versionCode": 3,
+  "versionName": "0.1.1-beta"
+ },
+ "https://github.com/SgtBilko76/OpenArena-VR/releases/download/v1.1.0/OpenArena-VR-v1.1.0.apk": {
+  "minSdk": 25,
+  "package": "com.bilko.openarenavr",
+  "versionCode": 9,
+  "versionName": "1.1.0"
+ },
+ "https://github.com/SgtBilko76/OpenTIE-VR/releases/download/v0.1.8-beta/OpenTIE-VR-v0.1.8-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.opentievr",
+  "versionCode": 9,
+  "versionName": "0.1.8-beta"
+ },
+ "https://github.com/SgtBilko76/OpenXW-VR/releases/download/v0.1.3-beta/OpenXW-VR-v0.1.3-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.openxwvr",
+  "versionCode": 4,
+  "versionName": "0.1.3-beta"
+ },
+ "https://github.com/SgtBilko76/OpenXWA-VR/releases/download/v0.1.8-beta/OpenXWA-VR-v0.1.8-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.openxwavr",
+  "versionCode": 9,
+  "versionName": "0.1.8-beta"
+ },
+ "https://github.com/SgtBilko76/OpenXvT-VR/releases/download/v0.1.1-beta/OpenXvT-VR-v0.1.1-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.openxvtvr",
+  "versionCode": 2,
+  "versionName": "0.1.1-beta"
+ },
+ "https://github.com/SgtBilko76/RVGL-VR/releases/download/v0.1.1/RVGL-VR-v0.1.1.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.rvglvr",
+  "versionCode": 3,
+  "versionName": "0.1.1"
+ },
+ "https://github.com/SgtBilko76/Sauerbraten-VR/releases/download/Beta-0.2/sauerbraten-vr.apk": {
+  "minSdk": 29,
+  "package": "org.sauerquest.vr",
+  "versionCode": 13,
+  "versionName": "0.2"
+ },
+ "https://github.com/SgtBilko76/SpaghettiKart-VR/releases/download/v0.2.0-beta1/SpaghettiKart-VR-0.2.0-beta1.apk": {
+  "minSdk": 29,
+  "package": "dev.spaghettikart.vr",
+  "versionCode": 2,
+  "versionName": "0.2.0-beta1"
+ },
+ "https://github.com/SgtBilko76/SpeedDreams-VR/releases/download/v0.10.0-beta/Speeddreams.0.10.0-beta.apk": {
+  "minSdk": 29,
+  "package": "com.speeddreamsvr",
+  "versionCode": 6,
+  "versionName": "0.10.0-beta"
+ },
+ "https://github.com/SgtBilko76/Starship-VR/releases/download/v1.0-beta1/Starship-VR-1.0-beta1.apk": {
+  "minSdk": 29,
+  "package": "com.starship.vr",
+  "versionCode": 2,
+  "versionName": "1.0-beta1"
+ },
+ "https://github.com/SgtBilko76/SuperTux-3D/releases/download/Beta0.2/SuperTux-Beta0.2-quest-pico-arm64-v8a.apk": {
+  "minSdk": 21,
+  "package": "org.supertux.supertux2",
+  "versionCode": 7,
+  "versionName": "0.7.0"
+ },
+ "https://github.com/SgtBilko76/SuperTuxKart-VR/releases/download/v1.0.1/SuperTuxKart-VR-1.0.1.apk": {
+  "minSdk": 26,
+  "package": "portroyale.online.supertuxkart",
+  "versionCode": 101,
+  "versionName": "1.0.1"
+ },
+ "https://github.com/SgtBilko76/Unreal-Gold-VR/releases/download/v1.0.0-beta12/UnrealGoldVR-1.0.0-beta12.apk": {
+  "minSdk": 29,
+  "package": "com.dpjudas.surrealengine",
+  "versionCode": 15,
+  "versionName": "1.0.0-beta12"
+ },
+ "https://github.com/SgtBilko76/Unreal-Tournament-VR/releases/download/v1.0.0-beta12-ut99/UnrealTournamentVR-1.0.0-beta12.apk": {
+  "minSdk": 29,
+  "package": "com.dpjudas.surrealengine.ut99",
+  "versionCode": 15,
+  "versionName": "1.0.0-beta12"
+ },
+ "https://github.com/SgtBilko76/UrbanTerror4-VR/releases/download/v1.0.1/UrbanTerror4-VR-v1.0.1.apk": {
+  "minSdk": 25,
+  "package": "com.bilko.urtquest",
+  "versionCode": 101,
+  "versionName": "1.0.1"
+ },
+ "https://github.com/SgtBilko76/VDrift-QuestVR/releases/download/v0.2.0/VDriftVR-0.2.0.apk": {
+  "minSdk": 29,
+  "package": "com.vdriftvr",
+  "versionCode": 2,
+  "versionName": "0.2.0"
+ },
+ "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.40-beta/VPinball-VR-Beta-0.40.apk": {
+  "minSdk": 29,
+  "package": "org.vpinball.vpinball_bgfx",
+  "versionCode": 100810040,
+  "versionName": "Beta 0.40"
+ },
+ "https://github.com/SgtBilko76/WCSaga-VR/releases/download/v0.1.6-beta/WCSaga-VR-v0.1.6-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.wcsagavr",
+  "versionCode": 7,
+  "versionName": "0.1.6-beta"
+ },
+ "https://github.com/SgtBilko76/Warzone2100-VR/releases/download/v0.1.1-beta/Warzone2100-VR-Quest-v0.1.1-beta.apk": {
+  "minSdk": 32,
+  "package": "net.wz2100.warzone2100.quest",
+  "versionCode": 2,
+  "versionName": "0.1.1-beta"
+ },
+ "https://github.com/SgtBilko76/Wipeout-Rewrite-VR/releases/download/v0.1.0-beta1/WipeoutRewriteVR-0.1.0-beta1-pico.apk": {
+  "minSdk": 29,
+  "package": "online.portroyale.wipeoutrewritevr",
+  "versionCode": 1,
+  "versionName": "0.1.0-beta1"
+ },
+ "https://github.com/SgtBilko76/Wipeout-Rewrite-VR/releases/download/v0.1.0-beta1/WipeoutRewriteVR-0.1.0-beta1-quest.apk": {
+  "minSdk": 29,
+  "package": "online.portroyale.wipeoutrewritevr",
+  "versionCode": 1,
+  "versionName": "0.1.0-beta1"
+ },
+ "https://github.com/SgtBilko76/WipeoutPure-VR/releases/download/v0.1.0-beta/WipeoutPure-VR-v0.1.0-beta.apk": {
+  "minSdk": 29,
+  "package": "online.portroyale.wipeoutpurevr",
+  "versionCode": 1100,
+  "versionName": "0.1.0-beta"
+ },
+ "https://github.com/SgtBilko76/X-Wing-Revival-VR/releases/download/v1.0.3/X-Wing-Revival-VR-v1.0.3-full.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.xwingrevivalvr",
+  "versionCode": 5,
+  "versionName": "1.0.3"
+ },
+ "https://github.com/SgtBilko76/Xonotic-VR/releases/download/Beta-0.5/Xonotic-VR-full-release.apk": {
+  "minSdk": 26,
+  "package": "com.sgtbilko.xonoticquest",
+  "versionCode": 11,
+  "versionName": "0.5.0"
+ },
+ "https://github.com/SgtBilko76/lionheart-remake-vr/releases/download/v0.2.0-beta/Lionheart-3D-v0.2.0-beta.apk": {
+  "minSdk": 29,
+  "package": "com.b3dgs.lionheart.quest",
+  "versionCode": 3,
+  "versionName": "0.2.0-beta"
+ },
+ "https://github.com/SgtBilko76/snes9x-3D/releases/download/v0.1/Snes9xVR-0.1.apk": {
+  "minSdk": 29,
+  "package": "com.snes9x.vr",
+  "versionCode": 3,
+  "versionName": "0.1"
+ },
+ "https://github.com/SgtBilko76/wc1-re-vr/releases/download/quest-vr-1.0.1/WingCommanderVR-1.0.1.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.wc1vr",
+  "versionCode": 3,
+  "versionName": "1.0.1"
+ },
+ "https://github.com/SgtBilko76/wc1-re-vr/releases/download/quest-vr-1.0.1/WingCommanderVR-1.0.1.zip#WC.EXE": null,
+ "https://github.com/SgtBilko76/wc2-re-vr/releases/download/quest-vr-1.0.1/WingCommanderIIVR-1.0.1.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.wc2vr",
+  "versionCode": 3,
+  "versionName": "1.0.1"
+ },
+ "https://github.com/SgtBilko76/wc2-re-vr/releases/download/quest-vr-1.0.1/WingCommanderIIVR-1.0.1.zip#GAMEDAT/COCKPIT.VGA": null,
+ "https://github.com/WinlatorXR/WinlatorXR/releases/download/winlatorxr_dawn42/WinlatorXR-dawn-42.apk": {
+  "minSdk": 26,
+  "package": "com.winlator.cmod",
+  "versionCode": 24,
+  "versionName": "dawn-42"
+ }
+}

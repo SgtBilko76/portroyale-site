@@ -23,6 +23,10 @@ Open `public/index.html` in a browser. To host it, upload the contents of `publi
 
 The site is published with GitHub Pages at https://portroyale.online. Every push to `main` rebuilds and deploys it (`.github/workflows/deploy.yml`). The workflow also runs once a day, so new GitHub releases appear on the site automatically.
 
+## Headset app catalog
+
+`build.py` also writes `public/catalog.json`: every port with its newest release, the APK package names and versions, game-data folders and WinlatorXR settings. The Port Royale headset app ([PortRoyale-App](https://github.com/SgtBilko76/PortRoyale-App)) reads it to install ports and to tell when an update is out. Package names and versions are read straight from the release APKs on GitHub (only the zip directory and the manifest, with `tools/apkinfo.py`) and cached in `apkinfo.json`. `site.app_repo` in `games.json` names the app's own repo, so the app can update itself.
+
 ## Browser installer
 
 Port pages whose latest release has an APK get an "Install from your browser" box: it installs the APK on a Quest or PICO over USB (WebUSB + ADB, Chrome/Edge only).

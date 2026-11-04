@@ -25,6 +25,9 @@ IMAGES = ROOT / "images"
 # Cache-buster so browsers fetch style.css again whenever it changes.
 CSS_VERSION = hashlib.sha1((ROOT / "style.css").read_bytes()).hexdigest()[:8]
 CACHE = ROOT / "releases.json"
+# Package name / version of every released APK (read remotely by tools/apkinfo.py), keyed by
+# download URL. Feeds catalog.json, which the Port Royale headset app uses for updates.
+APKINFO = ROOT / "apkinfo.json"
 # Browser installer bundle (built from installer/src by `npm run build` in installer/).
 INSTALLER_JS = ROOT / "installer.js"
 INSTALLER_VERSION = hashlib.sha1(INSTALLER_JS.read_bytes()).hexdigest()[:8] if INSTALLER_JS.exists() else "0"
@@ -614,6 +617,8 @@ def main():
     if "--refresh" in sys.argv or not rels:
         print("Fetching releases from GitHub...")
         rels.update(fetch_releases(site["github_user"], games))
+        if site.get("app_repo"):  # the Port Royale headset app updates itself from here
+            rels.update(fetch_releases(site["github_user"], [{"repo": site["app_repo"]}]))
         try:  # newest public WinlatorXR, offered by the WinlatorXR mod installers
             x = _gh_json("https://api.github.com/repos/WinlatorXR/WinlatorXR/releases/latest")
             apk = next(a for a in x["assets"] if a["name"].endswith(".apk"))
@@ -639,7 +644,107 @@ def main():
         next_g = ordered[i + 1] if i + 1 < len(ordered) else None
         (OUT / f"{g['slug']}.html").write_text(build_game(site, cats, g, rels, prev_g, next_g), encoding="utf-8")
     write_seo_files(site, ordered, rels)
+    write_catalog(site, cats, ordered, rels)
     print(f"Built {len(ordered) + 1} pages into {OUT}")
+
+
+def plain(text):
+    """games.json inline markup -> plain text (for the headset app)."""
+    text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1", text)
+    return re.sub(r"\*\*|`|(?<![\w*])\*(?!\s)|(?<!\s)\*(?![\w*])", "", text)
+
+
+def asset_headset(name):
+    n = name.lower()
+    return "pico" if "pico" in n and "quest" not in n else "quest" if "quest" in n and "pico" not in n else "any"
+
+
+def write_catalog(site, cats, ordered, rels):
+    """catalog.json: everything the Port Royale headset app (installer + updater) needs.
+
+    APK package names and versions come from apkinfo.json; missing entries are read from
+    GitHub with range requests (only the zip directory + manifest, a few hundred KB)."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from apkinfo import apk_info, zip_root
+    info = json.loads(APKINFO.read_text()) if APKINFO.exists() else {}
+    changed = False
+
+    def apk(url):
+        nonlocal changed
+        if url not in info:
+            try:
+                info[url] = apk_info(url)
+                changed = True
+                print(f"  apkinfo {url.rsplit('/', 1)[1]}: {info[url]}")
+            except Exception as e:
+                print(f"  ! apkinfo {url}: {e}")
+                return {}
+        return info[url]
+
+    def hero_url(g):
+        img = hero_image(g, images_for(g["slug"]))
+        return f"{site['url']}/{img.relative_to(ROOT).as_posix()}" if img else None
+
+    games = []
+    for g in ordered:
+        r = latest(rels.get(g["repo"], []))
+        assets = []
+        for a in (r["assets"] if r else []):
+            ext = a["name"].rsplit(".", 1)[-1].lower()
+            x = {"name": a["name"], "size": a["size"], "url": a["url"], "type": ext,
+                 "headset": asset_headset(a["name"])}
+            if ext == "apk":
+                x.update({k: v for k, v in apk(a["url"]).items() if v is not None})
+            elif ext == "zip" and not g.get("winlator_install"):
+                # free game data zip (e.g. 0 A.D.): where does the app unpack it?
+                for d in g.get("data", []):
+                    if d.get("kind") == "folder" and d.get("marker") and d.get("target", "").startswith("/sdcard/"):
+                        key = f"{a['url']}#{d['marker']}"
+                        if key not in info:
+                            info[key] = zip_root(a["url"], d["marker"])
+                            changed = True
+                            print(f"  zip root {a['name']}: {info[key]}")
+                        if info[key] is not None:
+                            x["extract"] = {"target": d["target"], "strip": info[key], "marker": d["marker"]}
+                            break
+            assets.append(x)
+        games.append({
+            "slug": g["slug"], "name": g["name"], "category": g["category"],
+            "tagline": plain(g.get("tagline", "")),
+            "about": [plain(t) for t in g.get("about", [])],
+            "needs": [plain(t) for t in g.get("needs", [])],
+            "notes": [plain(t) for t in g.get("notes", [])],
+            "install_extra": plain(g["install_extra"]) if g.get("install_extra") else None,
+            "page": f"{site['url']}/{g['slug']}.html",
+            "repo": f"https://github.com/{site['github_user']}/{g['repo']}",
+            "image": hero_url(g),
+            "release": {"tag": r["tag"], "name": r["name"], "date": r["date"], "url": r["url"],
+                        "prerelease": r.get("prerelease", False)} if r else None,
+            "assets": assets,
+            "data": [{k: d.get(k) for k in ("label", "kind", "target", "marker", "names", "check", "hint", "optional")
+                      if d.get(k) is not None} for d in g.get("data", [])],
+            "winlator": g.get("winlator_install"),
+        })
+    wxr = rels.get("_winlatorxr")
+    if wxr:
+        wxr = {"name": wxr["name"], "tag": wxr["tag"], "size": wxr["size"], "url": wxr["download"],
+               "release_url": wxr["url"], **{k: v for k, v in apk(wxr["download"]).items() if v is not None}}
+    app = None
+    if site.get("app_repo"):
+        r = latest(rels.get(site["app_repo"], []))
+        a = next((a for a in (r["assets"] if r else []) if a["name"].endswith(".apk")), None)
+        if a:
+            app = {"tag": r["tag"], "name": a["name"], "size": a["size"], "url": a["url"],
+                   "release_url": r["url"], **{k: v for k, v in apk(a["url"]).items() if v is not None}}
+    if changed:
+        APKINFO.write_text(json.dumps(info, indent=1, sort_keys=True) + "\n")
+    cat = {"version": 1, "generated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "site": {"title": site["title"], "url": site["url"], "tagline": site.get("tagline"),
+                    "discord_url": site.get("discord_url"), "sponsor_url": site.get("sponsor_url"),
+                    "kofi_url": site.get("kofi_url")},
+           "categories": [{"id": c["id"], "name": c["name"], "blurb": plain(c.get("blurb", ""))} for c in cats],
+           "games": games, "winlatorxr": wxr, "app": app}
+    (OUT / "catalog.json").write_text(json.dumps(cat, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def write_seo_files(site, ordered, rels):
