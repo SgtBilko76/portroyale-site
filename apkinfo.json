@@ -114,6 +114,12 @@
   "versionCode": 7,
   "versionName": "0.1.6-beta"
  },
+ "https://github.com/SgtBilko76/FreeSpace2-VR/releases/download/v0.1.7-beta/FreeSpace2-VR-v0.1.7-beta.apk": {
+  "minSdk": 29,
+  "package": "com.bilko.fs2vr",
+  "versionCode": 8,
+  "versionName": "0.1.7-beta"
+ },
  "https://github.com/SgtBilko76/Hurrican-3D/releases/download/v1.1.0/Hurrican-PicoVR-v1.1.0.apk": {
   "minSdk": 29,
   "package": "com.hurricangame.pico",

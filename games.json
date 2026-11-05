@@ -1271,7 +1271,7 @@
       "features": [
         "Head-tracked stereo 3D space in flight",
         "HUD fixed in front of the ship, with crosshair, target brackets and lead indicators lined up with your guns",
-        "Full flight control on the controllers: jet-style sticks (right stick flies, left stick is the throttle lever with an afterburner push at full throttle), a radial menu on the left grip for everything else, remappable in *Options → Controls*",
+        "Full flight control on the controllers: jet-style sticks (right stick flies, left stick is the throttle lever with an afterburner push at full throttle), a radial menu on the left grip for flight functions and a comms ring on the right grip for wingmen orders, remappable in *Options → Controls*",
         "Training missions playable with the controllers",
         "Chase view behind your ship",
         "Full lighting with ship shine, environment reflections and anti-aliasing",
@@ -1285,7 +1285,7 @@
         "Your own copy of FreeSpace 2 ([GOG](https://www.gog.com/game/freespace_2) or [Steam](https://store.steampowered.com/app/273620/)), about 1.8 GB of game files"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.6-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.7-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Copy your game files to `/sdcard/FS2` on the headset: from your GOG or Steam install folder, the nine `.vp` files (`root_fs2.vp` … `warble_fs2.vp`) and the folders `data2` and `data3` (cutscenes). The app moves the cutscenes into place on the first start.",
         "Or, on a PC with Python 3 and the Quest on USB: [get_fs2_data.py](https://github.com/SgtBilko76/FreeSpace2-VR/blob/fs2-vr/tools/quest/get_fs2_data.py) (`python3 get_fs2_data.py <game folder or GOG setup_freespace_2_*.exe> --push`) copies them for you; the GOG offline installer is unpacked with [innoextract](https://constexpr.org/innoextract/).",
         "Start **FreeSpace 2 VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
@@ -1307,12 +1307,13 @@
         "right": {
           "stick": [
             "directions - pitch/turn",
-            "press - match speed"
+            "press - match speed",
+            "in ring - pick comms"
           ],
           "b": "target in crosshair",
           "a": "nearest enemy",
           "trigger": "guns",
-          "grip": "hold - afterburner"
+          "grip": "hold - comms ring"
         }
       },
       "controls": {
@@ -1338,8 +1339,8 @@
             "Click"
           ],
           [
-            "Right grip (hold)",
-            "Afterburner (same as the left-stick push at full throttle)",
+            "Right grip (hold) + right stick",
+            "Comms ring: ships, wings, all fighters, reinforcements, rearm / repair, abort rearm; let go to pick, then the ship / wing and the order the same way (stick centred = close)",
             ""
           ],
           [
