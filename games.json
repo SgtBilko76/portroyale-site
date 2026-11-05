@@ -1271,7 +1271,7 @@
       "features": [
         "Head-tracked stereo 3D space in flight",
         "HUD fixed in front of the ship, with crosshair, target brackets and lead indicators lined up with your guns",
-        "Full flight control on the controllers: throttle lever on the right stick, a radial menu on the left grip for everything else, remappable in *Options → Controls*",
+        "Full flight control on the controllers: jet-style sticks (right stick flies, left stick is the throttle lever with an afterburner push at full throttle), a radial menu on the left grip for everything else, remappable in *Options → Controls*",
         "Training missions playable with the controllers",
         "Chase view behind your ship",
         "Full lighting with ship shine, environment reflections and anti-aliasing",
@@ -1285,7 +1285,7 @@
         "Your own copy of FreeSpace 2 ([GOG](https://www.gog.com/game/freespace_2) or [Steam](https://store.steampowered.com/app/273620/)), about 1.8 GB of game files"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.4-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Sideload the APK with SideQuest or `adb install -r -g FreeSpace2-VR-v0.1.5-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Copy your game files to `/sdcard/FS2` on the headset: from your GOG or Steam install folder, the nine `.vp` files (`root_fs2.vp` … `warble_fs2.vp`) and the folders `data2` and `data3` (cutscenes). The app moves the cutscenes into place on the first start.",
         "Or, on a PC with Python 3 and the Quest on USB: [get_fs2_data.py](https://github.com/SgtBilko76/FreeSpace2-VR/blob/fs2-vr/tools/quest/get_fs2_data.py) (`python3 get_fs2_data.py <game folder or GOG setup_freespace_2_*.exe> --push`) copies them for you; the GOG offline installer is unpacked with [innoextract](https://constexpr.org/innoextract/).",
         "Start **FreeSpace 2 VR** from *Unknown Sources* and allow \"access to all files\" when asked (on PICO: allow storage access; the game then restarts by itself)."
@@ -1293,10 +1293,10 @@
       "controls_diagram": {
         "left": {
           "stick": [
-            "directions - pitch/turn",
-            "press - autopilot",
-            "hold - warp out",
-            "in ring - pick action"
+            "up/down - throttle",
+            "left/right - roll",
+            "full + push again - afterburner",
+            "press - autopilot (hold: warp out)"
           ],
           "y": "next gun type",
           "x": "next missile type",
@@ -1306,8 +1306,7 @@
         },
         "right": {
           "stick": [
-            "up/down - throttle",
-            "left/right - roll",
+            "directions - pitch/turn",
             "press - match speed"
           ],
           "b": "target in crosshair",
@@ -1324,13 +1323,13 @@
         ],
         "rows": [
           [
-            "Left stick",
+            "Right stick",
             "Pitch and turn",
             ""
           ],
           [
-            "Right stick",
-            "Roll (left/right), throttle (up/down, stays where you leave it)",
+            "Left stick",
+            "Throttle (up/down, stays where you leave it), roll (left/right); at full throttle, push it forward again and hold for the afterburner",
             ""
           ],
           [
@@ -1340,7 +1339,7 @@
           ],
           [
             "Right grip (hold)",
-            "Afterburner",
+            "Afterburner (same as the left-stick push at full throttle)",
             ""
           ],
           [
@@ -2254,7 +2253,7 @@
         "Sharp HUD fixed in front of the ship, with crosshair, target brackets and lead indicators lined up with your guns",
         "Hits and explosions flash all around you, not on a flat screen",
         "No button combinations: everything else is on two small radial menus above your hands (hold a grip, point the stick, let go)",
-        "Throttle lever on the right stick, S-foils on the right grip; remappable in *Options → Controls*",
+        "Jet-style sticks: the right stick flies, the left stick is the throttle lever (push it forward again at full throttle to boost) and rolls; S-foils on the right grip; remappable in *Options → Controls*",
         "Rebel, Imperial and smuggler campaigns",
         "Multiplayer over your home network, or online via [PXO](https://pxo.nottheeye.com) (free account; switch PXO on in *Options → Multi*)",
         "Locked 72 fps in flight on Quest 3",
@@ -2266,7 +2265,7 @@
         "Wi-Fi and about 7 GB free space: the One-Tap Installer downloads the free Fate of the Galaxy game data (2.6 GB download, 4.6 GB on the headset) on the first start"
       ],
       "install": [
-        "Sideload the APK with SideQuest or `adb install -r -g FotG-VR-v0.3.2-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
+        "Sideload the APK with SideQuest or `adb install -r -g FotG-VR-v0.3.3-beta.apk`. SideQuest is a Quest tool, so on PICO use adb or whichever sideloader you already use.",
         "Start **Fate of the Galaxy VR** from *Unknown Sources*. The **One-Tap Installer** opens: press **Allow file access**, switch on \"Allow access\" and go back (on PICO: allow storage access).",
         "Press **Download and install**. The game data is downloaded from the official FSNebula mod server, checked, packed into a few archives for fast loading, and the largest ship and planet textures are halved (cockpits stay full size). About 15–30 minutes, depending on your Wi-Fi (13 minutes on our Quest 3). Keep the headset on; if it gets interrupted, start the app again and it continues where it stopped. When it is finished, the game starts, and later starts go straight into the game.",
         "Already have the game data from an earlier version in `/sdcard/FotG/FotG_R`? Then the installer is skipped. Without Wi-Fi on the headset, [get_fotg_data.py](https://github.com/SgtBilko76/FotG-VR/blob/fotg-vr/tools/quest/get_fotg_data.py) does the same on a PC (`python3 get_fotg_data.py --push`, with [pack_vp.py](https://github.com/SgtBilko76/FotG-VR/blob/fotg-vr/tools/quest/pack_vp.py) and [shrink_textures.py](https://github.com/SgtBilko76/FotG-VR/blob/fotg-vr/tools/quest/shrink_textures.py) next to it), or copy the `data` folder of a [Knossos.NET](https://knossosnet.github.io/Knossos-Release-Page/) install to `/sdcard/FotG/FotG_R` (with the box above or SideQuest; 8.7 GB, loads more slowly)."
@@ -2274,10 +2273,10 @@
       "controls_diagram": {
         "left": {
           "stick": [
-            "directions - pitch/turn",
-            "press - laser fire mode",
-            "hold - jump to hyperspace",
-            "in ring - pick action"
+            "up/down - throttle",
+            "left/right - roll",
+            "full + push again - boost",
+            "press - fire mode (hold: hyperspace)"
           ],
           "y": "next gun type",
           "x": "next missile type",
@@ -2289,8 +2288,7 @@
         },
         "right": {
           "stick": [
-            "up/down - throttle",
-            "left/right - roll",
+            "directions - pitch/turn",
             "press - match speed",
             "in ring - pick key"
           ],
@@ -2311,13 +2309,13 @@
         ],
         "rows": [
           [
-            "Left stick",
+            "Right stick",
             "Pitch and turn",
             ""
           ],
           [
-            "Right stick",
-            "Roll (left/right), throttle (up/down, stays where you leave it)",
+            "Left stick",
+            "Throttle (up/down, stays where you leave it), roll (left/right); at full throttle, push it forward again and hold to boost",
             ""
           ],
           [
