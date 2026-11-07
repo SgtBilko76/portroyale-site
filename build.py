@@ -287,7 +287,7 @@ def build_index(site, cats, games, rels):
         <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
       </div>
       <ul class="stats">
-        <li><strong>{len(games)}</strong> VR ports</li>
+        <li><strong>{len(games)}</strong> Own VR Ports</li>
         <li><strong>100%</strong> free</li>
         <li><strong>0</strong> PCs needed</li>
       </ul>
