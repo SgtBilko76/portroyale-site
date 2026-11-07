@@ -525,6 +525,10 @@ def build_game(site, cats, game, rels, prev_g, next_g):
 
     gallery = ""
     extra = imgs[1:]
+    hero_img = hero_image(game, imgs)
+    if hero_img is not None and hero_img in extra:
+        # the hero is the page header picture, not one of the gallery shots
+        extra = [p for p in extra if p != hero_img]
     videos = game.get("videos") or ([{"id": game["video"], "label": game.get("video_label", "")}] if game.get("video") else [])
     gallery_items = []
     for v in videos:
