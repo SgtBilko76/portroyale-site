@@ -4890,7 +4890,7 @@
       "repo": "gt4-vr",
       "coming_soon": "**Coming soon.** GT4 VR is in beta testing. It will be released here once the version that doesn't contain any of the game's code is ready: you will only need your own disc image.",
       "category": "native",
-      "tagline": "The PS2's big racing simulator, with head-tracked stereo 3D races on Meta Quest.",
+      "tagline": "The PS2's big racing simulator, with head-tracked stereo 3D races on Meta Quest and PICO.",
       "about": [
         "A standalone VR port of *Gran Turismo 4* (PS2, 2004), built on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00: the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, replays and the race start are shown on a large curved 3D screen; once the race really starts, the view switches to head-tracked VR, so you can look into the corners and around the cockpit while you drive.",
         "Two apps come from the same port: **GT4 Spec II VR** for the *Spec II* 1.10 mod, and **GT4 Online VR** for the US v2.00 release, with online races against other players through the in-game Multi-LAN mode. Both can be installed side by side.",
@@ -4905,7 +4905,7 @@
         "Shaders prepared in advance, so new tracks and cars don't stutter the first time"
       ],
       "needs": [
-        "Meta Quest 3 (tested); Quest 2 / Pro / 3S and PICO untested",
+        "Meta Quest 3 or PICO (both tested); Quest 2 / Pro / 3S untested",
         "**GT4 Spec II VR:** a disc image of the *Spec II* 1.10 mod, as an `.iso`",
         "**GT4 Online VR:** a disc image of your own *Gran Turismo 4*, **US release v2.00**, as an `.iso`",
         "GT4 Online VR: Wi-Fi for online races"
@@ -5019,7 +5019,7 @@
       },
       "controls_note": "In the VR menu, either stick chooses and changes a setting, A selects, the grips switch between Lobby and Settings, and B or the Menu button closes it. Triggers and grips can be swapped there. Hold the Meta button to re-centre the view.",
       "notes": [
-        "This is a beta, tested on Quest 3. Only the two disc versions above are supported: other releases of the game won't start.",
+        "This is a beta, tested on Quest 3 and PICO. Only the two disc versions above are supported: other releases of the game won't start.",
         "Online races: open the lobby (hold Menu), create a race or join one, then follow the three steps shown there (LAN settings, then *Arcade → Multi-LAN Race → Connect*).",
         "Saves live in `/sdcard/GT4SpecII` and `/sdcard/GT4HD` (`memcard.ps2`): copy them to your PC now and then."
       ],
