@@ -5026,6 +5026,128 @@
       "credits": "Based on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00 (MIT License); graphics through a [PCSX2](https://pcsx2.net)-based renderer. *Spec II* is a fan mod by its own authors and is not part of this port. Gran Turismo is a trademark of Sony Interactive Entertainment; this unofficial fan project is not affiliated with Sony or Polyphony Digital and contains no game data. Pictures: captured on a Meta Quest 3."
     },
     {
+      "slug": "ridgeracer5",
+      "name": "Ridge Racer V VR",
+      "repo": "RidgeRacerV-VR",
+      "coming_soon": "**Coming soon.** Ridge Racer V VR is in beta testing. It will be released here once the version that doesn't contain any of the game's code is ready: you will only need the files of your own disc.",
+      "category": "native",
+      "tagline": "Namco's PS2 launch racer on a huge curved 3D screen, with a head-tracked VR view in the race, on Meta Quest.",
+      "about": [
+        "A standalone VR port of *Ridge Racer V* (PS2, 2000), built on [Fukami](https://github.com/danisandoval/fukami) by Dani Sandoval: the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. You race on a big curved screen with real stereo depth, sharp at several times the PS2's resolution and in widescreen.",
+        "Once the race starts, both stick clicks switch to a head-tracked VR view: the race fills your field of view and you look into the corners while you drive, with the HUD on its own panel fixed in the driving direction. Menus, replays and the start sequence always stay on the curved screen.",
+        "The APK contains no game data: you bring the files of your own disc."
+      ],
+      "features": [
+        "Curved 3D screen with real stereo depth, about 88° wide, in true widescreen",
+        "Head-tracked VR view during the race (both stick clicks), with the HUD on its own panel in the driving direction",
+        "Sharp picture: 3x the PS2's resolution, 16x anisotropic filtering and FXAA",
+        "Analog steering, accelerator and brake on the triggers, gear shifts on the grips",
+        "Settings menu in the game (hold the left stick or press Menu): widescreen, HUD layout, picture and car detail options",
+        "Shaders prepared in advance, so new tracks and cars don't stutter the first time"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested); Quest 2 / Pro / 3S untested",
+        "The files of your own *Ridge Racer V*, **US release (SLUS-20002)**; the European release doesn't work"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Once it is released: download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r RidgeRacerV-VR-0.1.0-beta.apk`. Installing over an earlier beta keeps your saves.",
+        "Copy all files of your disc (`SLUS_200.02`, `R5.ALL`, `R5.STR`, the `.IRX` files and the rest; not an `.iso`) to `/sdcard/RidgeRacerV/disc` on the headset: with a PC file manager, SideQuest's file manager or `adb push`.",
+        "Start the app from *Library → Unknown Sources* and allow access to files when asked. If the disc files are missing, it says so on the screen."
+      ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "press - pause",
+            "press 1 s - settings menu",
+            "both pressed - VR / screen"
+          ],
+          "y": "circle",
+          "x": "square",
+          "menu": "settings menu",
+          "trigger": "brake",
+          "grip": "shift down"
+        },
+        "right": {
+          "stick": [
+            "directions - d-pad",
+            "press - look back"
+          ],
+          "b": "change view",
+          "a": "confirm",
+          "trigger": "accelerate",
+          "grip": "shift up"
+        }
+      },
+      "controls": {
+        "columns": [
+          "Controller",
+          "In a race",
+          "In the menus"
+        ],
+        "rows": [
+          [
+            "Right trigger",
+            "Accelerate",
+            "Confirm"
+          ],
+          [
+            "Left trigger",
+            "Brake",
+            ""
+          ],
+          [
+            "Right / left grip",
+            "Shift up / down",
+            ""
+          ],
+          [
+            "Left stick",
+            "Steer (analog)",
+            "Move (push hard)"
+          ],
+          [
+            "Right stick",
+            "D-pad",
+            "D-pad"
+          ],
+          [
+            "A / B / X / Y",
+            "Cross / Triangle (change view) / Square / Circle",
+            "Cross confirms"
+          ],
+          [
+            "Right stick click, hold",
+            "Look back",
+            ""
+          ],
+          [
+            "Left stick click, tap",
+            "Pause (Start)",
+            "Start"
+          ],
+          [
+            "Left stick click, hold 1 s, or Menu button",
+            "Settings menu",
+            "Settings menu"
+          ],
+          [
+            "Both stick clicks",
+            "Switch between the VR view and the curved screen",
+            ""
+          ]
+        ]
+      },
+      "controls_note": "The VR view is only available while you race: every race starts on the curved screen, and after the finish the curved screen comes back by itself. Hold the Meta button to re-centre the view.",
+      "notes": [
+        "This is a beta, tested on Quest 3. Only the US release of the disc is supported.",
+        "In very dense traffic the picture can drop a few frames now and then; the game itself keeps its full speed.",
+        "Saves live in `/sdcard/RidgeRacerV/mc`: copy them to your PC now and then."
+      ],
+      "credits": "Based on [Fukami](https://github.com/danisandoval/fukami) by Dani Sandoval (GPL-3.0); graphics through a [PCSX2](https://pcsx2.net)-based renderer. Ridge Racer is a trademark of Bandai Namco Entertainment; this unofficial fan project is not affiliated with Bandai Namco and contains no game data. Pictures: captured on a Meta Quest 3."
+    },
+    {
       "slug": "snes9x",
       "name": "Snes9x 3D",
       "repo": "snes9x-3D",
