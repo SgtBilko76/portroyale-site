@@ -4905,7 +4905,7 @@
         "Shaders prepared in advance, so new tracks and cars don't stutter the first time"
       ],
       "needs": [
-        "Meta Quest 3 or PICO (both tested); Quest 2 / Pro / 3S untested",
+        "Meta Quest 3 or PICO 4 (both tested); Quest 2 / Pro / 3S untested",
         "**GT4 Spec II VR:** a disc image of the *Spec II* 1.10 mod, as an `.iso`",
         "**GT4 Online VR:** a disc image of your own *Gran Turismo 4*, **US release v2.00**, as an `.iso`",
         "GT4 Online VR: Wi-Fi for online races"
@@ -5019,7 +5019,7 @@
       },
       "controls_note": "In the VR menu, either stick chooses and changes a setting, A selects, the grips switch between Lobby and Settings, and B or the Menu button closes it. Triggers and grips can be swapped there. Hold the Meta button to re-centre the view.",
       "notes": [
-        "This is a beta, tested on Quest 3 and PICO. Only the two disc versions above are supported: other releases of the game won't start.",
+        "This is a beta, tested on Quest 3 and PICO 4. Only the two disc versions above are supported: other releases of the game won't start.",
         "Online races: open the lobby (hold Menu), create a race or join one, then follow the three steps shown there (LAN settings, then *Arcade → Multi-LAN Race → Connect*).",
         "Saves live in `/sdcard/GT4SpecII` and `/sdcard/GT4HD` (`memcard.ps2`): copy them to your PC now and then."
       ],
