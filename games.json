@@ -4885,6 +4885,147 @@
       ]
     },
     {
+      "slug": "gt4",
+      "name": "GT4 VR",
+      "repo": "gt4-vr",
+      "coming_soon": "**Coming soon.** GT4 VR is in beta testing. It will be released here once the version that doesn't contain any of the game's code is ready: you will only need your own disc image.",
+      "category": "native",
+      "tagline": "The PS2's big racing simulator, with head-tracked stereo 3D races on Meta Quest.",
+      "about": [
+        "A standalone VR port of *Gran Turismo 4* (PS2, 2004), built on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00: the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, replays and the race start are shown on a large curved 3D screen; once the race really starts, the view switches to head-tracked VR, so you can look into the corners and around the cockpit while you drive.",
+        "Two apps come from the same port: **GT4 Spec II VR** for the *Spec II* 1.10 mod, and **GT4 Online VR** for the US v2.00 release, with online races against other players through the in-game Multi-LAN mode. Both can be installed side by side.",
+        "The APKs contain no game data: you bring a disc image of your own."
+      ],
+      "features": [
+        "Head-tracked stereo 3D races with real depth, switched on automatically when the race starts",
+        "Curved 3D screen for menus, replays and the race start, sharp at 3x the PS2's resolution",
+        "Analog throttle and brake on the triggers, gear shifts on the grips",
+        "VR menu (hold the Menu button): screen distance and size, **3D strength**, swapped triggers or grips, saved for the next start",
+        "**GT4 Online VR:** online races through a lobby in the VR menu and the game's own Multi-LAN race",
+        "Shaders prepared in advance, so new tracks and cars don't stutter the first time"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested); Quest 2 / Pro / 3S and PICO untested",
+        "**GT4 Spec II VR:** a disc image of the *Spec II* 1.10 mod, as an `.iso`",
+        "**GT4 Online VR:** a disc image of your own *Gran Turismo 4*, **US release v2.00**, as an `.iso`",
+        "GT4 Online VR: Wi-Fi for online races"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Once it is released: download the APK for your disc below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r GT4-SpecII-VR-0.2.3-beta.apk` (or `GT4-Online-VR-0.2.3-beta.apk`). Installing over an earlier beta keeps your saves.",
+        "Copy your disc image (any name ending in `.iso`) to `/sdcard/GT4SpecII` (Spec II) or `/sdcard/GT4HD` (Online) on the headset: with a PC file manager, SideQuest's file manager or `adb push`.",
+        "Start the app from *Library → Unknown Sources*. It checks the disc image and starts the game; if the image is missing or a different version, it says so on the screen."
+      ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "left/right - steer",
+            "press - L1",
+            "both pressed - VR / screen"
+          ],
+          "y": "change view",
+          "x": "handbrake",
+          "menu": [
+            "tap - pause",
+            "hold - VR menu"
+          ],
+          "trigger": "brake",
+          "grip": "shift down"
+        },
+        "right": {
+          "stick": [
+            "directions - d-pad",
+            "press - R1"
+          ],
+          "b": "back",
+          "a": "confirm",
+          "trigger": "throttle",
+          "grip": "shift up"
+        }
+      },
+      "controls": {
+        "columns": [
+          "Controller",
+          "In a race",
+          "In the menus"
+        ],
+        "rows": [
+          [
+            "Right trigger",
+            "Throttle (analog)",
+            "Confirm"
+          ],
+          [
+            "Left trigger",
+            "Brake (analog)",
+            ""
+          ],
+          [
+            "Right / left grip",
+            "Shift up / down",
+            ""
+          ],
+          [
+            "Left stick",
+            "Steer",
+            "Move the cursor"
+          ],
+          [
+            "Right stick",
+            "D-pad",
+            "D-pad"
+          ],
+          [
+            "A",
+            "",
+            "Confirm"
+          ],
+          [
+            "B",
+            "",
+            "Back"
+          ],
+          [
+            "X",
+            "Handbrake",
+            ""
+          ],
+          [
+            "Y",
+            "Change the camera view",
+            ""
+          ],
+          [
+            "Left / right stick click",
+            "L1 / R1",
+            "L1 / R1"
+          ],
+          [
+            "Both stick clicks",
+            "Switch between the VR view and the curved screen",
+            ""
+          ],
+          [
+            "Menu button",
+            "Pause",
+            "Start"
+          ],
+          [
+            "Menu button, hold",
+            "VR menu: settings (and the online lobby in GT4 Online VR)",
+            "VR menu"
+          ]
+        ]
+      },
+      "controls_note": "In the VR menu, either stick chooses and changes a setting, A selects, the grips switch between Lobby and Settings, and B or the Menu button closes it. Triggers and grips can be swapped there. Hold the Meta button to re-centre the view.",
+      "notes": [
+        "This is a beta, tested on Quest 3. Only the two disc versions above are supported: other releases of the game won't start.",
+        "Online races: open the lobby (hold Menu), create a race or join one, then follow the three steps shown there (LAN settings, then *Arcade → Multi-LAN Race → Connect*).",
+        "Saves live in `/sdcard/GT4SpecII` and `/sdcard/GT4HD` (`memcard.ps2`): copy them to your PC now and then."
+      ],
+      "credits": "Based on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00 (MIT License); graphics through a [PCSX2](https://pcsx2.net)-based renderer. *Spec II* is a fan mod by its own authors and is not part of this port. Gran Turismo is a trademark of Sony Interactive Entertainment; this unofficial fan project is not affiliated with Sony or Polyphony Digital and contains no game data. Pictures: captured on a Meta Quest 3."
+    },
+    {
       "slug": "snes9x",
       "name": "Snes9x 3D",
       "repo": "snes9x-3D",

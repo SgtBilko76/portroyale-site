@@ -145,6 +145,8 @@ def _assets_of(user, repo, rel):
 def fetch_releases(user, games):
     data = {}
     for g in games:
+        if g.get("coming_soon"):  # private repo: never fetch (a token could read its releases)
+            continue
         url = f"https://api.github.com/repos/{user}/{g['repo']}/releases?per_page=5"
         try:
             rels = _gh_json(url)
@@ -377,7 +379,9 @@ def app_section():
 def build_game(site, cats, game, rels, prev_g, next_g):
     user = site["github_user"]
     repo_url = f"https://github.com/{user}/{game['repo']}"
-    releases = rels.get(game["repo"], [])
+    # "coming_soon": text shown instead of downloads; the repo is private, so no GitHub links and no releases
+    soon = game.get("coming_soon")
+    releases = [] if soon else rels.get(game["repo"], [])
     rel = latest(releases)
     imgs = images_for(game["slug"])
     cat = next(c for c in cats if c["id"] == game["category"])
@@ -396,6 +400,8 @@ def build_game(site, cats, game, rels, prev_g, next_g):
         dl_btn = f'<a class="btn btn-primary" href="{esc(rel["url"])}" target="_blank" rel="noopener">{DL} Downloads ({esc(rel["tag"])})</a>'
     elif primary:
         dl_btn = f'<a class="btn btn-primary" href="{esc(primary["url"])}">{DL} Download {esc(rel["tag"])}</a>'
+    elif soon:
+        dl_btn = f'<a class="btn btn-primary" href="#download">{DL} Coming soon</a>'
     else:
         dl_btn = f'<a class="btn btn-primary" href="{repo_url}/releases" target="_blank" rel="noopener">{DL} Releases</a>' 
 
@@ -407,7 +413,12 @@ def build_game(site, cats, game, rels, prev_g, next_g):
         if primary and not multi_assets:
             facts.append(("Download size", human_size(primary["size"])))
     facts.append(("Type", esc(cat["name"])))
-    facts.append(("Source", f'<a href="{repo_url}" target="_blank" rel="noopener">{esc(game["repo"])}</a>'))
+    if soon:
+        facts.append(("Status", "Coming soon"))
+    else:
+        facts.append(("Source", f'<a href="{repo_url}" target="_blank" rel="noopener">{esc(game["repo"])}</a>'))
+    gh_btn = "" if soon else f'<a class="btn btn-ghost" href="{repo_url}" target="_blank" rel="noopener">{GH} GitHub</a>'
+    all_releases = "" if soon else f'<p class="note">All releases: <a href="{repo_url}/releases" target="_blank" rel="noopener">{repo_url.replace("https://", "")}/releases</a></p>'
     facts_html = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in facts)
 
     about = "".join(f"<p>{inline(p)}</p>" for p in game.get("about", []))
@@ -464,7 +475,9 @@ def build_game(site, cats, game, rels, prev_g, next_g):
           <p class="release-head"><a href="{esc(r['url'])}" target="_blank" rel="noopener">{esc(r['name'])}</a> {tag}<small>{esc(r['tag'])} · {human_date(r['date'])}</small></p>
           <ul class="files">{files}</ul>
         </div>""")
-    if not downloads:
+    if soon:
+        downloads.append(f'<p class="note">{inline(soon)}</p>')
+    elif not downloads:
         downloads.append(f'<p class="note">No release yet: check the <a href="{repo_url}" target="_blank" rel="noopener">repository</a>.</p>')
 
     installer = ""
@@ -564,7 +577,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     <p class="lead">{inline(game['tagline'])}</p>
     <div class="actions">
       {dl_btn}{install_btn}
-      <a class="btn btn-ghost" href="{repo_url}" target="_blank" rel="noopener">{GH} GitHub</a>
+      {gh_btn}
       <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
     </div>
   </div>
@@ -607,7 +620,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     <div>
       <h2 class="section-title">Download</h2>{installer}
       {''.join(downloads)}
-      <p class="note">All releases: <a href="{repo_url}/releases" target="_blank" rel="noopener">{repo_url.replace('https://', '')}/releases</a></p>
+      {all_releases}
       {discord_link(site, '<div class="help-box"><p><strong>Need help or found a bug?</strong> Ask in <strong>#support</strong> on our Discord, and get new releases in <strong>#new-releases</strong>.</p><a class="btn btn-discord" href="{url}" target="_blank" rel="noopener">' + DISCORD + ' Join the Discord</a></div>')}
     </div>
     <aside class="sponsor-card">
@@ -633,8 +646,9 @@ def build_game(site, cats, game, rels, prev_g, next_g):
         "applicationCategory": "GameApplication", "operatingSystem": "Android (Meta Quest)",
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": site["github_user"], "url": f"https://github.com/{user}"},
-        "sameAs": repo_url,
     }
+    if not soon:
+        ld["sameAs"] = repo_url
     if image:
         ld["image"] = f"{site['url']}/{image}"
     if rel:
@@ -733,6 +747,8 @@ def write_catalog(site, cats, ordered, rels):
 
     games = []
     for g in ordered:
+        if g.get("coming_soon"):  # nothing to install yet
+            continue
         r = latest(rels.get(g["repo"], []))
         assets = []
         for a in (r["assets"] if r else []):
