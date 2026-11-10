@@ -892,16 +892,16 @@
  ],
  "FotG-VR": [
   {
-   "tag": "v0.3.6-beta",
-   "name": "Fate of the Galaxy VR v0.3.6-beta",
-   "date": "2026-11-09T12:18:21Z",
+   "tag": "v0.3.7-beta",
+   "name": "Fate of the Galaxy VR v0.3.7-beta",
+   "date": "2026-11-10T09:10:57Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/FotG-VR/releases/tag/v0.3.6-beta",
+   "url": "https://github.com/SgtBilko76/FotG-VR/releases/tag/v0.3.7-beta",
    "assets": [
     {
-     "name": "FotG-VR-v0.3.6-beta.apk",
-     "size": 23337574,
-     "url": "https://github.com/SgtBilko76/FotG-VR/releases/download/v0.3.6-beta/FotG-VR-v0.3.6-beta.apk"
+     "name": "FotG-VR-v0.3.7-beta.apk",
+     "size": 23338486,
+     "url": "https://github.com/SgtBilko76/FotG-VR/releases/download/v0.3.7-beta/FotG-VR-v0.3.7-beta.apk"
     }
    ]
   }
