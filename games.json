@@ -4892,12 +4892,12 @@
       "category": "native",
       "tagline": "The PS2's big racing simulator, with head-tracked stereo 3D races on Meta Quest and PICO.",
       "about": [
-        "A standalone VR port of *Gran Turismo 4* (PS2, 2004), built on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00: the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, replays and the race start are shown on a large curved 3D screen; once the race really starts, the view switches to head-tracked VR, so you can look into the corners and around the cockpit while you drive.",
+        "A standalone VR port of *Gran Turismo 4* (PS2, 2004), built on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00: the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, replays and the race start are shown on a large curved 3D screen. The VR view doesn't switch on by itself: once the race has started, press both sticks to switch to head-tracked VR, so you can look into the corners and around the cockpit while you drive.",
         "Two apps come from the same port: **GT4 Spec II VR** for the *Spec II* 1.10 mod, and **GT4 Online VR** for the US v2.00 release, with online races against other players through the in-game Multi-LAN mode. Both can be installed side by side.",
         "The APKs contain no game data: you bring a disc image of your own."
       ],
       "features": [
-        "Head-tracked stereo 3D races with real depth, switched on automatically when the race starts",
+        "Head-tracked stereo 3D races with real depth: press both sticks once the race has started (VR doesn't switch on by itself)",
         "Curved 3D screen for menus, replays and the race start, sharp at 3x the PS2's resolution",
         "Analog throttle and brake on the triggers, gear shifts on the grips",
         "VR menu (hold the Menu button): screen distance and size, **3D strength**, swapped triggers or grips, saved for the next start",
@@ -5002,7 +5002,7 @@
           ],
           [
             "Both stick clicks",
-            "Switch between the VR view and the curved screen",
+            "Switch between the VR view and the curved screen (once the race has started)",
             ""
           ],
           [
@@ -5034,12 +5034,12 @@
       "tagline": "Namco's PS2 launch racer on a huge curved 3D screen, with a head-tracked VR view in the race, on Meta Quest.",
       "about": [
         "A standalone VR port of *Ridge Racer V* (PS2, 2000), built on [Fukami](https://github.com/danisandoval/fukami) by Dani Sandoval: the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. You race on a big curved screen with real stereo depth, sharp at several times the PS2's resolution and in widescreen.",
-        "Once the race starts, both stick clicks switch to a head-tracked VR view: the race fills your field of view and you look into the corners while you drive, with the HUD on its own panel fixed in the driving direction. Menus, replays and the start sequence always stay on the curved screen.",
+        "The VR view doesn't switch on by itself: every race starts on the curved screen, and once the race has started you press both sticks to switch to a head-tracked VR view. The race then fills your field of view and you look into the corners while you drive, with the HUD on its own panel fixed in the driving direction. Menus, replays and the start sequence always stay on the curved screen.",
         "The APK contains no game data: you bring the files of your own disc."
       ],
       "features": [
         "Curved 3D screen with real stereo depth, about 88° wide, in true widescreen",
-        "Head-tracked VR view during the race (both stick clicks), with the HUD on its own panel in the driving direction",
+        "Head-tracked VR view during the race: press both sticks once the race has started (it doesn't switch on by itself), with the HUD on its own panel in the driving direction",
         "Sharp picture: 3x the PS2's resolution, 16x anisotropic filtering and FXAA",
         "Analog steering, accelerator and brake on the triggers, gear shifts on the grips",
         "Settings menu in the game (hold the left stick or press Menu): widescreen, HUD layout, picture and car detail options",
@@ -5134,12 +5134,12 @@
           ],
           [
             "Both stick clicks",
-            "Switch between the VR view and the curved screen",
+            "Switch between the VR view and the curved screen (once the race has started)",
             ""
           ]
         ]
       },
-      "controls_note": "The VR view is only available while you race: every race starts on the curved screen, and after the finish the curved screen comes back by itself. Hold the Meta button to re-centre the view.",
+      "controls_note": "The VR view doesn't switch on by itself: every race starts on the curved screen, and you press both sticks once the race has started. In the menus the stick clicks do nothing; after the finish the curved screen comes back by itself. Hold the Meta button to re-centre the view.",
       "notes": [
         "This is a beta, tested on Quest 3. Only the US release of the disc is supported.",
         "In very dense traffic the picture can drop a few frames now and then; the game itself keeps its full speed.",
