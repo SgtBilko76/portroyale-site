@@ -5150,6 +5150,124 @@
       "credits": "Based on [Fukami](https://github.com/danisandoval/fukami) by Dani Sandoval (GPL-3.0); graphics through a [PCSX2](https://pcsx2.net)-based renderer. Ridge Racer is a trademark of Bandai Namco Entertainment; this unofficial fan project is not affiliated with Bandai Namco and contains no game data. Pictures: captured on a Meta Quest 3."
     },
     {
+      "slug": "forzahorizon",
+      "name": "Forza Horizon VR",
+      "repo": "ForzaHorizon-VR",
+      "coming_soon": "**Coming soon.** Forza Horizon VR is in beta testing. It will be released here once a version that doesn't contain any of the game's code is ready: you will only need your own disc.",
+      "category": "native",
+      "tagline": "The Xbox 360 open-world festival racer, with a head-tracked cockpit view, on Meta Quest.",
+      "about": [
+        "A standalone VR port of *Forza Horizon* (Xbox 360, 2012), built on [Pinyon Shift](https://github.com/arcanite24/pinyon-shift): the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, the map and the third-person cameras are shown on a large curved 3D screen.",
+        "Switch to the cockpit or hood camera and the view becomes head-tracked: you look around inside the car and into the corners while you drive through Colorado, and the HUD stays fixed in the driving direction instead of following your head. Back on a chase camera, the curved screen returns by itself.",
+        "The APK contains no game data: you bring your own disc."
+      ],
+      "features": [
+        "Head-tracked cockpit and hood view: switch to either camera in the game and it turns on by itself",
+        "HUD fixed in the driving direction, sized for the VR view",
+        "Curved 3D screen for menus, the map and the chase cameras",
+        "Analog throttle and brake on the triggers, all Xbox 360 controller buttons on the Touch controllers",
+        "Mesa Turnip graphics driver built for the Quest, for a smoother cockpit view"
+      ],
+      "needs": [
+        "Meta Quest 3 (tested); Quest 2 / Pro / 3S untested",
+        "Your own *Forza Horizon* disc, **US release** (Xbox 360)"
+      ],
+      "install": [
+        "Enable developer mode on your headset.",
+        "Once it is released: download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.1.0-beta.apk`.",
+        "Copy the game files from your disc to the headset as described in the release notes.",
+        "Start the app from *Library → Unknown Sources*."
+      ],
+      "controls_diagram": {
+        "left": {
+          "stick": [
+            "directions - steer",
+            "press - left stick"
+          ],
+          "y": "Xbox Y",
+          "x": "Xbox X",
+          "menu": [
+            "tap - start",
+            "hold - back"
+          ],
+          "trigger": "brake",
+          "grip": [
+            "tap - LB",
+            "hold - right stick is d-pad"
+          ]
+        },
+        "right": {
+          "stick": [
+            "directions - right stick",
+            "press - right stick"
+          ],
+          "b": "Xbox B",
+          "a": "Xbox A",
+          "trigger": "throttle",
+          "grip": "RB"
+        }
+      },
+      "controls": {
+        "columns": [
+          "Touch controller",
+          "Xbox 360 controller"
+        ],
+        "rows": [
+          [
+            "Right trigger",
+            "Right trigger (throttle, analog)"
+          ],
+          [
+            "Left trigger",
+            "Left trigger (brake, analog)"
+          ],
+          [
+            "Left stick",
+            "Left stick (steer)"
+          ],
+          [
+            "Right stick",
+            "Right stick"
+          ],
+          [
+            "A / B / X / Y",
+            "A / B / X / Y"
+          ],
+          [
+            "Left / right stick click",
+            "Left / right stick click"
+          ],
+          [
+            "Right grip",
+            "RB"
+          ],
+          [
+            "Left grip, tap",
+            "LB"
+          ],
+          [
+            "Left grip held + right stick",
+            "D-pad"
+          ],
+          [
+            "Menu button, tap",
+            "Start"
+          ],
+          [
+            "Menu button, hold",
+            "Back"
+          ]
+        ]
+      },
+      "controls_note": "The Touch controllers work like an Xbox 360 controller, so the game's own button layout applies. The head-tracked view turns on with the game's cockpit or hood camera. Hold the Meta button to re-centre the view.",
+      "notes": [
+        "This is a beta, tested on Quest 3. Only the US release of the disc is supported.",
+        "The head-tracked cockpit view runs at about 35–45 fps; menus and the curved screen are smoother.",
+        "Online multiplayer is not available yet."
+      ],
+      "credits": "Based on [Pinyon Shift](https://github.com/arcanite24/pinyon-shift) and its ShiftGlue SDK (BSD-3-Clause, derived from [Xenia](https://xenia.jp)); graphics on the Quest through [Mesa](https://mesa3d.org) Turnip. Forza Horizon is a trademark of Microsoft; this unofficial fan project is not affiliated with Microsoft or Playground Games and contains no game data."
+    },
+    {
       "slug": "snes9x",
       "name": "Snes9x 3D",
       "repo": "snes9x-3D",
