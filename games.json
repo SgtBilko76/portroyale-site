@@ -5021,6 +5021,7 @@
       "notes": [
         "This is a beta, tested on Quest 3 and PICO 4. Only the two disc versions above are supported: other releases of the game won't start.",
         "Online races: open the lobby (hold Menu), create a race or join one, then follow the three steps shown there (LAN settings, then *Arcade → Multi-LAN Race → Connect*).",
+        "**Support the online server:** online races in GT4 Online VR run through our own server, and its costs are paid privately. If you enjoy racing online, a coffee on [Ko-fi](https://ko-fi.com/sgtbilko76) helps keep it running.",
         "Saves live in `/sdcard/GT4SpecII` and `/sdcard/GT4HD` (`memcard.ps2`): copy them to your PC now and then.",
         "Known issue: in the car selection (showroom) the sound can crackle, because the game drops to about 45 fps there. Once you pick a car, it runs at full speed again."
       ],
