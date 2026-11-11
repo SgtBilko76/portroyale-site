@@ -268,8 +268,22 @@ def picture(game, img, cls="", eager=False):
     return f'<img class="{cls}{whole}" src="{esc(rel)}" alt="{esc(game["name"])}"{load}>'
 
 
-def latest(releases):
-    return releases[0] if releases else None
+def latest(releases, n=1):
+    """The newest release. A game with "combine_latest": N ships one app per release (GT4 VR: Spec II
+    and Online as separate releases of one repo): the newest N then count as one release, with all
+    their assets, the shared part of their tags and the repo's releases page as the link."""
+    if not releases:
+        return None
+    if n <= 1:
+        return releases[0]
+    group = releases[:n]
+    r = dict(group[0])
+    seen = set()
+    r["assets"] = [a for x in group for a in x["assets"] if not (a["name"] in seen or seen.add(a["name"]))]
+    r["name"] = " + ".join(x["name"] for x in group)
+    r["tag"] = os.path.commonprefix([x["tag"] for x in group]).rstrip("-_ ") or group[0]["tag"]
+    r["url"] = group[0]["url"].rsplit("/tag/", 1)[0]
+    return r
 
 
 # ---------------------------------------------------------------- index
@@ -305,7 +319,7 @@ def build_index(site, cats, games, rels):
         cards = []
         for g in members:
             imgs = images_for(g["slug"])
-            rel = latest(rels.get(g["repo"], []))
+            rel = latest(rels.get(g["repo"], []), g.get("combine_latest", 1))
             badge = f'<span class="badge">{esc(rel["tag"])}</span>' if rel else ""
             cards.append(f"""
       <a class="card" href="{esc(g['slug'])}.html">
@@ -382,7 +396,8 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     # "coming_soon": text shown instead of downloads; the repo is private, so no GitHub links and no releases
     soon = game.get("coming_soon")
     releases = [] if soon else rels.get(game["repo"], [])
-    rel = latest(releases)
+    n_latest = game.get("combine_latest", 1)
+    rel = latest(releases, n_latest)
     imgs = images_for(game["slug"])
     cat = next(c for c in cats if c["id"] == game["category"])
 
@@ -469,7 +484,7 @@ def build_game(site, cats, game, rels, prev_g, next_g):
         files = "".join(
             f'<li><a class="file" href="{esc(a["url"])}">{DL}<span>{esc(a["name"])}</span><small>{human_size(a["size"])}</small></a></li>'
             for a in r["assets"]) or '<li class="note">No files attached.</li>'
-        tag = '<span class="badge badge-inline">latest</span>' if i == 0 else ""
+        tag = '<span class="badge badge-inline">latest</span>' if i < n_latest else ""
         downloads.append(f"""
         <div class="release">
           <p class="release-head"><a href="{esc(r['url'])}" target="_blank" rel="noopener">{esc(r['name'])}</a> {tag}<small>{esc(r['tag'])} · {human_date(r['date'])}</small></p>
@@ -749,7 +764,7 @@ def write_catalog(site, cats, ordered, rels):
     for g in ordered:
         if g.get("coming_soon"):  # nothing to install yet
             continue
-        r = latest(rels.get(g["repo"], []))
+        r = latest(rels.get(g["repo"], []), g.get("combine_latest", 1))
         assets = []
         for a in (r["assets"] if r else []):
             ext = a["name"].rsplit(".", 1)[-1].lower()
@@ -814,7 +829,7 @@ def write_seo_files(site, ordered, rels):
     today = date.today().isoformat()
     urls = [(f"{site['url']}/", today, "1.0")]
     for g in ordered:
-        r = latest(rels.get(g["repo"], []))
+        r = latest(rels.get(g["repo"], []), g.get("combine_latest", 1))
         urls.append((f"{site['url']}/{g['slug']}.html", (r["date"] or today)[:10] if r else today, "0.8"))
     items = "".join(f"  <url><loc>{esc(u)}</loc><lastmod>{d}</lastmod><priority>{p}</priority></url>\n"
                     for u, d, p in urls)

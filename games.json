@@ -4888,13 +4888,13 @@
       "slug": "gt4",
       "name": "GT4 VR",
       "repo": "gt4-vr",
-      "coming_soon": "**Coming soon.** GT4 VR is in beta testing. It will be released here once the version that doesn't contain any of the game's code is ready: you will only need your own disc image.",
+      "combine_latest": 2,
       "category": "native",
       "tagline": "The PS2's big racing simulator, with head-tracked stereo 3D races on Meta Quest and PICO.",
       "about": [
-        "A standalone VR port of *Gran Turismo 4* (PS2, 2004), built on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00: the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, replays and the race start are shown on a large curved 3D screen. The VR view doesn't switch on by itself: once the race has started, press both sticks to switch to head-tracked VR, so you can look into the corners and around the cockpit while you drive.",
+        "A standalone VR port of *Gran Turismo 4* (PS2, 2004), built on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00: the app reads the game's program from your own disc image and translates it into native ARM code on the headset while you play. Menus, replays and the race start are shown on a large curved 3D screen. The VR view doesn't switch on by itself: once the race has started, press both sticks to switch to head-tracked VR, so you can look into the corners and around the cockpit while you drive.",
         "Two apps come from the same port: **GT4 Spec II VR** for the *Spec II* 1.10 mod, and **GT4 Online VR** for the US v2.00 release, with online races against other players through the in-game Multi-LAN mode. Both can be installed side by side.",
-        "The APKs contain no game data: you bring a disc image of your own."
+        "The APKs contain no game code and no game data: you bring a disc image of your own."
       ],
       "features": [
         "Head-tracked stereo 3D races with real depth: press both sticks once the race has started (VR doesn't switch on by itself)",
@@ -4912,7 +4912,7 @@
       ],
       "install": [
         "Enable developer mode on your headset.",
-        "Once it is released: download the APK for your disc below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r GT4-SpecII-VR-0.2.3-beta.apk` (or `GT4-Online-VR-0.2.3-beta.apk`). Installing over an earlier beta keeps your saves.",
+        "Download the APK for your disc below, or install it with the browser installer. To sideload it yourself, use [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r GT4-SpecII-VR-0.3.0-beta.apk` (or `GT4-Online-VR-0.3.0-beta.apk`). Installing over an earlier beta keeps your saves.",
         "Copy your disc image (any name ending in `.iso`) to `/sdcard/GT4SpecII` (Spec II) or `/sdcard/GT4HD` (Online) on the headset: with a PC file manager, SideQuest's file manager or `adb push`.",
         "Start the app from *Library → Unknown Sources*. It checks the disc image and starts the game; if the image is missing or a different version, it says so on the screen."
       ],
@@ -5021,9 +5021,10 @@
       "notes": [
         "This is a beta, tested on Quest 3 and PICO 4. Only the two disc versions above are supported: other releases of the game won't start.",
         "Online races: open the lobby (hold Menu), create a race or join one, then follow the three steps shown there (LAN settings, then *Arcade → Multi-LAN Race → Connect*).",
-        "Saves live in `/sdcard/GT4SpecII` and `/sdcard/GT4HD` (`memcard.ps2`): copy them to your PC now and then."
+        "Saves live in `/sdcard/GT4SpecII` and `/sdcard/GT4HD` (`memcard.ps2`): copy them to your PC now and then.",
+        "Known issue: in the car selection (showroom) the sound can crackle, because the game drops to about 45 fps there. Once you pick a car, it runs at full speed again."
       ],
-      "credits": "Based on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00 (MIT License); graphics through a [PCSX2](https://pcsx2.net)-based renderer. *Spec II* is a fan mod by its own authors and is not part of this port. Gran Turismo is a trademark of Sony Interactive Entertainment; this unofficial fan project is not affiliated with Sony or Polyphony Digital and contains no game data. Pictures: captured on a Meta Quest 3."
+      "credits": "Based on [ps2-web-recomp](https://github.com/snuri00/ps2-web-recomp) by snuri00 (MIT License); graphics through a [PCSX2](https://pcsx2.net)-based renderer ([source](https://github.com/SgtBilko76/gt4-vr/tree/main/bridge), GPL-3.0). *Spec II* is a fan mod by its own authors and is not part of this port. Gran Turismo is a trademark of Sony Interactive Entertainment; this unofficial fan project is not affiliated with Sony or Polyphony Digital and contains no game data. Pictures: captured on a Meta Quest 3."
     },
     {
       "slug": "ridgeracer5",

@@ -921,5 +921,45 @@
     }
    ]
   }
+ ],
+ "gt4-vr": [
+  {
+   "tag": "v0.3.0-beta-specii",
+   "name": "GT4 Spec II VR 0.3.0-beta",
+   "date": "2026-11-11T16:09:40Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/gt4-vr/releases/tag/v0.3.0-beta-specii",
+   "assets": [
+    {
+     "name": "GT4-SpecII-VR-0.3.0-beta.apk",
+     "size": 44632736,
+     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.0-beta-specii/GT4-SpecII-VR-0.3.0-beta.apk"
+    },
+    {
+     "name": "SHA256SUMS.txt",
+     "size": 95,
+     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.0-beta-specii/SHA256SUMS.txt"
+    }
+   ]
+  },
+  {
+   "tag": "v0.3.0-beta-online",
+   "name": "GT4 Online VR 0.3.0-beta",
+   "date": "2026-11-11T16:09:53Z",
+   "prerelease": true,
+   "url": "https://github.com/SgtBilko76/gt4-vr/releases/tag/v0.3.0-beta-online",
+   "assets": [
+    {
+     "name": "GT4-Online-VR-0.3.0-beta.apk",
+     "size": 44700448,
+     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.0-beta-online/GT4-Online-VR-0.3.0-beta.apk"
+    },
+    {
+     "name": "SHA256SUMS.txt",
+     "size": 95,
+     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.0-beta-online/SHA256SUMS.txt"
+    }
+   ]
+  }
  ]
 }
