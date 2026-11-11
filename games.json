@@ -4906,7 +4906,7 @@
       ],
       "needs": [
         "Meta Quest 3 or PICO 4 (both tested); Quest 2 / Pro / 3S untested",
-        "**GT4 Spec II VR:** a disc image of the *Spec II* 1.10 mod, as an `.iso`",
+        "**GT4 Spec II VR:** a disc image of the *Spec II* 1.10 mod, as an `.iso`. Spec II is a fan mod that fixes and expands GT4 (new events and cars, better engine sounds, more camera and HUD options). It comes as an xDelta patch: download it from the [Spec II mod site](https://www.theadmiester.co.uk/specii/) and apply it to your own disc image of the US (NTSC) *Gran Turismo 4 Online Public Beta* to create the Spec II ISO.",
         "**GT4 Online VR:** a disc image of your own *Gran Turismo 4*, **US release v2.00**, as an `.iso`",
         "GT4 Online VR: Wi-Fi for online races"
       ],
