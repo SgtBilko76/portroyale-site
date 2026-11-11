@@ -324,6 +324,18 @@
   "versionCode": 11,
   "versionName": "0.5.0"
  },
+ "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.0-beta-online/GT4-Online-VR-0.3.0-beta.apk": {
+  "minSdk": 29,
+  "package": "online.portroyale.gt4hd",
+  "versionCode": 9,
+  "versionName": "0.3.0-beta"
+ },
+ "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.0-beta-specii/GT4-SpecII-VR-0.3.0-beta.apk": {
+  "minSdk": 29,
+  "package": "online.portroyale.gt4vr",
+  "versionCode": 9,
+  "versionName": "0.3.0-beta"
+ },
  "https://github.com/SgtBilko76/lionheart-remake-vr/releases/download/v0.2.0-beta/Lionheart-3D-v0.2.0-beta.apk": {
   "minSdk": 29,
   "package": "com.b3dgs.lionheart.quest",
