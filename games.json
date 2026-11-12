@@ -5165,6 +5165,7 @@
         "Head-tracked cockpit and hood view: switch to either camera in the game and it turns on by itself",
         "HUD fixed in the driving direction, sized for the VR view",
         "Curved 3D screen for menus, the map and the chase cameras",
+        "Sharper picture: 2x antialiasing (MSAA) is on by default, for clean edges on the curved screen at a smooth 60 fps limit",
         "Analog throttle and brake on the triggers, all Xbox 360 controller buttons on the Touch controllers",
         "Mesa Turnip graphics driver built for the Quest, for a smoother cockpit view"
       ],
@@ -5174,7 +5175,7 @@
       ],
       "install": [
         "Enable developer mode on your headset.",
-        "Once it is released: download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.1.0-beta.apk`.",
+        "Once it is released: download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.8.3-preview.1.apk`.",
         "Copy the game files from your disc to the headset as described in the release notes.",
         "Start the app from *Library → Unknown Sources*."
       ],
@@ -5261,9 +5262,9 @@
       },
       "controls_note": "The Touch controllers work like an Xbox 360 controller, so the game's own button layout applies. The head-tracked view turns on with the game's cockpit or hood camera. Hold the Meta button to re-centre the view.",
       "notes": [
-        "This is a beta, tested on Quest 3. Only the US release of the disc is supported.",
+        "This is a beta (0.8.3-preview.1), tested on Quest 3. Only the US release of the disc is supported.",
         "The head-tracked cockpit view runs at about 35–45 fps; menus and the curved screen are smoother.",
-        "Online multiplayer is not available yet."
+        "Online multiplayer is switched off in this beta."
       ],
       "credits": "Based on [Pinyon Shift](https://github.com/arcanite24/pinyon-shift) and its ShiftGlue SDK (BSD-3-Clause, derived from [Xenia](https://xenia.jp)); graphics on the Quest through [Mesa](https://mesa3d.org) Turnip. Forza Horizon is a trademark of Microsoft; this unofficial fan project is not affiliated with Microsoft or Playground Games and contains no game data."
     },
