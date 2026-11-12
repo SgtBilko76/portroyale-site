@@ -4912,7 +4912,7 @@
       ],
       "install": [
         "Enable developer mode on your headset.",
-        "Download the APK for your disc below, or install it with the browser installer. To sideload it yourself, use [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r GT4-SpecII-VR-0.3.0-beta.apk` (or `GT4-Online-VR-0.3.0-beta.apk`). Installing over an earlier beta keeps your saves.",
+        "Download the APK for your disc below, or install it with the browser installer. To sideload it yourself, use [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r GT4-SpecII-VR-0.3.1-beta.apk` (or `GT4-Online-VR-0.3.1-beta.apk`). Installing over an earlier beta keeps your saves.",
         "Copy your disc image (any name ending in `.iso`) to `/sdcard/GT4SpecII` (Spec II) or `/sdcard/GT4HD` (Online) on the headset: with a PC file manager, SideQuest's file manager or `adb push`.",
         "Start the app from *Library → Unknown Sources*. It checks the disc image and starts the game; if the image is missing or a different version, it says so on the screen."
       ],
