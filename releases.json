@@ -924,40 +924,40 @@
  ],
  "gt4-vr": [
   {
-   "tag": "v0.3.1-beta-specii",
-   "name": "GT4 Spec II VR 0.3.1-beta",
-   "date": "2026-11-12T17:33:29Z",
+   "tag": "v0.3.2-beta-specii",
+   "name": "GT4 Spec II VR 0.3.2-beta",
+   "date": "2026-11-13T08:18:55Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/gt4-vr/releases/tag/v0.3.1-beta-specii",
+   "url": "https://github.com/SgtBilko76/gt4-vr/releases/tag/v0.3.2-beta-specii",
    "assets": [
     {
-     "name": "GT4-SpecII-VR-0.3.1-beta.apk",
-     "size": 44847316,
-     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.1-beta-specii/GT4-SpecII-VR-0.3.1-beta.apk"
+     "name": "GT4-SpecII-VR-0.3.2-beta.apk",
+     "size": 45060772,
+     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.2-beta-specii/GT4-SpecII-VR-0.3.2-beta.apk"
     },
     {
      "name": "SHA256SUMS.txt",
      "size": 95,
-     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.1-beta-specii/SHA256SUMS.txt"
+     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.2-beta-specii/SHA256SUMS.txt"
     }
    ]
   },
   {
-   "tag": "v0.3.1-beta-online",
-   "name": "GT4 Online VR 0.3.1-beta",
-   "date": "2026-11-12T17:33:42Z",
+   "tag": "v0.3.2-beta-online",
+   "name": "GT4 Online VR 0.3.2-beta",
+   "date": "2026-11-13T08:19:09Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/gt4-vr/releases/tag/v0.3.1-beta-online",
+   "url": "https://github.com/SgtBilko76/gt4-vr/releases/tag/v0.3.2-beta-online",
    "assets": [
     {
-     "name": "GT4-Online-VR-0.3.1-beta.apk",
-     "size": 44915472,
-     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.1-beta-online/GT4-Online-VR-0.3.1-beta.apk"
+     "name": "GT4-Online-VR-0.3.2-beta.apk",
+     "size": 45129380,
+     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.2-beta-online/GT4-Online-VR-0.3.2-beta.apk"
     },
     {
      "name": "SHA256SUMS.txt",
      "size": 95,
-     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.1-beta-online/SHA256SUMS.txt"
+     "url": "https://github.com/SgtBilko76/gt4-vr/releases/download/v0.3.2-beta-online/SHA256SUMS.txt"
     }
    ]
   }
