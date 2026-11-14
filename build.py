@@ -310,6 +310,7 @@ def build_index(site, cats, games, rels):
     </div>
   </div>
 </section>"""]
+    parts.append(new_releases_section(games, rels))
     if APP:
         parts.append(app_section())
     for c in cats:
@@ -354,6 +355,45 @@ def build_index(site, cats, games, rels):
     ld = {"@context": "https://schema.org", "@type": "WebSite", "name": site["title"],
           "url": site["url"] + "/", "description": site["intro"]}
     return page(site, f"{site['title']} | {site['tagline']}", "".join(parts), site["intro"], "", None, ld)
+
+
+NEW_RELEASES = 4  # cards in the index "New releases" band
+
+
+def new_releases_section(games, rels):
+    """Index band with the newest releases across all ports (one card per port, newest first).
+    Fed by releases.json, so it updates itself with every build.py --refresh (daily deploy)."""
+    recent = []
+    for g in games:
+        if g.get("coming_soon"):
+            continue
+        rel = latest(rels.get(g["repo"], []), g.get("combine_latest", 1))
+        if rel and rel.get("date"):
+            recent.append((rel["date"], g, rel))
+    recent.sort(key=lambda x: x[0], reverse=True)
+    if not recent:
+        return ""
+    cards = []
+    for date, g, rel in recent[:NEW_RELEASES]:
+        imgs = images_for(g["slug"])
+        cards.append(f"""
+      <a class="card" href="{esc(g['slug'])}.html">
+        <div class="card-media">{picture(g, imgs[0] if imgs else None, "card-img")}<span class="badge badge-date">{esc(human_date(date))}</span><span class="badge">{esc(rel["tag"])}</span></div>
+        <div class="card-body">
+          <h3>{esc(g['name'])}</h3>
+          <p>{inline(g['tagline'])}</p>
+          <span class="more">What's new &amp; download →</span>
+        </div>
+      </a>""")
+    return f"""
+<section class="section new-releases" id="new">
+  <div class="wrap">
+    <h2 class="section-title">New releases</h2>
+    <p class="section-blurb">The latest port updates, newest first.</p>
+    <div class="grid">{''.join(cards)}
+    </div>
+  </div>
+</section>"""
 
 
 def app_section():
