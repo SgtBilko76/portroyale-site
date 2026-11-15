@@ -5154,13 +5154,13 @@
       "slug": "forzahorizon",
       "name": "Forza Horizon VR",
       "repo": "ForzaHorizon-VR",
-      "coming_soon": "**Coming soon.** Forza Horizon VR is in beta testing. It will be released here once a version that doesn't contain any of the game's code is ready: you will only need your own disc.",
       "category": "native",
       "tagline": "The Xbox 360 open-world festival racer, with a head-tracked cockpit view, on Meta Quest.",
       "about": [
         "A standalone VR port of *Forza Horizon* (Xbox 360, 2012), built on [Pinyon Shift](https://github.com/arcanite24/pinyon-shift): the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, the map and the third-person cameras are shown on a large curved 3D screen.",
         "Switch to the cockpit or hood camera and the view becomes head-tracked: you look around inside the car and into the corners while you drive through Colorado, and the HUD stays fixed in the driving direction instead of following your head. Back on a chase camera, the curved screen returns by itself.",
-        "The APK contains no game data: you bring your own disc."
+        "The APK contains no game code or data: you bring your own disc.",
+        "**Why the first start takes 25 to 35 minutes:** the game belongs to Microsoft, and a download that carried its code could not be shared legally. So the headset makes the game itself from your own disc files the first time you start the app: it translates the Xbox 360 program into source code (about 10 minutes), compiles it for the Quest's processor (about 13 minutes) and links it (about a minute). A progress screen shows each step and the time left. This happens once after installing or updating; after that the game starts in seconds. If the headset goes to sleep or you close the app, the build continues where it stopped."
       ],
       "features": [
         "Head-tracked cockpit and hood view: switch to either camera in the game and it turns on by itself",
@@ -5176,9 +5176,9 @@
       ],
       "install": [
         "Enable developer mode on your headset.",
-        "Once it is released: download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.8.3-preview.1.apk`.",
-        "Copy the game files from your disc to the headset as described in the release notes.",
-        "Start the app from *Library → Unknown Sources*."
+        "Download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.2.0-beta.apk`. Installing over an earlier build keeps your saves.",
+        "Copy the game files extracted from your own disc (US release) to the headset, as the app's setup screen explains.",
+        "Start **ForzaHorizon-VR** from *Library → Unknown Sources*. On the first start it builds the game from your disc files (25 to 35 minutes, once, with a progress screen; see above why). Keep about 4 GB free. When it is done, the game starts by itself."
       ],
       "controls_diagram": {
         "left": {
@@ -5263,9 +5263,10 @@
       },
       "controls_note": "The Touch controllers work like an Xbox 360 controller, so the game's own button layout applies. The head-tracked view turns on with the game's cockpit or hood camera. Hold the Meta button to re-centre the view.",
       "notes": [
-        "This is a beta (0.8.3-preview.1), tested on Quest 3. Only the US release of the disc is supported.",
+        "This is a beta (0.2.0-beta), tested on Quest 3. Only the US release of the disc is supported.",
         "The head-tracked cockpit view runs at about 35–45 fps; menus and the curved screen are smoother.",
-        "Online multiplayer is switched off in this beta."
+        "Online multiplayer is switched off in this beta.",
+        "The first minutes of play can stutter briefly while the headset builds its own shader cache (it is made from the game too, so it cannot be included in the download)."
       ],
       "credits": "Based on [Pinyon Shift](https://github.com/arcanite24/pinyon-shift) and its ShiftGlue SDK (BSD-3-Clause, derived from [Xenia](https://xenia.jp)); graphics on the Quest through [Mesa](https://mesa3d.org) Turnip. Forza Horizon is a trademark of Microsoft; this unofficial fan project is not affiliated with Microsoft or Playground Games and contains no game data."
     },
