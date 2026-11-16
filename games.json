@@ -5174,11 +5174,11 @@
       "needs": [
         "Meta Quest 3 (tested); Quest 2 / Pro / 3S untested",
         "PICO 4 Ultra (untested); the older PICO 4 / Neo 3 can't run it (no Vulkan 1.3)",
-        "Your own *Forza Horizon* disc, **US release** (Xbox 360)"
+        "Your own *Forza Horizon* disc, **US release** (Xbox 360). Title update v4 is not supported on the headset: the app checks your files before building and tells you if anything is wrong"
       ],
       "install": [
         "Enable developer mode on your headset (on PICO: *Settings → General → About*, tap the software version 7 times, then turn on USB debugging under *Developer*).",
-        "Download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.3.0-beta.apk`. Installing over an earlier build keeps your saves.",
+        "Download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.3.1-beta.apk`. Installing over an earlier build keeps your saves.",
         "Copy the game files extracted from your own disc (US release) to the headset, as the app's setup screen explains.",
         "Start **ForzaHorizon-VR** from *Library → Unknown Sources* (on PICO: *Library → Unknown*). On the first start it builds the game from your disc files (25 to 35 minutes, once, with a progress screen; see above why). Keep about 4 GB free. When it is done, the game starts by itself."
       ],
@@ -5265,7 +5265,7 @@
       },
       "controls_note": "The Touch controllers work like an Xbox 360 controller, so the game's own button layout applies. The head-tracked view turns on with the game's cockpit or hood camera. Hold the Meta button to re-centre the view.",
       "notes": [
-        "This is a beta (0.3.0-beta), tested on Quest 3. Only the US release of the disc is supported. Updating from 0.2.0-beta rebuilds the game once; your saves are kept.",
+        "This is a beta (0.3.1-beta), tested on Quest 3. Only the US release of the disc is supported. Updating from 0.3.0-beta keeps your built game (no rebuild); from 0.2.0-beta it rebuilds once. Your saves are kept.",
         "PICO support is untested: if the app does not start, or the buttons are mapped differently, please open an issue on GitHub (headset model and PICO OS version).",
         "The head-tracked cockpit view runs at about 35–45 fps; menus and the curved screen are smoother.",
         "Online multiplayer is switched off in this beta.",
