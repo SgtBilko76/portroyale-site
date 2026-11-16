@@ -964,21 +964,21 @@
  ],
  "ForzaHorizon-VR": [
   {
-   "tag": "quest-v0.3.3-beta",
-   "name": "ForzaHorizon-VR 0.3.3-beta",
-   "date": "2026-11-16T14:07:26Z",
+   "tag": "quest-v0.3.4-beta",
+   "name": "ForzaHorizon-VR 0.3.4-beta",
+   "date": "2026-11-16T15:48:58Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/ForzaHorizon-VR/releases/tag/quest-v0.3.3-beta",
+   "url": "https://github.com/SgtBilko76/ForzaHorizon-VR/releases/tag/quest-v0.3.4-beta",
    "assets": [
     {
-     "name": "ForzaHorizon-VR-0.3.3-beta.apk",
-     "size": 103349446,
-     "url": "https://github.com/SgtBilko76/ForzaHorizon-VR/releases/download/quest-v0.3.3-beta/ForzaHorizon-VR-0.3.3-beta.apk"
+     "name": "ForzaHorizon-VR-0.3.4-beta.apk",
+     "size": 103381276,
+     "url": "https://github.com/SgtBilko76/ForzaHorizon-VR/releases/download/quest-v0.3.4-beta/ForzaHorizon-VR-0.3.4-beta.apk"
     },
     {
      "name": "SHA256SUMS",
      "size": 97,
-     "url": "https://github.com/SgtBilko76/ForzaHorizon-VR/releases/download/quest-v0.3.3-beta/SHA256SUMS"
+     "url": "https://github.com/SgtBilko76/ForzaHorizon-VR/releases/download/quest-v0.3.4-beta/SHA256SUMS"
     }
    ]
   }
