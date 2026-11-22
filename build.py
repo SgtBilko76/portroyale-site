@@ -388,7 +388,7 @@ def new_releases_section(games, rels):
     return f"""
 <section class="section new-releases" id="new">
   <div class="wrap">
-    <h2 class="section-title">Updates &amp; New releases</h2>
+    <h2 class="section-title">Updates &amp; Releases</h2>
     <p class="section-blurb">The latest port updates, newest first.</p>
     <div class="grid">{''.join(cards)}
     </div>
