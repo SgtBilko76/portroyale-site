@@ -5155,15 +5155,17 @@
       "name": "Forza Horizon VR",
       "repo": "ForzaHorizon-VR",
       "category": "native",
-      "tagline": "The Xbox 360 open-world festival racer, with a head-tracked cockpit view, on Meta Quest and PICO 4 Ultra.",
+      "tagline": "The Xbox 360 open-world festival racer in 3D, with a head-tracked cockpit view and hand steering, on Meta Quest and PICO 4 Ultra.",
       "about": [
-        "A standalone VR port of *Forza Horizon* (Xbox 360, 2012), built on [Pinyon Shift](https://github.com/arcanite24/pinyon-shift): the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, the map and the third-person cameras are shown on a large curved 3D screen.",
+        "A standalone VR port of *Forza Horizon* (Xbox 360, 2012), built on [Pinyon Shift](https://github.com/arcanite24/pinyon-shift): the game's own code is statically recompiled and runs directly on the headset, no emulator CPU. Menus, the map and the chase cameras are shown on a large curved screen — and the picture is stereoscopic: each eye sees its own image, so the car and the landscape have real depth.",
         "Switch to the cockpit or hood camera and the view becomes head-tracked: you look around inside the car and into the corners while you drive through Colorado, and the HUD stays fixed in the driving direction instead of following your head. Back on a chase camera, the curved screen returns by itself.",
-        "The APK contains no game code or data: you bring your own disc. Copy the .iso you made from it to the headset, and the setup screen copies the game out of it right there, no PC tools needed.",
+        "The APK contains no game code or data: you bring the game files of your own disc. Put the game folder (the one containing *default.xex*) on the headset and the setup screen picks it; no PC tools are needed on the headset.",
         "**One APK for Meta Quest and PICO 4 Ultra:** it uses the Khronos OpenXR loader, so the headset's own runtime takes over. The setup screen and the first-start build screen appear on a curved VR screen: point with a controller and pull the trigger.",
         "**Why the first start takes 25 to 35 minutes:** the game belongs to Microsoft, and a download that carried its code could not be shared legally. So the headset makes the game itself from your own disc files the first time you start the app: it translates the Xbox 360 program into source code (about 10 minutes), compiles it for the headset's processor (about 13 minutes) and links it (about a minute). A progress screen shows each step and the time left. This happens once after installing or updating; after that the game starts in seconds. If the headset goes to sleep or you close the app, the build continues where it stopped."
       ],
       "features": [
+        "Stereoscopic 3D with real depth, on for every camera",
+        "Hand steering in the cockpit view: the grips become the steering wheel, the dash a gear lever (off by default, in SETTINGS)",
         "Head-tracked cockpit and hood view: switch to either camera in the game and it turns on by itself",
         "HUD fixed in the driving direction, sized for the VR view",
         "Curved 3D screen for menus, the map and the chase cameras",
@@ -5174,13 +5176,13 @@
       "needs": [
         "Meta Quest 3 (tested); Quest 2 / Pro / 3S untested",
         "PICO 4 Ultra (untested); the older PICO 4 / Neo 3 can't run it (no Vulkan 1.3)",
-        "Your own *Forza Horizon* disc, **US release** (Xbox 360). Title update v4 is not supported on the headset: the app checks your files before building and tells you if anything is wrong"
+        "Your own *Forza Horizon* disc, **US release** (Xbox 360), and its game folder — the app reads a folder of game files; in this version it does not open .iso images"
       ],
       "install": [
         "Enable developer mode on your headset (on PICO: *Settings → General → About*, tap the software version 7 times, then turn on USB debugging under *Developer*).",
-        "Download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.3.4-beta.apk`. Installing over an earlier build keeps your saves.",
-        "Copy the .iso you made from your own disc (US release) to the headset: connect it to your PC with a USB cable, allow file access in the headset, and copy the file into the *Download* folder.",
-        "Start **ForzaHorizon-VR** from *Library → Unknown Sources* (on PICO: *Library → Unknown*), press **Choose the .iso file** and pick it. The game files are copied out of it (a few minutes); then you can delete the .iso there. Press **Play**: the headset builds the game from your disc files (25 to 35 minutes, once, with a progress screen; see above why). Keep about 12 GB free for the copy and the build. When it is done, the game starts by itself."
+        "Download the APK below and sideload it with [SideQuest](https://sidequestvr.com/setup-howto) or `adb install -r ForzaHorizon-VR-0.4.2-beta.apk`. Installing over an earlier build keeps your saves, but the headset rebuilds the game once (25 to 35 minutes).",
+        "Extract the game from your own disc (US release) so you have the game folder — the one that contains *default.xex* — and copy that folder to the headset: connect it to your PC with a USB cable, allow file access, and put the folder into *Download*.",
+        "Start **ForzaHorizon-VR** from *Library → Unknown Sources* (on PICO: *Library → Unknown*), press **Choose folder**, pick the game folder, then **Play**: the headset builds the game from your disc files (25 to 35 minutes, once, with a progress screen; see above why). Keep about 12 GB free. When it is done, the game starts by itself."
       ],
       "controls_diagram": {
         "left": {
@@ -5263,9 +5265,9 @@
           ]
         ]
       },
-      "controls_note": "The Touch controllers work like an Xbox 360 controller, so the game's own button layout applies. The head-tracked view turns on with the game's cockpit or hood camera. Hold the Meta button to re-centre the view.",
+      "controls_note": "The Touch controllers work like an Xbox 360 controller, so the game's own button layout applies. The head-tracked view turns on with the game's cockpit or hood camera. With hand steering on (SETTINGS), the grips become the steering wheel and the dash a gear lever. Hold the Meta button to re-centre the view.",
       "notes": [
-        "This is a beta (0.3.4-beta), tested on Quest 3 from a fresh install with the .iso. It fixes the head-tracked cockpit view, which earlier betas did not include. Only the US release of the disc is supported. Updating from 0.3.0 to 0.3.3 keeps your built game (no rebuild); from 0.2.0-beta it rebuilds once. Your saves are kept.",
+        "This is a beta (0.4.2-beta), tested on Quest 3. It adds the stereoscopic 3D picture and hand steering to the head-tracked cockpit view; the setup screen now works from a game folder of your own disc. Updating from any earlier version rebuilds the game once (25 to 35 minutes); your saves are kept.",
         "PICO support is untested: if the app does not start, or the buttons are mapped differently, please open an issue on GitHub (headset model and PICO OS version).",
         "The head-tracked cockpit view runs at about 35–45 fps; menus and the curved screen are smoother.",
         "Online multiplayer is switched off in this beta.",
