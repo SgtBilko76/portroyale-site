@@ -987,5 +987,26 @@
     }
    ]
   }
+ ],
+ "ridgeracer5-vr": [
+  {
+   "tag": "v0.3.0",
+   "name": "Ridge Racer V VR 0.3.0",
+   "date": "2026-11-23T16:24:31Z",
+   "prerelease": false,
+   "url": "https://github.com/SgtBilko76/ridgeracer5-vr/releases/tag/v0.3.0",
+   "assets": [
+    {
+     "name": "RidgeRacerV-VR-0.3.0.apk",
+     "size": 21610612,
+     "url": "https://github.com/SgtBilko76/ridgeracer5-vr/releases/download/v0.3.0/RidgeRacerV-VR-0.3.0.apk"
+    },
+    {
+     "name": "SHA256SUMS.txt",
+     "size": 91,
+     "url": "https://github.com/SgtBilko76/ridgeracer5-vr/releases/download/v0.3.0/SHA256SUMS.txt"
+    }
+   ]
+  }
  ]
 }
