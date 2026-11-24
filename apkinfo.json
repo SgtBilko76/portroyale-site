@@ -108,6 +108,12 @@
   "versionCode": 4200,
   "versionName": "0.4.2-beta"
  },
+ "https://github.com/SgtBilko76/ForzaHorizon-VR/releases/download/quest-v0.4.5-beta/ForzaHorizon-VR-0.4.5-beta.apk": {
+  "minSdk": 33,
+  "package": "studio.deimos.pinyonshift",
+  "versionCode": 4500,
+  "versionName": "0.4.5-beta"
+ },
  "https://github.com/SgtBilko76/FotG-VR/releases/download/v0.3.1-beta/FotG-VR-v0.3.1-beta.apk": {
   "minSdk": 29,
   "package": "com.bilko.fotgvr",
