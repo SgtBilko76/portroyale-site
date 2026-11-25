@@ -214,6 +214,8 @@ def page(site, title, body, desc="", path="", image=None, ld=None):
       <a href="index.html#winlator">WinlatorXR</a>
       <a href="https://github.com/{esc(site['github_user'])}" target="_blank" rel="noopener">GitHub</a>
       {discord_link(site, '<a href="{url}" target="_blank" rel="noopener">Discord</a>')}
+      {f'<a href="{esc(site["youtube_url"])}" target="_blank" rel="noopener">YouTube</a>' if site.get("youtube_url") else ''}
+      {f'<a class="btn btn-kofi btn-sm nav-kofi" href="{esc(site["kofi_url"])}" target="_blank" rel="noopener" title="Support the ports on Ko-fi">{KOFI} Ko-fi</a>' if site.get("kofi_url") else ''}
       {f'<a class="btn btn-primary btn-sm nav-app" href="{esc(APP["url"])}" title="Port Royale app {esc(APP["tag"])}: install and update the ports right on your headset">{DL} Get the app</a>' if APP else ''}
     </nav>
   </div>

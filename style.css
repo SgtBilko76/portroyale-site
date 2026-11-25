@@ -318,6 +318,8 @@ code {
 
 /* ---------- Port Royale app (header button + index band) */
 .nav .nav-app { margin-left: 4px; }
+.nav .nav-kofi { margin-left: 4px; }
+.nav .nav-kofi + .nav-app { margin-left: 0; }
 .app-inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
 .app-features { margin: 1.2em 0 0; padding-left: 1.2em; }
 .app-features li { margin-bottom: .45em; }
