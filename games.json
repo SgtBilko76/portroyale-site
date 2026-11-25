@@ -67,7 +67,7 @@
         "Tables and ROMs: download them in the app, or bring your own `.vpx` tables and ROMs"
       ],
       "install": [
-        "Sideload the APK for your headset with SideQuest or `adb install -r VPinball-VR-Beta-0.40.apk`. The same APK works on Meta Quest and PICO.",
+        "Sideload the APK for your headset with SideQuest or `adb install -r VPinball-VR-Beta-0.46.apk`. The same APK works on Meta Quest and PICO.",
         "Start VPinball (*Library → Unknown Sources*) and get tables with **+ → Download from Archive.org**: the table, its ROM and backglass are installed for you.",
         "Or use your own tables: put each in its own folder, with its ROMs next to it (`VPinball/tables/<Table name>/<table>.vpx` and `VPinball/tables/<Table name>/pinmame/roms/<rom>.zip`), and select the `VPinball/tables` folder in the settings."
       ],
