@@ -634,7 +634,6 @@ def build_game(site, cats, game, rels, prev_g, next_g):
     <div class="actions">
       {dl_btn}{install_btn}
       {gh_btn}
-      <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
     </div>
   </div>
 </section>
