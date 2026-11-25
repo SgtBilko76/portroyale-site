@@ -302,7 +302,6 @@ def build_index(site, cats, games, rels):
       <div class="actions">
         <a class="btn btn-primary" href="#full">Browse the ports</a>
         {discord_link(site, '<a class="btn btn-discord" href="{url}" target="_blank" rel="noopener">' + DISCORD + ' Join the Discord</a>')}
-        <a class="btn btn-kofi" href="{esc(site['kofi_url'])}" target="_blank" rel="noopener">{KOFI} Ko-fi</a>
       </div>
       <ul class="stats">
         <li><strong>{len(games)}</strong> Own VR Ports</li>
