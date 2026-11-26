@@ -336,6 +336,12 @@
   "versionCode": 100810046,
   "versionName": "Beta 0.46"
  },
+ "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.48-beta/VPinball-VR-Beta-0.48.apk": {
+  "minSdk": 29,
+  "package": "org.vpinball.vpinball_bgfx",
+  "versionCode": 100810048,
+  "versionName": "Beta 0.48"
+ },
  "https://github.com/SgtBilko76/WCSaga-VR/releases/download/v0.1.6-beta/WCSaga-VR-v0.1.6-beta.apk": {
   "minSdk": 29,
   "package": "com.bilko.wcsagavr",

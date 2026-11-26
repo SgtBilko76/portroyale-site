@@ -80,16 +80,16 @@
  ],
  "VPinball-VR": [
   {
-   "tag": "v0.46-beta",
-   "name": "Beta 0.46: VR menu reliability",
-   "date": "2026-11-25T17:47:23Z",
+   "tag": "v0.48-beta",
+   "name": "Beta 0.48: Automatic ROM for imported tables",
+   "date": "2026-11-26T17:30:41Z",
    "prerelease": true,
-   "url": "https://github.com/SgtBilko76/VPinball-VR/releases/tag/v0.46-beta",
+   "url": "https://github.com/SgtBilko76/VPinball-VR/releases/tag/v0.48-beta",
    "assets": [
     {
-     "name": "VPinball-VR-Beta-0.46.apk",
-     "size": 122421548,
-     "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.46-beta/VPinball-VR-Beta-0.46.apk"
+     "name": "VPinball-VR-Beta-0.48.apk",
+     "size": 93812658,
+     "url": "https://github.com/SgtBilko76/VPinball-VR/releases/download/v0.48-beta/VPinball-VR-Beta-0.48.apk"
     }
    ]
   }
